@@ -14,6 +14,11 @@ const files = [
   "styles.css",
   "13979.jpg",
   "14692.jpg",
+  "hero-abstract-solidarity.jpg",
+  "abstract-waiting-hourglass.jpg",
+  "abstract-parliament-hill.jpg",
+  "hero-delayed-application.jpg",
+  "hero-security-screening.jpg",
 ];
 
 if (!fs.existsSync(publicDir)) {
