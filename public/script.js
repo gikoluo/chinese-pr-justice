@@ -1,3 +1,43 @@
+// Story cards: show full story in modal
+(function () {
+    const modal = document.getElementById('story-modal');
+    const backdrop = modal.querySelector('.story-modal-backdrop');
+    const closeBtn = modal.querySelector('.story-modal-close');
+    const titleEl = modal.querySelector('.story-modal-title');
+    const locationEl = modal.querySelector('.story-modal-location');
+    const bodyEl = modal.querySelector('.story-modal-body');
+
+    function openModal(card) {
+        const meta = card.querySelector('.story-meta');
+        const full = card.querySelector('.story-content-full');
+        if (!meta || !full) return;
+        titleEl.textContent = meta.querySelector('h3')?.textContent || '';
+        locationEl.textContent = meta.querySelector('.story-location')?.textContent || '';
+        locationEl.style.display = locationEl.textContent ? '' : 'none';
+        bodyEl.innerHTML = full.innerHTML;
+        modal.removeAttribute('hidden');
+        document.body.classList.add('story-modal-open');
+        closeBtn.focus();
+    }
+
+    function closeModal() {
+        modal.setAttribute('hidden', '');
+        document.body.classList.remove('story-modal-open');
+    }
+
+    document.querySelectorAll('.story-toggle').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const card = btn.closest('.story-card');
+            if (card && card.querySelector('.story-content-full')) openModal(card);
+        });
+    });
+    backdrop.addEventListener('click', closeModal);
+    closeBtn.addEventListener('click', closeModal);
+    modal.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeModal();
+    });
+})();
+
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -137,48 +177,5 @@ window.addEventListener('beforeprint', () => {
 window.addEventListener('afterprint', () => {
     document.body.classList.remove('printing');
 });
-
-// Statistics counter animation
-const animateCount = (element, target) => {
-    let current = 0;
-    const increment = target / 50;
-    const timer = setInterval(() => {
-        current += increment;
-        if (current >= target) {
-            element.textContent = target;
-            clearInterval(timer);
-        } else {
-            element.textContent = Math.floor(current);
-        }
-    }, 30);
-};
-
-// Trigger counter animation when hero section is visible
-const heroObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            const statNumbers = document.querySelectorAll('.stat-number');
-            statNumbers.forEach(stat => {
-                const text = stat.textContent;
-                if (text.includes('+')) {
-                    const num = parseInt(text.replace(/\D/g, ''));
-                    if (!isNaN(num)) {
-                        stat.textContent = '0';
-                        setTimeout(() => {
-                            animateCount(stat, num);
-                            stat.textContent += '+';
-                        }, 200);
-                    }
-                }
-            });
-            heroObserver.unobserve(entry.target);
-        }
-    });
-}, { threshold: 0.5 });
-
-const hero = document.querySelector('.hero');
-if (hero) {
-    heroObserver.observe(hero);
-}
 
 console.log('Justice for PR Applicants - Website loaded successfully');
