@@ -735,7 +735,7 @@ body.story-modal-open {
 .story-modal-box {
     position: relative;
     width: 100%;
-    max-width: 560px;
+    max-width: 780px;
     max-height: calc(100vh - 3rem);
     background: white;
     border-radius: 8px;
