@@ -1,0 +1,7 @@
+name = "parliament-hill-match"
+main = "worker.js"
+compatibility_date = "2024-01-01"
+
+[assets]
+directory = "./public"
+binding = "ASSETS"

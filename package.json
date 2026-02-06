@@ -1,0 +1,14 @@
+{
+  "name": "parliament-hill-match",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "npm run copy-assets && wrangler deploy",
+    "copy-assets": "node scripts/copy-assets.js",
+    "predeploy": "npm run copy-assets"
+  },
+  "devDependencies": {
+    "wrangler": "^3.0.0"
+  }
+}
