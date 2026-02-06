@@ -11,8 +11,9 @@
         const meta = card.querySelector('.story-meta');
         const full = card.querySelector('.story-content-full');
         if (!meta || !full) return;
-        titleEl.textContent = meta.querySelector('h3')?.textContent || '';
-        locationEl.textContent = meta.querySelector('.story-location')?.textContent || '';
+        const titleNode = meta.querySelector('.story-meta-title') || meta.querySelector('h3');
+        titleEl.textContent = titleNode?.textContent?.trim() || '';
+        locationEl.textContent = meta.querySelector('.story-location')?.textContent?.trim() || '';
         locationEl.style.display = locationEl.textContent ? '' : 'none';
         bodyEl.innerHTML = full.innerHTML;
         modal.removeAttribute('hidden');
