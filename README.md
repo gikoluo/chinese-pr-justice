@@ -101,8 +101,9 @@ This movement is built on:
 
 ## Contact
 
-- Email: *[To be added]*
-- WeChat: *[To be added]*
+- **Website:** [chinese-pr-delay.ca](https://chinese-pr-delay.ca)
+- **Email:** [we@chinese-pr-delay.ca](mailto:we@chinese-pr-delay.ca)
+- Email us to join our WeChat group or for other ways to connect.
 
 ---
 

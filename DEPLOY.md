@@ -75,6 +75,8 @@ Then open the URL Wrangler prints (usually `http://localhost:8787`).
 
 ## Custom domain
 
+**Production site:** [chinese-pr-delay.ca](https://chinese-pr-delay.ca)
+
 To use your own domain instead of `*.workers.dev`:
 
 1. In [Cloudflare Dashboard](https://dash.cloudflare.com/) go to **Workers & Pages** → your worker → **Settings** → **Domains & Routes**.
