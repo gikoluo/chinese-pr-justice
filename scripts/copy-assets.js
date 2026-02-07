@@ -19,6 +19,7 @@ const files = [
   "abstract-parliament-hill.jpg",
   "hero-delayed-application.jpg",
   "hero-security-screening.jpg",
+  "permit-letter.png",
 ];
 
 if (!fs.existsSync(publicDir)) {
