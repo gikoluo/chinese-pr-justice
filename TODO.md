@@ -8,7 +8,7 @@
 ☑ Email we@chinese-pr-delay.ca . All mails can be read and managed by account chineseprdelay@gmail.com , ask Andy Luo for forwarding message or access code
 
 ## Domain Design
-☐ Slagon 
+☐ Slogan 
 ☐ Hero Images
 
 
