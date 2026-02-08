@@ -13,11 +13,11 @@ const files = [
   "script.js",
   "styles.css",
   "13979.jpg",
-  "14692.jpg",
+  "14692.png",
   "hero-abstract-solidarity.jpg",
   "abstract-waiting-hourglass.jpg",
   "abstract-parliament-hill.jpg",
-  "hero-delayed-application.jpg",
+  "hero-delayed-application.png",
   "hero-security-screening.jpg",
   "permit-letter.png",
 ];
