@@ -1,0 +1,166 @@
+---
+// Hero2 Section component - Image Background
+---
+
+<section class="hero2">
+    <div class="hero2-content">
+        <h2 class="hero2-title">Security check is important.</h2>
+        <p class="hero2-subtitle">So is certainty, dignity, and time.</p>
+        <div class="hero2-buttons">
+            <a href="/join" class="btn-cta btn-flip">
+                <span class="btn-text-block">
+                    <span class="btn-text-wrapper">
+                        <span class="hover-out-text">Join Our Movement</span>
+                        <span class="hover-in-text">Join Our Movement</span>
+                    </span>
+                </span>
+            </a>
+            <a href="/event" class="btn-secondary-light btn-flip">
+                <span class="btn-text-block">
+                    <span class="btn-text-wrapper">
+                        <span class="hover-out-text">Event Details</span>
+                        <span class="hover-in-text">Event Details</span>
+                    </span>
+                </span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<style>
+    .hero2 {
+        position: relative;
+        height: 60vh;
+        min-height: 400px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                    url('/images/hero2-bg-feb-9.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .hero2-content {
+        position: relative;
+        z-index: 1;
+        padding: 0 2rem;
+        max-width: 800px;
+        margin-left: 10%;
+    }
+
+    .hero2-title {
+        font-size: 5rem;
+        font-weight: 700;
+        color: white;
+        margin: 0 0 0.5rem 0;
+        line-height: 1.2;
+        text-align: left;
+        white-space: nowrap;
+    }
+
+    .hero2-subtitle {
+        font-size: 2rem;
+        font-weight: 400;
+        color: white;
+        margin: 0;
+        opacity: 0.9;
+        text-align: left;
+    }
+
+    .hero2-buttons {
+        margin-top: 2rem;
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    /* Flip animation base */
+    .btn-flip {
+        display: inline-block;
+        text-decoration: none;
+    }
+
+    .btn-text-block {
+        display: block;
+        overflow: hidden;
+        height: 1.25em;
+    }
+
+    .btn-text-wrapper {
+        display: block;
+        transition: transform 0.3s ease;
+    }
+
+    .hover-out-text,
+    .hover-in-text {
+        display: block;
+        height: 1.25em;
+        line-height: 1.25;
+    }
+
+    .btn-flip:hover .btn-text-wrapper {
+        transform: translateY(-50%);
+    }
+
+    .btn-cta {
+        background: rgb(229, 25, 55);
+        color: #ffffff;
+        padding: 0.875rem 1.5rem;
+        font-size: 0.9375rem;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+        transition: background 0.2s;
+    }
+
+    .btn-cta:hover {
+        background: rgb(200, 20, 45);
+    }
+
+    .btn-secondary-light {
+        background: transparent;
+        color: #ffffff;
+        border: 2px solid #ffffff;
+        padding: 0.875rem 1.5rem;
+        border-radius: 0;
+        font-size: 0.9375rem;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+        transition: background 0.3s, color 0.3s;
+    }
+
+    .btn-secondary-light:hover {
+        background: #ffffff;
+        color: var(--text-dark);
+    }
+
+    .btn-secondary-light .hover-in-text {
+        color: var(--text-dark);
+    }
+
+    @media (max-width: 768px) {
+        .hero2 {
+            height: 50vh;
+            min-height: 300px;
+        }
+
+        .hero2-content {
+            margin-left: 5%;
+            padding: 0 1.5rem;
+        }
+
+        .hero2-title {
+            font-size: 2rem;
+        }
+
+        .hero2-subtitle {
+            font-size: 1.125rem;
+        }
+
+        .hero2-buttons {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+</style>
