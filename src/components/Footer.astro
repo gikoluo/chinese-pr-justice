@@ -1,0 +1,109 @@
+---
+// Footer component - shared across all pages
+---
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>About This Movement</h4>
+                <p>We are Chinese PR applicants and families who have experienced discriminatory delays in security screening. We demand fair, transparent, and timely immigration processing.</p>
+            </div>
+
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="/#declaration">Declaration</a></li>
+                    <li><a href="/#demands">Our Demands</a></li>
+                    <li><a href="/#stories">Stories</a></li>
+                    <li><a href="/event">Event</a></li>
+                    <li><a href="/join">Join Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="https://www.canada.ca/en/immigration-refugees-citizenship.html" target="_blank">IRCC Website</a></li>
+                    <li><a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/application/check-processing-times.html" target="_blank">Processing Times</a></li>
+                    <li><a href="https://atip-aiprp.apps.gc.ca/atip/welcome.do" target="_blank">Order GCMS Notes</a></li>
+                    <li><a href="https://www.ourcommons.ca/members/en" target="_blank">Find Your MP</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p><a href="https://chinese-pr-delay.ca">chinese-pr-delay.ca</a></p>
+                <p><a href="mailto:we@chinese-pr-delay.ca">we@chinese-pr-delay.ca</a></p>
+                <p>We stand together for justice.</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Justice for Chinese PR Applicants. <a href="https://chinese-pr-delay.ca">chinese-pr-delay.ca</a></p>
+            <p class="footer-note">We advocate for fair policy, not against any group or nation. We believe in Canada's values of equality and justice.</p>
+        </div>
+    </div>
+</footer>
+
+<style>
+    .footer {
+        background: var(--primary-dark);
+        color: white;
+        padding: 2rem 0 1rem;
+    }
+
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .footer-section h4 {
+        font-size: 1.125rem;
+        margin-bottom: 0.75rem;
+        color: var(--accent-color);
+    }
+
+    .footer-section p {
+        line-height: 1.6;
+        opacity: 0.9;
+        margin-bottom: 0.375rem;
+        font-size: 0.9375rem;
+    }
+
+    .footer-section ul {
+        list-style: none;
+    }
+
+    .footer-section ul li {
+        margin-bottom: 0.375rem;
+    }
+
+    .footer-section a {
+        color: white;
+        text-decoration: none;
+        opacity: 0.8;
+        transition: opacity 0.3s;
+        font-size: 0.9375rem;
+    }
+
+    .footer-section a:hover {
+        opacity: 1;
+        text-decoration: underline;
+    }
+
+    .footer-bottom {
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding-top: 1.25rem;
+        text-align: center;
+        opacity: 0.8;
+        font-size: 0.875rem;
+    }
+
+    .footer-note {
+        font-size: 0.8125rem;
+        margin-top: 0.375rem;
+    }
+</style>
