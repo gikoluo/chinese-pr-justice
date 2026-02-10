@@ -11,38 +11,38 @@ const { showNote = false } = Astro.props;
 <section id="photos" class="photos-section">
     <div class="container">
         <h2><span class="lang-en">{eventPhotosSection.title.en}</span><span class="lang-zh">{eventPhotosSection.title.zh}</span><span class="lang-fr">{eventPhotosSection.title.fr}</span></h2>
-        <p class="section-intro">Photos from our movement will be added here after the event.</p>
+        <p class="section-intro"><span class="lang-en">{eventPhotosSection.intro.en}</span><span class="lang-zh">{eventPhotosSection.intro.zh}</span><span class="lang-fr">{eventPhotosSection.intro.fr}</span></p>
 
         <div class="photos-grid">
             <div class="photo-placeholder">
                 <img src="/images/13979.jpg" alt="Community gathering" />
-                <p>Preparing for the march</p>
+                <p><span class="lang-en">{eventPhotosSection.captionPreparing.en}</span><span class="lang-zh">{eventPhotosSection.captionPreparing.zh}</span><span class="lang-fr">{eventPhotosSection.captionPreparing.fr}</span></p>
             </div>
 
             <div class="photo-placeholder">
                 <img src="/images/14692.jpg" alt="Supporters" />
-                <p>United for justice</p>
+                <p><span class="lang-en">{eventPhotosSection.captionUnited.en}</span><span class="lang-zh">{eventPhotosSection.captionUnited.zh}</span><span class="lang-fr">{eventPhotosSection.captionUnited.fr}</span></p>
             </div>
 
             <div class="photo-placeholder">
                 <img src="/images/hero-abstract-solidarity.jpg" alt="Silhouettes of people standing in solidarity" />
-                <p>Standing together for justice</p>
+                <p><span class="lang-en">{eventPhotosSection.captionStanding.en}</span><span class="lang-zh">{eventPhotosSection.captionStanding.zh}</span><span class="lang-fr">{eventPhotosSection.captionStanding.fr}</span></p>
             </div>
 
             <div class="photo-placeholder">
                 <img src="/images/abstract-waiting-hourglass.jpg" alt="Golden hourglass representing years of waiting" />
-                <p>40+ months and counting</p>
+                <p><span class="lang-en">{eventPhotosSection.captionMonths.en}</span><span class="lang-zh">{eventPhotosSection.captionMonths.zh}</span><span class="lang-fr">{eventPhotosSection.captionMonths.fr}</span></p>
             </div>
 
             <div class="photo-placeholder">
                 <img src="/images/abstract-parliament-hill.jpg" alt="Parliament Hill silhouette with golden sunrise" />
-                <p>Procession to Parliament Hill</p>
+                <p><span class="lang-en">{eventPhotosSection.captionProcession.en}</span><span class="lang-zh">{eventPhotosSection.captionProcession.zh}</span><span class="lang-fr">{eventPhotosSection.captionProcession.fr}</span></p>
             </div>
 
             <div class="photo-placeholder">
                 <div class="photo-empty">
                     <span>📷</span>
-                    <p>Event photos coming soon</p>
+                    <p><span class="lang-en">{eventPhotosSection.photosComingSoon.en}</span><span class="lang-zh">{eventPhotosSection.photosComingSoon.zh}</span><span class="lang-fr">{eventPhotosSection.photosComingSoon.fr}</span></p>
                 </div>
             </div>
         </div>

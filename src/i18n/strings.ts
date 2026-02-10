@@ -187,10 +187,20 @@ export const storiesSection = {
   subtitle: { en: 'Real people, real families, real consequences. These are the human costs of indefinite security screening delays.', zh: '真实的人、真实的家庭、真实的代价。这是无限期安全背景调查拖延带来的人道代价。', fr: 'De vraies personnes, de vraies familles, de vraies conséquences. Voici le coût humain des délais indéfinis de l\'évaluation de sécurité.' },
   moreStories: { en: 'More Stories Coming Soon', zh: '更多故事即将推出', fr: 'D\'autres témoignages à venir' },
   shareStory: { en: 'Share Your Story', zh: '分享你的故事', fr: 'Partagez votre histoire' },
+  notIsolatedTitle: { en: 'These Are Not Isolated Cases', zh: '这些并非个案', fr: 'Ce ne sont pas des cas isolés' },
+  notIsolatedDesc: { en: 'Thousands of Chinese PR applicants are experiencing similar delays. Each story represents a family in limbo, dreams deferred, and futures uncertain.', zh: '数千名华人PR申请人正经历类似的拖延。每个故事都代表一个悬而未决的家庭、被搁置的梦想和不确定的未来。', fr: 'Des milliers de demandeurs de RP chinois connaissent des délais similaires. Chaque témoignage représente une famille en suspens, des rêves reportés et un avenir incertain.' },
+  notIsolatedTogether: { en: 'Together, our voices cannot be ignored.', zh: '团结一心，我们的声音不容忽视。', fr: 'Ensemble, nos voix ne peuvent être ignorées.' },
 } as const;
 
 export const eventPhotosSection = {
   title: { en: 'Event Photos', zh: '活动照片', fr: 'Photos de l\'événement' },
+  intro: { en: 'Photos from our movement will be added here after the event.', zh: '活动结束后，我们将在此添加我们运动的照片。', fr: 'Les photos de notre mouvement seront ajoutées ici après l\'événement.' },
+  photosComingSoon: { en: 'Event photos coming soon', zh: '活动照片即将推出', fr: 'Photos de l\'événement à venir' },
+  captionPreparing: { en: 'Preparing for the march', zh: '为游行做准备', fr: 'Préparation de la marche' },
+  captionUnited: { en: 'United for justice', zh: '为公正团结一心', fr: 'Unis pour la justice' },
+  captionStanding: { en: 'Standing together for justice', zh: '为公正并肩而立', fr: 'Debout ensemble pour la justice' },
+  captionMonths: { en: '40+ months and counting', zh: '40多个月仍在等待', fr: 'Plus de 40 mois et ça continue' },
+  captionProcession: { en: 'Procession to Parliament Hill', zh: '国会山游行', fr: 'Marche vers la Colline du Parlement' },
 } as const;
 
 export const eventPage = {
@@ -199,6 +209,27 @@ export const eventPage = {
   bannerTitle: { en: 'March for PR Justice', zh: '为PR公正而游行', fr: 'Marche pour la justice RP' },
   bannerTagline: { en: 'End Discriminatory Security Screening Delays', zh: '终结歧视性安全背景调查拖延', fr: 'Mettons fin aux délais discriminatoires de l\'évaluation de sécurité' },
   joinCampaign: { en: 'JOIN THE CAMPAIGN', zh: '加入行动', fr: 'REJOINDRE LA CAMPAGNE' },
+  quickInfoDate: { en: 'Friday, March 13, 2026', zh: '2026年3月13日 周五', fr: 'Vendredi 13 mars 2026' },
+  quickInfoTime: { en: '8:30 AM – 4:30 PM', zh: '上午8:30 – 下午4:30', fr: '8 h 30 – 16 h 30' },
+  quickInfoPlace: { en: 'Parliament Hill, Ottawa, Ontario', zh: '国会山，渥太华，安大略省', fr: 'Colline du Parlement, Ottawa, Ontario' },
+  whatToBringTitle: { en: 'What to Bring', zh: '携带物品', fr: 'À apporter' },
+  whatToBring1: { en: 'Signs or banners (approved — we\'ll provide some)', zh: '标语或横幅（已批准 — 我们会提供部分）', fr: 'Pancartes ou bannières (approuvées — nous en fournirons)' },
+  whatToBring2: { en: 'Flyers (approved — we\'ll provide printouts)', zh: '传单（已批准 — 我们会提供印刷品）', fr: 'Tracts (approuvés — nous fournirons des imprimés)' },
+  whatToBring3: { en: 'Warm clothing (March in Ottawa — dress for cold)', zh: '保暖衣物（渥太华三月 — 注意防寒）', fr: 'Vêtements chauds (mars à Ottawa — prévoir le froid)' },
+  whatToBring4: { en: 'Water and snacks', zh: '水和零食', fr: 'Eau et collations' },
+  whatToBring5: { en: 'Your CBSA/GCMS notes (optional, for media)', zh: '您的CBSA/GCMS notes（可选，供媒体）', fr: 'Vos notes CBSA/GCMS (optionnel, pour les médias)' },
+  whatToBring6: { en: 'A copy of your story (for journalists)', zh: '您的故事副本（供记者）', fr: 'Une copie de votre témoignage (pour les journalistes)' },
+  whatToBring7: { en: 'Positive energy and determination', zh: '积极的态度和决心', fr: 'Énergie positive et détermination' },
+  guidelinesTitle: { en: 'Important Guidelines (Per Permit)', zh: '重要须知（按许可要求）', fr: 'Directives importantes (selon le permis)' },
+  guidelines1: { en: 'Peaceful & Respectful: This is a peaceful, permitted demonstration', zh: '和平与尊重：这是一次和平、经许可的示威活动', fr: 'Pacifique et respectueux : Il s\'agit d\'une manifestation pacifique et autorisée' },
+  guidelines2: { en: 'Keep Sidewalks Clear: The main sidewalk must remain unimpeded for Parliamentarians and the public', zh: '保持人行道畅通：主通道须保持畅通，供议员和公众使用', fr: 'Garder les trottoirs dégagés : Le trottoir principal doit rester libre pour les parlementaires et le public' },
+  guidelines3: { en: 'No Fundraising: No fundraising activities on Parliament Hill', zh: '禁止筹款：国会山禁止筹款活动', fr: 'Pas de collecte de fonds : Aucune activité de financement sur la Colline du Parlement' },
+  guidelines4: { en: 'No Structures: No props, chairs, or tables — signs, banners, and flyers only', zh: '禁止搭建：禁止道具、椅子或桌子 — 仅标语、横幅和传单', fr: 'Pas de structures : Pas d\'accessoires, chaises ou tables — uniquement pancartes, bannières et tracts' },
+  guidelines5: { en: 'Clean Up: Our group is responsible for cleaning the area after the event', zh: '清理：我们负责活动结束后清理场地', fr: 'Nettoyage : Notre groupe est responsable du nettoyage de la zone après l\'événement' },
+  guidelines6: { en: 'Be Flexible: Due to construction, we may be asked to relocate — follow all instructions', zh: '保持灵活：因施工我们可能被要求转移 — 请遵守一切指示', fr: 'Rester flexible : En raison des travaux, nous pourrions devoir nous déplacer — suivez toutes les instructions' },
+  guidelines7: { en: 'Media Ready: Be prepared to share your story with press', zh: '配合媒体：准备好向媒体分享您的故事', fr: 'Prêt pour les médias : Soyez prêt à partager votre témoignage avec la presse' },
+  ctaTitle: { en: 'Will You Stand With Us?', zh: '您会与我们站在一起吗？', fr: 'Tiendrez-vous avec nous ?' },
+  ctaText: { en: 'Your presence matters. Every person who shows up sends a message that we will not accept discriminatory treatment.', zh: '您的参与很重要。每一个到场的人都在传递我们不会接受歧视性对待的信息。', fr: 'Votre présence compte. Chaque personne qui se présente envoie un message que nous n\'accepterons pas le traitement discriminatoire.' },
 } as const;
 
 export const joinPage = {
