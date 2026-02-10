@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import EventPhotos from "../components/EventPhotos.astro";
+import { eventPage } from "../i18n/strings";
 ---
 
 <BaseLayout
@@ -9,16 +10,19 @@ import EventPhotos from "../components/EventPhotos.astro";
   <!-- Event Section -->
   <section id="event" class="event-section">
     <div class="container">
-      <h2>Procession to Parliament Hill</h2>
+      <h2><span class="lang-en">{eventPage.title.en}</span><span class="lang-zh">{eventPage.title.zh}</span><span class="lang-fr">{eventPage.title.fr}</span></h2>
       <p class="section-intro">
-        Join us as we march for justice and demand action from the Canadian
-        government.
+        <span class="lang-en">{eventPage.intro.en}</span>
+        <span class="lang-zh">{eventPage.intro.zh}</span>
+        <span class="lang-fr">{eventPage.intro.fr}</span>
       </p>
 
       <div class="event-banner">
-        <h3>March for PR Justice</h3>
+        <h3><span class="lang-en">{eventPage.bannerTitle.en}</span><span class="lang-zh">{eventPage.bannerTitle.zh}</span><span class="lang-fr">{eventPage.bannerTitle.fr}</span></h3>
         <p class="event-tagline">
-          End Discriminatory Security Screening Delays
+          <span class="lang-en">{eventPage.bannerTagline.en}</span>
+          <span class="lang-zh">{eventPage.bannerTagline.zh}</span>
+          <span class="lang-fr">{eventPage.bannerTagline.fr}</span>
         </p>
       </div>
 
@@ -368,8 +372,8 @@ import EventPhotos from "../components/EventPhotos.astro";
           <a href="/join" class="btn-cta btn-flip">
             <span class="btn-text-block">
               <span class="btn-text-wrapper">
-                <span class="hover-out-text">JOIN THE CAMPAIGN</span>
-                <span class="hover-in-text">JOIN THE CAMPAIGN</span>
+                <span class="hover-out-text"><span class="lang-en">{eventPage.joinCampaign.en}</span><span class="lang-zh">{eventPage.joinCampaign.zh}</span><span class="lang-fr">{eventPage.joinCampaign.fr}</span></span>
+                <span class="hover-in-text"><span class="lang-en">{eventPage.joinCampaign.en}</span><span class="lang-zh">{eventPage.joinCampaign.zh}</span><span class="lang-fr">{eventPage.joinCampaign.fr}</span></span>
               </span>
             </span>
           </a>

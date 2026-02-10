@@ -1,5 +1,6 @@
 ---
-// EventPhotos Section component
+// EventPhotos Section component (EN + 中文)
+import { eventPhotosSection } from '../i18n/strings';
 interface Props {
     showNote?: boolean;
 }
@@ -9,7 +10,7 @@ const { showNote = false } = Astro.props;
 
 <section id="photos" class="photos-section">
     <div class="container">
-        <h2>Event Photos</h2>
+        <h2><span class="lang-en">{eventPhotosSection.title.en}</span><span class="lang-zh">{eventPhotosSection.title.zh}</span><span class="lang-fr">{eventPhotosSection.title.fr}</span></h2>
         <p class="section-intro">Photos from our movement will be added here after the event.</p>
 
         <div class="photos-grid">

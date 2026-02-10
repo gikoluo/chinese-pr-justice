@@ -1,11 +1,12 @@
 ---
-// OurStories Section component
+// OurStories Section component (EN + 中文)
+import { storiesSection } from '../i18n/strings';
 ---
 
 <section id="stories" class="stories-section">
     <div class="container">
-        <h2>Our Stories</h2>
-        <p class="section-intro">Real people, real families, real consequences. These are the human costs of indefinite security screening delays.</p>
+        <h2><span class="lang-en">{storiesSection.title.en}</span><span class="lang-zh">{storiesSection.title.zh}</span><span class="lang-fr">{storiesSection.title.fr}</span></h2>
+        <p class="section-intro"><span class="lang-en">{storiesSection.subtitle.en}</span><span class="lang-zh">{storiesSection.subtitle.zh}</span><span class="lang-fr">{storiesSection.subtitle.fr}</span></p>
 
         <div class="stories-scroll-wrap">
             <div class="stories-grid">
@@ -90,10 +91,10 @@
                         <span class="story-delay-sub">Stories</span>
                     </div>
                 </div>
-                <h3>More Stories Coming Soon</h3>
-                <p>We are collecting stories from affected Chinese PR applicants across Canada.</p>
-                <p><strong>Do you have a story to share?</strong></p>
-                <a href="/join" class="btn btn-secondary">Share Your Story</a>
+                <h3><span class="lang-en">{storiesSection.moreStories.en}</span><span class="lang-zh">{storiesSection.moreStories.zh}</span><span class="lang-fr">{storiesSection.moreStories.fr}</span></h3>
+                <p><span class="lang-en">We are collecting stories from affected Chinese PR applicants across Canada.</span><span class="lang-zh">我们正在征集全加受影响的华人PR申请人的故事。</span><span class="lang-fr">Nous recueillons les témoignages des demandeurs de RP chinois touchés partout au Canada.</span></p>
+                <p><strong><span class="lang-en">Do you have a story to share?</span><span class="lang-zh">你有故事要分享吗？</span><span class="lang-fr">Avez-vous une histoire à partager?</span></strong></p>
+                <a href="/join" class="btn btn-secondary"><span class="lang-en">{storiesSection.shareStory.en}</span><span class="lang-zh">{storiesSection.shareStory.zh}</span><span class="lang-fr">{storiesSection.shareStory.fr}</span></a>
             </div>
             </div>
         </div>

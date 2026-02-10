@@ -43,6 +43,20 @@
   --grey: #dedede;
 }
 
+/* Language toggle: show only the active language */
+[data-lang="en"] .lang-zh,
+[data-lang="en"] .lang-fr {
+  display: none !important;
+}
+[data-lang="zh"] .lang-en,
+[data-lang="zh"] .lang-fr {
+  display: none !important;
+}
+[data-lang="fr"] .lang-en,
+[data-lang="fr"] .lang-zh {
+  display: none !important;
+}
+
 body {
   font-family: var(--font-body);
   line-height: 1.6;

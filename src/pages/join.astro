@@ -1,17 +1,18 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { joinPage } from '../i18n/strings';
 ---
 
 <BaseLayout title="Join Us | Justice for Chinese PR Applicants">
     <!-- Join/Contact Section -->
     <section id="join" class="join-section">
         <div class="container">
-            <h2>Join Our Movement</h2>
-            <p class="section-intro">Together we are stronger. Add your voice to thousands demanding fair treatment.</p>
+            <h2><span class="lang-en">{joinPage.title.en}</span><span class="lang-zh">{joinPage.title.zh}</span><span class="lang-fr">{joinPage.title.fr}</span></h2>
+            <p class="section-intro"><span class="lang-en">{joinPage.intro.en}</span><span class="lang-zh">{joinPage.intro.zh}</span><span class="lang-fr">{joinPage.intro.fr}</span></p>
 
             <div class="join-grid">
                 <div class="join-card">
-                    <h3>📧 Share Your Story</h3>
+                    <h3>📧 <span class="lang-en">{joinPage.shareStory.en}</span><span class="lang-zh">{joinPage.shareStory.zh}</span><span class="lang-fr">{joinPage.shareStory.fr}</span></h3>
                     <p>Your experience matters. Help us document the impact of security screening delays.</p>
                     <p><strong>Email us at:</strong> <a href="mailto:we@chinese-pr-delay.ca">we@chinese-pr-delay.ca</a></p>
                     <p>Include:</p>
@@ -24,7 +25,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                 </div>
 
                 <div class="join-card">
-                    <h3>📱 Stay Connected</h3>
+                    <h3>📱 <span class="lang-en">{joinPage.stayConnected.en}</span><span class="lang-zh">{joinPage.stayConnected.zh}</span><span class="lang-fr">{joinPage.stayConnected.fr}</span></h3>
                     <p>Get updates about the procession and advocacy efforts.</p>
                     <p><strong>Website:</strong> <a href="https://chinese-pr-delay.ca">chinese-pr-delay.ca</a></p>
                     <p><strong>Email:</strong> <a href="mailto:we@chinese-pr-delay.ca">we@chinese-pr-delay.ca</a></p>
@@ -32,7 +33,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                 </div>
 
                 <div class="join-card">
-                    <h3>🎙️ Speak Out</h3>
+                    <h3>🎙️ <span class="lang-en">{joinPage.speakOut.en}</span><span class="lang-zh">{joinPage.speakOut.zh}</span><span class="lang-fr">{joinPage.speakOut.fr}</span></h3>
                     <p>Interested in speaking at the event or to media?</p>
                     <ul>
                         <li>Share your testimony at Parliament Hill</li>

@@ -1,5 +1,6 @@
 ---
-// Hero Section - image background, banner panel left, stat card right
+// Hero Section - image background, banner panel left, stat card right (EN + 中文)
+import { hero } from '../i18n/strings';
 ---
 
 <section class="hero">
@@ -42,13 +43,13 @@
                         <span class="stat-number">40+</span>
                     </div>
                     <div class="stat-white">
-                        <span>MONTHS</span>
-                        <span>WAITING FOR</span>
-                        <span>IRCC RESPONSE</span>
+                        <span><span class="lang-en">{hero.statMonths.en}</span><span class="lang-zh">{hero.statMonths.zh}</span><span class="lang-fr">{hero.statMonths.fr}</span></span>
+                        <span><span class="lang-en">{hero.statWaiting.en}</span><span class="lang-zh">{hero.statWaiting.zh}</span><span class="lang-fr">{hero.statWaiting.fr}</span></span>
+                        <span><span class="lang-en">{hero.statResponse.en}</span><span class="lang-zh">{hero.statResponse.zh}</span><span class="lang-fr">{hero.statResponse.fr}</span></span>
                     </div>
                     <div class="stat-black">
-                        <span>NO TIMELINES</span>
-                        <span>NO RESULTS</span>
+                        <span><span class="lang-en">{hero.statNoTimelines.en}</span><span class="lang-zh">{hero.statNoTimelines.zh}</span><span class="lang-fr">{hero.statNoTimelines.fr}</span></span>
+                        <span><span class="lang-en">{hero.statNoResults.en}</span><span class="lang-zh">{hero.statNoResults.zh}</span><span class="lang-fr">{hero.statNoResults.fr}</span></span>
                     </div>
                 </div>
             </div>
@@ -56,19 +57,37 @@
 
         <!-- Dedicated line below: event title + timeline + Event Details link -->
         <div class="hero-event">
-            <h2 class="hero-event-title">Procession to Parliament Hill</h2>
+            <h2 class="hero-event-title">
+                <span class="lang-en">{hero.eventTitle.en}</span>
+                <span class="lang-zh">{hero.eventTitle.zh}</span>
+                <span class="lang-fr">{hero.eventTitle.fr}</span>
+            </h2>
             <div class="hero-event-details">
-                <span>Friday, March 13, 2026</span>
+                <span class="lang-en">Friday, March 13, 2026</span>
+                <span class="lang-zh">2026年3月13日 周五</span>
+                <span class="lang-fr">Vendredi 13 mars 2026</span>
                 <span class="hero-event-dot" aria-hidden="true">·</span>
-                <span>8:30 AM – 4:30 PM</span>
+                <span class="lang-en">8:30 AM – 4:30 PM</span>
+                <span class="lang-zh">上午8:30 – 下午4:30</span>
+                <span class="lang-fr">8 h 30 – 16 h 30</span>
                 <span class="hero-event-dot" aria-hidden="true">·</span>
-                <span>Ottawa, Ontario</span>
+                <span class="lang-en">Ottawa, Ontario</span>
+                <span class="lang-zh">渥太华，安大略省</span>
+                <span class="lang-fr">Ottawa, Ontario</span>
             </div>
-            <a href="/event" class="hero-event-link">Event Details</a>
+            <a href="/event" class="hero-event-link">
+                <span class="lang-en">{hero.eventDetailsLink.en}</span>
+                <span class="lang-zh">{hero.eventDetailsLink.zh}</span>
+                <span class="lang-fr">{hero.eventDetailsLink.fr}</span>
+            </a>
         </div>
 
         <div class="cta-buttons">
-            <a href="/join" class="btn-cta">Join Our Movement</a>
+            <a href="/join" class="btn-cta">
+                <span class="lang-en">{hero.joinMovement.en}</span>
+                <span class="lang-zh">{hero.joinMovement.zh}</span>
+                <span class="lang-fr">{hero.joinMovement.fr}</span>
+            </a>
         </div>
     </div>
 </section>

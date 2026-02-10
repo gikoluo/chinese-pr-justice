@@ -3,6 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Hero from '../components/Hero.astro';
 import OurStories from '../components/OurStories.astro';
 import EventPhotos from '../components/EventPhotos.astro';
+import { declarationSection, demandsSection, demandTitles } from '../i18n/strings';
 ---
 
 <BaseLayout title="Justice for Chinese PR Applicants - End Unfair Security Screening Delays">
@@ -11,13 +12,13 @@ import EventPhotos from '../components/EventPhotos.astro';
     <!-- Justice Declaration Section -->
     <section id="declaration" class="declaration-section">
         <div class="container">
-            <h2>Declaration of Justice</h2>
+            <h2><span class="lang-en">{declarationSection.title.en}</span><span class="lang-zh">{declarationSection.title.zh}</span><span class="lang-fr">{declarationSection.title.fr}</span></h2>
             <div class="declaration-content">
                 <div class="declaration-intro">
-                    <h3>We Stand for Fair Immigration Processing</h3>
+                    <h3><span class="lang-en">{declarationSection.introTitle.en}</span><span class="lang-zh">{declarationSection.introTitle.zh}</span><span class="lang-fr">{declarationSection.introTitle.fr}</span></h3>
                     <p>We are Chinese immigrants, students, workers, and families who have followed every rule, paid every fee, and waited patiently for our Permanent Residence applications to be processed. Yet we face unprecedented delays of 40+ months due to prolonged security screening—while IRCC's estimated processing time is 12 months (last updated: January 14, 2026).</p>
                 </div>
-                <h3 class="declaration-subtitle">We Declare That:</h3>
+                <h3 class="declaration-subtitle"><span class="lang-en">{declarationSection.declareThat.en}</span><span class="lang-zh">{declarationSection.declareThat.zh}</span><span class="lang-fr">{declarationSection.declareThat.fr}</span></h3>
                 <ul class="declaration-list declaration-grid">
                     <li><strong>Equality:</strong> We deserve the same processing standards and timelines as applicants from other countries. Current delays disproportionately affect Chinese applicants.</li>
                     <li><strong>Transparency:</strong> We have the right to know why security screening takes 3-5+ years when all admissibility requirements are already met. We deserve clear explanations, not indefinite silence.</li>
@@ -25,8 +26,8 @@ import EventPhotos from '../components/EventPhotos.astro';
                     <li><strong>Accountability:</strong> IRCC's pattern of missed deadlines and broken promises shows systematic failure. We demand accountability for these delays that destroy lives and futures.</li>
                     <li><strong>Human Dignity:</strong> We are not case numbers. We are human beings with families, careers, children, and dreams. Our lives are on hold while bureaucracy fails us.</li>
                 </ul>
-                <h3 class="declaration-subtitle">The Human Cost</h3>
-                <p class="declaration-impact-intro">These delays have severe consequences:</p>
+                <h3 class="declaration-subtitle"><span class="lang-en">{declarationSection.humanCost.en}</span><span class="lang-zh">{declarationSection.humanCost.zh}</span><span class="lang-fr">{declarationSection.humanCost.fr}</span></h3>
+                <p class="declaration-impact-intro"><span class="lang-en">{declarationSection.impactIntro.en}</span><span class="lang-zh">{declarationSection.impactIntro.zh}</span><span class="lang-fr">{declarationSection.impactIntro.fr}</span></p>
                 <ul class="impact-list impact-grid">
                     <li>Children lose eligibility for domestic tuition ($130,000-200,000 per child)</li>
                     <li>Families cannot reunite with elderly parents</li>
@@ -35,7 +36,7 @@ import EventPhotos from '../components/EventPhotos.astro';
                     <li>Work permits expire, forcing families to leave Canada</li>
                     <li>Repeated medical exams and police certificates cost thousands</li>
                 </ul>
-                <p class="declaration-conclusion"><strong>We have waited long enough. We demand action now.</strong></p>
+                <p class="declaration-conclusion"><strong><span class="lang-en">{declarationSection.conclusion.en}</span><span class="lang-zh">{declarationSection.conclusion.zh}</span><span class="lang-fr">{declarationSection.conclusion.fr}</span></strong></p>
             </div>
         </div>
     </section>
@@ -43,63 +44,63 @@ import EventPhotos from '../components/EventPhotos.astro';
     <!-- Calling For / Demands Section -->
     <section id="demands" class="demands-section">
         <div class="container">
-            <h2>What We Are Calling For</h2>
-            <p class="section-intro">We call on the Canadian Government, Immigration Minister, and IRCC to take immediate action:</p>
+            <h2><span class="lang-en">{demandsSection.title.en}</span><span class="lang-zh">{demandsSection.title.zh}</span><span class="lang-fr">{demandsSection.title.fr}</span></h2>
+            <p class="section-intro"><span class="lang-en">{demandsSection.intro.en}</span><span class="lang-zh">{demandsSection.intro.zh}</span><span class="lang-fr">{demandsSection.intro.fr}</span></p>
 
             <div class="demands-grid">
                 <div class="demand-card">
                     <div class="demand-number">1</div>
-                    <h3>Immediate Processing</h3>
+                    <h3><span class="lang-en">{demandTitles.immediate.en}</span><span class="lang-zh">{demandTitles.immediate.zh}</span><span class="lang-fr">{demandTitles.immediate.fr}</span></h3>
                     <p>Complete all security screenings for cases pending over 2 years within 90 days. No more indefinite delays.</p>
                 </div>
 
                 <div class="demand-card">
                     <div class="demand-number">2</div>
-                    <h3>Equal Treatment</h3>
+                    <h3><span class="lang-en">{demandTitles.equal.en}</span><span class="lang-zh">{demandTitles.equal.zh}</span><span class="lang-fr">{demandTitles.equal.fr}</span></h3>
                     <p>Ensure Chinese applicants receive the same processing standards and timelines as applicants from other countries. End discriminatory practices.</p>
                 </div>
 
                 <div class="demand-card">
                     <div class="demand-number">3</div>
-                    <h3>Transparency & Communication</h3>
+                    <h3><span class="lang-en">{demandTitles.transparency.en}</span><span class="lang-zh">{demandTitles.transparency.zh}</span><span class="lang-fr">{demandTitles.transparency.fr}</span></h3>
                     <p>Provide clear explanations for security screening delays beyond 6 months. Give applicants specific information about their cases, not generic responses.</p>
                 </div>
 
                 <div class="demand-card">
                     <div class="demand-number">4</div>
-                    <h3>Accountability for Delays</h3>
+                    <h3><span class="lang-en">{demandTitles.accountability.en}</span><span class="lang-zh">{demandTitles.accountability.zh}</span><span class="lang-fr">{demandTitles.accountability.fr}</span></h3>
                     <p>Hold IRCC accountable for missed deadlines and processing failures. Establish enforceable timelines with consequences for non-compliance.</p>
                 </div>
 
                 <div class="demand-card">
                     <div class="demand-number">5</div>
-                    <h3>Humanitarian Consideration</h3>
+                    <h3><span class="lang-en">{demandTitles.humanitarian.en}</span><span class="lang-zh">{demandTitles.humanitarian.zh}</span><span class="lang-fr">{demandTitles.humanitarian.fr}</span></h3>
                     <p>Implement expedited processing for humanitarian cases: families with children in school, expired work permits, elderly parents, medical emergencies.</p>
                 </div>
 
                 <div class="demand-card">
                     <div class="demand-number">6</div>
-                    <h3>Temporary Measures</h3>
+                    <h3><span class="lang-en">{demandTitles.temporary.en}</span><span class="lang-zh">{demandTitles.temporary.zh}</span><span class="lang-fr">{demandTitles.temporary.fr}</span></h3>
                     <p>Grant domestic tuition eligibility and temporary PR benefits to applicants who have passed all other requirements while security screening completes.</p>
                 </div>
 
                 <div class="demand-card">
                     <div class="demand-number">7</div>
-                    <h3>Mandamus Reform</h3>
+                    <h3><span class="lang-en">{demandTitles.mandamus.en}</span><span class="lang-zh">{demandTitles.mandamus.zh}</span><span class="lang-fr">{demandTitles.mandamus.fr}</span></h3>
                     <p>Support judicial remedies for unreasonable delays. Stop using "national security" as blanket justification to dismiss legitimate Mandamus applications.</p>
                 </div>
 
                 <div class="demand-card">
                     <div class="demand-number">8</div>
-                    <h3>Public Apology</h3>
+                    <h3><span class="lang-en">{demandTitles.apology.en}</span><span class="lang-zh">{demandTitles.apology.zh}</span><span class="lang-fr">{demandTitles.apology.fr}</span></h3>
                     <p>Minister of Immigration must publicly acknowledge the disproportionate impact on Chinese applicants and commit to concrete solutions with timelines.</p>
                 </div>
             </div>
 
             <div class="demands-cta">
-                <h3>Support Our Demands</h3>
-                <p>Add your voice to thousands of affected families. Join us at Parliament Hill.</p>
-                <a href="/join" class="btn btn-primary-large">Join the Movement</a>
+                <h3><span class="lang-en">{demandsSection.supportTitle.en}</span><span class="lang-zh">{demandsSection.supportTitle.zh}</span><span class="lang-fr">{demandsSection.supportTitle.fr}</span></h3>
+                <p><span class="lang-en">{demandsSection.supportDesc.en}</span><span class="lang-zh">{demandsSection.supportDesc.zh}</span><span class="lang-fr">{demandsSection.supportDesc.fr}</span></p>
+                <a href="/join" class="btn btn-primary-large"><span class="lang-en">{demandsSection.joinMovement.en}</span><span class="lang-zh">{demandsSection.joinMovement.zh}</span><span class="lang-fr">{demandsSection.joinMovement.fr}</span></a>
             </div>
         </div>
     </section>

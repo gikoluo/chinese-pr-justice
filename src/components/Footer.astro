@@ -1,47 +1,48 @@
 ---
-// Footer component - shared across all pages
+// Footer component - shared across all pages (EN + 中文)
+import { nav, footer as footerStrings } from '../i18n/strings';
 ---
 
 <footer class="footer">
     <div class="container">
         <div class="footer-content">
             <div class="footer-section">
-                <h4>About This Movement</h4>
-                <p>We are Chinese PR applicants and families who have experienced discriminatory delays in security screening. We demand fair, transparent, and timely immigration processing.</p>
+                <h4><span class="lang-en">{footerStrings.about.en}</span><span class="lang-zh">{footerStrings.about.zh}</span><span class="lang-fr">{footerStrings.about.fr}</span></h4>
+                <p><span class="lang-en">{footerStrings.aboutDesc.en}</span><span class="lang-zh">{footerStrings.aboutDesc.zh}</span><span class="lang-fr">{footerStrings.aboutDesc.fr}</span></p>
             </div>
 
             <div class="footer-section">
-                <h4>Quick Links</h4>
+                <h4><span class="lang-en">{footerStrings.quickLinks.en}</span><span class="lang-zh">{footerStrings.quickLinks.zh}</span><span class="lang-fr">{footerStrings.quickLinks.fr}</span></h4>
                 <ul>
-                    <li><a href="/#declaration">Declaration</a></li>
-                    <li><a href="/#demands">Our Demands</a></li>
-                    <li><a href="/#stories">Stories</a></li>
-                    <li><a href="/event">Event</a></li>
-                    <li><a href="/join">Join Us</a></li>
+                    <li><a href="/#declaration"><span class="lang-en">{nav.declaration.en}</span><span class="lang-zh">{nav.declaration.zh}</span><span class="lang-fr">{nav.declaration.fr}</span></a></li>
+                    <li><a href="/#demands"><span class="lang-en">{nav.demands.en}</span><span class="lang-zh">{nav.demands.zh}</span><span class="lang-fr">{nav.demands.fr}</span></a></li>
+                    <li><a href="/#stories"><span class="lang-en">{nav.stories.en}</span><span class="lang-zh">{nav.stories.zh}</span><span class="lang-fr">{nav.stories.fr}</span></a></li>
+                    <li><a href="/event"><span class="lang-en">{nav.event.en}</span><span class="lang-zh">{nav.event.zh}</span><span class="lang-fr">{nav.event.fr}</span></a></li>
+                    <li><a href="/join"><span class="lang-en">{nav.joinUs.en}</span><span class="lang-zh">{nav.joinUs.zh}</span><span class="lang-fr">{nav.joinUs.fr}</span></a></li>
                 </ul>
             </div>
 
             <div class="footer-section">
-                <h4>Resources</h4>
+                <h4><span class="lang-en">{footerStrings.resources.en}</span><span class="lang-zh">{footerStrings.resources.zh}</span><span class="lang-fr">{footerStrings.resources.fr}</span></h4>
                 <ul>
-                    <li><a href="https://www.canada.ca/en/immigration-refugees-citizenship.html" target="_blank">IRCC Website</a></li>
-                    <li><a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/application/check-processing-times.html" target="_blank">Processing Times</a></li>
-                    <li><a href="https://atip-aiprp.apps.gc.ca/atip/welcome.do" target="_blank">Order GCMS Notes</a></li>
-                    <li><a href="https://www.ourcommons.ca/members/en" target="_blank">Find Your MP</a></li>
+                    <li><a href="https://www.canada.ca/en/immigration-refugees-citizenship.html" target="_blank"><span class="lang-en">{footerStrings.ircc.en}</span><span class="lang-zh">{footerStrings.ircc.zh}</span><span class="lang-fr">{footerStrings.ircc.fr}</span></a></li>
+                    <li><a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/application/check-processing-times.html" target="_blank"><span class="lang-en">{footerStrings.processingTimes.en}</span><span class="lang-zh">{footerStrings.processingTimes.zh}</span><span class="lang-fr">{footerStrings.processingTimes.fr}</span></a></li>
+                    <li><a href="https://atip-aiprp.apps.gc.ca/atip/welcome.do" target="_blank"><span class="lang-en">{footerStrings.gcms.en}</span><span class="lang-zh">{footerStrings.gcms.zh}</span><span class="lang-fr">{footerStrings.gcms.fr}</span></a></li>
+                    <li><a href="https://www.ourcommons.ca/members/en" target="_blank"><span class="lang-en">{footerStrings.findMP.en}</span><span class="lang-zh">{footerStrings.findMP.zh}</span><span class="lang-fr">{footerStrings.findMP.fr}</span></a></li>
                 </ul>
             </div>
 
             <div class="footer-section">
-                <h4>Contact</h4>
+                <h4><span class="lang-en">{footerStrings.contact.en}</span><span class="lang-zh">{footerStrings.contact.zh}</span><span class="lang-fr">{footerStrings.contact.fr}</span></h4>
                 <p><a href="https://chinese-pr-delay.ca">chinese-pr-delay.ca</a></p>
                 <p><a href="mailto:we@chinese-pr-delay.ca">we@chinese-pr-delay.ca</a></p>
-                <p>We stand together for justice.</p>
+                <p><span class="lang-en">{footerStrings.standTogether.en}</span><span class="lang-zh">{footerStrings.standTogether.zh}</span><span class="lang-fr">{footerStrings.standTogether.fr}</span></p>
             </div>
         </div>
 
         <div class="footer-bottom">
-            <p>&copy; 2026 Justice for Chinese PR Applicants. <a href="https://chinese-pr-delay.ca">chinese-pr-delay.ca</a></p>
-            <p class="footer-note">We advocate for fair policy, not against any group or nation. We believe in Canada's values of equality and justice.</p>
+            <p><span class="lang-en">{footerStrings.copyright.en}</span><span class="lang-zh">{footerStrings.copyright.zh}</span><span class="lang-fr">{footerStrings.copyright.fr}</span> <a href="https://chinese-pr-delay.ca">chinese-pr-delay.ca</a></p>
+            <p class="footer-note"><span class="lang-en">{footerStrings.footerNote.en}</span><span class="lang-zh">{footerStrings.footerNote.zh}</span><span class="lang-fr">{footerStrings.footerNote.fr}</span></p>
         </div>
     </div>
 </footer>
