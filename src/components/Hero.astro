@@ -1,242 +1,447 @@
 ---
-// Hero Section component
+// Hero Section - image background, banner panel left, stat card right
 ---
 
 <section class="hero">
-    <div class="container">
-        <div class="hero-grid">
-            <div class="hero-main">
-                <div class="hero-slogan">
-                    <p class="slogan-line slogan-en">Justice Delayed is Justice <em>Denied</em></p>
-                    <p class="slogan-line slogan-fr">La justice retardée est une justice <em>refusée</em></p>
-                    <p class="slogan-line slogan-zh">迟来的正义等于没有正义</p>
-                </div>
-                <p class="hero-subtitle">Chinese PR applicants have waited 40+ months — IRCC estimated: 12 months</p>
-                <div class="cta-buttons">
-                    <a href="/join" class="btn btn-primary">Join Our Movement</a>
-                    <a href="/event" class="btn btn-secondary">Event Details</a>
+    <img
+        src="/images/hero2-bg-feb-9.jpg"
+        alt=""
+        class="hero-bg"
+        loading="eager"
+    />
+    <div class="hero-overlay"></div>
+
+    <div class="hero-inner">
+        <!-- Row: DEMAND block and 40+ block (same height, aligned top/bottom) -->
+        <div class="hero-columns">
+            <div class="hero-left">
+                <div class="hero-banner">
+                    <p class="banner-line-1">WE DEMAND A TIMELY DECISION</p>
+                    <p class="banner-line-2"><span class="banner-delayed">DELAYED</span> BY IRCC</p>
+                    <hr class="banner-rule" />
+                    <p class="banner-demands">
+                        <span>REASONABLE TIMELINES</span>
+                        <span class="banner-sep" aria-hidden="true">||</span>
+                        <span>PROCEDURAL FAIRNESS</span>
+                    </p>
+                    <p class="banner-demands banner-fr">
+                        <span>Délais raisonnables</span>
+                        <span class="banner-sep" aria-hidden="true">|</span>
+                        <span>Équité procédurale</span>
+                    </p>
+                    <p class="banner-demands banner-zh">
+                        <span>明确时限</span>
+                        <span class="banner-sep" aria-hidden="true">|</span>
+                        <span>程序公平</span>
+                    </p>
                 </div>
             </div>
-            <div class="hero-image">
-                <img src="/images/hero-delayed-application.jpg" alt="Canadian PR application stamped DELAYED with passport and 40+ months calendar" />
-            </div>
-            <div class="hero-demands">
-                <h2 class="hero-demands-title">Our Demands</h2>
-                <ol class="hero-demands-list">
-                    <li><span class="demand-num">1.</span> Immediate Processing</li>
-                    <li><span class="demand-num">2.</span> Equal Treatment</li>
-                    <li><span class="demand-num">3.</span> Transparency & Communication</li>
-                    <li><span class="demand-num">4.</span> Accountability for Delays</li>
-                    <li><span class="demand-num">5.</span> Humanitarian Consideration</li>
-                    <li><span class="demand-num">6.</span> Temporary Measures</li>
-                    <li><span class="demand-num">7.</span> Mandamus Reform</li>
-                    <li><span class="demand-num">8.</span> Public Apology</li>
-                </ol>
-                <div class="hero-event-line">
-                    <strong>Procession to Parliament Hill</strong>
-                    March 13, 2026 — Ottawa, Ontario
+            <div class="hero-right">
+                <div class="stat-card">
+                    <div class="stat-red">
+                        <span class="stat-number">40+</span>
+                    </div>
+                    <div class="stat-white">
+                        <span>MONTHS</span>
+                        <span>WAITING FOR</span>
+                        <span>IRCC RESPONSE</span>
+                    </div>
+                    <div class="stat-black">
+                        <span>NO TIMELINES</span>
+                        <span>NO RESULTS</span>
+                    </div>
                 </div>
             </div>
+        </div>
+
+        <!-- Dedicated line below: event title + timeline + Event Details link -->
+        <div class="hero-event">
+            <h2 class="hero-event-title">Procession to Parliament Hill</h2>
+            <div class="hero-event-details">
+                <span>Friday, March 13, 2026</span>
+                <span class="hero-event-dot" aria-hidden="true">·</span>
+                <span>8:30 AM – 4:30 PM</span>
+                <span class="hero-event-dot" aria-hidden="true">·</span>
+                <span>Ottawa, Ontario</span>
+            </div>
+            <a href="/event" class="hero-event-link">Event Details</a>
+        </div>
+
+        <div class="cta-buttons">
+            <a href="/join" class="btn-cta">Join Our Movement</a>
         </div>
     </div>
 </section>
 
 <style>
+    /* ── Section ── */
     .hero {
-        background: linear-gradient(145deg, var(--primary-color) 0%, var(--primary-dark) 100%);
-        color: white;
-        padding: 2.5rem 0;
         position: relative;
+        min-height: 75vh;
+        display: flex;
+        align-items: center;
         overflow: hidden;
     }
 
-    .hero::after {
-        content: '';
+    /* ── Background image ── */
+    .hero-bg {
         position: absolute;
-        top: -50%;
-        right: -10%;
-        width: 40%;
-        height: 200%;
-        background: rgba(255, 255, 255, 0.03);
-        transform: rotate(12deg);
-        pointer-events: none;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        z-index: 0;
     }
 
-    .hero-grid {
-        display: grid;
-        grid-template-columns: 1fr auto 1fr;
-        gap: 2rem;
-        align-items: center;
-        position: relative;
+    /* ── Overlay ── */
+    .hero-overlay {
+        position: absolute;
+        inset: 0;
         z-index: 1;
+        background: linear-gradient(
+            135deg,
+            rgba(15, 26, 67, 0.84) 0%,
+            rgba(15, 26, 67, 0.68) 50%,
+            rgba(15, 26, 67, 0.50) 100%
+        );
     }
 
-    .hero-main {
-        text-align: left;
+    /* ── Content wrapper ── */
+    .hero-inner {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 3.5rem 2rem;
     }
 
-    .hero-slogan {
-        margin-bottom: 1rem;
+    /* ── Two-column layout: DEMAND and 40+ same height, top/bottom aligned ── */
+    .hero-columns {
+        display: flex;
+        align-items: stretch;
+        gap: 3rem;
     }
 
-    .slogan-line {
+    .hero-left {
+        flex: 1;
+        min-width: 0;
+        display: flex;
+    }
+
+    .hero-banner {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        padding: 2rem 2.25rem;
+        background: rgba(245, 240, 230, 0.97);
+        color: var(--text-dark);
+        border-radius: 6px;
+        box-shadow: 0 6px 32px rgba(0, 0, 0, 0.3);
+    }
+
+    .hero-right {
+        flex-shrink: 0;
+        display: flex;
+    }
+
+    .banner-line-1 {
         margin: 0;
-        line-height: 1.15;
+        font-size: clamp(1.35rem, 3vw, 1.85rem);
+        font-weight: 800;
+        letter-spacing: 0.04em;
+        color: var(--text-dark);
+        line-height: 1.2;
+        text-transform: uppercase;
     }
 
-    .slogan-en {
-        font-size: 2.5rem;
-        font-weight: 900;
-        letter-spacing: -0.02em;
-        color: white;
+    .banner-line-2 {
+        margin: 0.3rem 0 0 0;
+        font-size: clamp(2rem, 4.5vw, 3rem);
+        font-weight: 800;
+        letter-spacing: 0.02em;
+        color: var(--text-dark);
+        line-height: 1.1;
     }
 
-    .slogan-en em {
-        font-style: normal;
-        color: #dc2626;
-        background: linear-gradient(180deg, transparent 60%, rgba(220, 38, 38, 0.25) 60%);
-        text-decoration: none;
-        padding: 0 0.15em;
-        text-shadow: 0 0 20px rgba(220, 38, 38, 0.5);
-    }
-
-    .slogan-fr {
-        font-size: 1.125rem;
-        font-weight: 500;
-        opacity: 0.8;
-        margin-top: 0.375rem;
+    .banner-delayed {
+        color: var(--red);
         font-style: italic;
     }
 
-    .slogan-fr em {
-        font-style: italic;
-        color: var(--accent-bright);
-        text-decoration: underline;
-        text-decoration-thickness: 1px;
-        text-underline-offset: 3px;
+    .banner-rule {
+        margin: 0.75rem 0 0.6rem 0;
+        border: none;
+        height: 3px;
+        background: var(--red);
     }
 
-    .slogan-zh {
-        font-size: 1.25rem;
+    .banner-demands {
+        margin: 0;
+        font-size: 1.0625rem;
         font-weight: 700;
-        margin-top: 0.375rem;
-        color: var(--accent-bright);
+        color: var(--text-dark);
+        letter-spacing: 0.02em;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+    }
+
+    .banner-demands .banner-sep {
+        color: var(--red);
+        font-weight: 800;
+        font-size: 1rem;
+    }
+
+    .banner-fr {
+        font-size: 0.9375rem;
+        font-weight: 600;
+        margin-top: 0.2rem;
+    }
+
+    .banner-zh {
+        font-size: 1.0625rem;
+        font-weight: 700;
+        margin-top: 0.25rem;
         letter-spacing: 0.05em;
     }
 
-    .hero-subtitle {
-        font-size: 1rem;
+    /* ── Event block: dedicated line below DEMAND + 40+, enlarged & highlighted ── */
+    .hero-event {
+        margin-top: 1.75rem;
         margin-bottom: 1.25rem;
-        opacity: 0.85;
-        line-height: 1.4;
-        font-weight: 400;
+        padding: 1.25rem 1.5rem;
+        background: rgba(255, 255, 255, 0.12);
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        border-radius: 8px;
+        width: 100%;
     }
 
-    .cta-buttons {
-        display: flex;
-        gap: 0.75rem;
+    .hero-event-title {
+        font-size: clamp(1.5rem, 4vw, 2.25rem);
+        font-weight: 800;
+        color: #fff;
+        margin: 0 0 0.5rem 0;
+        text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+        letter-spacing: 0.02em;
     }
 
-    .hero-image {
+    .hero-event-details {
         display: flex;
         align-items: center;
+        flex-wrap: wrap;
+        gap: 0.35rem;
+        font-size: clamp(1rem, 2vw, 1.125rem);
+        font-weight: 600;
+        color: rgba(255, 255, 255, 0.95);
+    }
+
+    .hero-event-dot {
+        opacity: 0.7;
+        margin: 0 0.2rem;
+    }
+
+    .hero-event-link {
+        display: inline-block;
+        margin-top: 0.75rem;
+        padding: 0.5rem 1rem;
+        font-size: 0.9375rem;
+        font-weight: 600;
+        color: #fff;
+        border: 2px solid rgba(255, 255, 255, 0.85);
+        border-radius: 4px;
+        text-decoration: none;
+        transition: background 0.3s, color 0.3s, border-color 0.3s;
+    }
+
+    .hero-event-link:hover {
+        background: #fff;
+        color: var(--text-dark);
+        border-color: #fff;
+    }
+
+    /* ── CTA buttons ── */
+    .cta-buttons {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    .btn-cta {
+        display: inline-block;
+        text-decoration: none;
+        background: var(--red);
+        color: #fff;
+        padding: 0.75rem 1.5rem;
+        font-size: 0.9375rem;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        border-radius: 4px;
+        transition: background 0.2s;
+    }
+
+    .btn-cta:hover {
+        background: rgb(200, 20, 45);
+    }
+
+    .btn-outline {
+        display: inline-block;
+        text-decoration: none;
+        background: transparent;
+        color: #fff;
+        border: 2px solid rgba(255, 255, 255, 0.85);
+        padding: 0.75rem 1.5rem;
+        font-size: 0.9375rem;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        border-radius: 4px;
+        transition: background 0.3s, color 0.3s, border-color 0.3s;
+    }
+
+    .btn-outline:hover {
+        background: #fff;
+        color: var(--text-dark);
+        border-color: #fff;
+    }
+
+    /* ── Stat card (pure HTML/CSS), stretches to same row height as banner ── */
+    .stat-card {
+        width: 240px;
+        flex: 1;
+        min-height: 0;
+        border: 3px solid #111;
+        border-radius: 6px;
+        overflow: hidden;
+        box-shadow: 0 6px 28px rgba(0, 0, 0, 0.35);
+        text-align: center;
+        font-family: var(--font-body);
+        display: flex;
+        flex-direction: column;
+    }
+
+    .stat-red {
+        background: var(--red);
+        padding: 1.25rem 1rem;
+    }
+
+    .stat-number {
+        display: block;
+        font-size: 5rem;
+        font-weight: 900;
+        color: #fff;
+        line-height: 1;
+        letter-spacing: -0.03em;
+    }
+
+    .stat-white {
+        flex: 1;
+        background: #fff;
+        color: #111;
+        padding: 0.75rem 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.1rem;
         justify-content: center;
     }
 
-    .hero-image img {
-        width: 320px;
-        border-radius: 6px;
-        box-shadow: 0 6px 28px rgba(0, 0, 0, 0.45);
-        border: 3px solid rgba(255, 255, 255, 0.15);
-    }
-
-    .hero-demands {
-        border-left: 3px solid var(--accent-bright);
-        padding-left: 1.25rem;
-    }
-
-    .hero-demands-title {
-        font-size: 1.125rem;
-        font-weight: 800;
-        margin-bottom: 0.5rem;
-        color: var(--accent-bright);
-        text-transform: uppercase;
-        letter-spacing: 0.04em;
-    }
-
-    .hero-demands-list {
-        list-style: none;
-        padding: 0;
-        margin: 0 0 0.75rem;
-    }
-
-    .hero-demands-list li {
-        padding: 0.2rem 0;
-        font-size: 0.875rem;
-        line-height: 1.35;
-        display: flex;
-        gap: 0.4rem;
-        align-items: baseline;
-    }
-
-    .hero-demands-list li .demand-num {
-        color: var(--accent-bright);
-        font-weight: 800;
-        font-size: 0.8125rem;
-        min-width: 1.25rem;
-        flex-shrink: 0;
-    }
-
-    .hero-event-line {
-        margin-top: 0.75rem;
-        padding-top: 0.75rem;
-        border-top: 1px solid rgba(255, 255, 255, 0.2);
-        font-size: 0.875rem;
-        opacity: 0.9;
-    }
-
-    .hero-event-line strong {
+    .stat-white span {
         display: block;
-        font-size: 0.9375rem;
-        color: var(--accent-bright);
+        font-size: 0.95rem;
+        font-weight: 800;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        line-height: 1.3;
     }
 
-    /* Responsive */
-    @media (max-width: 968px) {
-        .hero-grid {
-            grid-template-columns: 1fr;
+    .stat-black {
+        background: #111;
+        color: #fff;
+        padding: 0.75rem 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.1rem;
+    }
+
+    .stat-black span {
+        display: block;
+        font-size: 0.85rem;
+        font-weight: 800;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        line-height: 1.3;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 768px) {
+        .hero {
+            min-height: auto;
         }
 
-        .hero-image {
-            order: -1;
+        .hero-inner {
+            padding: 3rem 1.25rem;
         }
 
-        .hero-image img {
-            width: 100%;
-            max-width: 100%;
+        .hero-columns {
+            flex-direction: column;
+            gap: 2rem;
+            align-items: stretch;
         }
 
-        .hero-demands {
-            border-left: none;
-            padding-left: 0;
-            border-top: 1px solid rgba(255, 255, 255, 0.2);
-            padding-top: 1.5rem;
+        .hero-right {
+            display: flex;
+            justify-content: center;
         }
 
-        .slogan-en {
-            font-size: 1.75rem;
+        .stat-card {
+            width: 200px;
         }
 
-        .slogan-fr {
-            font-size: 1rem;
+        .stat-number {
+            font-size: 3.5rem;
         }
 
-        .slogan-zh {
-            font-size: 1.125rem;
+        .hero-banner {
+            padding: 1.5rem 1.5rem;
         }
 
-        .hero-subtitle {
+        .banner-line-1 {
+            font-size: 1.1rem;
+        }
+
+        .banner-line-2 {
+            font-size: 1.5rem;
+        }
+
+        .banner-demands {
+            font-size: 0.875rem;
+        }
+
+        .banner-fr {
+            font-size: 0.8125rem;
+        }
+
+        .banner-zh {
             font-size: 0.9375rem;
+        }
+
+        .hero-event {
+            margin-top: 1.5rem;
+            padding: 1rem 1.25rem;
+        }
+
+        .hero-event-title {
+            font-size: 1.35rem;
+        }
+
+        .hero-event-details {
+            font-size: 0.9375rem;
+        }
+
+        .cta-buttons {
+            flex-direction: column;
+            align-items: flex-start;
         }
     }
 </style>

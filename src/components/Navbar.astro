@@ -12,7 +12,7 @@ const currentPath = Astro.url.pathname;
 
 <nav class="navbar">
     <div class="container">
-        <a href="/" class="nav-brand">Justice for PR Applicants</a>
+        <a href="/" class="nav-brand">PR Justice Now</a>
         <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
             <span class="nav-toggle-bar"></span>
             <span class="nav-toggle-bar"></span>
@@ -127,14 +127,15 @@ const currentPath = Astro.url.pathname;
         opacity: 1;
     }
 
-    /* Navigation */
+    /* Navigation – hero theme: dark blue gradient, white text, red accent */
     .navbar {
-        background: var(--bg-white);
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        background: linear-gradient(145deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
         position: sticky;
         top: 0;
         z-index: 1000;
-        padding: 0.75rem 0;
+        padding: 0.85rem 0;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.08);
     }
 
     .navbar :global(.container) {
@@ -145,8 +146,17 @@ const currentPath = Astro.url.pathname;
 
     .nav-brand {
         font-size: 1.25rem;
-        font-weight: 700;
-        color: var(--primary-color);
+        font-weight: 800;
+        color: #fff;
+        text-decoration: none;
+        letter-spacing: 0.02em;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+        transition: color 0.2s, opacity 0.2s;
+    }
+
+    .nav-brand:hover {
+        color: rgba(255, 255, 255, 0.95);
+        opacity: 0.95;
     }
 
     .nav-menu {
@@ -155,17 +165,26 @@ const currentPath = Astro.url.pathname;
     }
 
     .nav-menu a {
-        color: var(--text-dark);
+        color: rgba(255, 255, 255, 0.92);
         text-decoration: none;
-        font-weight: 500;
-        transition: color 0.3s;
+        font-weight: 600;
+        font-size: 0.9375rem;
+        letter-spacing: 0.02em;
+        transition: color 0.2s, text-shadow 0.2s;
     }
 
     .nav-menu a:hover {
-        color: var(--accent-color);
+        color: #fff;
+        text-shadow: 0 0 0 1px rgba(255, 255, 255, 0.3);
     }
 
-    /* Mobile hamburger toggle button */
+    .nav-menu a.active {
+        color: #fff;
+        border-bottom: 2px solid var(--red);
+        padding-bottom: 2px;
+    }
+
+    /* Mobile hamburger – white bars on dark nav */
     .nav-toggle {
         display: none;
         flex-direction: column;
@@ -183,7 +202,7 @@ const currentPath = Astro.url.pathname;
         display: block;
         width: 100%;
         height: 2px;
-        background-color: var(--text-dark);
+        background-color: #fff;
         border-radius: 2px;
         transition: transform 0.3s ease, opacity 0.3s ease;
     }
@@ -237,7 +256,7 @@ const currentPath = Astro.url.pathname;
             gap: 0;
             margin-top: 1rem;
             padding-top: 1rem;
-            border-top: 1px solid rgba(0, 0, 0, 0.1);
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
         }
 
         .nav-menu.open {
@@ -246,7 +265,7 @@ const currentPath = Astro.url.pathname;
 
         .nav-menu a {
             padding: 0.75rem 0;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
         }
 
         .nav-menu a:last-child {
@@ -254,7 +273,12 @@ const currentPath = Astro.url.pathname;
         }
 
         .nav-menu a:hover {
-            color: var(--primary-color);
+            color: #fff;
+        }
+
+        .nav-menu a.active {
+            border-bottom: 2px solid var(--red);
+            padding-bottom: 0.5rem;
         }
     }
 </style>
