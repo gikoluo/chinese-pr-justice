@@ -4,24 +4,17 @@
 
 <section class="hero2">
     <div class="hero2-content">
-        <div class="hero2-buttons">
-            <a href="/join" class="btn-cta btn-flip">
-                <span class="btn-text-block">
-                    <span class="btn-text-wrapper">
-                        <span class="hover-out-text">Join Our Movement</span>
-                        <span class="hover-in-text">Join Our Movement</span>
-                    </span>
-                </span>
-            </a>
-            <a href="/event" class="btn-secondary-light btn-flip">
-                <span class="btn-text-block">
-                    <span class="btn-text-wrapper">
-                        <span class="hover-out-text">Event Details</span>
-                        <span class="hover-in-text">Event Details</span>
-                    </span>
-                </span>
-            </a>
+        <h2 class="hero2-title">Procession to Parliament Hill</h2>
+        <p class="hero2-subtitle">March for PR Justice — End Discriminatory Security Screening Delays</p>
+        <p class="hero2-intro">Join us as we march for justice and demand action from the Canadian government.</p>
+        <div class="hero2-quick-info">
+            <span>Friday, March 13, 2026</span>
+            <span class="hero2-quick-divider">·</span>
+            <span>8:30 AM – 4:30 PM</span>
+            <span class="hero2-quick-divider">·</span>
+            <span>Parliament Hill, Ottawa</span>
         </div>
+        <a href="/event" class="hero2-link">Full event details & schedule →</a>
     </div>
 </section>
 
@@ -49,92 +42,60 @@
     }
 
     .hero2-title {
-        font-size: 5rem;
+        font-size: clamp(1.75rem, 4vw, 3rem);
         font-weight: 700;
         color: white;
         margin: 0 0 0.5rem 0;
         line-height: 1.2;
         text-align: left;
-        white-space: nowrap;
     }
 
     .hero2-subtitle {
-        font-size: 2rem;
-        font-weight: 400;
+        font-size: 1.5rem;
+        font-weight: 500;
         color: white;
-        margin: 0;
-        opacity: 0.9;
+        margin: 0 0 0.75rem 0;
+        opacity: 0.95;
         text-align: left;
     }
 
-    .hero2-buttons {
-        margin-top: 2rem;
+    .hero2-intro {
+        font-size: 1.125rem;
+        color: white;
+        margin: 0 0 1rem 0;
+        opacity: 0.9;
+        line-height: 1.5;
+        max-width: 32ch;
+    }
+
+    .hero2-quick-info {
         display: flex;
-        gap: 1rem;
+        align-items: center;
         flex-wrap: wrap;
+        gap: 0.35rem;
+        font-size: 0.9375rem;
+        color: white;
+        opacity: 0.95;
+        margin-bottom: 1rem;
     }
 
-    /* Flip animation base */
-    .btn-flip {
+    .hero2-quick-divider {
+        opacity: 0.7;
+        margin: 0 0.25rem;
+    }
+
+    .hero2-link {
         display: inline-block;
-        text-decoration: none;
-    }
-
-    .btn-text-block {
-        display: block;
-        overflow: hidden;
-        height: 1.25em;
-    }
-
-    .btn-text-wrapper {
-        display: block;
-        transition: transform 0.3s ease;
-    }
-
-    .hover-out-text,
-    .hover-in-text {
-        display: block;
-        height: 1.25em;
-        line-height: 1.25;
-    }
-
-    .btn-flip:hover .btn-text-wrapper {
-        transform: translateY(-50%);
-    }
-
-    .btn-cta {
-        background: rgb(229, 25, 55);
-        color: #ffffff;
-        padding: 0.875rem 1.5rem;
+        color: white;
         font-size: 0.9375rem;
         font-weight: 500;
-        letter-spacing: 0.5px;
-        transition: background 0.2s;
+        text-decoration: underline;
+        text-underline-offset: 3px;
+        transition: opacity 0.2s;
     }
 
-    .btn-cta:hover {
-        background: rgb(200, 20, 45);
-    }
-
-    .btn-secondary-light {
-        background: transparent;
-        color: #ffffff;
-        border: 2px solid #ffffff;
-        padding: 0.875rem 1.5rem;
-        border-radius: 0;
-        font-size: 0.9375rem;
-        font-weight: 500;
-        letter-spacing: 0.5px;
-        transition: background 0.3s, color 0.3s;
-    }
-
-    .btn-secondary-light:hover {
-        background: #ffffff;
-        color: var(--text-dark);
-    }
-
-    .btn-secondary-light .hover-in-text {
-        color: var(--text-dark);
+    .hero2-link:hover {
+        opacity: 0.9;
     }
 
     @media (max-width: 768px) {
@@ -156,9 +117,12 @@
             font-size: 1.125rem;
         }
 
-        .hero2-buttons {
-            flex-direction: column;
-            align-items: flex-start;
+        .hero2-intro {
+            font-size: 1rem;
+        }
+
+        .hero2-quick-info {
+            font-size: 0.875rem;
         }
     }
 </style>
