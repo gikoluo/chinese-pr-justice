@@ -59,6 +59,11 @@ const currentPath = Astro.url.pathname;
                 <span class="lang-zh">{nav.joinUs.zh}</span>
                 <span class="lang-fr">{nav.joinUs.fr}</span>
             </a>
+            <a href="/references" class:list={[{ active: currentPath === '/references' || currentPath === '/references/' }]}>
+                <span class="lang-en">{nav.references.en}</span>
+                <span class="lang-zh">{nav.references.zh}</span>
+                <span class="lang-fr">{nav.references.fr}</span>
+            </a>
             </div>
         </div>
     </div>

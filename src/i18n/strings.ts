@@ -9,6 +9,7 @@ export const nav = {
   stories: { en: 'Stories', zh: '故事', fr: 'Témoignages' },
   event: { en: 'Event', zh: '活动', fr: 'Événement' },
   joinUs: { en: 'Join Us', zh: '加入我们', fr: 'Rejoignez-nous' },
+  references: { en: 'References', zh: '参考文献', fr: 'Références' },
 } as const;
 
 export const announcement = {
@@ -42,143 +43,164 @@ export const footer = {
   findMP: { en: 'Find Your MP', zh: '查找您的国会议员', fr: 'Trouver votre député' },
 } as const;
 
+/** Petition-exact Declaration: WHEREAS bullets and CONCLUSION (verbatim from House_Commons_Petition_CORRECTED.md). */
 export const declarationSection = {
   title: { en: 'Declaration of Justice', zh: '公正宣言', fr: 'Déclaration pour la justice' },
-  introTitle: { en: 'We Stand for Fair Immigration Processing', zh: '我们主张公平的移民审理', fr: 'Nous défendons un traitement équitable de l\'immigration' },
+  introTitle: { en: 'Petition to Address the Worsening Crisis in Permanent Residence Processing Delays', zh: '请愿：应对永久居民审理拖延日益严重的危机', fr: 'Pétition pour faire face à l\'aggravation de la crise des délais de traitement de la résidence permanente' },
   introParagraph: {
-    en: 'We are Chinese immigrants, students, workers, and families who have followed every rule, paid every fee, and waited patiently for our Permanent Residence applications to be processed. Yet we face unprecedented delays of 40+ months due to prolonged security screening—while IRCC\'s estimated processing time is 12 months (last updated: January 14, 2026).',
-    zh: '我们是华人移民、学生、工作者和家庭，遵守了每一项规则，缴纳了每一项费用，耐心等待永久居民申请得到审理。然而，由于漫长的安全背景调查，我们面临超过40个月的空前拖延——而IRCC公布的审理时间约为12个月（最后更新：2026年1月14日）。',
-    fr: 'Nous sommes des immigrants chinois, des étudiants, des travailleurs et des familles qui avons respecté toutes les règles, payé tous les frais et attendu patiemment que nos demandes de résidence permanente soient traitées. Pourtant, nous faisons face à des délais sans précédent de plus de 40 mois en raison d\'une évaluation de sécurité prolongée—alors que le délai de traitement estimé par l\'IRCC est de 12 mois (dernière mise à jour : 14 janvier 2026).',
+    en: 'TO THE GOVERNMENT OF CANADA AND THE HOUSE OF COMMONS IN PARLIAMENT ASSEMBLED:',
+    zh: '致加拿大政府及国会下议院：',
+    fr: 'AU GOUVERNEMENT DU CANADA ET À LA CHAMBRE DES COMMUNES RÉUNIE EN PARLEMENT :',
   },
-  declareThat: { en: 'We Declare That:', zh: '我们声明：', fr: 'Nous déclarons que :' },
-  declareEquality: {
-    en: 'We deserve the same processing standards and timelines as applicants from other countries. Current delays disproportionately affect Chinese applicants.',
-    zh: '我们理应与其他国家申请人享有相同的审理标准和时限。目前的拖延对华人申请人影响尤为严重。',
-    fr: 'Nous méritons les mêmes normes et délais de traitement que les demandeurs d\'autres pays. Les délais actuels affectent de manière disproportionnée les demandeurs chinois.',
+  whereasTitle: { en: 'WHEREAS:', zh: '鉴于：', fr: 'ATTENDU QUE :' },
+  /** One-to-three word topic label for each WHEREAS (en, zh, fr). */
+  whereasTopic: {
+    whereas1: { en: 'Extreme Delays', zh: '极端拖延', fr: 'Délais extrêmes' },
+    whereas2: { en: 'Backlog Statistics', zh: '积压数据', fr: 'Statistiques d\'arriéré' },
+    whereas3: { en: 'PR Backlog', zh: 'PR积压', fr: 'Arriéré RP' },
+    whereas4: { en: 'Crisis Worsening', zh: '危机恶化', fr: 'Crise qui s\'aggrave' },
+    whereas5: { en: 'Reforms Failed', zh: '改革失败', fr: 'Réformes échouées' },
+    whereas6: { en: 'Human Cost', zh: '人道代价', fr: 'Coût humain' },
+    whereas7: { en: 'Discriminatory System', zh: '歧视性制度', fr: 'Système discriminatoire' },
+    whereas8: { en: 'No Recourse', zh: '无救济', fr: 'Aucun recours' },
+  } as const,
+  whereas1: {
+    en: 'Thousands of Permanent Residence (PR) applicants are experiencing extreme delays in security screening, with many cases exceeding 30-40 months — far beyond published service standards;',
+    zh: '数千名永久居民（PR）申请人正经历安全背景调查的极端拖延，许多案件超过30–40个月——远高于公布的审理标准；',
+    fr: 'Des milliers de demandeurs de résidence permanente (RP) subissent des délais extrêmes dans l\'évaluation de sécurité, de nombreux dossiers dépassant 30 à 40 mois — bien au-delà des normes de service publiées ;',
   },
-  declareTransparency: {
-    en: 'We have the right to know why security screening takes 3-5+ years when all admissibility requirements are already met. We deserve clear explanations, not indefinite silence.',
-    zh: '当所有准入要求均已满足时，我们有权知悉为何安全背景调查需要3至5年以上。我们理应得到明确解释，而非无限期的沉默。',
-    fr: 'Nous avons le droit de savoir pourquoi l\'évaluation de sécurité prend 3 à 5 ans et plus lorsque toutes les exigences d\'admissibilité sont déjà remplies. Nous méritons des explications claires, pas un silence indéfini.',
+  whereas2: {
+    en: 'As of November 30, 2025, according to official IRCC statistics [1], Canada\'s immigration system holds **2,130,700 total applications**, with **1,005,800 (47%) in backlog** exceeding service standards — more than double IRCC\'s stated 20% target;',
+    zh: '截至2025年11月30日，根据IRCC官方数据[1]，加拿大移民系统共有**2,130,700份申请**，其中**1,005,800份（47%）处于积压**、超过服务标准——是IRCC所定20%目标的两倍以上；',
+    fr: 'Au 30 novembre 2025, selon les statistiques officielles de l\'IRCC [1], le système d\'immigration du Canada compte **2 130 700 demandes au total**, dont **1 005 800 (47 %) en arriéré** dépassant les normes de service — plus du double de la cible de 20 % de l\'IRCC ;',
   },
-  declareFairness: {
-    en: 'Security screening should not be used as a tool for discrimination. Thorough security checks are reasonable; indefinite delays without explanation are not.',
-    zh: '安全背景调查不应被用作歧视工具。严格的安全审查是合理的；无解释的无限期拖延则不是。',
-    fr: 'L\'évaluation de sécurité ne doit pas servir d\'outil de discrimination. Des contrôles de sécurité rigoureux sont raisonnables ; des délais indéfinis sans explication ne le sont pas.',
+  whereas3: {
+    en: 'For Permanent Residence applications specifically, **the majority are delayed**: of 941,600 total PR applications, only 426,600 (45%) are within service standards while **515,000 (55%) are in backlog** [1];',
+    zh: '就永久居民申请而言，**多数被拖延**：在941,600份PR申请中，仅426,600份（45%）在服务标准内，而**515,000份（55%）处于积压**[1]；',
+    fr: 'Pour les demandes de résidence permanente en particulier, **la majorité sont en retard** : sur 941 600 demandes de RP au total, seulement 426 600 (45 %) respectent les normes de service tandis que **515 000 (55 %) sont en arriéré** [1] ;',
   },
-  declareAccountability: {
-    en: 'IRCC\'s pattern of missed deadlines and broken promises shows systematic failure. We demand accountability for these delays that destroy lives and futures.',
-    zh: 'IRCC一再错过期限、违背承诺，显示出系统性的失败。我们要求对这些摧毁生活和未来的拖延追究责任。',
-    fr: 'La tendance de l\'IRCC à manquer les échéances et à ne pas tenir ses promesses montre un échec systémique. Nous exigeons une responsabilisation pour ces délais qui détruisent des vies et des avenirs.',
+  whereas4: {
+    en: '**THE CRISIS IS WORSENING, NOT IMPROVING:** IRCC\'s own historical data [1] shows that Provincial Nominee Program (Express Entry) backlogs **reached the 20% target by mid-2023**, proving the system can work — yet by November 2025 the backlog has **climbed to 53%**, with government projections showing it will reach **56% by January 2026** — a complete system collapse in just 18 months;',
+    zh: '**危机在恶化，而非改善：** IRCC自身的历史数据[1]显示省提名计划（快速通道）积压**曾在2023年中期达到20%目标**，证明系统可以运转——然而到2025年11月积压已**升至53%**，政府预测**2026年1月将达56%**——仅18个月内系统彻底崩溃；',
+    fr: '**LA CRISE S\'AGGRAVE, ELLE NE S\'AMÉLIORE PAS :** Les données historiques de l\'IRCC [1] montrent que les arriérés du Programme des candidats des provinces (Entrée express) **avaient atteint la cible de 20 % mi-2023**, prouvant que le système peut fonctionner — pourtant en novembre 2025 l\'arriéré **est monté à 53 %**, avec des projections gouvernementales indiquant **56 % en janvier 2026** — un effondrement complet du système en 18 mois ;',
   },
-  declareHumanDignity: {
-    en: 'We are not case numbers. We are human beings with families, careers, children, and dreams. Our lives are on hold while bureaucracy fails us.',
-    zh: '我们不是档案编号。我们是有家庭、事业、子女和梦想的人。在官僚体制辜负我们的同时，我们的人生被搁置。',
-    fr: 'Nous ne sommes pas des numéros de dossier. Nous sommes des êtres humains avec des familles, des carrières, des enfants et des rêves. Nos vies sont en attente alors que la bureaucratie nous fait défaut.',
+  whereas5: {
+    en: 'Despite government initiatives to improve security screening automation [2], the backlog has not only failed to improve but has **worsened dramatically**, demonstrating failure of promised reforms;',
+    zh: '尽管政府推动安全审查自动化[2]，积压不仅未见改善反而**急剧恶化**，表明承诺的改革失败；',
+    fr: 'Malgré les initiatives gouvernementales pour améliorer l\'automatisation de l\'évaluation de sécurité [2], l\'arriéré n\'a pas seulement échoué à s\'améliorer mais s\'est **considérablement aggravé**, démontrant l\'échec des réformes promises ;',
   },
-  humanCost: { en: 'The Human Cost', zh: '人道代价', fr: 'Le coût humain' },
-  impactIntro: { en: 'These delays have severe consequences:', zh: '这些拖延造成严重后果：', fr: 'Ces délais ont de graves conséquences :' },
-  impactTuition: {
-    en: 'Children lose eligibility for domestic tuition ($130,000-200,000 per child)',
-    zh: '子女失去国内学费资格（每名子女约13万至20万加元）',
-    fr: 'Les enfants perdent l\'éligibilité aux frais de scolarité nationaux (130 000 à 200 000 $ par enfant)',
+  whereas6: {
+    en: 'These extreme delays — often **30-40 months or more** beyond published service standards — cause severe and documented harm to applicants and their families, including: **prolonged family separation** (parents unable to reunite with children, spouses living apart for years), **mental health crises** from years of uncertainty with no end date or communication, **loss of legal status and work authorization** leaving families unable to support themselves, **denial of healthcare access** under provincial health systems, **lost career opportunities** and professional stagnation, and **catastrophic financial burdens** including $130,000-$200,000 in excess international education costs for families with children, mounting legal fees, and inability to sponsor family members [3];',
+    zh: '这些极端拖延——往往**超出公布的服务标准30–40个月或更久**——对申请人及其家庭造成严重且有据可查的伤害，包括：**长期家庭分离**（父母无法与子女团聚、配偶分居数年）、**心理健康危机**、**失去合法身份和工作许可**使家庭无法自持、**无法获得省级医疗**、**职业机会丧失**与职业停滞，以及**灾难性经济负担**——包括有子女家庭的国际教育超额成本13万–20万加元、不断增加的律师费、无法担保家庭成员[3]；',
+    fr: 'Ces délais extrêmes — souvent **30 à 40 mois ou plus** au-delà des normes de service publiées — causent un préjudice grave et documenté aux demandeurs et à leurs familles, notamment : **séparation familiale prolongée** (parents incapables de rejoindre leurs enfants, conjoints vivant séparés pendant des années), **crises de santé mentale**, **perte du statut légal et du permis de travail** laissant les familles incapables de subvenir à leurs besoins, **refus d\'accès aux soins** dans les régimes provinciaux, **opportunités professionnelles perdues** et stagnation, et **fardeaux financiers catastrophiques** dont 130 000 à 200 000 $ de frais d\'éducation internationale excessifs pour les familles avec enfants, frais juridiques croissants et impossibilité de parrainer les proches [3] ;',
   },
-  impactReunite: {
-    en: 'Families cannot reunite with elderly parents',
-    zh: '家庭无法与年迈父母团聚',
-    fr: 'Les familles ne peuvent pas se réunir avec leurs parents âgés',
+  whereas7: {
+    en: 'Current processing times of "months, even years" beyond service standards violate applicants\' rights to timely administrative decisions as established in Canadian administrative law, and create a **discriminatory two-tier immigration system** where certain applicants — disproportionately from specific countries of origin — face indefinite delays while others from different backgrounds are processed within normal timeframes [4];',
+    zh: '当前审理时间超出服务标准「数月甚至数年」侵犯了申请人在加拿大行政法下享有的及时行政决定权，并造成**歧视性的双轨移民制度**：部分申请人——不成比例地来自特定来源国——面临无限期拖延，而其他背景的申请人却在正常时限内获批[4]；',
+    fr: 'Les délais de traitement actuels de « mois, voire des années » au-delà des normes de service violent le droit des demandeurs à des décisions administratives en temps opportun établi par le droit administratif canadien, et créent un **système d\'immigration discriminatoire à deux vitesses** où certains demandeurs — disproportionnellement de certains pays d\'origine — subissent des délais indéfinis tandis que d\'autres d\'origines différentes sont traités dans les délais normaux [4] ;',
   },
-  impactCareers: {
-    en: 'Careers are stalled and opportunities lost',
-    zh: '职业停滞，机会丧失',
-    fr: 'Les carrières sont bloquées et les opportunités perdues',
+  whereas8: {
+    en: 'Applicants have no access to transparent information about their cases, no meaningful recourse when service standards are violated by 300-500%, and no compensation for the financial and emotional harm caused by government failures that have been documented but not addressed [5].',
+    zh: '申请人无法获得关于其案件的透明信息，在服务标准被违反300–500%时没有有意义的救济，也没有针对政府已记录却未纠正的失职所造成的经济与精神损害的赔偿[5]。',
+    fr: 'Les demandeurs n\'ont pas accès à une information transparente sur leurs dossiers, aucun recours significatif lorsque les normes de service sont dépassées de 300 à 500 %, et aucune compensation pour le préjudice financier et moral causé par des manquements gouvernementaux documentés mais non corrigés [5].',
   },
-  impactMentalHealth: {
-    en: 'Mental health suffers from years of uncertainty',
-    zh: '多年不确定性损害心理健康',
-    fr: 'La santé mentale souffre d\'années d\'incertitude',
+  conclusionTitle: {
+    en: 'This comprehensive three-pillar solution addresses a worsening crisis that is documented in the government\'s own official data and independent oversight reports. The evidence is undeniable:',
+    zh: '这一全面三支柱方案针对的是政府自身官方数据和独立监督报告所记录的日益严重的危机。证据确凿：',
+    fr: 'Cette solution complète en trois piliers répond à une crise aggravée documentée dans les données officielles du gouvernement et les rapports de surveillance indépendants. Les preuves sont indéniables :',
   },
-  impactWorkPermits: {
-    en: 'Work permits expire, forcing families to leave Canada',
-    zh: '工签到期，迫使家庭离开加拿大',
-    fr: 'Les permis de travail expirent, forçant les familles à quitter le Canada',
+  conclusion1: {
+    en: '**The system is collapsing:** IRCC\'s own statistics show permanent residence backlogs have deteriorated from the 20% target achieved in 2023 to 55% in November 2025, with projections reaching 56% by January 2026 — proving the system CAN work but is currently failing due to inadequate resources and accountability.',
+    zh: '**系统正在崩溃：** IRCC自身统计显示永久居民积压从2023年达到的20%目标恶化到2025年11月的55%，预计2026年1月达56%——证明系统本可以运转，却因资源和问责不足而正在失败。',
+    fr: '**Le système s\'effondre :** les statistiques de l\'IRCC montrent que les arriérés de résidence permanente se sont détériorés de la cible de 20 % atteinte en 2023 à 55 % en novembre 2025, avec des projections à 56 % en janvier 2026 — prouvant que le système PEUT fonctionner mais échoue actuellement faute de ressources et de responsabilisation suffisantes.',
   },
-  impactMedicalExams: {
-    en: 'Repeated medical exams and police certificates cost thousands',
-    zh: '重复体检和无犯罪证明花费数千加元',
-    fr: 'Les examens médicaux et certificats de police répétés coûtent des milliers de dollars',
+  conclusion2: {
+    en: '**Discrimination is documented:** Official NSIRA investigations, Auditor General reports, and Federal Court cases confirm that applicants from certain countries face discriminatory delays, with security screening criteria found "not justifiable on security grounds" and processing disparities documented across seven of eight PR programs.',
+    zh: '**歧视已有记录：** NSIRA正式调查、审计长报告和联邦法院案件均确认，来自某些国家的申请人面临歧视性拖延，安全审查标准被认定「无法从安全角度证明合理」，八项PR计划中有七项存在审理差异。',
+    fr: '**La discrimination est documentée :** les enquêtes officielles du NSIRA, les rapports du vérificateur général et les décisions de la Cour fédérale confirment que les demandeurs de certains pays subissent des délais discriminatoires, les critères d\'évaluation de sécurité ayant été jugés « non justifiables pour des raisons de sécurité » et les disparités de traitement documentées dans sept des huit programmes de RP.',
   },
-  conclusion: { en: 'We have waited long enough. We demand action now.', zh: '我们已等待太久。我们要求立即行动。', fr: 'Nous avons assez attendu. Nous exigeons des mesures maintenant.' },
+  conclusion3: {
+    en: '**Families are suffering with no recourse:** Applicants endure 30-40+ month delays causing family separation, mental health crises, and financial losses of $130,000-$200,000, yet have no access to transparent case information, no independent ombudsman to investigate delays, and no compensation for documented harm.',
+    zh: '**家庭在承受痛苦且无救济：** 申请人忍受30–40个月以上的拖延，导致家庭分离、心理健康危机和13万–20万加元的经济损失，却无法获得透明的案件信息、没有独立监察专员调查拖延、也没有对已记录损害的赔偿。',
+    fr: '**Les familles souffrent sans recours :** les demandeurs endurent des délais de 30 à 40 mois ou plus causant séparation familiale, crises de santé mentale et pertes financières de 130 000 à 200 000 $, sans accès à une information transparente sur leur dossier, sans ombudsman indépendant pour enquêter sur les délais et sans compensation pour le préjudice documenté.',
+  },
+  conclusion4: {
+    en: '**Promised reforms have failed:** Despite government automation initiatives and repeated commitments to improve security screening, backlogs have worsened dramatically, demonstrating that voluntary measures are insufficient and enforceable standards with consequences are required.',
+    zh: '**承诺的改革已失败：** 尽管政府推动自动化和一再承诺改善安全审查，积压却急剧恶化，表明自愿措施不足，必须实施带后果的可执行标准。',
+    fr: '**Les réformes promises ont échoué :** malgré les initiatives d\'automatisation du gouvernement et les engagements répétés d\'améliorer l\'évaluation de sécurité, les arriérés se sont considérablement aggravés, démontrant que les mesures volontaires sont insuffisantes et que des normes exécutoires avec conséquences sont nécessaires.',
+  },
+  conclusionFinal: {
+    en: '**We call on Parliament to act immediately. Thousands of families cannot wait another year while the crisis worsens.**',
+    zh: '**我们呼吁国会立即行动。数千家庭无法在危机恶化中再等一年。**',
+    fr: '**Nous demandons au Parlement d\'agir immédiatement. Des milliers de familles ne peuvent pas attendre une année de plus alors que la crise s\'aggrave.**',
+  },
 } as const;
 
-/** Labels for the "We Declare That" list (bold prefix before each paragraph). */
-export const declarationListLabels = {
-  equality: { en: 'Equality:', zh: '平等：', fr: 'Égalité :' },
-  transparency: { en: 'Transparency:', zh: '透明：', fr: 'Transparence :' },
-  fairness: { en: 'Fairness:', zh: '公平：', fr: 'Équité :' },
-  accountability: { en: 'Accountability:', zh: '问责：', fr: 'Responsabilité :' },
-  humanDignity: { en: 'Human Dignity:', zh: '人的尊严：', fr: 'Dignité humaine :' },
-} as const;
+/** Keys for the 8 WHEREAS bullets (used in index.astro). */
+export const declarationWhereasKeys = ['whereas1', 'whereas2', 'whereas3', 'whereas4', 'whereas5', 'whereas6', 'whereas7', 'whereas8'] as const;
 
+/** Petition-exact: "WE, THE UNDERSIGNED... call upon..." and three-pillar intro. */
 export const demandsSection = {
   title: { en: 'What We Are Calling For', zh: '我们的诉求', fr: 'Nos revendications' },
-  intro: { en: 'We call on the Canadian Government, Immigration Minister, and IRCC to take immediate action:', zh: '我们呼吁加拿大政府、移民部长及IRCC立即采取行动：', fr: 'Nous demandons au gouvernement canadien, au ministre de l\'Immigration et à l\'IRCC d\'agir immédiatement :' },
+  intro: { en: 'WE, THE UNDERSIGNED, residents of Canada, call upon the Government of Canada and the House of Commons to implement a comprehensive three-pillar solution:', zh: '我们，签署人，加拿大居民，呼吁加拿大政府和下议院落实全面三支柱方案：', fr: 'NOUS, SOUS-SIGNÉS, résidents du Canada, demandons au gouvernement du Canada et à la Chambre des communes de mettre en œuvre une solution complète en trois piliers :' },
   supportTitle: { en: 'Support Our Demands', zh: '支持我们的诉求', fr: 'Soutenez nos revendications' },
   supportDesc: { en: 'Add your voice to thousands of affected families. Join us at Parliament Hill.', zh: '与数千个受影响家庭一起发声。加入我们的国会山游行。', fr: 'Ajoutez votre voix à des milliers de familles touchées. Rejoignez-nous sur la Colline du Parlement.' },
   joinMovement: { en: 'Join the Movement', zh: '加入行动', fr: 'Rejoindre le mouvement' },
 } as const;
 
+/** Petition-exact demand titles (verbatim from petition). */
 export const demandTitles: Record<string, { en: string; zh: string; fr: string }> = {
-  immediate: { en: 'Immediate Processing', zh: '立即审理', fr: 'Traitement immédiat' },
-  equal: { en: 'Equal Treatment', zh: '平等对待', fr: 'Traitement égal' },
-  transparency: { en: 'Transparency & Communication', zh: '透明与沟通', fr: 'Transparence et communication' },
-  accountability: { en: 'Accountability for Delays', zh: '对拖延负责', fr: 'Responsabilité des délais' },
-  humanitarian: { en: 'Humanitarian Consideration', zh: '人道考量', fr: 'Considération humanitaire' },
-  temporary: { en: 'Temporary Measures', zh: '临时措施', fr: 'Mesures temporaires' },
-  mandamus: { en: 'Mandamus Reform', zh: '强制令改革', fr: 'Réforme du mandamus' },
-  apology: { en: 'Public Apology', zh: '公开道歉', fr: 'Excuses publiques' },
+  immediate: { en: 'Immediately Address the Backlog Crisis', zh: '立即化解积压危机', fr: 'Résoudre immédiatement la crise des arriérés' },
+  equal: { en: 'Immediately Expedite Low-Risk Cases That Have Completed CSIS Screening', zh: '立即加速已完成CSIS审查的低风险案件', fr: 'Accélérer immédiatement les dossiers à faible risque ayant terminé le screening CSIS' },
+  transparency: { en: 'Ensure Equal Treatment Regardless of Country of Origin', zh: '确保不论来源国平等对待', fr: 'Garantir un traitement égal quel que soit le pays d\'origine' },
+  accountability: { en: 'Provide Transparency and Communication', zh: '提供透明与沟通', fr: 'Assurer la transparence et la communication' },
+  humanitarian: { en: 'Create Independent Oversight', zh: '建立独立监督', fr: 'Créer un contrôle indépendant' },
+  temporary: { en: 'Implement Interim Relief Measures', zh: '落实临时救济措施', fr: 'Mettre en œuvre des mesures de secours intérimaires' },
+  mandamus: { en: 'Establish Parliamentary Oversight with Consequences', zh: '建立带问责的国会监督', fr: 'Établir un contrôle parlementaire avec conséquences' },
+  apology: { en: 'Establish Mandatory Service Standards with Consequences', zh: '建立带问责的强制性服务标准', fr: 'Établir des normes de service obligatoires avec conséquences' },
 };
 
+/** Petition-exact demand bodies (verbatim from petition). */
 export const demandBodies: Record<string, { en: string; zh: string; fr: string }> = {
   immediate: {
-    en: 'Complete all security screenings for cases pending over 2 years within 90 days. No more indefinite delays.',
-    zh: '在90天内完成所有积压超过2年的安全背景调查。不再无限期拖延。',
-    fr: 'Terminer toutes les évaluations de sécurité pour les dossiers en attente depuis plus de 2 ans dans les 90 jours. Plus de délais indéfinis.',
+    en: 'Allocate emergency resources to reverse the worsening trend and clear the 515,000 PR applications in backlog within 12 months, bringing backlog levels back to the 20% target last achieved in 2023 — a level the government has already proven is achievable with proper resource allocation.',
+    zh: '调配应急资源以扭转恶化趋势，在12个月内消化51.5万份PR积压申请，将积压率恢复至2023年曾达到的20%目标——政府已证明在适当资源下可以达到该水平。',
+    fr: 'Allouer des ressources d\'urgence pour inverser la tendance à la détérioration et traiter les 515 000 demandes de RP en arriéré en 12 mois, ramenant le niveau d\'arriéré à la cible de 20 % atteinte en 2023 — niveau que le gouvernement a déjà prouvé atteignable avec une allocation adéquate.',
   },
   equal: {
-    en: 'Ensure Chinese applicants receive the same processing standards and timelines as applicants from other countries. End discriminatory practices.',
-    zh: '确保华人申请人享有与其他国家申请人相同的审理标准和时限。终止歧视性做法。',
-    fr: 'Garantir que les demandeurs chinois bénéficient des mêmes normes et délais de traitement que les demandeurs d\'autres pays. Mettre fin aux pratiques discriminatoires.',
+    en: 'For applicants who have successfully completed CSIS security screening and whose CBSA security screening has exceeded published service standards, immediately expedite final processing to completion within 30 days, recognizing that the primary national security concerns have already been addressed and further delays are unjustifiable.',
+    zh: '对已成功完成CSIS安全审查且CBSA安全审查已超过公布服务标准的申请人，立即在30天内完成最终审理，承认主要国家安全关切已得到处理，进一步拖延无正当理由。',
+    fr: 'Pour les demandeurs ayant terminé avec succès l\'évaluation de sécurité du CSIS et dont l\'évaluation de sécurité de l\'ASFC dépasse les normes de service publiées, accélérer immédiatement le traitement final pour aboutir en 30 jours, en reconnaissant que les principales préoccupations de sécurité nationale ont déjà été traitées et que tout délai supplémentaire est injustifiable.',
   },
   transparency: {
-    en: 'Provide clear explanations for security screening delays beyond 6 months. Give applicants specific information about their cases, not generic responses.',
-    zh: '对超过6个月的安全背景调查拖延提供明确解释。向申请人提供其个案的具体信息，而非笼统回复。',
-    fr: 'Fournir des explications claires pour les délais d\'évaluation de sécurité au-delà de 6 mois. Donner aux demandeurs des informations précises sur leur dossier, pas des réponses génériques.',
+    en: 'Immediately end discriminatory processing practices by conducting an independent audit of security screening processing times by country of origin, implementing corrective measures within 90 days to eliminate identified disparities, and publishing quarterly reports to Parliament on processing times broken down by applicant nationality to ensure ongoing accountability.',
+    zh: '通过按申请人国籍对安全审查审理时间进行独立审计、90天内落实纠正措施以消除已发现的差异，并向国会按申请人国籍分列的审理时间季度报告，立即终止歧视性审理做法，确保持续问责。',
+    fr: 'Mettre fin immédiatement aux pratiques de traitement discriminatoires en réalisant un audit indépendant des délais de traitement de l\'évaluation de sécurité par pays d\'origine, en mettant en œuvre des mesures correctives en 90 jours pour éliminer les disparités constatées, et en publiant des rapports trimestriels au Parlement sur les délais de traitement ventilés par nationalité des demandeurs pour assurer une responsabilisation continue.',
   },
   accountability: {
-    en: 'Hold IRCC accountable for missed deadlines and processing failures. Establish enforceable timelines with consequences for non-compliance.',
-    zh: '追究IRCC对错过期限和审理失败的责任。制定可执行的时限并对不遵守行为施加后果。',
-    fr: 'Tenir l\'IRCC responsable des échéances manquées et des échecs de traitement. Établir des délais exécutoires avec des conséquences en cas de non-conformité.',
+    en: 'Require IRCC, CSIS, and CBSA to provide proactive case updates every 90 days, including which agency is processing the file, what stage the case is at, and estimated completion timelines.',
+    zh: '要求IRCC、CSIS和CBSA每90天主动提供案件更新，包括由哪一机构审理、案件处于何阶段以及预计完成时间。',
+    fr: 'Exiger que l\'IRCC, le CSIS et l\'ASFC fournissent des mises à jour proactives tous les 90 jours, notamment quel organisme traite le dossier, à quel stade en est le dossier et les délais de complétion prévus.',
   },
   humanitarian: {
-    en: 'Implement expedited processing for humanitarian cases: families with children in school, expired work permits, elderly parents, medical emergencies.',
-    zh: '对人道主义个案实施加急审理：子女在学的家庭、工签过期、年迈父母、医疗紧急情况。',
-    fr: 'Mettre en œuvre un traitement accéléré pour les cas humanitaires : familles avec enfants scolarisés, permis de travail expirés, parents âgés, urgences médicales.',
+    en: 'Establish an independent immigration ombudsperson with authority to investigate IRCC processing delays and compel responses to applicant complaints; and create an independent oversight body for CBSA immigration security screening (equivalent to NSIRA\'s oversight of CSIS) with authority to investigate delays, compel agencies to explain processing failures, and order expedited processing for cases with demonstrated hardship.',
+    zh: '设立独立移民监察专员，有权调查IRCC审理拖延并强制回应申请人投诉；并为CBSA移民安全审查建立独立监督机构（相当于NSIRA对CSIS的监督），有权调查拖延、强制机构解释审理失败并责令对证明存在困难的案件加速审理。',
+    fr: 'Créer un ombudsman de l\'immigration indépendant ayant le pouvoir d\'enquêter sur les délais de traitement de l\'IRCC et d\'imposer des réponses aux plaintes des demandeurs ; et créer un organisme de contrôle indépendant pour l\'évaluation de sécurité en immigration de l\'ASFC (équivalent au contrôle du NSIRA sur le CSIS) avec pouvoir d\'enquêter sur les délais, d\'obliger les organismes à expliquer les échecs de traitement et d\'ordonner un traitement accéléré pour les dossiers avec difficultés démontrées.',
   },
   temporary: {
-    en: 'Grant domestic tuition eligibility and temporary PR benefits to applicants who have passed all other requirements while security screening completes.',
-    zh: '在安全背景调查完成期间，对已满足其他所有要求的申请人给予国内学费资格和临时PR福利。',
-    fr: 'Accorder l\'éligibilité aux frais de scolarité nationaux et des avantages temporaires de RP aux demandeurs qui ont satisfait à toutes les autres exigences pendant que l\'évaluation de sécurité se termine.',
+    en: 'For applicants waiting beyond 200% of service standards, immediately grant: (a) open work permits valid until final decision, (b) ability to sponsor immediate family members, and (c) temporary status documents to prevent life disruption.',
+    zh: '对等待时间超过服务标准200%的申请人，立即给予：(a) 有效期至最终决定的开放工签，(b) 担保直系亲属的资格，(c) 临时身份文件以减少生活中断。',
+    fr: 'Pour les demandeurs en attente au-delà de 200 % des normes de service, accorder immédiatement : (a) des permis de travail ouverts valides jusqu\'à la décision finale, (b) la possibilité de parrainer les membres de la famille immédiate, et (c) des documents de statut temporaire pour prévenir les bouleversements de la vie.',
   },
   mandamus: {
-    en: 'Support judicial remedies for unreasonable delays. Stop using "national security" as blanket justification to dismiss legitimate Mandamus applications.',
-    zh: '支持对不合理拖延的司法救济。停止以「国家安全」为笼统理由驳回合法的强制令申请。',
-    fr: 'Soutenir les recours judiciaires pour les délais déraisonnables. Cesser d\'utiliser la « sécurité nationale » comme justification générale pour rejeter les demandes de mandamus légitimes.',
+    en: 'Require the Minister of Immigration, Refugees and Citizenship Canada to appear before the Standing Committee on Citizenship and Immigration quarterly to answer specific questions on: (a) security screening backlogs and why they continue to worsen despite promised reforms, (b) processing time disparities by country of origin with plans to eliminate discrimination, (c) resource allocation and why automation investments have failed to improve outcomes; and mandate that if backlog levels exceed 30% or processing disparities by country are not reduced by 50% within 12 months, the Minister must table an emergency action plan with dedicated funding to Parliament for approval.',
+    zh: '要求加拿大移民、难民及公民部长每季度出席公民与移民常设委员会，就以下具体问题作答：(a) 安全审查积压及为何在承诺改革后仍持续恶化，(b) 按来源国划分的审理时间差异及消除歧视的计划，(c) 资源分配及为何自动化投入未能改善结果；并规定若积压水平超过30%或12个月内按国家划分的审理差异未减少50%，部长须向国会提交带专项资金的紧急行动计划供批准。',
+    fr: 'Exiger que le ministre de l\'Immigration, des Réfugiés et de la Citoyenneté du Canada comparaisse devant le Comité permanent de la citoyenneté et de l\'immigration chaque trimestre pour répondre à des questions précises sur : (a) les arriérés d\'évaluation de sécurité et pourquoi ils continuent de s\'aggraver malgré les réformes promises, (b) les disparités de délais de traitement par pays d\'origine et les plans pour éliminer la discrimination, (c) l\'allocation des ressources et pourquoi les investissements en automatisation n\'ont pas amélioré les résultats ; et exiger que si les niveaux d\'arriéré dépassent 30 % ou si les disparités de traitement par pays ne sont pas réduites de 50 % en 12 mois, le ministre doive déposer un plan d\'action d\'urgence avec financement dédié au Parlement pour approbation.',
   },
   apology: {
-    en: 'Minister of Immigration must publicly acknowledge the disproportionate impact on Chinese applicants and commit to concrete solutions with timelines.',
-    zh: '移民部长必须公开承认对华人申请人的不成比例影响，并承诺在有时限的前提下落实具体解决方案。',
-    fr: 'Le ministre de l\'Immigration doit reconnaître publiquement l\'impact disproportionné sur les demandeurs chinois et s\'engager sur des solutions concrètes avec des échéanciers.',
+    en: 'Implement enforceable service standards with automatic escalation and ministerial review for any case exceeding service standards by more than 100%.',
+    zh: '实施可执行的服务标准，对超过服务标准100%以上的任何案件实行自动升级及部长审查。',
+    fr: 'Mettre en œuvre des normes de service exécutoires avec escalade automatique et examen ministériel pour tout dossier dépassant les normes de service de plus de 100 %.',
   },
 };
 

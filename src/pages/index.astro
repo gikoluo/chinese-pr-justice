@@ -3,64 +3,47 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Hero from '../components/Hero.astro';
 import OurStories from '../components/OurStories.astro';
 import EventPhotos from '../components/EventPhotos.astro';
-import { declarationSection, declarationListLabels, demandsSection, demandTitles, demandBodies } from '../i18n/strings';
+import CitationText from '../components/CitationText.astro';
+import { declarationSection, declarationWhereasKeys, demandsSection, demandTitles, demandBodies } from '../i18n/strings';
 ---
 
 <BaseLayout title="Justice for Chinese PR Applicants - End Unfair Security Screening Delays">
     <Hero />
 
-    <!-- Justice Declaration Section -->
+    <!-- Justice Declaration Section (petition-exact: WHEREAS + CONCLUSION) -->
     <section id="declaration" class="declaration-section">
         <div class="container">
             <h2><span class="lang-en">{declarationSection.title.en}</span><span class="lang-zh">{declarationSection.title.zh}</span><span class="lang-fr">{declarationSection.title.fr}</span></h2>
             <div class="declaration-content">
                 <div class="declaration-intro">
                     <h3><span class="lang-en">{declarationSection.introTitle.en}</span><span class="lang-zh">{declarationSection.introTitle.zh}</span><span class="lang-fr">{declarationSection.introTitle.fr}</span></h3>
-                    <p>
+                    <p class="declaration-to-whom">
                         <span class="lang-en">{declarationSection.introParagraph.en}</span>
                         <span class="lang-zh">{declarationSection.introParagraph.zh}</span>
                         <span class="lang-fr">{declarationSection.introParagraph.fr}</span>
                     </p>
                 </div>
-                <h3 class="declaration-subtitle"><span class="lang-en">{declarationSection.declareThat.en}</span><span class="lang-zh">{declarationSection.declareThat.zh}</span><span class="lang-fr">{declarationSection.declareThat.fr}</span></h3>
-                <ul class="declaration-list declaration-grid">
-                    <li>
-                        <span class="lang-en"><strong>{declarationListLabels.equality.en}</strong> {declarationSection.declareEquality.en}</span>
-                        <span class="lang-zh"><strong>{declarationListLabels.equality.zh}</strong>{declarationSection.declareEquality.zh}</span>
-                        <span class="lang-fr"><strong>{declarationListLabels.equality.fr}</strong> {declarationSection.declareEquality.fr}</span>
-                    </li>
-                    <li>
-                        <span class="lang-en"><strong>{declarationListLabels.transparency.en}</strong> {declarationSection.declareTransparency.en}</span>
-                        <span class="lang-zh"><strong>{declarationListLabels.transparency.zh}</strong>{declarationSection.declareTransparency.zh}</span>
-                        <span class="lang-fr"><strong>{declarationListLabels.transparency.fr}</strong> {declarationSection.declareTransparency.fr}</span>
-                    </li>
-                    <li>
-                        <span class="lang-en"><strong>{declarationListLabels.fairness.en}</strong> {declarationSection.declareFairness.en}</span>
-                        <span class="lang-zh"><strong>{declarationListLabels.fairness.zh}</strong>{declarationSection.declareFairness.zh}</span>
-                        <span class="lang-fr"><strong>{declarationListLabels.fairness.fr}</strong> {declarationSection.declareFairness.fr}</span>
-                    </li>
-                    <li>
-                        <span class="lang-en"><strong>{declarationListLabels.accountability.en}</strong> {declarationSection.declareAccountability.en}</span>
-                        <span class="lang-zh"><strong>{declarationListLabels.accountability.zh}</strong>{declarationSection.declareAccountability.zh}</span>
-                        <span class="lang-fr"><strong>{declarationListLabels.accountability.fr}</strong> {declarationSection.declareAccountability.fr}</span>
-                    </li>
-                    <li>
-                        <span class="lang-en"><strong>{declarationListLabels.humanDignity.en}</strong> {declarationSection.declareHumanDignity.en}</span>
-                        <span class="lang-zh"><strong>{declarationListLabels.humanDignity.zh}</strong>{declarationSection.declareHumanDignity.zh}</span>
-                        <span class="lang-fr"><strong>{declarationListLabels.humanDignity.fr}</strong> {declarationSection.declareHumanDignity.fr}</span>
-                    </li>
+                <h3 class="declaration-subtitle"><span class="lang-en">{declarationSection.whereasTitle.en}</span><span class="lang-zh">{declarationSection.whereasTitle.zh}</span><span class="lang-fr">{declarationSection.whereasTitle.fr}</span></h3>
+                <ul class="declaration-list declaration-whereas-grid">
+                    {declarationWhereasKeys.map((key) => (
+                        <li>
+                            <span class="whereas-topic lang-en">{declarationSection.whereasTopic[key].en}:</span>
+                            <span class="whereas-topic lang-zh">{declarationSection.whereasTopic[key].zh}：</span>
+                            <span class="whereas-topic lang-fr">{declarationSection.whereasTopic[key].fr} :</span>
+                            <span class="lang-en"><CitationText text={declarationSection[key].en} /></span>
+                            <span class="lang-zh"><CitationText text={declarationSection[key].zh} /></span>
+                            <span class="lang-fr"><CitationText text={declarationSection[key].fr} /></span>
+                        </li>
+                    ))}
                 </ul>
-                <h3 class="declaration-subtitle"><span class="lang-en">{declarationSection.humanCost.en}</span><span class="lang-zh">{declarationSection.humanCost.zh}</span><span class="lang-fr">{declarationSection.humanCost.fr}</span></h3>
-                <p class="declaration-impact-intro"><span class="lang-en">{declarationSection.impactIntro.en}</span><span class="lang-zh">{declarationSection.impactIntro.zh}</span><span class="lang-fr">{declarationSection.impactIntro.fr}</span></p>
-                <ul class="impact-list impact-grid">
-                    <li><span class="lang-en">{declarationSection.impactTuition.en}</span><span class="lang-zh">{declarationSection.impactTuition.zh}</span><span class="lang-fr">{declarationSection.impactTuition.fr}</span></li>
-                    <li><span class="lang-en">{declarationSection.impactReunite.en}</span><span class="lang-zh">{declarationSection.impactReunite.zh}</span><span class="lang-fr">{declarationSection.impactReunite.fr}</span></li>
-                    <li><span class="lang-en">{declarationSection.impactCareers.en}</span><span class="lang-zh">{declarationSection.impactCareers.zh}</span><span class="lang-fr">{declarationSection.impactCareers.fr}</span></li>
-                    <li><span class="lang-en">{declarationSection.impactMentalHealth.en}</span><span class="lang-zh">{declarationSection.impactMentalHealth.zh}</span><span class="lang-fr">{declarationSection.impactMentalHealth.fr}</span></li>
-                    <li><span class="lang-en">{declarationSection.impactWorkPermits.en}</span><span class="lang-zh">{declarationSection.impactWorkPermits.zh}</span><span class="lang-fr">{declarationSection.impactWorkPermits.fr}</span></li>
-                    <li><span class="lang-en">{declarationSection.impactMedicalExams.en}</span><span class="lang-zh">{declarationSection.impactMedicalExams.zh}</span><span class="lang-fr">{declarationSection.impactMedicalExams.fr}</span></li>
+                <h3 class="declaration-subtitle declaration-conclusion-heading"><span class="lang-en">{declarationSection.conclusionTitle.en}</span><span class="lang-zh">{declarationSection.conclusionTitle.zh}</span><span class="lang-fr">{declarationSection.conclusionTitle.fr}</span></h3>
+                <ul class="declaration-list conclusion-list">
+                    <li><span class="lang-en"><CitationText text={declarationSection.conclusion1.en} /></span><span class="lang-zh"><CitationText text={declarationSection.conclusion1.zh} /></span><span class="lang-fr"><CitationText text={declarationSection.conclusion1.fr} /></span></li>
+                    <li><span class="lang-en"><CitationText text={declarationSection.conclusion2.en} /></span><span class="lang-zh"><CitationText text={declarationSection.conclusion2.zh} /></span><span class="lang-fr"><CitationText text={declarationSection.conclusion2.fr} /></span></li>
+                    <li><span class="lang-en"><CitationText text={declarationSection.conclusion3.en} /></span><span class="lang-zh"><CitationText text={declarationSection.conclusion3.zh} /></span><span class="lang-fr"><CitationText text={declarationSection.conclusion3.fr} /></span></li>
+                    <li><span class="lang-en"><CitationText text={declarationSection.conclusion4.en} /></span><span class="lang-zh"><CitationText text={declarationSection.conclusion4.zh} /></span><span class="lang-fr"><CitationText text={declarationSection.conclusion4.fr} /></span></li>
                 </ul>
-                <p class="declaration-conclusion"><strong><span class="lang-en">{declarationSection.conclusion.en}</span><span class="lang-zh">{declarationSection.conclusion.zh}</span><span class="lang-fr">{declarationSection.conclusion.fr}</span></strong></p>
+                <p class="declaration-conclusion"><span class="lang-en"><CitationText text={declarationSection.conclusionFinal.en} /></span><span class="lang-zh"><CitationText text={declarationSection.conclusionFinal.zh} /></span><span class="lang-fr"><CitationText text={declarationSection.conclusionFinal.fr} /></span></p>
             </div>
         </div>
     </section>
