@@ -163,6 +163,8 @@ export const demandsSection = {
   supportTitle: { en: 'Support Our Demands', zh: '支持我们的诉求', fr: 'Soutenez nos revendications' },
   supportDesc: { en: 'Add your voice to thousands of affected families. Join us at Parliament Hill.', zh: '与数千个受影响家庭一起发声。加入我们的国会山游行。', fr: 'Ajoutez votre voix à des milliers de familles touchées. Rejoignez-nous sur la Colline du Parlement.' },
   joinMovement: { en: 'Join the Movement', zh: '加入行动', fr: 'Rejoindre le mouvement' },
+  expand: { en: 'Expand', zh: '展开', fr: 'Développer' },
+  collapse: { en: 'Collapse', zh: '收起', fr: 'Réduire' },
 } as const;
 
 /** Petition-exact demand titles (verbatim from petition). */
