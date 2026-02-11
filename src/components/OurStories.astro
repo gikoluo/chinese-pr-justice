@@ -64,7 +64,8 @@ import { storiesSection } from '../i18n/strings';
                 </div>
                 <div class="story-header">
                     <div class="story-meta">
-                        <p class="story-meta-line"><span class="story-meta-title">Jeff Yan</span>, <span class="story-location">Canada</span></p>
+                        <p class="story-meta-line"><span class="story-meta-title">Jeff Yan</span></p>
+                        <p class="story-meta-line story-meta-profession"><span class="story-profession">International Trade Manager</span>, <span class="story-location">Canada</span></p>
                     </div>
                 </div>
                 <p class="story-teaser">My journey to secure permanent residency in Canada has turned into a nightmare of bureaucratic inaction and inexplicable delays. I submitted my federal application in November 2022, hoping for a new beginning for my family. Security passed in December 2023—then inexplicably reverted to "Security in Progress" in January 2024. Over a year later, two Mandamus applications dismissed, MP interventions with no results. I am demanding that IRCC and CBSA address the facts and finalize my application immediately.</p>
@@ -262,8 +263,18 @@ import { storiesSection } from '../i18n/strings';
         line-height: 1.4;
     }
 
+    .story-meta-line.story-meta-profession {
+        margin-top: 0.25rem;
+        font-size: 0.9375rem;
+        font-weight: 600;
+    }
+
+    .story-meta-line .story-profession {
+        color: #e2e8f0;
+    }
+
     .story-meta-line .story-location {
-        font-weight: 700;
+        font-weight: 600;
         color: #cbd5e0;
     }
 
