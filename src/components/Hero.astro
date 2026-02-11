@@ -42,7 +42,7 @@ import { hero, heroStats } from '../i18n/strings';
                 <div class="stat-slider" id="hero-stat-slider">
                     <div class="stat-slider-track" id="hero-stat-track">
                         <div class="stat-slide">
-                            <div class="stat-card" data-slide-index="0" data-odometer-target="30">
+                            <div class="stat-card" data-slide-index="0" data-odometer-target="30" data-odometer-slow-target="40">
                                 <div class="stat-red">
                                     <span class="stat-number"><span id="hero-odometer-months" class="odometer">0</span><span class="stat-suffix">+</span></span>
                                 </div>
@@ -636,6 +636,7 @@ import { hero, heroStats } from '../i18n/strings';
         var totalSlides = 3;
         var intervalMs = 8000;
         var durationMs = 1200;
+        var monthsSlowDurationMs = 6000;
 
         function easeOutQuart(t) {
             return 1 - (1 - t) * (1 - t) * (1 - t) * (1 - t);
@@ -664,9 +665,14 @@ import { hero, heroStats } from '../i18n/strings';
                 el = document.getElementById('hero-odometer-months');
                 card = el && el.closest('.stat-card');
                 target = card ? parseInt(card.getAttribute('data-odometer-target'), 10) : 30;
+                var slowTarget = card ? parseInt(card.getAttribute('data-odometer-slow-target'), 10) : 40;
                 if (el && !isNaN(target)) {
                     el.textContent = '0';
-                    animateValue(el, 0, target, durationMs);
+                    animateValue(el, 0, target, durationMs, function() {
+                        if (!isNaN(slowTarget) && slowTarget > target) {
+                            animateValue(el, target, slowTarget, monthsSlowDurationMs);
+                        }
+                    });
                 }
             } else if (index === 1) {
                 el = document.getElementById('hero-odometer-pct');
