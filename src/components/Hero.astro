@@ -40,7 +40,7 @@ import { hero } from '../i18n/strings';
             <div class="hero-right">
                 <div class="stat-card">
                     <div class="stat-red">
-                        <span class="stat-number">40+</span>
+                        <span class="stat-number"><span id="months-odometer" class="odometer">18</span><span class="stat-plus">+</span></span>
                     </div>
                     <div class="stat-white">
                         <span><span class="lang-en">{hero.statMonths.en}</span><span class="lang-zh">{hero.statMonths.zh}</span><span class="lang-fr">{hero.statMonths.fr}</span></span>
@@ -75,19 +75,24 @@ import { hero } from '../i18n/strings';
                 <span class="lang-zh">渥太华，安大略省</span>
                 <span class="lang-fr">Ottawa, Ontario</span>
             </div>
-            <a href="/event" class="hero-event-link">
-                <span class="lang-en">{hero.eventDetailsLink.en}</span>
-                <span class="lang-zh">{hero.eventDetailsLink.zh}</span>
-                <span class="lang-fr">{hero.eventDetailsLink.fr}</span>
-            </a>
-        </div>
-
-        <div class="cta-buttons">
-            <a href="/join" class="btn-cta">
-                <span class="lang-en">{hero.joinMovement.en}</span>
-                <span class="lang-zh">{hero.joinMovement.zh}</span>
-                <span class="lang-fr">{hero.joinMovement.fr}</span>
-            </a>
+            <div class="hero-event-buttons">
+                <a href="/join" class="btn-cta btn-flip">
+                    <span class="btn-text-block">
+                        <span class="btn-text-wrapper">
+                            <span class="hover-out-text"><span class="lang-en">{hero.joinMovement.en}</span><span class="lang-zh">{hero.joinMovement.zh}</span><span class="lang-fr">{hero.joinMovement.fr}</span></span>
+                            <span class="hover-in-text"><span class="lang-en">{hero.joinMovement.en}</span><span class="lang-zh">{hero.joinMovement.zh}</span><span class="lang-fr">{hero.joinMovement.fr}</span></span>
+                        </span>
+                    </span>
+                </a>
+                <a href="/event" class="hero-event-link btn-flip">
+                    <span class="btn-text-block">
+                        <span class="btn-text-wrapper">
+                            <span class="hover-out-text"><span class="lang-en">{hero.eventDetailsLink.en}</span><span class="lang-zh">{hero.eventDetailsLink.zh}</span><span class="lang-fr">{hero.eventDetailsLink.fr}</span></span>
+                            <span class="hover-in-text"><span class="lang-en">{hero.eventDetailsLink.en}</span><span class="lang-zh">{hero.eventDetailsLink.zh}</span><span class="lang-fr">{hero.eventDetailsLink.fr}</span></span>
+                        </span>
+                    </span>
+                </a>
+            </div>
         </div>
     </div>
 </section>
@@ -245,11 +250,13 @@ import { hero } from '../i18n/strings';
         margin: 0 0 0.5rem 0;
         text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
         letter-spacing: 0.02em;
+        text-align: center;
     }
 
     .hero-event-details {
         display: flex;
         align-items: center;
+        justify-content: center;
         flex-wrap: wrap;
         gap: 0.35rem;
         font-size: clamp(1rem, 2vw, 1.125rem);
@@ -262,10 +269,17 @@ import { hero } from '../i18n/strings';
         margin: 0 0.2rem;
     }
 
+    .hero-event-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin-top: 0.75rem;
+        flex-wrap: wrap;
+    }
+
     .hero-event-link {
         display: inline-block;
-        margin-top: 0.75rem;
-        padding: 0.5rem 1rem;
+        padding: 0.75rem 1.5rem;
         font-size: 0.9375rem;
         font-weight: 600;
         color: #fff;
@@ -281,21 +295,13 @@ import { hero } from '../i18n/strings';
         border-color: #fff;
     }
 
-    /* ── CTA buttons ── */
-    .cta-buttons {
-        display: flex;
-        gap: 1rem;
-        flex-wrap: wrap;
-    }
-
+    /* CTA Button with Flip Animation */
     .btn-cta {
-        display: inline-block;
-        text-decoration: none;
-        background: var(--red);
-        color: #fff;
-        padding: 0.75rem 1.5rem;
+        background: rgb(229, 25, 55);
+        color: #ffffff;
+        padding: 0.875rem 1.5rem;
         font-size: 0.9375rem;
-        font-weight: 600;
+        font-weight: 500;
         letter-spacing: 0.5px;
         border-radius: 4px;
         transition: background 0.2s;
@@ -305,24 +311,32 @@ import { hero } from '../i18n/strings';
         background: rgb(200, 20, 45);
     }
 
-    .btn-outline {
+    /* Flip animation */
+    .btn-flip {
         display: inline-block;
         text-decoration: none;
-        background: transparent;
-        color: #fff;
-        border: 2px solid rgba(255, 255, 255, 0.85);
-        padding: 0.75rem 1.5rem;
-        font-size: 0.9375rem;
-        font-weight: 600;
-        letter-spacing: 0.5px;
-        border-radius: 4px;
-        transition: background 0.3s, color 0.3s, border-color 0.3s;
     }
 
-    .btn-outline:hover {
-        background: #fff;
-        color: var(--text-dark);
-        border-color: #fff;
+    .btn-text-block {
+        display: block;
+        overflow: hidden;
+        height: 1.25em;
+    }
+
+    .btn-text-wrapper {
+        display: block;
+        transition: transform 0.3s ease;
+    }
+
+    .hover-out-text,
+    .hover-in-text {
+        display: block;
+        height: 1.25em;
+        line-height: 1.25;
+    }
+
+    .btn-flip:hover .btn-text-wrapper {
+        transform: translateY(-50%);
     }
 
     /* ── Stat card (pure HTML/CSS), stretches to same row height as banner ── */
@@ -346,7 +360,9 @@ import { hero } from '../i18n/strings';
     }
 
     .stat-number {
-        display: block;
+        display: flex;
+        align-items: baseline;
+        justify-content: center;
         font-size: 5rem;
         font-weight: 900;
         color: #fff;
@@ -458,9 +474,86 @@ import { hero } from '../i18n/strings';
             font-size: 0.9375rem;
         }
 
-        .cta-buttons {
+        .hero-event-buttons {
             flex-direction: column;
-            align-items: flex-start;
+            align-items: stretch;
+        }
+
+        .hero-event-buttons .btn-cta,
+        .hero-event-buttons .hero-event-link {
+            text-align: center;
+        }
+    }
+
+    /* Odometer custom styles for white text */
+    .odometer.odometer-auto-theme,
+    .odometer.odometer-theme-default {
+        font-family: var(--font-body);
+        font-size: 5rem;
+        font-weight: 900;
+        line-height: 1;
+        letter-spacing: -0.03em;
+        font-variant-numeric: tabular-nums;
+    }
+
+    .odometer .odometer-digit {
+        width: 0.6em;
+        text-align: center;
+    }
+
+    .odometer.odometer-auto-theme .odometer-digit,
+    .odometer.odometer-theme-default .odometer-digit {
+        background: transparent;
+        color: #fff;
+    }
+
+    .odometer.odometer-auto-theme .odometer-digit .odometer-digit-inner,
+    .odometer.odometer-theme-default .odometer-digit .odometer-digit-inner {
+        color: #fff;
+    }
+
+    .stat-plus {
+        font-size: 5rem;
+        font-weight: 900;
+        color: #fff;
+        line-height: 1;
+        letter-spacing: -0.03em;
+    }
+
+    @media (max-width: 768px) {
+        .odometer.odometer-auto-theme,
+        .odometer.odometer-theme-default,
+        .stat-plus {
+            font-size: 3.5rem;
         }
     }
 </style>
+
+<!-- Odometer CSS (Default theme) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/odometer@0.4.8/themes/odometer-theme-default.min.css" />
+
+<!-- Odometer JS -->
+<script src="https://cdn.jsdelivr.net/npm/odometer@0.4.8/odometer.min.js" is:inline></script>
+
+<script is:inline>
+    document.addEventListener('DOMContentLoaded', function() {
+        const el = document.getElementById('months-odometer');
+        if (!el) return;
+
+        let currentValue = 18;
+        const minValue = 18;
+        const maxValue = 68;
+
+        // Set initial value
+        el.innerHTML = currentValue;
+
+        // Increment every 3 seconds
+        setInterval(function() {
+            currentValue++;
+            if (currentValue > maxValue) {
+                currentValue = minValue;
+            }
+            el.innerHTML = currentValue;
+        }, 3000);
+    });
+</script>
