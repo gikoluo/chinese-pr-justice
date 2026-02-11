@@ -16,11 +16,28 @@ export const announcement = {
   event: { en: 'Procession to Parliament Hill — March 13, 2026 — Ottawa, Ontario', zh: '国会山游行 — 2026年3月13日 — 渥太华，安大略省', fr: 'Marche vers la Colline du Parlement — 13 mars 2026 — Ottawa, Ontario' },
 } as const;
 
+/** Real PR stats from IRCC application inventory (Canada.ca). Update when inventory page updates. */
+export const heroStats = {
+  prBacklogPercent: 55,
+  prBacklogThousands: 515,
+  dataDate: 'Nov 2025',
+  sourceUrl: 'https://www.canada.ca/en/immigration-refugees-citizenship/corporate/reports-statistics/statistics-open-data/immigration-stats/application-inventory.html',
+} as const;
+
 export const hero = {
   eventTitle: { en: 'Procession to Parliament Hill', zh: '国会山游行', fr: 'Marche vers la Colline du Parlement' },
   eventDetails: { en: 'Friday, March 13, 2026 · 8:30 AM – 4:30 PM · Ottawa, Ontario', zh: '2026年3月13日 周五 · 上午8:30 – 下午4:30 · 渥太华，安大略省', fr: 'Vendredi 13 mars 2026 · 8 h 30 – 16 h 30 · Ottawa, Ontario' },
   eventDetailsLink: { en: 'Event Details', zh: '活动详情', fr: 'Détails de l\'événement' },
   joinMovement: { en: 'Join Our Movement', zh: '加入我们', fr: 'Rejoignez le mouvement' },
+  /** Hero stat card: main label (PR in backlog) */
+  statMainLabel: { en: 'PR IN BACKLOG', zh: 'PR积压', fr: 'RP EN ARRIÉRÉ' },
+  /** Hero stat card: sub label (beyond service standards) */
+  statSubLabel: { en: 'BEYOND SERVICE STANDARDS', zh: '超出服务标准', fr: 'AU-DELÀ DES NORMES' },
+  /** Hero stat card: data date */
+  statDataDate: { en: 'Nov 2025', zh: '2025年11月', fr: 'Nov. 2025' },
+  /** Hero stat card: source link text */
+  statSource: { en: 'Source: Canada.ca', zh: '来源：Canada.ca', fr: 'Source : Canada.ca' },
+  /* Legacy keys kept for any other references */
   statMonths: { en: 'MONTHS', zh: '个月', fr: 'MOIS' },
   statWaiting: { en: 'WAITING FOR', zh: '等待', fr: 'EN ATTENTE DE' },
   statResponse: { en: 'IRCC RESPONSE', zh: 'IRCC无回复', fr: 'RÉPONSE IRCC' },

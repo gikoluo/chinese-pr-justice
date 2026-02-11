@@ -1,6 +1,6 @@
 ---
 // Hero Section - image background, banner panel left, stat card right (EN + 中文)
-import { hero } from '../i18n/strings';
+import { hero, heroStats } from '../i18n/strings';
 ---
 
 <section class="hero">
@@ -38,9 +38,62 @@ import { hero } from '../i18n/strings';
                 </div>
             </div>
             <div class="hero-right">
-                <div class="stat-card">
+                <!-- On-screen: 3-card slider (30+ months, 55%, 515K) -->
+                <div class="stat-slider" id="hero-stat-slider">
+                    <div class="stat-slider-track" id="hero-stat-track">
+                        <div class="stat-slide">
+                            <div class="stat-card" data-slide-index="0" data-odometer-target="30">
+                                <div class="stat-red">
+                                    <span class="stat-number"><span id="hero-odometer-months" class="odometer">0</span><span class="stat-suffix">+</span></span>
+                                </div>
+                                <div class="stat-white">
+                                    <span><span class="lang-en">{hero.statMonths.en}</span><span class="lang-zh">{hero.statMonths.zh}</span><span class="lang-fr">{hero.statMonths.fr}</span></span>
+                                    <span><span class="lang-en">{hero.statWaiting.en}</span><span class="lang-zh">{hero.statWaiting.zh}</span><span class="lang-fr">{hero.statWaiting.fr}</span></span>
+                                    <span><span class="lang-en">{hero.statResponse.en}</span><span class="lang-zh">{hero.statResponse.zh}</span><span class="lang-fr">{hero.statResponse.fr}</span></span>
+                                </div>
+                                <div class="stat-black">
+                                    <span><span class="lang-en">{hero.statNoTimelines.en}</span><span class="lang-zh">{hero.statNoTimelines.zh}</span><span class="lang-fr">{hero.statNoTimelines.fr}</span></span>
+                                    
+                                    <span><span class="lang-en">{hero.statNoResults.en}</span><span class="lang-zh">{hero.statNoResults.zh}</span><span class="lang-fr">{hero.statNoResults.fr}</span></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="stat-slide">
+                            <div class="stat-card" data-odometer-target={heroStats.prBacklogPercent} data-slide-index="1">
+                                <div class="stat-red">
+                                    <span class="stat-number"><span id="hero-odometer-pct" class="odometer">0</span><span class="stat-suffix">%</span></span>
+                                </div>
+                                <div class="stat-white">
+                                    <span><span class="lang-en">{hero.statMainLabel.en}</span><span class="lang-zh">{hero.statMainLabel.zh}</span><span class="lang-fr">{hero.statMainLabel.fr}</span></span>
+                                    <span><span class="lang-en">{hero.statSubLabel.en}</span><span class="lang-zh">{hero.statSubLabel.zh}</span><span class="lang-fr">{hero.statSubLabel.fr}</span></span>
+                                    <span class="stat-data-date"><span class="lang-en">{hero.statDataDate.en}</span><span class="lang-zh">{hero.statDataDate.zh}</span><span class="lang-fr">{hero.statDataDate.fr}</span></span>
+                                </div>
+                                <div class="stat-black">
+                                    <a href={heroStats.sourceUrl} target="_blank" rel="noopener noreferrer" class="stat-source-link"><span class="lang-en">{hero.statSource.en}</span><span class="lang-zh">{hero.statSource.zh}</span><span class="lang-fr">{hero.statSource.fr}</span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="stat-slide">
+                            <div class="stat-card" data-odometer-target={heroStats.prBacklogThousands} data-slide-index="2">
+                                <div class="stat-red">
+                                    <span class="stat-number"><span id="hero-odometer-k" class="odometer">0</span><span class="stat-suffix">K</span></span>
+                                </div>
+                                <div class="stat-white">
+                                    <span><span class="lang-en">{hero.statMainLabel.en}</span><span class="lang-zh">{hero.statMainLabel.zh}</span><span class="lang-fr">{hero.statMainLabel.fr}</span></span>
+                                    <span><span class="lang-en">{hero.statSubLabel.en}</span><span class="lang-zh">{hero.statSubLabel.zh}</span><span class="lang-fr">{hero.statSubLabel.fr}</span></span>
+                                    <span class="stat-data-date"><span class="lang-en">{hero.statDataDate.en}</span><span class="lang-zh">{hero.statDataDate.zh}</span><span class="lang-fr">{hero.statDataDate.fr}</span></span>
+                                </div>
+                                <div class="stat-black">
+                                    <a href={heroStats.sourceUrl} target="_blank" rel="noopener noreferrer" class="stat-source-link"><span class="lang-en">{hero.statSource.en}</span><span class="lang-zh">{hero.statSource.zh}</span><span class="lang-fr">{hero.statSource.fr}</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Print / offline banner: 30+ months only -->
+                <div class="stat-card stat-card-print" aria-hidden="true">
                     <div class="stat-red">
-                        <span class="stat-number"><span id="months-odometer" class="odometer">18</span><span class="stat-plus">+</span></span>
+                        <span class="stat-number">30<span class="stat-suffix">+</span></span>
                     </div>
                     <div class="stat-white">
                         <span><span class="lang-en">{hero.statMonths.en}</span><span class="lang-zh">{hero.statMonths.zh}</span><span class="lang-fr">{hero.statMonths.fr}</span></span>
@@ -49,6 +102,7 @@ import { hero } from '../i18n/strings';
                     </div>
                     <div class="stat-black">
                         <span><span class="lang-en">{hero.statNoTimelines.en}</span><span class="lang-zh">{hero.statNoTimelines.zh}</span><span class="lang-fr">{hero.statNoTimelines.fr}</span></span>
+                        <span class="stat-print-sep" aria-hidden="true"> / </span>
                         <span><span class="lang-en">{hero.statNoResults.en}</span><span class="lang-zh">{hero.statNoResults.zh}</span><span class="lang-fr">{hero.statNoResults.fr}</span></span>
                     </div>
                 </div>
@@ -339,6 +393,30 @@ import { hero } from '../i18n/strings';
         transform: translateY(-50%);
     }
 
+    /* ── Stat slider (3 cards: 30+, 55%, 515K) ── */
+    .stat-slider {
+        width: 240px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .stat-slider-track {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+        will-change: transform;
+    }
+
+    .stat-slide {
+        min-width: 100%;
+        flex-shrink: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .stat-slider .stat-card {
+        width: 240px;
+    }
+
     /* ── Stat card (pure HTML/CSS), stretches to same row height as banner ── */
     .stat-card {
         width: 240px;
@@ -429,6 +507,14 @@ import { hero } from '../i18n/strings';
             justify-content: center;
         }
 
+        .stat-slider {
+            width: 200px;
+        }
+
+        .stat-slider .stat-card {
+            width: 200px;
+        }
+
         .stat-card {
             width: 200px;
         }
@@ -485,34 +571,16 @@ import { hero } from '../i18n/strings';
         }
     }
 
-    /* Odometer custom styles for white text */
-    .odometer.odometer-auto-theme,
-    .odometer.odometer-theme-default {
+    /* Count-up number (replaces odometer; same look) */
+    .stat-number .odometer,
+    .stat-number [id^="hero-odometer-"] {
         font-family: var(--font-body);
-        font-size: 5rem;
-        font-weight: 900;
-        line-height: 1;
-        letter-spacing: -0.03em;
+        font-size: inherit;
+        font-weight: inherit;
         font-variant-numeric: tabular-nums;
     }
 
-    .odometer .odometer-digit {
-        width: 0.6em;
-        text-align: center;
-    }
-
-    .odometer.odometer-auto-theme .odometer-digit,
-    .odometer.odometer-theme-default .odometer-digit {
-        background: transparent;
-        color: #fff;
-    }
-
-    .odometer.odometer-auto-theme .odometer-digit .odometer-digit-inner,
-    .odometer.odometer-theme-default .odometer-digit .odometer-digit-inner {
-        color: #fff;
-    }
-
-    .stat-plus {
+    .stat-suffix {
         font-size: 5rem;
         font-weight: 900;
         color: #fff;
@@ -520,40 +588,115 @@ import { hero } from '../i18n/strings';
         letter-spacing: -0.03em;
     }
 
+    .stat-data-date {
+        font-size: 0.85rem;
+        font-weight: 600;
+        opacity: 0.9;
+    }
+
+    .stat-source-link {
+        color: #fff;
+        text-decoration: none;
+        font-weight: 800;
+    }
+
+    .stat-source-link:hover {
+        color: #fff;
+        text-decoration: underline;
+        opacity: 0.9;
+    }
+
+    /* Print/offline banner: hidden on screen, shown when printing */
+    .stat-card-print {
+        display: none;
+    }
+
+    @media print {
+        .stat-slider {
+            display: none !important;
+        }
+        .stat-card-print {
+            display: block !important;
+        }
+    }
+
     @media (max-width: 768px) {
-        .odometer.odometer-auto-theme,
-        .odometer.odometer-theme-default,
-        .stat-plus {
+        .stat-suffix {
             font-size: 3.5rem;
         }
     }
 </style>
 
-<!-- Odometer CSS (Default theme) -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/odometer@0.4.8/themes/odometer-theme-default.min.css" />
-
-<!-- Odometer JS -->
-<script src="https://cdn.jsdelivr.net/npm/odometer@0.4.8/odometer.min.js" is:inline></script>
-
 <script is:inline>
     document.addEventListener('DOMContentLoaded', function() {
-        const el = document.getElementById('months-odometer');
-        if (!el) return;
+        var track = document.getElementById('hero-stat-track');
+        if (!track) return;
 
-        let currentValue = 18;
-        const minValue = 18;
-        const maxValue = 68;
+        var slideIndex = 0;
+        var totalSlides = 3;
+        var intervalMs = 8000;
+        var durationMs = 1200;
 
-        // Set initial value
-        el.innerHTML = currentValue;
+        function easeOutQuart(t) {
+            return 1 - (1 - t) * (1 - t) * (1 - t) * (1 - t);
+        }
 
-        // Increment every 3 seconds
-        setInterval(function() {
-            currentValue++;
-            if (currentValue > maxValue) {
-                currentValue = minValue;
+        function animateValue(el, from, to, durationMs, callback) {
+            if (!el) return;
+            var start = null;
+            function step(timestamp) {
+                if (start === null) start = timestamp;
+                var elapsed = timestamp - start;
+                var progress = Math.min(elapsed / durationMs, 1);
+                var eased = easeOutQuart(progress);
+                var current = Math.round(from + (to - from) * eased);
+                el.textContent = current;
+                if (progress < 1) {
+                    requestAnimationFrame(step);
+                } else if (callback) callback();
             }
-            el.innerHTML = currentValue;
-        }, 3000);
+            requestAnimationFrame(step);
+        }
+
+        function runCountUpForSlide(index) {
+            var el, card, target;
+            if (index === 0) {
+                el = document.getElementById('hero-odometer-months');
+                card = el && el.closest('.stat-card');
+                target = card ? parseInt(card.getAttribute('data-odometer-target'), 10) : 30;
+                if (el && !isNaN(target)) {
+                    el.textContent = '0';
+                    animateValue(el, 0, target, durationMs);
+                }
+            } else if (index === 1) {
+                el = document.getElementById('hero-odometer-pct');
+                card = el && el.closest('.stat-card');
+                target = card ? parseInt(card.getAttribute('data-odometer-target'), 10) : 55;
+                if (el && !isNaN(target)) {
+                    el.textContent = '0';
+                    animateValue(el, 0, target, durationMs);
+                }
+            } else if (index === 2) {
+                el = document.getElementById('hero-odometer-k');
+                card = el && el.closest('.stat-card');
+                target = card ? parseInt(card.getAttribute('data-odometer-target'), 10) : 515;
+                if (el && !isNaN(target)) {
+                    el.textContent = '0';
+                    animateValue(el, 0, target, durationMs);
+                }
+            }
+        }
+
+        function goToSlide(index) {
+            slideIndex = (index + totalSlides) % totalSlides;
+            track.style.transform = 'translateX(-' + (slideIndex * 100) + '%)';
+            runCountUpForSlide(slideIndex);
+        }
+
+        setInterval(function() {
+            goToSlide(slideIndex + 1);
+        }, intervalMs);
+
+        runCountUpForSlide(0);
     });
 </script>
