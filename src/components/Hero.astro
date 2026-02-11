@@ -1,0 +1,708 @@
+---
+// Hero Section - image background, banner panel left, stat card right (EN + 中文)
+import { hero, heroStats } from '../i18n/strings';
+---
+
+<section class="hero">
+    <img
+        src="/images/hero2-bg-feb-9.jpg"
+        alt=""
+        class="hero-bg"
+        loading="eager"
+    />
+    <div class="hero-overlay"></div>
+
+    <div class="hero-inner">
+        <!-- Row: DEMAND block and 40+ block (same height, aligned top/bottom) -->
+        <div class="hero-columns">
+            <div class="hero-left">
+                <div class="hero-banner">
+                    <p class="banner-line-1">WE DEMAND A TIMELY DECISION</p>
+                    <p class="banner-line-2"><span class="banner-delayed">DELAYED</span> BY IRCC</p>
+                    <hr class="banner-rule" />
+                    <p class="banner-demands">
+                        <span>REASONABLE TIMELINES</span>
+                        <span class="banner-sep" aria-hidden="true">||</span>
+                        <span>PROCEDURAL FAIRNESS</span>
+                    </p>
+                    <p class="banner-demands banner-fr">
+                        <span>Délais raisonnables</span>
+                        <span class="banner-sep" aria-hidden="true">|</span>
+                        <span>Équité procédurale</span>
+                    </p>
+                    <p class="banner-demands banner-zh">
+                        <span>明确时限</span>
+                        <span class="banner-sep" aria-hidden="true">|</span>
+                        <span>程序公平</span>
+                    </p>
+                </div>
+            </div>
+            <div class="hero-right">
+                <!-- On-screen: 3-card slider (30+ months, 55%, 515K) -->
+                <div class="stat-slider" id="hero-stat-slider">
+                    <div class="stat-slider-track" id="hero-stat-track">
+                        <div class="stat-slide">
+                            <div class="stat-card" data-slide-index="0" data-odometer-target="30" data-odometer-slow-target="40">
+                                <div class="stat-red">
+                                    <span class="stat-number"><span id="hero-odometer-months" class="odometer">0</span><span class="stat-suffix">+</span></span>
+                                </div>
+                                <div class="stat-white">
+                                    <span><span class="lang-en">{hero.statMonths.en}</span><span class="lang-zh">{hero.statMonths.zh}</span><span class="lang-fr">{hero.statMonths.fr}</span></span>
+                                    <span><span class="lang-en">{hero.statWaiting.en}</span><span class="lang-zh">{hero.statWaiting.zh}</span><span class="lang-fr">{hero.statWaiting.fr}</span></span>
+                                    <span><span class="lang-en">{hero.statResponse.en}</span><span class="lang-zh">{hero.statResponse.zh}</span><span class="lang-fr">{hero.statResponse.fr}</span></span>
+                                </div>
+                                <div class="stat-black">
+                                    <span><span class="lang-en">{hero.statNoTimelines.en}</span><span class="lang-zh">{hero.statNoTimelines.zh}</span><span class="lang-fr">{hero.statNoTimelines.fr}</span></span>
+                                    
+                                    <span><span class="lang-en">{hero.statNoResults.en}</span><span class="lang-zh">{hero.statNoResults.zh}</span><span class="lang-fr">{hero.statNoResults.fr}</span></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="stat-slide">
+                            <div class="stat-card" data-odometer-target={heroStats.prBacklogPercent} data-slide-index="1">
+                                <div class="stat-red">
+                                    <span class="stat-number"><span id="hero-odometer-pct" class="odometer">0</span><span class="stat-suffix">%</span></span>
+                                </div>
+                                <div class="stat-white">
+                                    <span><span class="lang-en">{hero.statMainLabel.en}</span><span class="lang-zh">{hero.statMainLabel.zh}</span><span class="lang-fr">{hero.statMainLabel.fr}</span></span>
+                                    <span><span class="lang-en">{hero.statSubLabel.en}</span><span class="lang-zh">{hero.statSubLabel.zh}</span><span class="lang-fr">{hero.statSubLabel.fr}</span></span>
+                                    <span class="stat-data-date"><span class="lang-en">{hero.statDataDate.en}</span><span class="lang-zh">{hero.statDataDate.zh}</span><span class="lang-fr">{hero.statDataDate.fr}</span></span>
+                                </div>
+                                <div class="stat-black">
+                                    <a href={heroStats.sourceUrl} target="_blank" rel="noopener noreferrer" class="stat-source-link"><span class="lang-en">{hero.statSource.en}</span><span class="lang-zh">{hero.statSource.zh}</span><span class="lang-fr">{hero.statSource.fr}</span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="stat-slide">
+                            <div class="stat-card" data-odometer-target={heroStats.prBacklogThousands} data-slide-index="2">
+                                <div class="stat-red">
+                                    <span class="stat-number"><span id="hero-odometer-k" class="odometer">0</span><span class="stat-suffix">K</span></span>
+                                </div>
+                                <div class="stat-white">
+                                    <span><span class="lang-en">{hero.statMainLabel.en}</span><span class="lang-zh">{hero.statMainLabel.zh}</span><span class="lang-fr">{hero.statMainLabel.fr}</span></span>
+                                    <span><span class="lang-en">{hero.statSubLabel.en}</span><span class="lang-zh">{hero.statSubLabel.zh}</span><span class="lang-fr">{hero.statSubLabel.fr}</span></span>
+                                    <span class="stat-data-date"><span class="lang-en">{hero.statDataDate.en}</span><span class="lang-zh">{hero.statDataDate.zh}</span><span class="lang-fr">{hero.statDataDate.fr}</span></span>
+                                </div>
+                                <div class="stat-black">
+                                    <a href={heroStats.sourceUrl} target="_blank" rel="noopener noreferrer" class="stat-source-link"><span class="lang-en">{hero.statSource.en}</span><span class="lang-zh">{hero.statSource.zh}</span><span class="lang-fr">{hero.statSource.fr}</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Print / offline banner: 30+ months only -->
+                <div class="stat-card stat-card-print" aria-hidden="true">
+                    <div class="stat-red">
+                        <span class="stat-number">30<span class="stat-suffix">+</span></span>
+                    </div>
+                    <div class="stat-white">
+                        <span><span class="lang-en">{hero.statMonths.en}</span><span class="lang-zh">{hero.statMonths.zh}</span><span class="lang-fr">{hero.statMonths.fr}</span></span>
+                        <span><span class="lang-en">{hero.statWaiting.en}</span><span class="lang-zh">{hero.statWaiting.zh}</span><span class="lang-fr">{hero.statWaiting.fr}</span></span>
+                        <span><span class="lang-en">{hero.statResponse.en}</span><span class="lang-zh">{hero.statResponse.zh}</span><span class="lang-fr">{hero.statResponse.fr}</span></span>
+                    </div>
+                    <div class="stat-black">
+                        <span><span class="lang-en">{hero.statNoTimelines.en}</span><span class="lang-zh">{hero.statNoTimelines.zh}</span><span class="lang-fr">{hero.statNoTimelines.fr}</span></span>
+                        <span class="stat-print-sep" aria-hidden="true"> / </span>
+                        <span><span class="lang-en">{hero.statNoResults.en}</span><span class="lang-zh">{hero.statNoResults.zh}</span><span class="lang-fr">{hero.statNoResults.fr}</span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dedicated line below: event title + timeline + Event Details link -->
+        <div class="hero-event">
+            <h2 class="hero-event-title">
+                <span class="lang-en">{hero.eventTitle.en}</span>
+                <span class="lang-zh">{hero.eventTitle.zh}</span>
+                <span class="lang-fr">{hero.eventTitle.fr}</span>
+            </h2>
+            <div class="hero-event-details">
+                <span class="lang-en">Friday, March 13, 2026</span>
+                <span class="lang-zh">2026年3月13日 周五</span>
+                <span class="lang-fr">Vendredi 13 mars 2026</span>
+                <span class="hero-event-dot" aria-hidden="true">·</span>
+                <span class="lang-en">8:30 AM – 4:30 PM</span>
+                <span class="lang-zh">上午8:30 – 下午4:30</span>
+                <span class="lang-fr">8 h 30 – 16 h 30</span>
+                <span class="hero-event-dot" aria-hidden="true">·</span>
+                <span class="lang-en">Ottawa, Ontario</span>
+                <span class="lang-zh">渥太华，安大略省</span>
+                <span class="lang-fr">Ottawa, Ontario</span>
+            </div>
+            <div class="hero-event-buttons">
+                <a href="/join" class="btn-cta btn-flip">
+                    <span class="btn-text-block">
+                        <span class="btn-text-wrapper">
+                            <span class="hover-out-text"><span class="lang-en">{hero.joinMovement.en}</span><span class="lang-zh">{hero.joinMovement.zh}</span><span class="lang-fr">{hero.joinMovement.fr}</span></span>
+                            <span class="hover-in-text"><span class="lang-en">{hero.joinMovement.en}</span><span class="lang-zh">{hero.joinMovement.zh}</span><span class="lang-fr">{hero.joinMovement.fr}</span></span>
+                        </span>
+                    </span>
+                </a>
+                <a href="/event" class="hero-event-link btn-flip">
+                    <span class="btn-text-block">
+                        <span class="btn-text-wrapper">
+                            <span class="hover-out-text"><span class="lang-en">{hero.eventDetailsLink.en}</span><span class="lang-zh">{hero.eventDetailsLink.zh}</span><span class="lang-fr">{hero.eventDetailsLink.fr}</span></span>
+                            <span class="hover-in-text"><span class="lang-en">{hero.eventDetailsLink.en}</span><span class="lang-zh">{hero.eventDetailsLink.zh}</span><span class="lang-fr">{hero.eventDetailsLink.fr}</span></span>
+                        </span>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* ── Section ── */
+    .hero {
+        position: relative;
+        min-height: 75vh;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    /* ── Background image ── */
+    .hero-bg {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        z-index: 0;
+    }
+
+    /* ── Overlay ── */
+    .hero-overlay {
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        background: linear-gradient(
+            135deg,
+            rgba(15, 26, 67, 0.84) 0%,
+            rgba(15, 26, 67, 0.68) 50%,
+            rgba(15, 26, 67, 0.50) 100%
+        );
+    }
+
+    /* ── Content wrapper ── */
+    .hero-inner {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 3.5rem 2rem;
+    }
+
+    /* ── Two-column layout: DEMAND and 40+ same height, top/bottom aligned ── */
+    .hero-columns {
+        display: flex;
+        align-items: stretch;
+        gap: 3rem;
+    }
+
+    .hero-left {
+        flex: 1;
+        min-width: 0;
+        display: flex;
+    }
+
+    .hero-banner {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        padding: 2rem 2.25rem;
+        background: rgba(245, 240, 230, 0.97);
+        color: var(--text-dark);
+        border-radius: 6px;
+        box-shadow: 0 6px 32px rgba(0, 0, 0, 0.3);
+    }
+
+    .hero-right {
+        flex-shrink: 0;
+        display: flex;
+    }
+
+    .banner-line-1 {
+        margin: 0;
+        font-size: clamp(1.35rem, 3vw, 1.85rem);
+        font-weight: 800;
+        letter-spacing: 0.04em;
+        color: var(--text-dark);
+        line-height: 1.2;
+        text-transform: uppercase;
+    }
+
+    .banner-line-2 {
+        margin: 0.3rem 0 0 0;
+        font-size: clamp(2rem, 4.5vw, 3rem);
+        font-weight: 800;
+        letter-spacing: 0.02em;
+        color: var(--text-dark);
+        line-height: 1.1;
+    }
+
+    .banner-delayed {
+        color: var(--red);
+        font-style: italic;
+    }
+
+    .banner-rule {
+        margin: 0.75rem 0 0.6rem 0;
+        border: none;
+        height: 3px;
+        background: var(--red);
+    }
+
+    .banner-demands {
+        margin: 0;
+        font-size: 1.0625rem;
+        font-weight: 700;
+        color: var(--text-dark);
+        letter-spacing: 0.02em;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+    }
+
+    .banner-demands .banner-sep {
+        color: var(--red);
+        font-weight: 800;
+        font-size: 1rem;
+    }
+
+    .banner-fr {
+        font-size: 0.9375rem;
+        font-weight: 600;
+        margin-top: 0.2rem;
+    }
+
+    .banner-zh {
+        font-size: 1.0625rem;
+        font-weight: 700;
+        margin-top: 0.25rem;
+        letter-spacing: 0.05em;
+    }
+
+    /* ── Event block: dedicated line below DEMAND + 40+, enlarged & highlighted ── */
+    .hero-event {
+        margin-top: 1.75rem;
+        margin-bottom: 1.25rem;
+        padding: 1.25rem 1.5rem;
+        background: rgba(255, 255, 255, 0.12);
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        border-radius: 8px;
+        width: 100%;
+    }
+
+    .hero-event-title {
+        font-size: clamp(1.5rem, 4vw, 2.25rem);
+        font-weight: 800;
+        color: #fff;
+        margin: 0 0 0.5rem 0;
+        text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+        letter-spacing: 0.02em;
+        text-align: center;
+    }
+
+    .hero-event-details {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 0.35rem;
+        font-size: clamp(1rem, 2vw, 1.125rem);
+        font-weight: 600;
+        color: rgba(255, 255, 255, 0.95);
+    }
+
+    .hero-event-dot {
+        opacity: 0.7;
+        margin: 0 0.2rem;
+    }
+
+    .hero-event-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin-top: 0.75rem;
+        flex-wrap: wrap;
+    }
+
+    .hero-event-link {
+        display: inline-block;
+        padding: 0.75rem 1.5rem;
+        font-size: 0.9375rem;
+        font-weight: 600;
+        color: #fff;
+        border: 2px solid rgba(255, 255, 255, 0.85);
+        border-radius: 4px;
+        text-decoration: none;
+        transition: background 0.3s, color 0.3s, border-color 0.3s;
+    }
+
+    .hero-event-link:hover {
+        background: #fff;
+        color: var(--text-dark);
+        border-color: #fff;
+    }
+
+    /* CTA Button with Flip Animation */
+    .btn-cta {
+        background: rgb(229, 25, 55);
+        color: #ffffff;
+        padding: 0.875rem 1.5rem;
+        font-size: 0.9375rem;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+        border-radius: 4px;
+        transition: background 0.2s;
+    }
+
+    .btn-cta:hover {
+        background: rgb(200, 20, 45);
+    }
+
+    /* Flip animation */
+    .btn-flip {
+        display: inline-block;
+        text-decoration: none;
+    }
+
+    .btn-text-block {
+        display: block;
+        overflow: hidden;
+        height: 1.25em;
+    }
+
+    .btn-text-wrapper {
+        display: block;
+        transition: transform 0.3s ease;
+    }
+
+    .hover-out-text,
+    .hover-in-text {
+        display: block;
+        height: 1.25em;
+        line-height: 1.25;
+    }
+
+    .btn-flip:hover .btn-text-wrapper {
+        transform: translateY(-50%);
+    }
+
+    /* ── Stat slider (3 cards: 30+, 55%, 515K) ── */
+    .stat-slider {
+        width: 240px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .stat-slider-track {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+        will-change: transform;
+    }
+
+    .stat-slide {
+        min-width: 100%;
+        flex-shrink: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .stat-slider .stat-card {
+        width: 240px;
+    }
+
+    /* ── Stat card (pure HTML/CSS), stretches to same row height as banner ── */
+    .stat-card {
+        width: 240px;
+        flex: 1;
+        min-height: 0;
+        border: 3px solid #111;
+        border-radius: 6px;
+        overflow: hidden;
+        box-shadow: 0 6px 28px rgba(0, 0, 0, 0.35);
+        text-align: center;
+        font-family: var(--font-body);
+        display: flex;
+        flex-direction: column;
+    }
+
+    .stat-red {
+        background: var(--red);
+        padding: 1.25rem 1rem;
+    }
+
+    .stat-number {
+        display: flex;
+        align-items: baseline;
+        justify-content: center;
+        font-size: 5rem;
+        font-weight: 900;
+        color: #fff;
+        line-height: 1;
+        letter-spacing: -0.03em;
+    }
+
+    .stat-white {
+        flex: 1;
+        background: #fff;
+        color: #111;
+        padding: 0.75rem 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.1rem;
+        justify-content: center;
+    }
+
+    .stat-white span {
+        display: block;
+        font-size: 0.95rem;
+        font-weight: 800;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        line-height: 1.3;
+    }
+
+    .stat-black {
+        background: #111;
+        color: #fff;
+        padding: 0.75rem 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.1rem;
+    }
+
+    .stat-black span {
+        display: block;
+        font-size: 0.85rem;
+        font-weight: 800;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        line-height: 1.3;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 768px) {
+        .hero {
+            min-height: auto;
+        }
+
+        .hero-inner {
+            padding: 3rem 1.25rem;
+        }
+
+        .hero-columns {
+            flex-direction: column;
+            gap: 2rem;
+            align-items: stretch;
+        }
+
+        .hero-right {
+            display: flex;
+            justify-content: center;
+        }
+
+        .stat-slider {
+            width: 200px;
+        }
+
+        .stat-slider .stat-card {
+            width: 200px;
+        }
+
+        .stat-card {
+            width: 200px;
+        }
+
+        .stat-number {
+            font-size: 3.5rem;
+        }
+
+        .hero-banner {
+            padding: 1.5rem 1.5rem;
+        }
+
+        .banner-line-1 {
+            font-size: 1.1rem;
+        }
+
+        .banner-line-2 {
+            font-size: 1.5rem;
+        }
+
+        .banner-demands {
+            font-size: 0.875rem;
+        }
+
+        .banner-fr {
+            font-size: 0.8125rem;
+        }
+
+        .banner-zh {
+            font-size: 0.9375rem;
+        }
+
+        .hero-event {
+            margin-top: 1.5rem;
+            padding: 1rem 1.25rem;
+        }
+
+        .hero-event-title {
+            font-size: 1.35rem;
+        }
+
+        .hero-event-details {
+            font-size: 0.9375rem;
+        }
+
+        .hero-event-buttons {
+            flex-direction: column;
+            align-items: stretch;
+        }
+
+        .hero-event-buttons .btn-cta,
+        .hero-event-buttons .hero-event-link {
+            text-align: center;
+        }
+    }
+
+    /* Count-up number (replaces odometer; same look) */
+    .stat-number .odometer,
+    .stat-number [id^="hero-odometer-"] {
+        font-family: var(--font-body);
+        font-size: inherit;
+        font-weight: inherit;
+        font-variant-numeric: tabular-nums;
+    }
+
+    .stat-suffix {
+        font-size: 5rem;
+        font-weight: 900;
+        color: #fff;
+        line-height: 1;
+        letter-spacing: -0.03em;
+    }
+
+    .stat-data-date {
+        font-size: 0.85rem;
+        font-weight: 600;
+        opacity: 0.9;
+    }
+
+    .stat-source-link {
+        color: #fff;
+        text-decoration: none;
+        font-weight: 800;
+    }
+
+    .stat-source-link:hover {
+        color: #fff;
+        text-decoration: underline;
+        opacity: 0.9;
+    }
+
+    /* Print/offline banner: hidden on screen, shown when printing */
+    .stat-card-print {
+        display: none;
+    }
+
+    @media print {
+        .stat-slider {
+            display: none !important;
+        }
+        .stat-card-print {
+            display: block !important;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .stat-suffix {
+            font-size: 3.5rem;
+        }
+    }
+</style>
+
+<script is:inline>
+    document.addEventListener('DOMContentLoaded', function() {
+        var track = document.getElementById('hero-stat-track');
+        if (!track) return;
+
+        var slideIndex = 0;
+        var totalSlides = 3;
+        var intervalMs = 8000;
+        var durationMs = 1200;
+        var monthsSlowDurationMs = 6000;
+
+        function easeOutQuart(t) {
+            return 1 - (1 - t) * (1 - t) * (1 - t) * (1 - t);
+        }
+
+        function animateValue(el, from, to, durationMs, callback) {
+            if (!el) return;
+            var start = null;
+            function step(timestamp) {
+                if (start === null) start = timestamp;
+                var elapsed = timestamp - start;
+                var progress = Math.min(elapsed / durationMs, 1);
+                var eased = easeOutQuart(progress);
+                var current = Math.round(from + (to - from) * eased);
+                el.textContent = current;
+                if (progress < 1) {
+                    requestAnimationFrame(step);
+                } else if (callback) callback();
+            }
+            requestAnimationFrame(step);
+        }
+
+        function runCountUpForSlide(index) {
+            var el, card, target;
+            if (index === 0) {
+                el = document.getElementById('hero-odometer-months');
+                card = el && el.closest('.stat-card');
+                target = card ? parseInt(card.getAttribute('data-odometer-target'), 10) : 30;
+                var slowTarget = card ? parseInt(card.getAttribute('data-odometer-slow-target'), 10) : 40;
+                if (el && !isNaN(target)) {
+                    el.textContent = '0';
+                    animateValue(el, 0, target, durationMs, function() {
+                        if (!isNaN(slowTarget) && slowTarget > target) {
+                            animateValue(el, target, slowTarget, monthsSlowDurationMs);
+                        }
+                    });
+                }
+            } else if (index === 1) {
+                el = document.getElementById('hero-odometer-pct');
+                card = el && el.closest('.stat-card');
+                target = card ? parseInt(card.getAttribute('data-odometer-target'), 10) : 55;
+                if (el && !isNaN(target)) {
+                    el.textContent = '0';
+                    animateValue(el, 0, target, durationMs);
+                }
+            } else if (index === 2) {
+                el = document.getElementById('hero-odometer-k');
+                card = el && el.closest('.stat-card');
+                target = card ? parseInt(card.getAttribute('data-odometer-target'), 10) : 515;
+                if (el && !isNaN(target)) {
+                    el.textContent = '0';
+                    animateValue(el, 0, target, durationMs);
+                }
+            }
+        }
+
+        function goToSlide(index) {
+            slideIndex = (index + totalSlides) % totalSlides;
+            track.style.transform = 'translateX(-' + (slideIndex * 100) + '%)';
+            runCountUpForSlide(slideIndex);
+        }
+
+        setInterval(function() {
+            goToSlide(slideIndex + 1);
+        }, intervalMs);
+
+        runCountUpForSlide(0);
+    });
+</script>

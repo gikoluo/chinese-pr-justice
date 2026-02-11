@@ -92,6 +92,19 @@ This movement is built on:
 - **Inclusivity** -- We welcome all supporters who believe in fair immigration processing
 - **Canadian values** -- We believe in the equality and justice that Canada promises
 
+## Sample Materials
+
+We've prepared sample materials to help you advocate for your case:
+
+- **[Protest Speech - "A Timely Decision Delayed by IRCC"](samples/Protest_Speech_IRCC_Delays.docx)** -- A powerful speech template for Parliament Hill protests, including timeline, evidence, and 8 demands (Word document)
+- **[Personal Story Example - Chunhui Luo](samples/chunhui-luo-story.md)** -- A complete story submission showing 42 months of delays, financial impact, and systemic discrimination evidence (Markdown format)
+
+Use these as templates when:
+- Preparing your own protest speech
+- Submitting your story to our website
+- Writing to your MP or Immigration Minister
+- Organizing local advocacy events
+
 ## Resources
 
 - [IRCC Website](https://www.canada.ca/en/immigration-refugees-citizenship.html)

@@ -1,14 +1,19 @@
 {
-  "name": "parliament-hill-match",
+  "name": "chinese-pr-justice",
   "version": "1.0.0",
   "private": true,
+  "type": "module",
   "scripts": {
-    "dev": "wrangler dev",
-    "deploy": "npm run copy-assets && wrangler deploy",
-    "copy-assets": "node scripts/copy-assets.js",
-    "predeploy": "npm run copy-assets"
+    "dev": "astro dev",
+    "build": "astro build",
+    "copy-assets": "astro build",
+    "preview": "astro preview",
+    "deploy": "npm run build && wrangler deploy"
   },
   "devDependencies": {
     "wrangler": "^3.0.0"
+  },
+  "dependencies": {
+    "astro": "^5.17.1"
   }
 }

@@ -1,0 +1,35 @@
+---
+interface Props {
+  text: string;
+  basePath?: string;
+}
+const { text, basePath = '/references' } = Astro.props;
+
+/** Escape HTML in text so it is safe inside tags */
+function escapeHtml(s: string): string {
+  return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+}
+
+/** Build one HTML string: **...** -> <strong>, [n] -> <a href='...'>[n]</a> (single-quoted attrs for set:html) */
+function toHtml(raw: string): string {
+  const byBold = raw.split(/\*\*/);
+  let out = '';
+  for (let i = 0; i < byBold.length; i++) {
+    const segment = byBold[i];
+    const parts = segment.split(/(\[\d\])/);
+    let segHtml = '';
+    for (const p of parts) {
+      const m = p.match(/^\[(\d)\]$/);
+      if (m) segHtml += `<a href='${basePath}#ref${m[1]}' class='citation-ref'>[${m[1]}]</a>`;
+      else segHtml += escapeHtml(p);
+    }
+    if (i % 2 === 1) out += '<strong>' + segHtml + '</strong>';
+    else out += segHtml;
+  }
+  return out;
+}
+
+const html = toHtml(text);
+---
+
+<Fragment set:html={html} />

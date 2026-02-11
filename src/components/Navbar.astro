@@ -1,0 +1,365 @@
+---
+// Navbar component - shared across all pages (EN + 中文)
+import { nav, announcement } from '../i18n/strings';
+const currentPath = Astro.url.pathname;
+---
+
+<div class="announcement-bar" id="announcement-bar">
+    <a href="/event" class="announcement-content">
+        <span class="lang-en">{announcement.event.en}</span>
+        <span class="lang-zh">{announcement.event.zh}</span>
+        <span class="lang-fr">{announcement.event.fr}</span>
+    </a>
+    <button class="announcement-close" aria-label="Close announcement">&times;</button>
+</div>
+
+<nav class="navbar">
+    <div class="container">
+        <a href="/" class="nav-brand">
+            <span class="lang-en">{nav.brand.en}</span>
+            <span class="lang-zh">{nav.brand.zh}</span>
+            <span class="lang-fr">{nav.brand.fr}</span>
+        </a>
+        <div class="nav-right">
+            <div class="nav-lang-switcher">
+                <button type="button" class="lang-btn" data-set-lang="en" aria-label="English">EN</button>
+                <span class="lang-divider">|</span>
+                <button type="button" class="lang-btn" data-set-lang="zh" aria-label="中文">中文</button>
+                <span class="lang-divider">|</span>
+                <button type="button" class="lang-btn" data-set-lang="fr" aria-label="Français">FR</button>
+            </div>
+            <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span class="nav-toggle-bar"></span>
+                <span class="nav-toggle-bar"></span>
+                <span class="nav-toggle-bar"></span>
+            </button>
+            <div class="nav-menu">
+            <a href="/#declaration" class:list={[{ active: currentPath === '/' }]}>
+                <span class="lang-en">{nav.declaration.en}</span>
+                <span class="lang-zh">{nav.declaration.zh}</span>
+                <span class="lang-fr">{nav.declaration.fr}</span>
+            </a>
+            <a href="/#demands">
+                <span class="lang-en">{nav.demands.en}</span>
+                <span class="lang-zh">{nav.demands.zh}</span>
+                <span class="lang-fr">{nav.demands.fr}</span>
+            </a>
+            <a href="/#stories">
+                <span class="lang-en">{nav.stories.en}</span>
+                <span class="lang-zh">{nav.stories.zh}</span>
+                <span class="lang-fr">{nav.stories.fr}</span>
+            </a>
+            <a href="/event" class:list={[{ active: currentPath === '/event' || currentPath === '/event/' }]}>
+                <span class="lang-en">{nav.event.en}</span>
+                <span class="lang-zh">{nav.event.zh}</span>
+                <span class="lang-fr">{nav.event.fr}</span>
+            </a>
+            <a href="/join" class:list={[{ active: currentPath === '/join' || currentPath === '/join/' }]}>
+                <span class="lang-en">{nav.joinUs.en}</span>
+                <span class="lang-zh">{nav.joinUs.zh}</span>
+                <span class="lang-fr">{nav.joinUs.fr}</span>
+            </a>
+            <a href="/references" class:list={[{ active: currentPath === '/references' || currentPath === '/references/' }]}>
+                <span class="lang-en">{nav.references.en}</span>
+                <span class="lang-zh">{nav.references.zh}</span>
+                <span class="lang-fr">{nav.references.fr}</span>
+            </a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<script>
+    // Mobile hamburger menu toggle
+    const navToggle = document.querySelector('.nav-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+
+    if (navToggle && navMenu) {
+        navToggle.addEventListener('click', () => {
+            const isOpen = navMenu.classList.toggle('open');
+            navToggle.classList.toggle('active', isOpen);
+            navToggle.setAttribute('aria-expanded', String(isOpen));
+        });
+
+        // Close menu when a nav link is clicked
+        navMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('open');
+                navToggle.classList.remove('active');
+                navToggle.setAttribute('aria-expanded', 'false');
+            });
+        });
+    }
+
+    // Announcement bar functionality
+    const announcementBar = document.getElementById('announcement-bar');
+    const announcementClose = document.querySelector('.announcement-close');
+
+    function closeAnnouncement() {
+        if (announcementBar) {
+            announcementBar.classList.add('hidden');
+        }
+    }
+
+    // Close on button click
+    if (announcementClose) {
+        announcementClose.addEventListener('click', closeAnnouncement);
+    }
+
+    // Close on scroll
+    let hasScrolled = false;
+    window.addEventListener('scroll', () => {
+        if (!hasScrolled && window.scrollY > 0) {
+            hasScrolled = true;
+            closeAnnouncement();
+        }
+    }, { passive: true });
+</script>
+
+<style>
+    /* Announcement Bar */
+    .announcement-bar {
+        background: rgb(229, 25, 55);
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .announcement-bar.hidden {
+        transform: translateY(-100%);
+        opacity: 0;
+        height: 0;
+        overflow: hidden;
+    }
+
+    .announcement-content {
+        color: #ffffff;
+        font-size: 0.9rem;
+        font-weight: 400;
+        text-align: center;
+        text-decoration: none;
+        transition: opacity 0.2s;
+    }
+
+    .announcement-content:hover {
+        opacity: 0.85;
+    }
+
+    .announcement-close {
+        position: absolute;
+        right: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: transparent;
+        border: none;
+        color: #ffffff;
+        font-size: 1.25rem;
+        line-height: 1;
+        cursor: pointer;
+        padding: 0 4px;
+        opacity: 0.8;
+        transition: opacity 0.2s;
+    }
+
+    .announcement-close:hover {
+        opacity: 1;
+    }
+
+    /* Navigation – hero theme: dark blue gradient, white text, red accent */
+    .navbar {
+        background: linear-gradient(145deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        padding: 0.85rem 0;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .navbar :global(.container) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav-right {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .nav-brand {
+        font-size: 1.25rem;
+        font-weight: 800;
+        color: #fff;
+        text-decoration: none;
+        letter-spacing: 0.02em;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+        transition: color 0.2s, opacity 0.2s;
+    }
+
+    .nav-brand:hover {
+        color: rgba(255, 255, 255, 0.95);
+        opacity: 0.95;
+    }
+
+    .nav-menu {
+        display: flex;
+        gap: 2rem;
+    }
+
+    .nav-menu a {
+        color: rgba(255, 255, 255, 0.92);
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.9375rem;
+        letter-spacing: 0.02em;
+        transition: color 0.2s, text-shadow 0.2s;
+    }
+
+    .nav-menu a:hover {
+        color: #fff;
+        text-shadow: 0 0 0 1px rgba(255, 255, 255, 0.3);
+    }
+
+    .nav-menu a.active {
+        color: #fff;
+        border-bottom: 2px solid var(--red);
+        padding-bottom: 2px;
+    }
+
+    /* Language switcher */
+    .nav-lang-switcher {
+        display: flex;
+        align-items: center;
+        gap: 0.35rem;
+        margin-right: 0.5rem;
+    }
+
+    .lang-btn {
+        background: transparent;
+        border: none;
+        color: rgba(255, 255, 255, 0.85);
+        font-size: 0.8125rem;
+        font-weight: 600;
+        cursor: pointer;
+        padding: 0.25rem 0.4rem;
+        border-radius: 3px;
+        transition: color 0.2s, background 0.2s;
+    }
+
+    .lang-btn:hover {
+        color: #fff;
+        background: rgba(255, 255, 255, 0.1);
+    }
+
+    .lang-divider {
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 0.75rem;
+    }
+
+    /* Mobile hamburger – white bars on dark nav */
+    .nav-toggle {
+        display: none;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 22px;
+        height: 16px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        z-index: 1001;
+    }
+
+    .nav-toggle-bar {
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: #fff;
+        border-radius: 2px;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    /* Hamburger to X animation when menu is open */
+    .nav-toggle.active .nav-toggle-bar:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+
+    .nav-toggle.active .nav-toggle-bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .nav-toggle.active .nav-toggle-bar:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+
+    /* Responsive */
+    @media (max-width: 968px) {
+        .nav-menu {
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            justify-content: center;
+        }
+    }
+
+    @media (max-width: 640px) {
+        .nav-brand {
+            font-size: 1rem;
+        }
+
+        .nav-menu {
+            font-size: 0.875rem;
+        }
+    }
+
+    /* Mobile navigation (≤575px) */
+    @media (max-width: 575px) {
+        .navbar :global(.container) {
+            flex-wrap: wrap;
+        }
+
+        .nav-right {
+            flex-wrap: wrap;
+        }
+
+        .nav-toggle {
+            display: flex;
+        }
+
+        .nav-menu {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+            gap: 0;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        .nav-menu.open {
+            display: flex;
+        }
+
+        .nav-menu a {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .nav-menu a:last-child {
+            border-bottom: none;
+        }
+
+        .nav-menu a:hover {
+            color: #fff;
+        }
+
+        .nav-menu a.active {
+            border-bottom: 2px solid var(--red);
+            padding-bottom: 0.5rem;
+        }
+    }
+</style>

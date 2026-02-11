@@ -1,0 +1,96 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { joinPage } from '../i18n/strings';
+---
+
+<BaseLayout title="Join Us | Justice for Chinese PR Applicants">
+    <!-- Join/Contact Section -->
+    <section id="join" class="join-section">
+        <div class="container">
+            <h2><span class="lang-en">{joinPage.title.en}</span><span class="lang-zh">{joinPage.title.zh}</span><span class="lang-fr">{joinPage.title.fr}</span></h2>
+            <p class="section-intro"><span class="lang-en">{joinPage.intro.en}</span><span class="lang-zh">{joinPage.intro.zh}</span><span class="lang-fr">{joinPage.intro.fr}</span></p>
+
+            <div class="join-grid">
+                <div class="join-card">
+                    <h3>📧 <span class="lang-en">{joinPage.shareStory.en}</span><span class="lang-zh">{joinPage.shareStory.zh}</span><span class="lang-fr">{joinPage.shareStory.fr}</span></h3>
+                    <p>Your experience matters. Help us document the impact of security screening delays.</p>
+                    <p><strong>Email us at:</strong> <a href="mailto:we@chinese-pr-delay.ca">we@chinese-pr-delay.ca</a></p>
+                    <p>Include:</p>
+                    <ul>
+                        <li>Your timeline (when applied, how long waiting)</li>
+                        <li>Impact on your family/career/finances</li>
+                        <li>What you want the government to know</li>
+                        <li>Whether we can share publicly (anonymously or with name)</li>
+                    </ul>
+                </div>
+
+                <div class="join-card">
+                    <h3>📱 <span class="lang-en">{joinPage.stayConnected.en}</span><span class="lang-zh">{joinPage.stayConnected.zh}</span><span class="lang-fr">{joinPage.stayConnected.fr}</span></h3>
+                    <p>Get updates about the procession and advocacy efforts.</p>
+                    <p><strong>Website:</strong> <a href="https://chinese-pr-delay.ca">chinese-pr-delay.ca</a></p>
+                    <p><strong>Email:</strong> <a href="mailto:we@chinese-pr-delay.ca">we@chinese-pr-delay.ca</a></p>
+                    <p>Email us to join our WeChat group or WhatsApp list. We'll notify you about event dates, media coverage, and important developments.</p>
+                </div>
+
+                <div class="join-card">
+                    <h3>🎙️ <span class="lang-en">{joinPage.speakOut.en}</span><span class="lang-zh">{joinPage.speakOut.zh}</span><span class="lang-fr">{joinPage.speakOut.fr}</span></h3>
+                    <p>Interested in speaking at the event or to media?</p>
+                    <ul>
+                        <li>Share your testimony at Parliament Hill</li>
+                        <li>Speak to journalists and news outlets</li>
+                        <li>Represent our community's voice</li>
+                    </ul>
+                    <p>Contact us to volunteer as a spokesperson.</p>
+                </div>
+
+                <div class="join-card">
+                    <h3>🤝 Volunteer</h3>
+                    <p>Help organize and coordinate the procession:</p>
+                    <ul>
+                        <li>Event planning and logistics</li>
+                        <li>Media outreach and press relations</li>
+                        <li>Social media and communications</li>
+                        <li>Translation (Chinese/English)</li>
+                        <li>Legal support and advocacy</li>
+                        <li>Sign and banner creation</li>
+                    </ul>
+                    <p>Email us to join the organizing team.</p>
+                </div>
+
+                <div class="join-card">
+                    <h3>💼 Legal & Advocacy Support</h3>
+                    <p>Are you a lawyer, immigration consultant, or advocate?</p>
+                    <p>We need:</p>
+                    <ul>
+                        <li>Legal advice on collective action</li>
+                        <li>Mandamus application guidance</li>
+                        <li>Policy analysis and recommendations</li>
+                        <li>Media training for participants</li>
+                    </ul>
+                    <p>Contact us to offer professional support.</p>
+                </div>
+
+                <div class="join-card">
+                    <h3>📢 Spread the Word</h3>
+                    <p>Help us reach more affected families:</p>
+                    <ul>
+                        <li>Share <strong>chinese-pr-delay.ca</strong> with your networks</li>
+                        <li>Post on social media (WeChat, Facebook, Twitter)</li>
+                        <li>Talk to your local Chinese community organizations</li>
+                        <li>Contact Chinese-language media outlets</li>
+                        <li>Reach out to your MP and tell them about our cause</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="join-cta-box">
+                <h3>Every Voice Counts</h3>
+                <p>Whether you attend the procession, share your story, or simply spread the word - you are making a difference.</p>
+                <p><strong>Contact Information</strong></p>
+                <p>🌐 <strong>Website:</strong> <a href="https://chinese-pr-delay.ca">chinese-pr-delay.ca</a></p>
+                <p>📧 <strong>Email:</strong> <a href="mailto:we@chinese-pr-delay.ca">we@chinese-pr-delay.ca</a></p>
+                <p>Email us to join our WeChat group or for other ways to connect.</p>
+            </div>
+        </div>
+    </section>
+</BaseLayout>

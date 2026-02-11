@@ -1,0 +1,111 @@
+---
+// Footer component - shared across all pages (EN + 中文)
+import { nav, footer as footerStrings } from '../i18n/strings';
+---
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4><span class="lang-en">{footerStrings.about.en}</span><span class="lang-zh">{footerStrings.about.zh}</span><span class="lang-fr">{footerStrings.about.fr}</span></h4>
+                <p><span class="lang-en">{footerStrings.aboutDesc.en}</span><span class="lang-zh">{footerStrings.aboutDesc.zh}</span><span class="lang-fr">{footerStrings.aboutDesc.fr}</span></p>
+            </div>
+
+            <div class="footer-section">
+                <h4><span class="lang-en">{footerStrings.quickLinks.en}</span><span class="lang-zh">{footerStrings.quickLinks.zh}</span><span class="lang-fr">{footerStrings.quickLinks.fr}</span></h4>
+                <ul>
+                    <li><a href="/#declaration"><span class="lang-en">{nav.declaration.en}</span><span class="lang-zh">{nav.declaration.zh}</span><span class="lang-fr">{nav.declaration.fr}</span></a></li>
+                    <li><a href="/#demands"><span class="lang-en">{nav.demands.en}</span><span class="lang-zh">{nav.demands.zh}</span><span class="lang-fr">{nav.demands.fr}</span></a></li>
+                    <li><a href="/#stories"><span class="lang-en">{nav.stories.en}</span><span class="lang-zh">{nav.stories.zh}</span><span class="lang-fr">{nav.stories.fr}</span></a></li>
+                    <li><a href="/event"><span class="lang-en">{nav.event.en}</span><span class="lang-zh">{nav.event.zh}</span><span class="lang-fr">{nav.event.fr}</span></a></li>
+                    <li><a href="/join"><span class="lang-en">{nav.joinUs.en}</span><span class="lang-zh">{nav.joinUs.zh}</span><span class="lang-fr">{nav.joinUs.fr}</span></a></li>
+                    <li><a href="/references"><span class="lang-en">{nav.references.en}</span><span class="lang-zh">{nav.references.zh}</span><span class="lang-fr">{nav.references.fr}</span></a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4><span class="lang-en">{footerStrings.resources.en}</span><span class="lang-zh">{footerStrings.resources.zh}</span><span class="lang-fr">{footerStrings.resources.fr}</span></h4>
+                <ul>
+                    <li><a href="https://www.canada.ca/en/immigration-refugees-citizenship.html" target="_blank"><span class="lang-en">{footerStrings.ircc.en}</span><span class="lang-zh">{footerStrings.ircc.zh}</span><span class="lang-fr">{footerStrings.ircc.fr}</span></a></li>
+                    <li><a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/application/check-processing-times.html" target="_blank"><span class="lang-en">{footerStrings.processingTimes.en}</span><span class="lang-zh">{footerStrings.processingTimes.zh}</span><span class="lang-fr">{footerStrings.processingTimes.fr}</span></a></li>
+                    <li><a href="https://atip-aiprp.apps.gc.ca/atip/welcome.do" target="_blank"><span class="lang-en">{footerStrings.gcms.en}</span><span class="lang-zh">{footerStrings.gcms.zh}</span><span class="lang-fr">{footerStrings.gcms.fr}</span></a></li>
+                    <li><a href="https://www.ourcommons.ca/members/en" target="_blank"><span class="lang-en">{footerStrings.findMP.en}</span><span class="lang-zh">{footerStrings.findMP.zh}</span><span class="lang-fr">{footerStrings.findMP.fr}</span></a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4><span class="lang-en">{footerStrings.contact.en}</span><span class="lang-zh">{footerStrings.contact.zh}</span><span class="lang-fr">{footerStrings.contact.fr}</span></h4>
+                <p><a href="https://chinese-pr-delay.ca">chinese-pr-delay.ca</a></p>
+                <p><a href="mailto:we@chinese-pr-delay.ca">we@chinese-pr-delay.ca</a></p>
+                <p><span class="lang-en">{footerStrings.standTogether.en}</span><span class="lang-zh">{footerStrings.standTogether.zh}</span><span class="lang-fr">{footerStrings.standTogether.fr}</span></p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p><span class="lang-en">{footerStrings.copyright.en}</span><span class="lang-zh">{footerStrings.copyright.zh}</span><span class="lang-fr">{footerStrings.copyright.fr}</span> <a href="https://chinese-pr-delay.ca">chinese-pr-delay.ca</a></p>
+            <p class="footer-note"><span class="lang-en">{footerStrings.footerNote.en}</span><span class="lang-zh">{footerStrings.footerNote.zh}</span><span class="lang-fr">{footerStrings.footerNote.fr}</span></p>
+        </div>
+    </div>
+</footer>
+
+<style>
+    .footer {
+        background: var(--primary-dark);
+        color: white;
+        padding: 2rem 0 1rem;
+    }
+
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .footer-section h4 {
+        font-size: 1.125rem;
+        margin-bottom: 0.75rem;
+        color: var(--accent-color);
+    }
+
+    .footer-section p {
+        line-height: 1.6;
+        opacity: 0.9;
+        margin-bottom: 0.375rem;
+        font-size: 0.9375rem;
+    }
+
+    .footer-section ul {
+        list-style: none;
+    }
+
+    .footer-section ul li {
+        margin-bottom: 0.375rem;
+    }
+
+    .footer-section a {
+        color: white;
+        text-decoration: none;
+        opacity: 0.8;
+        transition: opacity 0.3s;
+        font-size: 0.9375rem;
+    }
+
+    .footer-section a:hover {
+        opacity: 1;
+        text-decoration: underline;
+    }
+
+    .footer-bottom {
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding-top: 1.25rem;
+        text-align: center;
+        opacity: 0.8;
+        font-size: 0.875rem;
+    }
+
+    .footer-note {
+        font-size: 0.8125rem;
+        margin-top: 0.375rem;
+    }
+</style>

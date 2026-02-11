@@ -15,15 +15,18 @@
 ## Domain Content 
 AI Materials need to confirmation
 Schedule for Procession to Parliament Hill
+
 ☐ Need detail Schedule update
 ☐ Declaration of Justice
 ☐ What We Are Calling For
 
 ## Personal Stories
-Needs UU contribution:
+Needs UUs contribute:
+
 ☐ Our Stories
 
 ## Events
+
 ☐ Add Supporters who will stand by us
 ☐ Preheating photos
 ☐ Event Photos
