@@ -236,6 +236,7 @@ export const storiesSection = {
 export const eventPhotosSection = {
   title: { en: 'Event Photos', zh: '活动照片', fr: 'Photos de l\'événement' },
   intro: { en: 'Photos from our movement will be added here after the event.', zh: '活动结束后，我们将在此添加我们运动的照片。', fr: 'Les photos de notre mouvement seront ajoutées ici après l\'événement.' },
+  waitingMessage: { en: 'The event has not yet taken place. Photos will be added here after the procession on March 13, 2026. Please check back following the event.', zh: '活动尚未举行。2026年3月13日游行结束后，我们将在此添加照片。请于活动结束后再访。', fr: 'L\'événement n\'a pas encore eu lieu. Les photos seront ajoutées ici après la marche du 13 mars 2026. Merci de revenir après l\'événement.' },
   photosComingSoon: { en: 'Event photos coming soon', zh: '活动照片即将推出', fr: 'Photos de l\'événement à venir' },
   captionPreparing: { en: 'Preparing for the march', zh: '为游行做准备', fr: 'Préparation de la marche' },
   captionUnited: { en: 'United for justice', zh: '为公正团结一心', fr: 'Unis pour la justice' },
