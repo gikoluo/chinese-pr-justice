@@ -4,14 +4,33 @@ import { joinPage } from '../i18n/strings';
 ---
 
 <BaseLayout title="Join Us | Justice for Chinese PR Applicants">
+    <!-- Hero Section -->
+    <section class="join-hero">
+        <div class="join-hero-inner">
+            <!-- Title and subtitle temporarily hidden
+            <div class="join-hero-content">
+                <h1 class="join-hero-title">
+                    <span class="lang-en">{joinPage.title.en}</span>
+                    <span class="lang-zh">{joinPage.title.zh}</span>
+                    <span class="lang-fr">{joinPage.title.fr}</span>
+                </h1>
+                <div class="join-hero-underline"></div>
+                <p class="join-hero-subtitle">
+                    <span class="lang-en">{joinPage.intro.en}</span>
+                    <span class="lang-zh">{joinPage.intro.zh}</span>
+                    <span class="lang-fr">{joinPage.intro.fr}</span>
+                </p>
+            </div>
+            -->
+            <div class="join-hero-image">
+                <img src="/images/hero-campaign-canada-waiting.jpg" alt="40+ Months Waiting - We Demand A Decision Now" />
+            </div>
+        </div>
+    </section>
+
     <!-- Join/Contact Section -->
     <section id="join" class="join-section">
-        <div class="join-bg-image"></div>
-        <div class="join-overlay"></div>
         <div class="container join-content">
-            <h2><span class="lang-en">{joinPage.title.en}</span><span class="lang-zh">{joinPage.title.zh}</span><span class="lang-fr">{joinPage.title.fr}</span></h2>
-            <p class="section-intro"><span class="lang-en">{joinPage.intro.en}</span><span class="lang-zh">{joinPage.intro.zh}</span><span class="lang-fr">{joinPage.intro.fr}</span></p>
-
             <div class="join-grid">
                 <div class="join-card">
                     <h3>📧 <span class="lang-en">{joinPage.shareStory.en}</span><span class="lang-zh">{joinPage.shareStory.zh}</span><span class="lang-fr">{joinPage.shareStory.fr}</span></h3>
@@ -98,109 +117,99 @@ import { joinPage } from '../i18n/strings';
 </BaseLayout>
 
 <style>
+    /* Hero Section */
+    .join-hero {
+        padding: 0;
+    }
+
+    .join-hero-inner {
+        width: 100%;
+    }
+
+    .join-hero-content {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .join-hero-title {
+        font-family: var(--font-heading);
+        font-size: clamp(2rem, 5vw, 3rem);
+        font-weight: 700;
+        color: #fff;
+        margin: 0;
+        line-height: 1.2;
+    }
+
+    .join-hero-underline {
+        width: 80px;
+        height: 4px;
+        background: var(--red);
+        margin: 1rem 0;
+    }
+
+    .join-hero-subtitle {
+        font-size: clamp(1rem, 2vw, 1.25rem);
+        color: rgba(255, 255, 255, 0.9);
+        margin: 0;
+        line-height: 1.6;
+        max-width: 500px;
+    }
+
+    .join-hero-image {
+        width: 100%;
+    }
+
+    .join-hero-image img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    /* Join Section */
     .join-section {
-        position: relative;
-        min-height: 100vh;
-        padding: 4rem 0;
-        overflow: hidden;
-    }
-
-    .join-bg-image {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-image: url('/images/hero-campaign-canada-waiting.jpg');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        z-index: 0;
-    }
-
-    .join-overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        /* 使用渐变遮罩：上方较透明，下方较不透明，确保内容区域清晰 */
-        background: linear-gradient(
-            to bottom,
-            rgba(255, 255, 255, 0.75) 0%,
-            rgba(255, 255, 255, 0.80) 30%,
-            rgba(255, 255, 255, 0.88) 100%
-        );
-        z-index: 1;
+        padding: 3rem 0;
+        background: var(--bg-light);
     }
 
     .join-content {
         position: relative;
-        z-index: 2;
     }
 
-    .join-section h2,
-    .join-section .section-intro {
-        position: relative;
-        z-index: 2;
-    }
-
-    /* 确保卡片在背景上清晰可见 */
     .join-card {
-        background: rgba(255, 255, 255, 0.98);
-        backdrop-filter: blur(8px);
-        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-        border: 1px solid rgba(255, 255, 255, 0.5);
+        background: #fff;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        border-top: 3px solid var(--red);
+        border-radius: 0;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .join-card:hover {
         transform: translateY(-2px);
-        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
     }
 
     .join-cta-box {
-        background: rgba(255, 255, 255, 0.98);
-        backdrop-filter: blur(8px);
-        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-        border: 1px solid rgba(255, 255, 255, 0.5);
+        background: #fff;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     }
 
-    /* 标题区域增强对比度 */
-    .join-section h2 {
-        text-shadow: 0 2px 4px rgba(255, 255, 255, 0.8);
-        color: var(--text-dark);
-    }
-
-    .join-section .section-intro {
-        text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
-        color: var(--text-dark);
-    }
-
-    /* 移动端优化 */
+    /* Responsive */
     @media (max-width: 768px) {
-        .join-bg-image {
-            background-attachment: scroll;
+        .join-hero-inner {
+            flex-direction: column;
+            text-align: center;
         }
-        
+
+        .join-hero-underline {
+            margin: 1rem auto;
+        }
+
+        .join-hero-subtitle {
+            max-width: 100%;
+        }
+
         .join-section {
             padding: 2rem 0;
-        }
-    }
-
-    /* 高分辨率屏幕优化 */
-    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-        .join-bg-image {
-            background-image: url('/images/hero-campaign-canada-waiting.jpg');
-        }
-    }
-
-    /* 大屏幕优化 - 确保背景图片完整显示 */
-    @media (min-width: 1200px) {
-        .join-bg-image {
-            background-size: cover;
-            background-position: center top;
         }
     }
 </style>
