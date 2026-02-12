@@ -3,6 +3,29 @@ E-PETITION PACKAGE FOR HOUSE OF COMMONS
 Immigration Processing Delays - Permanent Residence Applications
 ================================================================================
 
+请愿书小组
+
+文案起草完毕， 
+1. 01_petition_documents/E-Petition_Full_Document_for_MPs.docx
+2. House_Commons_Petition_CORRECTED.md
+3. Petition_SHORT_VERSION_for_Web_Form.txt
+
+正在筛选议员，然后逐一发起邮件需求一位议员sponsership。 之后即可进行请愿书的传播和签名
+超过有500个有效签名的请愿书将正式提交给国会，政府必须在45日内对提交给众议院的每份请愿书作出回应。
+
+目前工作列表和状态: TASKS_TODO.txt
+重点工作: 
+1. Wait for response from Chak Au (3-4 days expected)
+2. **Research additional MP targets if primary/backup fail** 有合适的议员，以及对应的居民群友，请发送给我
+    Priority: LOW (only if needed)
+    Owner: OPEN
+    Help Needed: YES - someone to identify MPs who:
+      - Represent ridings with high immigrant populations
+      - Sit on Immigration Committee
+      - Have history of immigration advocacy
+      - Are Opposition members (Conservative/NDP/Bloc)
+
+
 PACKAGE OVERVIEW:
 This directory contains all materials for the House of Commons e-petition
 addressing the worsening crisis in Canada's permanent residence processing
