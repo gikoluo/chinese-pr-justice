@@ -1,0 +1,397 @@
+================================================================================
+E-PETITION PROJECT - TASK LIST & COLLABORATION TRACKER
+================================================================================
+
+Project: House of Commons E-Petition on PR Processing Delays
+Lead: Chunhui Luo (ca@luochunhui.com, +1 778-886-8708)
+Event: March 13, 2026 - Parliament Hill Procession
+Website: chinese-pr-delay.ca
+
+================================================================================
+PHASE 1: MP SPONSORSHIP (CURRENT PHASE)
+================================================================================
+
+✅ COMPLETED TASKS:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[✓] Research and compile evidence (IRCC data, NSIRA reports, Auditor General)
+[✓] Draft comprehensive petition with 3 pillars, 8 demands
+[✓] Create professional Word document for MPs
+[✓] Create short version for web form submission
+[✓] Write customized email to Chak Au (Conservative, Richmond Centre)
+[✓] Write backup email to Parm Bains (Liberal, Steveston-Richmond East)
+[✓] Write generic template for other MPs
+[✓] Organize all files into clean directory structure
+[✓] Send email to Chak Au - SENT February 12, 2026
+
+⏳ IN PROGRESS:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[ ] Wait for response from Chak Au (3-4 days expected)
+    Status: Email sent Feb 12, expecting response by Feb 15-16
+    Owner: Chunhui Luo
+    Next Action: Follow up if no response by Feb 19
+
+📋 UPCOMING TASKS (THIS PHASE):
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[ ] Follow-up email to Chak Au if no response
+    Deadline: Feb 19, 2026
+    Owner: Chunhui Luo
+    Help Needed: NO (automated task)
+
+[ ] Send email to Parm Bains (backup MP) if Chak Au declines
+    Deadline: Feb 20-22, 2026
+    Owner: Chunhui Luo
+    Help Needed: NO (already prepared)
+
+[ ] Research additional MP targets if primary/backup fail
+    Priority: LOW (only if needed)
+    Owner: OPEN
+    Help Needed: YES - someone to identify MPs who:
+      - Represent ridings with high immigrant populations
+      - Sit on Immigration Committee
+      - Have history of immigration advocacy
+      - Are Opposition members (Conservative/NDP/Bloc)
+
+[ ] Recruit volunteers to identify friendly MPs and find constituents
+    Priority: MEDIUM (parallel task, good insurance)
+    Owner: OPEN - NEED VOLUNTEER
+    Help Needed: YES - Need someone to:
+      - Call/recruit volunteers to research MP voting records and public statements
+      - Identify MPs who are immigration-friendly and likely to sponsor
+      - For each potential MP, find an affected constituent in their riding
+      - Connect constituent with Chunhui to coordinate outreach
+      - Maintain spreadsheet of: MP name, riding, contact, constituent contact
+    Skills Needed: Research, organization, networking
+    Strategy: Constituent outreach is MUCH more effective than outsider contact
+    Why This Matters: If Chak Au and Parm Bains don't work out, having 3-5
+                     backup MPs with local constituents ready = higher success
+
+[ ] Prepare meeting materials if MP wants face-to-face discussion
+    Priority: MEDIUM (if requested)
+    Owner: Chunhui Luo
+    Help Needed: MAYBE - review and practice presentation
+
+================================================================================
+PHASE 2: WEB FORM SUBMISSION (AFTER MP AGREES)
+================================================================================
+
+📋 TASKS (STARTS WHEN MP AGREES TO SPONSOR):
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[ ] Fill out ourcommons.ca e-petition form
+    Deadline: Within 24 hours of MP agreement
+    Owner: Chunhui Luo
+    Help Needed: NO (form already prepared)
+    Instructions: Use Petition_SHORT_VERSION_for_Web_Form.txt
+
+[ ] Select sponsoring MP in form (Step 3)
+    Critical: Must select correct MP name
+
+[ ] Submit form for MP review and House certification
+    Expected timeline: 1-2 weeks for certification
+
+[ ] Receive certification and petition URL
+    Action: Save URL immediately for distribution
+
+================================================================================
+PHASE 3: SIGNATURE COLLECTION (120 DAYS AFTER PETITION OPENS)
+================================================================================
+
+📋 MAJOR TASKS:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[ ] Announce petition launch on chinese-pr-delay.ca
+    Owner: Chunhui Luo
+    Help Needed: YES - someone to update website
+
+[ ] Create social media campaign materials
+    Priority: HIGH
+    Owner: OPEN - NEED VOLUNTEER
+    Help Needed: YES - Need someone to:
+      - Design shareable graphics (petition facts, testimonials)
+      - Write social media posts (WeChat, Twitter, Facebook)
+      - Create templates for sharing
+    Skills Needed: Graphic design, social media
+
+[ ] Organize WeChat group outreach
+    Priority: HIGH
+    Owner: OPEN - NEED VOLUNTEER
+    Help Needed: YES - Need someone to:
+      - Coordinate with Chinese community WeChat groups
+      - Post petition link with context
+      - Follow up in groups regularly
+    Skills Needed: Fluent Chinese (Mandarin), community connections
+
+[ ] Email campaign to affected families
+    Priority: HIGH
+    Owner: OPEN - NEED VOLUNTEER
+    Help Needed: YES - Need someone to:
+      - Compile email list from website registrations
+      - Draft email announcement with petition link
+      - Send periodic reminders (weekly)
+    Skills Needed: Email marketing, data management
+
+[ ] Reach out to immigration lawyers and consultants
+    Priority: MEDIUM
+    Owner: OPEN - NEED VOLUNTEER
+    Help Needed: YES - Need someone to:
+      - Compile list of immigration lawyers in Vancouver/Toronto
+      - Email them requesting they share petition with clients
+      - Follow up with reminders
+    Skills Needed: Professional communication
+
+[ ] Contact immigrant settlement organizations
+    Priority: MEDIUM
+    Owner: OPEN - NEED VOLUNTEER
+    Help Needed: YES - Need someone to:
+      - Identify organizations (MOSAIC, SUCCESS, etc.)
+      - Request they share petition through their networks
+      - Provide them with talking points
+    Skills Needed: Community outreach
+
+[ ] Weekly signature tracking and reporting
+    Priority: MEDIUM
+    Owner: OPEN - NEED VOLUNTEER
+    Help Needed: YES - Need someone to:
+      - Check signature count weekly
+      - Report progress to team
+      - Identify slow periods and suggest boost tactics
+    Skills Needed: Data tracking, analysis
+
+[ ] Coordinate with March 13 procession
+    Priority: HIGH
+    Owner: Chunhui Luo
+    Help Needed: YES - Need someone to:
+      - Create QR codes for petition at event
+      - Print materials with petition link
+      - Coordinate signature collection at procession
+    Skills Needed: Event coordination, printing
+
+[ ] Media outreach (newspapers, radio, TV)
+    Priority: MEDIUM
+    Owner: OPEN - NEED VOLUNTEER
+    Help Needed: YES - Need someone to:
+      - Draft press release about petition
+      - Contact ethnic media (Chinese newspapers, radio)
+      - Contact mainstream media (CBC, CTV, Globe & Mail)
+      - Offer Chunhui as spokesperson
+    Skills Needed: Media relations, communications
+
+[ ] Create petition milestone celebrations
+    Priority: LOW (morale boost)
+    Owner: OPEN - NEED VOLUNTEER
+    Help Needed: YES - Create posts for:
+      - 500 signatures
+      - 1,000 signatures
+      - 5,000 signatures
+      - 10,000 signatures
+    Skills Needed: Social media, community engagement
+
+📊 TARGET METRICS:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Minimum Success: 500 signatures (credible showing)
+Good Success: 2,000-5,000 signatures (significant support)
+Excellent Success: 10,000+ signatures (major political impact)
+
+================================================================================
+PHASE 4: PETITION PRESENTATION IN HOUSE OF COMMONS
+================================================================================
+
+📋 TASKS (AFTER 120-DAY SIGNATURE PERIOD):
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[ ] Coordinate with sponsoring MP for presentation date
+    Owner: Chunhui Luo
+    Help Needed: NO
+
+[ ] Prepare media statement for day of presentation
+    Owner: OPEN - NEED VOLUNTEER
+    Help Needed: YES - Draft statement for:
+      - Social media announcement
+      - Press release
+      - Website update
+    Skills Needed: Communications, writing
+
+[ ] Attend House session (if possible/practical)
+    Priority: LOW (nice to have)
+    Owner: Chunhui Luo + volunteers
+    Help Needed: MAYBE - coordinate group attendance
+
+[ ] Monitor for government response (due 45 days after presentation)
+    Owner: Chunhui Luo
+    Help Needed: YES - someone to:
+      - Track response deadline
+      - Set up alerts
+      - Review response when published
+    Skills Needed: Organization, policy analysis
+
+[ ] Analyze and respond to government's official response
+    Priority: HIGH
+    Owner: OPEN - NEED VOLUNTEER
+    Help Needed: YES - someone to:
+      - Read and analyze government response
+      - Draft public reaction statement
+      - Plan next steps based on response
+    Skills Needed: Policy analysis, communications
+
+================================================================================
+ONGOING TASKS (ALL PHASES)
+================================================================================
+
+📋 CONTINUOUS WORK:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[ ] Update chinese-pr-delay.ca website regularly
+    Frequency: Weekly or as needed
+    Owner: Chunhui Luo
+    Help Needed: YES - website maintenance, content updates
+
+[ ] Collect and publish affected family stories
+    Priority: HIGH (builds case, humanizes issue)
+    Owner: OPEN - NEED VOLUNTEER
+    Help Needed: YES - someone to:
+      - Conduct interviews with affected families
+      - Write up stories (with permission)
+      - Publish on website
+      - Create shareable testimonial graphics
+    Skills Needed: Writing, interviewing, empathy
+
+[ ] Monitor IRCC statistics for updates
+    Frequency: Monthly (IRCC publishes monthly)
+    Owner: OPEN - NEED VOLUNTEER
+    Help Needed: YES - someone to:
+      - Check IRCC website monthly
+      - Extract relevant statistics
+      - Update fact sheets if numbers change
+    Skills Needed: Data analysis
+
+[ ] Answer questions from affected families
+    Frequency: Daily/as needed
+    Owner: Chunhui Luo
+    Help Needed: YES - share the workload
+    Skills Needed: Immigration knowledge, empathy
+
+[ ] Coordinate with other advocacy groups
+    Priority: MEDIUM
+    Owner: OPEN - NEED VOLUNTEER
+    Help Needed: YES - someone to:
+      - Identify similar advocacy groups
+      - Build coalition relationships
+      - Coordinate joint actions
+    Skills Needed: Networking, collaboration
+
+================================================================================
+VOLUNTEER NEEDS SUMMARY
+================================================================================
+
+🔴 HIGH PRIORITY (NEED IMMEDIATELY):
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+1. Social Media Coordinator
+   - Create graphics and posts
+   - Manage sharing campaign when petition launches
+   - Time commitment: 5-10 hours/week during 120-day period
+
+2. WeChat Outreach Coordinator
+   - Fluent Mandarin required
+   - Post in Chinese community groups
+   - Time commitment: 3-5 hours/week during 120-day period
+
+3. Website Manager
+   - Update chinese-pr-delay.ca with petition info
+   - Add stories and updates
+   - Time commitment: 2-4 hours/week ongoing
+
+🟡 MEDIUM PRIORITY (NEED SOON):
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+4. Email Campaign Manager
+   - Coordinate email outreach to affected families
+   - Time commitment: 3-5 hours/week during 120-day period
+
+5. Media Relations Coordinator
+   - Draft press releases
+   - Contact media outlets
+   - Time commitment: 5-8 hours/week during key periods
+
+6. Story Collector/Writer
+   - Interview affected families
+   - Write compelling testimonials
+   - Time commitment: 4-6 hours/week ongoing
+
+7. MP Research & Constituent Coordinator
+   - Identify immigration-friendly MPs likely to sponsor petition
+   - Find affected constituents in target MPs' ridings
+   - Coordinate backup MP outreach strategy
+   - Time commitment: 3-5 hours/week initial research, then as needed
+
+🟢 LOWER PRIORITY (HELPFUL BUT NOT URGENT):
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+8. Data Tracker
+   - Monitor signatures and statistics
+   - Time commitment: 1-2 hours/week
+
+9. Event Coordinator (for March 13)
+   - Help coordinate petition signing at procession
+   - Time commitment: 10-15 hours in March
+
+10. Policy Analyst
+   - Analyze government response when it comes
+   - Time commitment: 5-10 hours one-time
+
+================================================================================
+HOW TO JOIN THE TEAM
+================================================================================
+
+📧 Contact: Chunhui Luo
+   Email: ca@luochunhui.com
+   Phone: +1 778-886-8708
+
+📝 To Volunteer:
+   1. Email Chunhui with subject: "E-Petition Volunteer - [Your Role]"
+   2. Include:
+      - Which role(s) you're interested in
+      - Your relevant skills/experience
+      - Time you can commit per week
+      - Any questions about the project
+   3. We'll set up a brief call to discuss next steps
+
+📍 Current Team:
+   - Chunhui Luo (Project Lead, Petition Author)
+   - [Your Name] - [Your Role] (add as people join)
+
+🔗 Resources:
+   - All petition documents: /e-petition/ folder
+   - Website: chinese-pr-delay.ca
+   - Event: March 13, 2026 Parliament Hill procession
+
+================================================================================
+NEXT MILESTONES
+================================================================================
+
+📅 UPCOMING DEADLINES:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Feb 15-16, 2026: Expected response from Chak Au
+Feb 19, 2026: Follow-up if no response
+March 13, 2026: Parliament Hill procession
+[TBD]: Petition opens for signatures (120-day period)
+[TBD + 120 days]: Petition closes
+[TBD + 45 days after presentation]: Government response due
+
+================================================================================
+SUCCESS CRITERIA
+================================================================================
+
+✓ Phase 1 Success: MP agrees to sponsor (targeting Chak Au)
+✓ Phase 2 Success: Petition certified and opens for signatures
+✓ Phase 3 Success: Collect 5,000+ signatures in 120 days
+✓ Phase 4 Success: Government provides substantive response with commitments
+
+ULTIMATE GOAL: Force government action on:
+1. Expediting CSIS-cleared cases stuck in CBSA
+2. 90-day mandatory case updates
+3. Independent oversight of processing delays
+4. Parliamentary accountability for backlog crisis
+
+================================================================================
+Last Updated: February 12, 2026
+================================================================================
+
+NOTES:
+- This is a living document - update as tasks are completed or priorities change
+- Share this file with all volunteers
+- Use it for team coordination and progress tracking
+- Mark tasks [✓] when completed, add dates and owner names

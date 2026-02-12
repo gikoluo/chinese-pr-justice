@@ -4,3 +4,4 @@ node_modules/
 *.log
 .astro/
 dist/
+e-petition/02_mp_emails

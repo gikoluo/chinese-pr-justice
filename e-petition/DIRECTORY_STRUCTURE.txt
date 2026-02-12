@@ -1,0 +1,88 @@
+================================================================================
+E-PETITION DIRECTORY STRUCTURE
+================================================================================
+
+e-petition/
+│
+├── README.txt                              (📄 Main overview and guide)
+├── README_MP_Outreach_Package.txt          (📄 Detailed workflow instructions)
+├── DIRECTORY_STRUCTURE.txt                 (📄 This file)
+├── TASKS_TODO.txt                          (📋 Complete task list for team)
+├── VOLUNTEER_OPPORTUNITIES.txt             (📢 Volunteer recruitment flyer)
+│
+├── 01_petition_documents/                  (📁 Final petition materials)
+│   ├── E-Petition_Full_Document_for_MPs.docx
+│   │   └─ Professional Word doc with complete petition
+│   │      Includes: 7 WHEREAS points, 8 demands (3 pillars), references
+│   │      Status: ✅ FINAL - ready to attach to MP emails
+│   │
+│   ├── Petition_SHORT_VERSION_for_Web_Form.txt
+│   │   └─ Condensed version for ourcommons.ca web form (~3,500 chars)
+│   │      Sections: PETITION TO, WHEREAS 1-7, WE THE UNDERSIGNED, CALL UPON, TO
+│   │      Status: ✅ FINAL - ready to copy-paste into web form
+│   │
+│   └── House_Commons_Petition_CORRECTED.md
+│       └─ Master source document in markdown format
+│          Status: ✅ FINAL - source of truth for all versions
+│
+├── 02_mp_emails/                           (📁 MP outreach communications)
+│   ├── STATUS.txt
+│   │   └─ Tracks email status and timeline
+│   │
+│   ├── Email_to_Chak_Au_Richmond_Centre.txt
+│   │   └─ PRIMARY TARGET: Chak Au (Conservative, Richmond Centre)
+│   │      Personal connection: Son volunteered for Conservative Party
+│   │      Status: ✅ SENT February 12, 2026
+│   │      Success rate: 80-90%
+│   │
+│   ├── Email_to_Parm_Bains_Your_MP.txt
+│   │   └─ BACKUP: Parm Bains (Liberal, Steveston-Richmond East)
+│   │      Strategy: Constituent obligation
+│   │      Status: ⏳ READY (send if Chak Au declines)
+│   │      Success rate: 30% sponsor / 70% raise privately
+│   │
+│   └── Email_TEMPLATE_for_Other_MPs.txt
+│       └─ Generic template for additional MPs
+│          Status: ⏳ TEMPLATE (requires customization)
+│
+└── 03_archive_old_versions/                (📁 Historical drafts - reference only)
+    ├── House_Commons_Petition.docx
+    ├── House_Commons_Petition_CITED.docx
+    ├── House_Commons_Petition_CORRECTED.docx
+    ├── House_Commons_Petition_FINAL.docx
+    ├── House_Commons_Petition_FINAL_WITH_TRENDS.docx
+    ├── House_Commons_Petition_OFFICIAL.docx
+    ├── House_Commons_Petition_FULL.md
+    └── MP_Invitation_Email.docx
+        └─ Previous versions kept for documentation only
+
+================================================================================
+QUICK ACCESS GUIDE
+================================================================================
+
+Need to...                          →  Go to...
+─────────────────────────────────────────────────────────────────────────────
+Understand the package              →  README.txt
+Check workflow and next steps       →  README_MP_Outreach_Package.txt
+See all tasks and assignments       →  TASKS_TODO.txt
+Recruit volunteers                  →  VOLUNTEER_OPPORTUNITIES.txt
+Attach petition to MP email         →  01_petition_documents/E-Petition_Full_Document_for_MPs.docx
+Fill ourcommons.ca web form         →  01_petition_documents/Petition_SHORT_VERSION_for_Web_Form.txt
+Check email status                  →  02_mp_emails/STATUS.txt
+Send to another MP                  →  02_mp_emails/Email_TEMPLATE_for_Other_MPs.txt
+Reference old versions              →  03_archive_old_versions/
+
+================================================================================
+FILE SIZES
+================================================================================
+
+E-Petition_Full_Document_for_MPs.docx       12 KB (professional Word doc)
+Petition_SHORT_VERSION_for_Web_Form.txt     4.4 KB (web form version)
+House_Commons_Petition_CORRECTED.md         17 KB (master source)
+Email_to_Chak_Au_Richmond_Centre.txt        4.0 KB (sent)
+Email_to_Parm_Bains_Your_MP.txt             3.9 KB (backup)
+Email_TEMPLATE_for_Other_MPs.txt            4.1 KB (template)
+
+================================================================================
+Last Updated: February 12, 2026
+================================================================================
