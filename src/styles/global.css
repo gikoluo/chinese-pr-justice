@@ -310,8 +310,8 @@ section h2 {
   row-gap: 0.75rem;
   background: var(--bg-light);
   padding: 1.25rem;
-  border-radius: 8px;
-  border-top: 4px solid var(--primary-color);
+  border-radius: 0;
+  border-top: 4px solid var(--red);
   transition:
     transform 0.3s,
     box-shadow 0.3s;

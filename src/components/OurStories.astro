@@ -1,6 +1,13 @@
 ---
 // OurStories Section component (EN + 中文)
+import { getCollection } from 'astro:content';
 import { storiesSection } from '../i18n/strings';
+
+// Get all stories and sort by order
+const stories = await getCollection('pr-stories');
+const sortedStories = stories
+  .filter(story => !story.data.isTemplate && !story.data.isPlaceholder)
+  .sort((a, b) => a.data.order - b.data.order);
 ---
 
 <section id="stories" class="stories-section">
@@ -10,265 +17,57 @@ import { storiesSection } from '../i18n/strings';
 
         <div class="stories-scroll-wrap">
             <div class="stories-grid">
-            <!-- Story 1 -->
-            <div class="story-card" data-story>
-                <div class="story-delay">
-                    <span class="story-delay-number">40</span>
-                    <div class="story-delay-labels">
-                        <span class="story-delay-label">Months</span>
-                        <span class="story-delay-sub">Waiting for IRCC</span>
+            {sortedStories.map(async (story) => {
+                const { Content } = await story.render();
+                return (
+                    <div class="story-card" data-story>
+                        <div class="story-delay">
+                            <span class="story-delay-number">{story.data.waitingMonths}</span>
+                            <div class="story-delay-labels">
+                                <span class="story-delay-label">Months</span>
+                                <span class="story-delay-sub">Waiting for IRCC</span>
+                            </div>
+                        </div>
+                        <div class="story-header">
+                            <div class="story-meta">
+                                <p class="story-meta-line">
+                                    <span class="story-meta-title">{story.data.anonymous ? story.data.title : story.data.name}</span>
+                                    {!story.data.profession && <>, <span class="story-location">{story.data.location}</span></>}
+                                </p>
+                                {story.data.profession && (
+                                    <p class="story-meta-line story-meta-profession">
+                                        <span class="story-profession">{story.data.profession}</span>, <span class="story-location">{story.data.location}</span>
+                                    </p>
+                                )}
+                            </div>
+                        </div>
+                        <p class="story-teaser">{story.data.teaser}</p>
+                        <div class="story-content-full" hidden>
+                            <div class="story-content-prose">
+                                <Content />
+                            </div>
+                            {story.data.quote && (
+                                <p class="story-quote">"{story.data.quote}"</p>
+                            )}
+                            {!story.data.anonymous && story.data.email && (
+                                <p><strong>— {story.data.name}</strong><br />
+                                {story.data.profession && <>{story.data.profession}, </>}{story.data.location}<br />
+                                Email: <a href={`mailto:${story.data.email}`}>{story.data.email}</a></p>
+                            )}
+                            {story.data.anonymous && story.data.email && (
+                                <p><strong>— {story.data.name}</strong><br />
+                                Email: <a href={`mailto:${story.data.email}`}>{story.data.email}</a></p>
+                            )}
+                            {story.data.timeline && (
+                                <div class="story-timeline">
+                                    <strong>Timeline:</strong> {story.data.timeline}
+                                </div>
+                            )}
+                        </div>
+                        <button type="button" class="story-toggle" aria-expanded="false">Read full story</button>
                     </div>
-                </div>
-                <div class="story-header">
-                    <div class="story-meta">
-                        <p class="story-meta-line"><span class="story-meta-title">BC PNP Applicant</span>, <span class="story-location">Richmond, BC</span></p>
-                    </div>
-                </div>
-                <p class="story-teaser">I applied for PR through BC PNP over 3.5 years ago. All requirements passed—eligibility, criminality, medical. Only security screening remains. My CBSA notes document a pattern of missed deadlines. Now my son faces $130,000-200,000 in extra tuition costs because our work permits don't qualify for domestic rates anymore.</p>
-                <div class="story-content-full" hidden>
-                    <p><strong>My name is Chunhui Luo.</strong> I applied for Permanent Residence through BC PNP in August 2022 — over 3.5 years ago. I followed every rule, submitted every document, paid every fee. All admissibility requirements passed: <strong>Eligibility ✓ Criminality ✓ Medical ✓</strong> Only security screening remains — and it has consumed over 40 months of my life.</p>
-
-                    <p><strong>The Pattern of Broken Promises:</strong> My CBSA notes document a disturbing pattern of missed deadlines. IRCC sets "due dates" then ignores them. The latest deadline is June 6, 2026. My MP was told I "may receive a potential update in July 2026, but this is not guaranteed." After 40+ months, even IRCC won't commit to their own deadlines.</p>
-
-                    <p><strong>My Son's Education Crisis:</strong> My son is in Grade 11. He will apply to Canadian universities in Fall 2026 for Fall 2027 admission. Without PR, he faces international tuition: <strong>$40,000-65,000 per year</strong>. With PR, domestic tuition is <strong>$7,000-15,000 per year</strong>. Over 4 years, that's a difference of <strong>$130,000-200,000</strong>.</p>
-
-                    <p><strong>Our Backup Plan Collapsed:</strong> I hold a Bridging Open Work Permit (BOWP) because my PR application is pending. Until May 2025, UBC offered domestic tuition to work permit holders' dependents. But UBC repealed that policy effective May 1, 2025. I researched every top Canadian university — UBC, SFU, U of T, McGill, McMaster, Waterloo, Western, Queen's. <strong>My BOWP doesn't qualify at a single one.</strong> They all require closed work permits with provincial employers. PR is the ONLY way my son can access domestic tuition.</p>
-
-                    <p><strong>The October 2026 Deadline:</strong> My work permit and my son's study permit expire in October 2026. If PR isn't approved, we must apply for extension or leave Canada — the country my son calls home. Even with extension, it won't solve the tuition problem. My son has excellent grades and would qualify for $50,000-150,000 in domestic scholarships — but only if we have PR.</p>
-
-                    <p><strong>Why Is This Happening?</strong> IRCC's own posted processing time is <strong>12 months</strong> (updated January 14, 2026). I am at <strong>40+ months</strong> — over three times that standard — with no explanation. Official data shows the system is in crisis: the PR backlog has grown from the 20% target achieved in 2023 to <strong>55%</strong> by November 2025, and promised reforms have not reversed it. Independent oversight reports and Federal Court cases have documented that many applicants face extreme delays far beyond service standards, with no transparent information and no meaningful recourse. I am one of those applicants — and I still have no answer from IRCC as to why.</p>
-
-                    <p><strong>What I'm Asking For:</strong> I'm not asking for special treatment. I'm asking for <em>equal treatment</em>. I'm asking for transparency about what security concerns remain after 40 months when I've already passed every other check. I'm asking for my son to have the same opportunities as other Canadian kids — to attend university without his family being bankrupted or deported.</p>
-
-                    <p class="story-quote">"We followed every rule. We paid every fee. We waited patiently. Yet we're treated like we don't deserve basic fairness. My son's future is being destroyed by bureaucratic delays and what feels like systematic discrimination. After 40 months, 'patience' is no longer enough. We demand action."</p>
-
-                    <p><strong>— Chunhui Luo</strong><br>
-                    Richmond, BC<br>
-                    Email: <a href="mailto:ca@luochunhui.com">ca@luochunhui.com</a></p>
-
-                    <div class="story-timeline">
-                        <strong>Timeline:</strong> Applied BC PNP Aug 2022 → All passed by mid-2023 → Security screening begins → June 6, 2026 deadline (from MP) → July 2026 update expected (not guaranteed) → Work permits expire Oct 2026 → Son applies to universities Fall 2026 → University starts Fall 2027
-                    </div>
-                </div>
-                <button type="button" class="story-toggle" aria-expanded="false">Read full story</button>
-            </div>
-
-            <!-- Story 2: Federal applicant, security passed then reverted -->
-            <div class="story-card" data-story>
-                <div class="story-delay">
-                    <span class="story-delay-number">38</span>
-                    <div class="story-delay-labels">
-                        <span class="story-delay-label">Months</span>
-                        <span class="story-delay-sub">Waiting for IRCC</span>
-                    </div>
-                </div>
-                <div class="story-header">
-                    <div class="story-meta">
-                        <p class="story-meta-line"><span class="story-meta-title">Jeff Yan</span></p>
-                        <p class="story-meta-line story-meta-profession"><span class="story-profession">International Trade Manager</span>, <span class="story-location">Canada</span></p>
-                    </div>
-                </div>
-                <p class="story-teaser">My journey to secure permanent residency in Canada has turned into a nightmare of bureaucratic inaction and inexplicable delays. I submitted my federal application in November 2022, hoping for a new beginning for my family. Security passed in December 2023—then inexplicably reverted to "Security in Progress" in January 2024. Over a year later, two Mandamus applications dismissed, MP interventions with no results. I am demanding that IRCC and CBSA address the facts and finalize my application immediately.</p>
-                <div class="story-content-full" hidden>
-                    <p>My journey to secure permanent residency in Canada has turned into a nightmare of bureaucratic inaction and inexplicable delays. I submitted my federal application in November 2022, hoping for a new beginning for my family.</p>
-                    <p>For a while, everything seemed to be on track. In July 2023, I received my Pre-Arrival Letter (PAL). Then came the crucial breakthrough: according to the official Tracker and CBSA notes, my Security Screening passed on December 8, 2023, with a validity date set until December 7, 2025. I felt relief, believing the finish line was near.</p>
-                    <p>However, that relief was short-lived. On January 29, 2024, without any justification or change in my circumstances, my status inexplicably reverted to "Security in Progress" according to CBSA notes.</p>
-                    <p>What followed has been over a year of frustration. I have had to file two Mandamus applications, both of which were dismissed. Despite complaints to CSIS confirming they completed their screening on March 5, 2025, IRCC continues to ignore the facts. I have sent countless emails to CBSA executives, only to receive the same automated, template replies stating "security in progress." Even interventions by two different Members of Parliament have yielded no results, only empty assurances.</p>
-                    <p>I am an English major with an MBA, worked in the private sector in import/export for auto parts and agricultural fertilizer. I have never traveled to sensitive countries, and my family has no background that would warrant this scrutiny. I am caught in a loop of repeated security screenings for no apparent reason, and IRCC refuses to explain why a passed security check was disregarded.</p>
-                    <p>The impact on my life has been devastating:</p>
-                    <p><strong>Mental Toll:</strong> The extreme uncertainty has caused immense mental and emotional distress.</p>
-                    <p><strong>Family Separation:</strong> My mother is ill, but because I am on a closed work permit, I cannot leave my job to return to China to care for her.</p>
-                    <p><strong>Financial Strain:</strong> Because my status remains pending, both of my children are forced to pay international student tuition fees, placing a massive burden on our family.</p>
-                    <p>I am demanding that IRCC and CBSA stop this injustice, address the facts of my case, and finalize my application immediately.</p>
-                    <p><strong>— Jeff Yan</strong><br>
-                    Email: <a href="mailto:jeffyan999@gmail.com">jeffyan999@gmail.com</a></p>
-                    <div class="story-timeline">
-                        <strong>Timeline:</strong> Federal application Nov 2022 → PAL July 2023 → Security passed Dec 8, 2023 (valid to Dec 7, 2025) → Status reverted to "Security in Progress" Jan 29, 2024 → Two Mandamus applications dismissed → CSIS confirmed screening complete March 5, 2025 → IRCC/CBSA still no resolution
-                    </div>
-                </div>
-                <button type="button" class="story-toggle" aria-expanded="false">Read full story</button>
-            </div>
-
-            <!-- Story 3: Software Engineer, continuing education delayed -->
-            <div class="story-card" data-story>
-                <div class="story-delay">
-                    <span class="story-delay-number">38</span>
-                    <div class="story-delay-labels">
-                        <span class="story-delay-label">Months</span>
-                        <span class="story-delay-sub">Waiting for IRCC</span>
-                    </div>
-                </div>
-                <div class="story-header">
-                    <div class="story-meta">
-                        <p class="story-meta-line"><span class="story-meta-title">Lei Cai</span></p>
-                        <p class="story-meta-line story-meta-profession"><span class="story-profession">Software Engineer</span>, <span class="story-location">Ottawa, ON</span></p>
-                    </div>
-                </div>
-                <p class="story-teaser">I am a young software engineer based in Ottawa. After earning my Canadian credential, I taught myself coding and secured a full-time software engineering position in 2022. I submitted my immigration application in December 2022, and since then, I have received no updates. My dream of pursuing a master's degree to advance my career has been repeatedly delayed because I cannot afford the extremely high international student tuition fees without PR status.</p>
-                <div class="story-content-full" hidden>
-                    <p><strong>The Story of My Continuing Education Delayed by Immigration Processing</strong></p>
-                    <p>I am a young software engineer based in Ottawa. Unlike many others, after earning my Canadian credential, I did not immediately continue working in a field directly related to my original area of study. Instead, driven by my passion for computers and coding, I taught myself and eventually, in 2022, secured a full-time software engineering position at a local tech company in Ottawa.</p>
-                    <p>I love the community where I live. I take part in local activities such as volunteering at the food bank. I am also deeply passionate about my profession and hope to create value for my community and for this country through the field I love.</p>
-                    <p>I submitted my immigration application in December 2022, and since then, I have received no updates. At the same time, as my work experience has grown, I have realized that if I want to make greater progress in the field of software development and truly support my long-term career goals, pursuing a master's degree has become essential.</p>
-                    <p>I began preparing my application materials in 2023. However, in every application cycle, I have had to step back because my current immigration status requires me to pay extremely high international student tuition fees. My application documents have gone through many revisions, but due to the immigration delays, to this day I still have not had the opportunity to submit my applications.</p>
-                    <p>The impact of this delay extends beyond just my career aspirations. Without permanent residency, I am unable to access the same educational opportunities that would allow me to contribute more meaningfully to Canada's tech sector. The financial burden of international tuition fees makes pursuing advanced education impossible, even though I am already contributing to the Canadian economy and community.</p>
-                    <p>I am asking for transparency and action from IRCC. After 38 months of waiting with no updates, I deserve to know the status of my application and when I can expect a resolution. My future, my career growth, and my ability to contribute more to this country I call home are all being held hostage by bureaucratic delays.</p>
-                    <p><strong>— Lei Cai</strong><br>
-                    Software Engineer, Ottawa, ON<br>
-                    Email: <a href="mailto:lei.cai.careers@gmail.com">lei.cai.careers@gmail.com</a></p>
-                    <div class="story-timeline">
-                        <strong>Timeline:</strong> Submitted immigration application Dec 2022 → No updates received → Began preparing master's degree applications 2023 → Repeatedly delayed due to international tuition fees → Still waiting for PR status → Unable to pursue advanced education
-                    </div>
-                </div>
-                <button type="button" class="story-toggle" aria-expanded="false">Read full story</button>
-            </div>
-
-            <!-- Story 4: International Medical Graduate, physician career stalled -->
-            <div class="story-card" data-story>
-                <div class="story-delay">
-                    <span class="story-delay-number">13</span>
-                    <div class="story-delay-labels">
-                        <span class="story-delay-label">Months</span>
-                        <span class="story-delay-sub">Waiting for IRCC</span>
-                    </div>
-                </div>
-                <div class="story-header">
-                    <div class="story-meta">
-                        <p class="story-meta-line"><span class="story-meta-title">International Medical Graduate</span></p>
-                        <p class="story-meta-line story-meta-profession"><span class="story-profession">Physician</span>, <span class="story-location">Quebec</span></p>
-                    </div>
-                </div>
-                <p class="story-teaser">I am an International Medical Graduate from China who has completed every professional milestone required to serve the Canadian community: MCC qualifying examinations, MD equivalence from CMQ, and LMCC licensure. Despite these qualifications, my immigration application has been stalled for 13 months with no end in sight. This delay has forced me to miss the 2025 residency application cycle and I am now on the verge of missing the 2026 cycle as well. While I should be in a hospital saving lives, I am forced away from the front lines by administrative paralysis.</p>
-                <div class="story-content-full" hidden>
-                    <p><strong>A Physician's Dream Stalled by Administrative Dysfunction: A Petition to Canada's Immigration System from an International Medical Graduate</strong></p>
-                    <p>I am an International Medical Graduate from China currently facing the most significant challenge of my career. This struggle is not born of a lack of medical expertise or professional competence, but rather from the profound administrative dysfunction marked by excessive delays and a lack of transparency within Immigration, Refugees and Citizenship Canada (IRCC).</p>
-                    <p>I have completed every professional milestone required to serve the Canadian community: I have successfully passed the Medical Council of Canada (MCC) qualifying examinations, received MD equivalence from the Collège des médecins du Québec (CMQ), and am a Licentiate of the Medical Council of Canada (LMCC). Furthermore, through my clinical observership in the Department of Medical Genetics at the McGill University Health Centre (MUHC), I had the opportunity to shadow senior clinicians and gain firsthand insight into the Canadian healthcare system. This experience also allowed me to witness, from a clinical perspective, the desperate need for specialized medical services.</p>
-                    <p>Despite these qualifications, my immigration application has been stalled for 13 months with no end in sight. This administrative inefficiency has triggered a devastating chain reaction: because my Permanent Residency (PR) status remains unapproved, I am barred from the Canadian Resident Matching Service (CaRMS). Consequently, I was forced to miss the 2025 residency application cycle and am now on the verge of missing the 2026 cycle as well.</p>
-                    <p>As a physician, my deepest regret is this: while I should be in a hospital saving lives, I am forced away from the front lines by administrative paralysis. This is not just a personal loss; it is a profound waste of Canadian public health resources. I am currently unable to fulfill my vocation to heal, nor can I contribute my skills as a high-value professional to Canada's socio-economic fabric.</p>
-                    <p>Canada is currently gripped by a severe physician shortage. By 2030, the deficit of clinical geneticists is projected to be 1.7 times the current capacity; in Quebec alone, 35% of senior practitioners in this field are nearing retirement. I have a deep affinity for Canada. As a doctor in the prime of my career, I am eager to enter the clinical front lines, alleviate the suffering of patients languishing on waiting lists, and give back to society through my expertise.</p>
-                    <p>I am not asking for special treatment. I am simply asking for a fair, transparent, and reasonable processing timeline. Please do not let bureaucratic dysfunction become the "career-ender" for a physician who only wishes to serve the health of this nation.</p>
-                    <p><strong>— International Medical Graduate</strong><br>
-                    Physician, Quebec<br>
-                    Email: <a href="mailto:yhl.lyh.hh@gmail.com">yhl.lyh.hh@gmail.com</a></p>
-                    <div class="story-timeline">
-                        <strong>Timeline:</strong> Completed MCC examinations → Received MD equivalence from CMQ → Obtained LMCC licensure → Clinical observership at MUHC → Immigration application stalled for 13+ months → Missed 2025 CaRMS residency cycle → On verge of missing 2026 cycle → Unable to practice medicine due to PR status delay
-                    </div>
-                </div>
-                <button type="button" class="story-toggle" aria-expanded="false">Read full story</button>
-            </div>
-
-            <!-- Story 5: Anonymous – loss, helplessness, children's stability -->
-            <div class="story-card" data-story>
-                <div class="story-delay">
-                    <span class="story-delay-number">42</span>
-                    <div class="story-delay-labels">
-                        <span class="story-delay-label">Months</span>
-                        <span class="story-delay-sub">Waiting for IRCC</span>
-                    </div>
-                </div>
-                <div class="story-header">
-                    <div class="story-meta">
-                        <p class="story-meta-line"><span class="story-meta-title">Anonymous</span>, <span class="story-location">Canada</span></p>
-                    </div>
-                </div>
-                <p class="story-teaser">We submitted our permanent residence application in August 2022. Security screening began in June 2023 and has been ongoing for over two and a half years, with no updates. In 2024 my husband's father passed away — because his status depended on maintaining work authorization, he could not travel home to say goodbye. Our daughter longs for a stable home of our own; we continue to pay a mortgage abroad and rent in Canada. We are asking for reasonable timelines, transparency, and accountability.</p>
-                <div class="story-content-full" hidden>
-                    <p>Thank you for documenting the impact of prolonged security screening delays. We would like to share our experience.</p>
-                    <p><strong>1. Timeline</strong><br>
-                    We submitted our permanent residence application in August 2022.<br>
-                    Security screening began in June 2023 and has now been ongoing for over two and a half years, with no updates or clear indication of progress.</p>
-                    <p>As of today, our PR application has been pending for nearly four years.</p>
-                    <p><strong>2. Emotional Hardship – Loss and Helplessness</strong><br>
-                    In 2024, my husband's father passed away.</p>
-                    <p>At that time, my husband was still under security screening and awaiting renewal of his work permit. Because our permanent residence application had not yet been approved, and his legal status in Canada depended on maintaining continuous work authorization, he could not leave the country without risking his ability to return and continue supporting our family.</p>
-                    <p>As a result, he was unable to travel home to say goodbye to his father in person.</p>
-                    <p>He said his final farewell over the phone while trying to comfort his elderly mother. It was one of the most painful moments for him — and for our entire family.</p>
-                    <p>I tried to console him by saying, "Once the PR is approved, we'll go home together to visit your father's grave."</p>
-                    <p>But another year has passed, and nothing has changed.</p>
-                    <p>The prolonged uncertainty has left us with a deep sense of loss and helplessness. It continues to affect his emotional well-being and our family's overall stability.</p>
-                    <p><strong>3. Impact on Our Children – Loss of Stability and Belonging</strong><br>
-                    Our 11-year-old daughter has long hoped that we would one day have a stable home of our own.</p>
-                    <p>Each Halloween, she asks if we can decorate "our own house" and invite friends over for trick-or-treating. But because we still live in a shared rental unit, we have to tell her, "maybe next year."</p>
-                    <p>Over time, she has become quieter and more withdrawn. As parents, it is heartbreaking to see how prolonged uncertainty has affected her sense of stability and belonging.</p>
-                    <p><strong>4. Financial and Settlement Impact</strong><br>
-                    Because our PR application remains pending, we have been unable to make key settlement decisions, such as selling our home overseas.</p>
-                    <p>We continue to pay both a mortgage abroad and rent in Canada, creating significant financial strain. The uncertainty makes it extremely difficult for us to plan our future or fully settle in Canada, despite having already built our lives here.</p>
-                    <p><strong>5. What We Want the Government to Know</strong><br>
-                    We fully respect the importance of security screening.</p>
-                    <p>However, security screening should not become an indefinite and opaque process. Law-abiding families deserve reasonable timelines, transparency, and communication about the status of their cases.</p>
-                    <p>Prolonged silence creates profound emotional, financial, and social consequences that extend far beyond administrative delay.</p>
-                    <p>We hope the government will:</p>
-                    <ul>
-                        <li>Establish clearer timelines for security screening</li>
-                        <li>Improve transparency and communication</li>
-                        <li>Ensure that applications are processed within a reasonable and accountable timeframe</li>
-                    </ul>
-                    <div class="story-timeline">
-                        <strong>Timeline:</strong> PR application submitted Aug 2022 → Security screening began June 2023 → Over 2.5 years in security screening with no updates → Husband's father passed away 2024; unable to travel home to say goodbye → PR pending nearly 4 years → Family continues to face emotional, financial, and settlement uncertainty
-                    </div>
-                </div>
-                <button type="button" class="story-toggle" aria-expanded="false">Read full story</button>
-            </div>
-
-            <!-- Story 6: Saskatchewan PNP – indefinite pause, daughter born in Canada, no CCB -->
-            <div class="story-card" data-story>
-                <div class="story-delay">
-                    <span class="story-delay-number">32</span>
-                    <div class="story-delay-labels">
-                        <span class="story-delay-label">Months</span>
-                        <span class="story-delay-sub">Waiting for IRCC</span>
-                    </div>
-                </div>
-                <div class="story-header">
-                    <div class="story-meta">
-                        <p class="story-meta-line"><span class="story-meta-title">Saskatchewan PNP Applicant</span>, <span class="story-location">Saskatchewan</span></p>
-                    </div>
-                </div>
-                <p class="story-teaser">I was approved under Saskatchewan's provincial nominee program and submitted my federal PR application in mid-2023. I passed eligibility, medical, and criminality; I moved to Canada, work here, and pay taxes. In April 2024 our files entered security screening—since then, no decision and no explanation. Our daughter was born in Canada and is a citizen, yet for a significant period she could not access the Canada Child Benefit. I am asking for a fair decision within a reasonable timeframe.</p>
-                <div class="story-content-full" hidden>
-                    <p>Three years ago, I was approved under Saskatchewan's provincial nominee program after meeting all required criteria. Based on that nomination, I submitted my federal permanent residence application in mid-2023. I passed eligibility, medical examinations, and criminality checks. I lawfully obtained a work permit, moved to Canada, secured employment, paid taxes, and began building a life in my community. At every stage, I complied fully with the rules.</p>
-                    <p>In April 2024, my family's files entered security screening. Since then, there has been no decision and no explanation. What began as a structured, rules-based pathway has become an indefinite administrative pause. A process that once progressed predictably has stalled without timeline, clarity, or meaningful communication.</p>
-                    <p>This delay has reduced our entire life to a temporary condition. Without permanent status, every major decision must be short-term. Housing is provisional. Career advancement is constrained. Long-term commitments cannot be made. Financial planning must assume uncertainty. My employer-specific work permit limits mobility and stability. Over the past three years, I have declined stronger employment opportunities—not because of performance or qualifications, but because administrative restrictions leave no flexibility. The cost of delay is cumulative, concrete, and irreversible.</p>
-                    <p>The financial strain is intensified by structural constraints. My spouse must stay home to care for our daughter and has no income. As a work-permit holder tied to a single employer, I am not legally permitted to take on additional employment to ease the burden. A single-income household carries inherent vulnerability, and prolonged uncertainty compounds that vulnerability.</p>
-                    <p>During this period, our daughter was born in Canada. She is a Canadian citizen by birth. Yet from her first day of life, she has grown up in an environment shaped by unresolved immigration status. For a significant period, despite our full compliance with the law, paying taxes, and contributing to Saskatchewan's economy, she was unable to access the Canada Child Benefit. The contradiction is difficult to ignore: a citizen child's statutory entitlement became entangled in prolonged administrative uncertainty affecting her parents. A temporary permit was meant to be transitional; it was never intended to define a child's formative years.</p>
-                    <p>The psychological toll is equally profound. Living year after year without clarity produces sustained stress. Administrative silence does not remain confined to paperwork; it permeates daily life. Over time, prolonged uncertainty erodes stability and becomes a genuine health risk.</p>
-                    <p>As a Saskatchewan resident, I am encouraged to see trade relations between China and Saskatchewan improve, with governments emphasizing cooperation and people-to-people ties. These are positive signals of mutual trust and long-term engagement. Yet prolonged and indefinite security screening in individual cases sends a conflicting signal. Economic partnership depends not only on agreements between governments, but on trust at the level of individuals.</p>
-                    <p>I do not question the importance of national security. But when a process continues for years without transparency, proportional limits, or communication, delay itself becomes a substantive burden. I am not asking for preferential treatment. I am asking for a fair decision within a reasonable timeframe. A rules-based system should not allow administrative silence to become the outcome.</p>
-                    <p><strong>— SKnominee</strong><br>
-                    Email: <a href="mailto:sknominee8@gmail.com">sknominee8@gmail.com</a></p>
-                    <div class="story-timeline">
-                        <strong>Timeline:</strong> Approved under Saskatchewan PNP (three years ago) → Federal PR application mid-2023 → Passed eligibility, medical, criminality → Moved to Canada, work permit, employment, taxes → Family files entered security screening April 2024 → No decision, no explanation since → Daughter born in Canada (citizen); unable to access CCB for a period → Still waiting for fair decision within reasonable timeframe
-                    </div>
-                </div>
-                <button type="button" class="story-toggle" aria-expanded="false">Read full story</button>
-            </div>
-
-            <!-- Template for others to add (hidden) -->
-            <div class="story-card story-template" data-story>
-                <div class="story-delay">
-                    <span class="story-delay-number">—</span>
-                    <div class="story-delay-labels">
-                        <span class="story-delay-label">Months</span>
-                        <span class="story-delay-sub">Waiting for IRCC</span>
-                    </div>
-                </div>
-                <div class="story-header">
-                    <div class="story-meta">
-                        <p class="story-meta-line"><span class="story-meta-title">Immigration Program</span>, <span class="story-location">City, Province</span></p>
-                    </div>
-                </div>
-                <p class="story-teaser">This space is for your story. Email us your experience to be added to this page.</p>
-                <div class="story-content-full" hidden>
-                    <p><em>This space is for your story. Email us your experience to be added to this page.</em></p>
-                    <ul>
-                        <li>How long have you been waiting?</li>
-                        <li>What has the delay cost you and your family?</li>
-                        <li>What do you want the government to know?</li>
-                    </ul>
-                    <p><strong>Contact us to share your story.</strong></p>
-                </div>
-                <button type="button" class="story-toggle" aria-expanded="false">Read full story</button>
-            </div>
+                );
+            })}
 
             <!-- Placeholder for more stories -->
             <div class="story-card story-placeholder">
@@ -450,8 +249,23 @@ import { storiesSection } from '../i18n/strings';
         display: none !important;
     }
 
-    .story-content-full p {
+    .story-content-full :global(p) {
         margin-bottom: 1rem;
+    }
+
+    .story-content-full :global(h2) {
+        font-size: 1.25rem;
+        color: #e2e8f0;
+        margin: 1.5rem 0 0.75rem;
+    }
+
+    .story-content-full :global(ul) {
+        margin-bottom: 1rem;
+        padding-left: 1.5rem;
+    }
+
+    .story-content-full :global(li) {
+        margin-bottom: 0.5rem;
     }
 
     .story-content-full .story-quote {
@@ -489,11 +303,6 @@ import { storiesSection } from '../i18n/strings';
     .story-toggle:hover {
         background: var(--accent-color);
         color: white;
-    }
-
-    .story-template {
-        display: none;
-        border-left-color: var(--secondary-color);
     }
 
     .story-placeholder {
@@ -548,3 +357,19 @@ import { storiesSection } from '../i18n/strings';
         color: #cbd5e0;
     }
 </style>
+
+<script>
+    // Toggle story expansion
+    document.querySelectorAll('.story-toggle').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const card = btn.closest('.story-card');
+            const content = card?.querySelector('.story-content-full');
+            if (!content) return;
+
+            const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+            btn.setAttribute('aria-expanded', String(!isExpanded));
+            content.hidden = isExpanded;
+            btn.textContent = isExpanded ? 'Read full story' : 'Show less';
+        });
+    });
+</script>
