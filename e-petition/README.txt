@@ -16,7 +16,7 @@ Immigration Processing Delays - Permanent Residence Applications
 目前工作列表和状态: TASKS_TODO.txt
 重点工作: 
 1. Wait for response from Chak Au (3-4 days expected)
-2. **Research additional MP targets if primary/backup fail** 有合适的议员，以及对应的居民群友，请发送给我
+2. **Research additional MP targets if primary/backup fail** 寻找合适的可能支持议员(更高可能性的条件包括： 移民政策友善、保守党、对IRCC等发表过针对性意见)，以及对应的居民群友，请发送给我 我将研究议员后发送单独的定制邮件
     Priority: LOW (only if needed)
     Owner: OPEN
     Help Needed: YES - someone to identify MPs who:
