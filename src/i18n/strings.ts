@@ -29,6 +29,7 @@ export const hero = {
   eventDetails: { en: 'Friday, March 13, 2026 · 8:30 AM – 4:30 PM · Ottawa, Ontario', zh: '2026年3月13日 周五 · 上午8:30 – 下午4:30 · 渥太华，安大略省', fr: 'Vendredi 13 mars 2026 · 8 h 30 – 16 h 30 · Ottawa, Ontario' },
   eventDetailsLink: { en: 'Event Details', zh: '活动详情', fr: 'Détails de l\'événement' },
   joinMovement: { en: 'Join Our Movement', zh: '加入我们', fr: 'Rejoignez le mouvement' },
+  donate: { en: 'Donate', zh: '捐款', fr: 'Faire un don' },
   /** Hero stat card: main label (PR in backlog) */
   statMainLabel: { en: 'PR IN BACKLOG', zh: 'PR积压', fr: 'RP EN ARRIÉRÉ' },
   /** Hero stat card: sub label (beyond service standards) */
@@ -280,6 +281,10 @@ export const joinPage = {
   shareStory: { en: 'Share Your Story', zh: '分享你的故事', fr: 'Partagez votre histoire' },
   stayConnected: { en: 'Stay Connected', zh: '保持联系', fr: 'Restez connecté' },
   speakOut: { en: 'Speak Out', zh: '发声', fr: 'Parlez' },
+  donateTitle: { en: 'Donate', zh: '捐款', fr: 'Faire un don' },
+  donateMethod: { en: 'We accept e-Transfer (Canada only). Send to:', zh: '我们接受电子转账（仅限加拿大）。请发送至：', fr: 'Nous acceptons les virements Interac (Canada seulement). Envoyer à :' },
+  donateEmail: { en: 'we@chinese-pr-delay.ca', zh: 'we@chinese-pr-delay.ca', fr: 'we@chinese-pr-delay.ca' },
+  donateNoReceipt: { en: 'We cannot provide donation tax credit receipts at this time.', zh: '我们目前无法提供捐款抵税收据。', fr: 'Nous ne pouvons pas fournir de reçus d\'impôt pour dons pour le moment.' },
 } as const;
 
 export type Lang = 'en' | 'zh' | 'fr';

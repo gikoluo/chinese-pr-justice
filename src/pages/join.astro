@@ -32,6 +32,13 @@ import { joinPage } from '../i18n/strings';
     <section id="join" class="join-section">
         <div class="container join-content">
             <div class="join-grid">
+                <div class="join-card" id="donate">
+                    <h3>💝 <span class="lang-en">{joinPage.donateTitle.en}</span><span class="lang-zh">{joinPage.donateTitle.zh}</span><span class="lang-fr">{joinPage.donateTitle.fr}</span></h3>
+                    <p><span class="lang-en">{joinPage.donateMethod.en}</span><span class="lang-zh">{joinPage.donateMethod.zh}</span><span class="lang-fr">{joinPage.donateMethod.fr}</span></p>
+                    <p><strong>Email:</strong> <a href="mailto:we@chinese-pr-delay.ca">we@chinese-pr-delay.ca</a></p>
+                    <p class="join-donate-note"><em><span class="lang-en">{joinPage.donateNoReceipt.en}</span><span class="lang-zh">{joinPage.donateNoReceipt.zh}</span><span class="lang-fr">{joinPage.donateNoReceipt.fr}</span></em></p>
+                </div>
+
                 <div class="join-card">
                     <h3>📧 <span class="lang-en">{joinPage.shareStory.en}</span><span class="lang-zh">{joinPage.shareStory.zh}</span><span class="lang-fr">{joinPage.shareStory.fr}</span></h3>
                     <p>Your experience matters. Help us document the impact of security screening delays.</p>
@@ -186,6 +193,12 @@ import { joinPage } from '../i18n/strings';
     .join-card:hover {
         transform: translateY(-2px);
         box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+    }
+
+    .join-donate-note {
+        margin-top: 0.75rem;
+        font-size: 0.875rem;
+        color: var(--text-light);
     }
 
     .join-cta-box {
