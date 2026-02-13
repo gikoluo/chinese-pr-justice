@@ -138,19 +138,19 @@ import { hero, heroStats } from '../i18n/strings';
                         </span>
                     </span>
                 </a>
-                <a href="/join#donate" class="btn-cta btn-cta-secondary btn-flip">
-                    <span class="btn-text-block">
-                        <span class="btn-text-wrapper">
-                            <span class="hover-out-text"><span class="lang-en">{hero.donate.en}</span><span class="lang-zh">{hero.donate.zh}</span><span class="lang-fr">{hero.donate.fr}</span></span>
-                            <span class="hover-in-text"><span class="lang-en">{hero.donate.en}</span><span class="lang-zh">{hero.donate.zh}</span><span class="lang-fr">{hero.donate.fr}</span></span>
-                        </span>
-                    </span>
-                </a>
                 <a href="/event" class="hero-event-link btn-flip">
                     <span class="btn-text-block">
                         <span class="btn-text-wrapper">
                             <span class="hover-out-text"><span class="lang-en">{hero.eventDetailsLink.en}</span><span class="lang-zh">{hero.eventDetailsLink.zh}</span><span class="lang-fr">{hero.eventDetailsLink.fr}</span></span>
                             <span class="hover-in-text"><span class="lang-en">{hero.eventDetailsLink.en}</span><span class="lang-zh">{hero.eventDetailsLink.zh}</span><span class="lang-fr">{hero.eventDetailsLink.fr}</span></span>
+                        </span>
+                    </span>
+                </a>
+                <a href="/join#donate" class="btn-cta btn-cta-donate btn-flip">
+                    <span class="btn-text-block">
+                        <span class="btn-text-wrapper">
+                            <span class="hover-out-text"><span class="lang-en">{hero.donate.en}</span><span class="lang-zh">{hero.donate.zh}</span><span class="lang-fr">{hero.donate.fr}</span></span>
+                            <span class="hover-in-text"><span class="lang-en">{hero.donate.en}</span><span class="lang-zh">{hero.donate.zh}</span><span class="lang-fr">{hero.donate.fr}</span></span>
                         </span>
                     </span>
                 </a>
@@ -373,15 +373,14 @@ import { hero, heroStats } from '../i18n/strings';
         background: rgb(200, 20, 45);
     }
 
-    .btn-cta-secondary {
-        background: transparent;
+    .btn-cta-donate {
+        background: #d81b60;
         color: #fff;
-        border: 2px solid rgba(255, 255, 255, 0.9);
+        border: none;
     }
 
-    .btn-cta-secondary:hover {
-        background: rgba(255, 255, 255, 0.15);
-        border-color: #fff;
+    .btn-cta-donate:hover {
+        background: #c2185b;
     }
 
     /* Flip animation */
