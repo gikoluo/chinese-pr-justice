@@ -6,25 +6,17 @@ import { joinPage } from '../i18n/strings';
 <BaseLayout title="Join Us | Justice for Chinese PR Applicants">
     <!-- Hero Section -->
     <section class="join-hero">
-        <div class="join-hero-inner">
-            <!-- Title and subtitle temporarily hidden
-            <div class="join-hero-content">
-                <h1 class="join-hero-title">
-                    <span class="lang-en">{joinPage.title.en}</span>
-                    <span class="lang-zh">{joinPage.title.zh}</span>
-                    <span class="lang-fr">{joinPage.title.fr}</span>
-                </h1>
-                <div class="join-hero-underline"></div>
-                <p class="join-hero-subtitle">
-                    <span class="lang-en">{joinPage.intro.en}</span>
-                    <span class="lang-zh">{joinPage.intro.zh}</span>
-                    <span class="lang-fr">{joinPage.intro.fr}</span>
-                </p>
-            </div>
-            -->
-            <div class="join-hero-image">
-                <img src="/images/hero-campaign-canada-waiting.jpg" alt="40+ Months Waiting - We Demand A Decision Now" />
-            </div>
+        <div class="join-hero-content">
+            <h1>
+                <span class="lang-en">{joinPage.title.en}</span>
+                <span class="lang-zh">{joinPage.title.zh}</span>
+                <span class="lang-fr">{joinPage.title.fr}</span>
+            </h1>
+            <p>
+                <span class="lang-en">{joinPage.intro.en}</span>
+                <span class="lang-zh">{joinPage.intro.zh}</span>
+                <span class="lang-fr">{joinPage.intro.fr}</span>
+            </p>
         </div>
     </section>
 
@@ -126,50 +118,29 @@ import { joinPage } from '../i18n/strings';
 <style>
     /* Hero Section */
     .join-hero {
-        padding: 0;
-    }
-
-    .join-hero-inner {
-        width: 100%;
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                    url('/images/hero-join-us-page.jpg') center/cover no-repeat;
+        padding: 6rem 1.5rem;
+        text-align: center;
+        color: white;
     }
 
     .join-hero-content {
-        flex: 1;
-        min-width: 0;
+        max-width: 800px;
+        margin: 0 auto;
     }
 
-    .join-hero-title {
-        font-family: var(--font-heading);
-        font-size: clamp(2rem, 5vw, 3rem);
+    .join-hero h1 {
+        font-size: 2.5rem;
         font-weight: 700;
-        color: #fff;
-        margin: 0;
-        line-height: 1.2;
+        margin-bottom: 1rem;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     }
 
-    .join-hero-underline {
-        width: 80px;
-        height: 4px;
-        background: var(--red);
-        margin: 1rem 0;
-    }
-
-    .join-hero-subtitle {
-        font-size: clamp(1rem, 2vw, 1.25rem);
-        color: rgba(255, 255, 255, 0.9);
-        margin: 0;
-        line-height: 1.6;
-        max-width: 500px;
-    }
-
-    .join-hero-image {
-        width: 100%;
-    }
-
-    .join-hero-image img {
-        width: 100%;
-        height: auto;
-        display: block;
+    .join-hero p {
+        font-size: 1.25rem;
+        opacity: 0.95;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
     }
 
     /* Join Section */
@@ -208,17 +179,16 @@ import { joinPage } from '../i18n/strings';
 
     /* Responsive */
     @media (max-width: 768px) {
-        .join-hero-inner {
-            flex-direction: column;
-            text-align: center;
+        .join-hero {
+            padding: 4rem 1rem;
         }
 
-        .join-hero-underline {
-            margin: 1rem auto;
+        .join-hero h1 {
+            font-size: 1.75rem;
         }
 
-        .join-hero-subtitle {
-            max-width: 100%;
+        .join-hero p {
+            font-size: 1rem;
         }
 
         .join-section {
