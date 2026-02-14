@@ -223,12 +223,12 @@ const currentPath = Astro.url.pathname;
     .nav-menu a:hover {
         color: #fff;
         text-shadow: 0 0 0 1px rgba(255, 255, 255, 0.3);
+        border-bottom: 2px solid var(--red);
+        padding-bottom: 2px;
     }
 
     .nav-menu a.active {
         color: #fff;
-        border-bottom: 2px solid var(--red);
-        padding-bottom: 2px;
     }
 
     /* Language switcher */
@@ -322,8 +322,17 @@ const currentPath = Astro.url.pathname;
             flex-wrap: wrap;
         }
 
+        .nav-brand {
+            /* 自然宽度，靠左 */
+        }
+
         .nav-right {
-            flex-wrap: wrap;
+            flex: 1;
+            justify-content: space-between;
+        }
+
+        .nav-lang-switcher {
+            margin-right: auto;
         }
 
         .nav-toggle {
@@ -333,11 +342,14 @@ const currentPath = Astro.url.pathname;
         .nav-menu {
             display: none;
             flex-direction: column;
-            width: 100%;
-            gap: 0;
-            margin-top: 1rem;
-            padding-top: 1rem;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: linear-gradient(145deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+            padding: 1rem;
             border-top: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
         }
 
         .nav-menu.open {
@@ -345,21 +357,22 @@ const currentPath = Astro.url.pathname;
         }
 
         .nav-menu a {
-            padding: 0.75rem 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 0.5rem 0;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.08);
         }
 
         .nav-menu a:last-child {
-            border-bottom: none;
+            border-bottom: 2px solid transparent;
         }
 
         .nav-menu a:hover {
             color: #fff;
+            border-bottom: 2px solid var(--red);
+            padding: 0.5rem 0;
         }
 
         .nav-menu a.active {
-            border-bottom: 2px solid var(--red);
-            padding-bottom: 0.5rem;
+            color: #fff;
         }
     }
 </style>
