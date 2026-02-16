@@ -1,11 +1,6 @@
 ---
 // EventPhotos Section component (EN + 中文)
 import { eventPhotosSection } from '../i18n/strings';
-interface Props {
-    showNote?: boolean;
-}
-
-const { showNote = false } = Astro.props;
 ---
 
 <section id="photos" class="photos-section">
@@ -17,12 +12,6 @@ const { showNote = false } = Astro.props;
             <span class="photos-waiting-icon" aria-hidden="true">📷</span>
             <p class="photos-waiting-text"><span class="lang-en">{eventPhotosSection.waitingMessage.en}</span><span class="lang-zh">{eventPhotosSection.waitingMessage.zh}</span><span class="lang-fr">{eventPhotosSection.waitingMessage.fr}</span></p>
         </div>
-
-        {showNote && (
-            <div class="photo-note">
-                <p><strong>Note:</strong> To add more photos after the event, simply place image files in the website folder and update the HTML file with the new image filenames.</p>
-            </div>
-        )}
     </div>
 </section>
 
@@ -56,15 +45,5 @@ const { showNote = false } = Astro.props;
         color: var(--text-light);
         font-size: 1rem;
         line-height: 1.6;
-    }
-
-    .photo-note {
-        margin-top: 1.5rem;
-        padding: 1rem;
-        background: white;
-        border-radius: 8px;
-        text-align: center;
-        font-size: 0.875rem;
-        color: var(--text-light);
     }
 </style>
