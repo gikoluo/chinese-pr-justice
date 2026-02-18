@@ -50,9 +50,8 @@ PHASE 1: MP SPONSORSHIP (CURRENT PHASE)
     Attach: E-Petition_Full_Document_for_MPs.docx
     Then forward INSTRUCTIONS_for_Yiou_Gao.txt to gaoyiou@gmail.com
 
-[ ] SEND Email_to_Vincent_Ho_v3_SHORT.txt to vincent.ho@parl.gc.ca
-    Attach: E-Petition_Full_Document_for_MPs.docx
-    Then forward INSTRUCTIONS_for_Junyi_Zhang.txt to jz2051@mun.ca
+[✓] SENT Email_to_Vincent_Ho_v3_SHORT.txt to vincent.ho@parl.gc.ca - February 17, 2026
+    Next: Forward INSTRUCTIONS_for_Junyi_Zhang.txt to jz2051@mun.ca so she sends her letter
 
 [ ] SEND Email_to_Fred_Davies_SHORT.txt to fred.davies@parl.gc.ca
     Attach: E-Petition_Full_Document_for_MPs.docx
