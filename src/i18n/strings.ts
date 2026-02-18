@@ -283,6 +283,8 @@ export const joinPage = {
   speakOut: { en: 'Speak Out', zh: '发声', fr: 'Parlez' },
   donateTitle: { en: 'Donate', zh: '捐款', fr: 'Faire un don' },
   donateMethod: { en: 'We accept e-Transfer (Canada only). Send to:', zh: '我们接受电子转账（仅限加拿大）。请发送至：', fr: 'Nous acceptons les virements Interac (Canada seulement). Envoyer à :' },
+  donateReceiverLabel: { en: 'Receiver:', zh: '收款人：', fr: 'Destinataire :' },
+  donateReceiverName: { en: 'Jiaqi Jiang', zh: 'Jiaqi Jiang', fr: 'Jiaqi Jiang' },
   donateEmail: { en: 'we@chinese-pr-delay.ca', zh: 'we@chinese-pr-delay.ca', fr: 'we@chinese-pr-delay.ca' },
   donateNoReceipt: { en: 'We cannot provide donation tax credit receipts at this time.', zh: '我们目前无法提供捐款抵税收据。', fr: 'Nous ne pouvons pas fournir de reçus d\'impôt pour dons pour le moment.' },
 } as const;
