@@ -15,60 +15,68 @@ PHASE 1: MP SPONSORSHIP (CURRENT PHASE)
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 [✓] Research and compile evidence (IRCC data, NSIRA reports, Auditor General)
 [✓] Draft comprehensive petition with 3 pillars, 8 demands
-[✓] Create professional Word document for MPs
+[✓] Create professional Word document for MPs (E-Petition_Full_Document_for_MPs.docx)
+[✓] Remove unrealistic "clear backlog in 12 months" - reframe 20% as proof point
 [✓] Create short version for web form submission
 [✓] Write customized email to Chak Au (Conservative, Richmond Centre)
 [✓] Write backup email to Parm Bains (Liberal, Steveston-Richmond East)
-[✓] Write generic template for other MPs
+[✓] Write generic template for other MPs (updated to PUBLIC version - no personal info)
 [✓] Organize all files into clean directory structure
 [✓] Send email to Chak Au - SENT February 12, 2026
+[✓] Research Michelle Rempel Garner - Shadow Minister for Immigration
+[✓] Draft email to Michelle Rempel Garner with constituent Wei Hua support
+[✓] Send email to Michelle Rempel Garner - SENT February 12, 2026
+[✓] Draft constituent email for Wei Hua (Calgary Nose Hill) + instructions
+[✓] Research TOP 20 MP targets - identified CIMM members as highest priority
+[✓] Research and draft email for Vincent Ho (Richmond Hill South)
+      - Tailored to his TFW concerns: high-quality immigration, job creation for youth
+      - Constituent Junyi Zhang verified in riding (18 Plaisance Rd, L4C 5B5)
+[✓] Draft constituent email for Junyi Zhang (Richmond Hill South) + instructions
+[✓] Research and draft email for Costas Menegakis (Aurora-Oak Ridges-Richmond Hill)
+      - Former Parliamentary Secretary to Minister of Citizenship and Immigration
+      - CIMM member, Richmond Hill riding (21%+ Chinese-speaking)
+      - Constituent Yiou Gao verified in riding (25 Waymount Ave, L4S 2G5)
+[✓] Draft constituent email for Yiou Gao (Aurora-Oak Ridges-Richmond Hill) + instructions
+[✓] Draft insurance target emails: Tom Kmiec, Brad Redekopp, Fred Davies
+[✓] Research Vancouver MPs: Jenny Kwan, Hedy Fry, Don Davies
+[✓] Draft alternative email to Don Davies (NDP economic advocacy, not sponsorship)
+[✓] Add constituent Huijuan Li to Fred Davies email (168 Scholfield Ave, Port Colborne)
+      - Port Colborne confirmed in Niagara South; Davies is FROM Port Colborne
+[✓] Draft constituent email for Huijuan Li (Niagara South) + instructions
 
-⏳ IN PROGRESS:
+⏸️ ACTION REQUIRED TONIGHT (Feb 17):
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-[ ] Wait for response from Chak Au (3-4 days expected)
-    Status: Email sent Feb 12, expecting response by Feb 15-16
-    Owner: Chunhui Luo
-    Next Action: Follow up if no response by Feb 19
+[ ] SEND Email_to_Costas_Menegakis_SHORT.txt to costas.menegakis@parl.gc.ca
+    Attach: E-Petition_Full_Document_for_MPs.docx
+    Then forward INSTRUCTIONS_for_Yiou_Gao.txt to gaoyiou@gmail.com
 
-📋 UPCOMING TASKS (THIS PHASE):
+[ ] SEND Email_to_Vincent_Ho_v3_SHORT.txt to vincent.ho@parl.gc.ca
+    Attach: E-Petition_Full_Document_for_MPs.docx
+    Then forward INSTRUCTIONS_for_Junyi_Zhang.txt to jz2051@mun.ca
+
+[ ] SEND Email_to_Fred_Davies_SHORT.txt to fred.davies@parl.gc.ca
+    Attach: E-Petition_Full_Document_for_MPs.docx
+    Then forward INSTRUCTIONS_for_Huijuan_Li.txt to lihuijuan1978@gmail.com
+
+[ ] CONFIRM Wei Hua (veenaarts1820@gmail.com) sent her Rempel Garner letter
+
+📋 UPCOMING TASKS (THIS WEEK):
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-[ ] Follow-up email to Chak Au if no response
+[ ] Follow-up email to Chak Au if no response by Feb 19
     Deadline: Feb 19, 2026
-    Owner: Chunhui Luo
-    Help Needed: NO (automated task)
 
-[ ] Send email to Parm Bains (backup MP) if Chak Au declines
-    Deadline: Feb 20-22, 2026
-    Owner: Chunhui Luo
-    Help Needed: NO (already prepared)
+[ ] Follow-up email to Michelle Rempel Garner if no response by Feb 19
+    Deadline: Feb 19, 2026
 
-[ ] Research additional MP targets if primary/backup fail
-    Priority: LOW (only if needed)
-    Owner: OPEN
-    Help Needed: YES - someone to identify MPs who:
-      - Represent ridings with high immigrant populations
-      - Sit on Immigration Committee
-      - Have history of immigration advocacy
-      - Are Opposition members (Conservative/NDP/Bloc)
+[ ] Monitor responses from tonight's three emails (expect Feb 22-24)
+    MPs: Menegakis, Vincent Ho, Fred Davies
 
-[ ] Recruit volunteers to identify friendly MPs and find constituents
-    Priority: MEDIUM (parallel task, good insurance)
-    Owner: OPEN - NEED VOLUNTEER
-    Help Needed: YES - Need someone to:
-      - Call/recruit volunteers to research MP voting records and public statements
-      - Identify MPs who are immigration-friendly and likely to sponsor
-      - For each potential MP, find an affected constituent in their riding
-      - Connect constituent with Chunhui to coordinate outreach
-      - Maintain spreadsheet of: MP name, riding, contact, constituent contact
-    Skills Needed: Research, organization, networking
-    Strategy: Constituent outreach is MUCH more effective than outsider contact
-    Why This Matters: If Chak Au and Parm Bains don't work out, having 3-5
-                     backup MPs with local constituents ready = higher success
+[ ] Prepare meeting materials if any MP wants face-to-face discussion
+    Priority: MEDIUM (if requested by MP)
 
-[ ] Prepare meeting materials if MP wants face-to-face discussion
-    Priority: MEDIUM (if requested)
-    Owner: Chunhui Luo
-    Help Needed: MAYBE - review and practice presentation
+[ ] Send Email_to_Tom_Kmiec_SHORT.txt or Email_to_Brad_Redekopp_SHORT.txt
+    Only if Tier 1+2 targets are insufficient
+    Emails ready: tom.kmiec@parl.gc.ca / brad.redekopp@parl.gc.ca
 
 ================================================================================
 PHASE 2: WEB FORM SUBMISSION (AFTER MP AGREES)
@@ -364,12 +372,18 @@ NEXT MILESTONES
 
 📅 UPCOMING DEADLINES:
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-Feb 15-16, 2026: Expected response from Chak Au
-Feb 19, 2026: Follow-up if no response
+Feb 12, 2026: SENT - Chak Au + Michelle Rempel Garner
+Feb 17, 2026: SEND TONIGHT - Costas Menegakis + Vincent Ho + Fred Davies
+Feb 18, 2026: Constituents send letters (Yiou Gao, Junyi Zhang, Huijuan Li)
+Feb 19, 2026: Follow-up if no response from Feb 12 emails
+Feb 22-24, 2026: Expect responses from tonight's emails
+Feb 24, 2026: Follow-up if no response from tonight's emails
 March 13, 2026: Parliament Hill procession
 [TBD]: Petition opens for signatures (120-day period)
 [TBD + 120 days]: Petition closes
 [TBD + 45 days after presentation]: Government response due
+
+Last Updated: February 17, 2026
 
 ================================================================================
 SUCCESS CRITERIA
