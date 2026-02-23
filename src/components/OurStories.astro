@@ -114,6 +114,13 @@ const sortedStories = stories
         margin: 0 -20px 2rem;
         padding: 0 20px 0.5rem;
         -webkit-overflow-scrolling: touch;
+        cursor: grab;
+        user-select: none;
+    }
+
+    .stories-scroll-wrap.is-dragging {
+        cursor: grabbing;
+        scroll-behavior: auto;
     }
 
     .stories-scroll-wrap::-webkit-scrollbar {
@@ -149,6 +156,21 @@ const sortedStories = stories
         border-left: 4px solid var(--accent-color);
         display: flex;
         flex-direction: column;
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .story-card:not(.story-placeholder):hover {
+        transform: translateY(-6px) scale(1.02);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35);
+    }
+
+    .story-card:not(.story-placeholder) {
+        cursor: pointer;
+    }
+
+    .story-placeholder:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
     }
 
     .story-delay {
@@ -359,9 +381,78 @@ const sortedStories = stories
 </style>
 
 <script>
-    // Toggle story expansion
+    // Stories strip: drag-to-scroll + mouse-follow (mouse left/right auto-scrolls)
+    (function () {
+        const wrap = document.querySelector('.stories-scroll-wrap');
+        if (!wrap) return;
+        let isDown = false;
+        let startX = 0;
+        let scrollLeft = 0;
+        let didDrag = false;
+
+        // Mouse-follow: current mouse X relative to viewport, and whether mouse is inside wrap
+        let mouseX = 0;
+        let isInsideWrap = false;
+        const ease = 0.06;
+        let rafId = 0;
+
+        function updateFollowScroll() {
+            if (!isInsideWrap || isDown) {
+                rafId = requestAnimationFrame(updateFollowScroll);
+                return;
+            }
+            const rect = wrap.getBoundingClientRect();
+            const maxScroll = wrap.scrollWidth - wrap.clientWidth;
+            if (maxScroll <= 0) {
+                rafId = requestAnimationFrame(updateFollowScroll);
+                return;
+            }
+            const xIn = mouseX - rect.left;
+            const t = Math.max(0, Math.min(1, xIn / rect.width));
+            const targetScroll = t * maxScroll;
+            const current = wrap.scrollLeft;
+            const next = current + (targetScroll - current) * ease;
+            wrap.scrollLeft = next;
+            rafId = requestAnimationFrame(updateFollowScroll);
+        }
+        rafId = requestAnimationFrame(updateFollowScroll);
+
+        wrap.addEventListener('mouseenter', () => { isInsideWrap = true; });
+        wrap.addEventListener('mouseleave', () => { isInsideWrap = false; });
+        wrap.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            if (!isDown) return;
+            e.preventDefault();
+            didDrag = true;
+            const x = e.pageX - wrap.offsetLeft;
+            const walk = (x - startX) * 1.2;
+            wrap.scrollLeft = scrollLeft - walk;
+        });
+
+        wrap.addEventListener('mousedown', (e) => {
+            isDown = true;
+            didDrag = false;
+            wrap.classList.add('is-dragging');
+            startX = e.pageX - wrap.offsetLeft;
+            scrollLeft = wrap.scrollLeft;
+        });
+        wrap.addEventListener('mouseleave', () => {
+            if (isDown) (window as unknown as { _storiesDidDrag?: boolean })._storiesDidDrag = didDrag;
+            isDown = false;
+            wrap.classList.remove('is-dragging');
+        });
+        wrap.addEventListener('mouseup', () => {
+            if (isDown) (window as unknown as { _storiesDidDrag?: boolean })._storiesDidDrag = didDrag;
+            isDown = false;
+            wrap.classList.remove('is-dragging');
+            setTimeout(() => { (window as unknown as { _storiesDidDrag?: boolean })._storiesDidDrag = false; }, 100);
+        });
+    })();
+
+    // Toggle story expansion (inline expand; modal is opened from BaseLayout on card/button click)
     document.querySelectorAll('.story-toggle').forEach(btn => {
-        btn.addEventListener('click', () => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
             const card = btn.closest('.story-card');
             const content = card?.querySelector('.story-content-full');
             if (!content) return;

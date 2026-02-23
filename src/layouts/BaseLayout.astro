@@ -89,6 +89,37 @@ const { title, description = "Justice for Chinese PR Applicants - End Unfair Sec
                 });
             });
 
+            // Click anywhere on a story card (except links/buttons) opens modal; ignore if user just dragged
+            document.querySelectorAll('.story-card:not(.story-placeholder)').forEach(card => {
+                card.addEventListener('click', (e) => {
+                    if ((window as unknown as { _storiesDidDrag?: boolean })._storiesDidDrag) return;
+                    if (!card.querySelector('.story-content-full')) return;
+                    const target = e.target as HTMLElement;
+                    if (target.closest('a') || target.closest('button')) return;
+                    openModal(card);
+                });
+            });
+
+            // Hover and hold: stay on a story card for a moment to auto-open the modal (no click)
+            const HOVER_OPEN_DELAY_MS = 1200;
+            document.querySelectorAll('.story-card:not(.story-placeholder)').forEach(card => {
+                let hoverTimer: ReturnType<typeof setTimeout> | null = null;
+                card.addEventListener('mouseenter', () => {
+                    if (!card.querySelector('.story-content-full')) return;
+                    hoverTimer = setTimeout(() => {
+                        hoverTimer = null;
+                        if ((window as unknown as { _storiesDidDrag?: boolean })._storiesDidDrag) return;
+                        if (modal.hasAttribute('hidden')) openModal(card);
+                    }, HOVER_OPEN_DELAY_MS);
+                });
+                card.addEventListener('mouseleave', () => {
+                    if (hoverTimer) {
+                        clearTimeout(hoverTimer);
+                        hoverTimer = null;
+                    }
+                });
+            });
+
             backdrop?.addEventListener('click', closeModal);
             closeBtn?.addEventListener('click', closeModal);
             modal.addEventListener('keydown', (e) => {
