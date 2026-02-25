@@ -38,7 +38,6 @@ We hope for:
 - Reasonable timelines and clearer communication
 - Fair and timely processing for applicants who have already waited beyond normal processing times
 
-Why do most Chinese applicants get security screening while Indian applicants and refugees pass?
 
 We came to Canada with the intention of building our lives here, contributing professionally, and integrating into society. We are not asking for special treatment—only for fairness, clarity, and timely decisions.
 

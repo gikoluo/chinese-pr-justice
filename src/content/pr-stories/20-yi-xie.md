@@ -1,10 +1,10 @@
 ---
-name: "Yi Xie"
+name: "Yi "
 title: "Inland PR & TRV Applicant"
 location: "Canada"
 profession: "Software Engineer"
 waitingMonths: 35
-email: "sfuxycs@gmail.com"
+email: "Hidden"
 anonymous: false
 order: 20
 teaser: "I will reach 35 months of waiting by March for my inland PR application — a process that should take less than 6 months. My inland TRV has been stuck for 30 months as well. I have been unable to leave Canada for almost three years because both were placed into security screening. CSIS confirmed they completed their part early in 2025, yet IRCC still refuses to finalize anything. I have not been able to see my seriously ill parents for three years. My marriage has faced severe strain. My mental health has collapsed — every day feels like being trapped without control over my own life."
