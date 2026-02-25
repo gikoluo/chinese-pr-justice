@@ -226,12 +226,36 @@ export const demandBodies: Record<string, { en: string; zh: string; fr: string }
 
 export const storiesSection = {
   title: { en: 'Our Stories', zh: '我们的故事', fr: 'Nos témoignages' },
-  subtitle: { en: 'Real people, real families, real consequences. These are the human costs of indefinite security screening delays.', zh: '真实的人、真实的家庭、真实的代价。这是无限期安全背景调查拖延带来的人道代价。', fr: 'De vraies personnes, de vraies familles, de vraies conséquences. Voici le coût humain des délais indéfinis de l\'évaluation de sécurité.' },
+  subtitle: {
+    en: 'Real people, real families, real consequences. These are the human costs of indefinite security screening delays. The stories below are just some of them.',
+    zh: '真实的人、真实的家庭、真实的代价。这是无限期安全背景调查拖延带来的人道代价。下面所载，只是其中一部分故事。',
+    fr: 'De vraies personnes, de vraies familles, de vraies conséquences. Voici le coût humain des délais indéfinis de l\'évaluation de sécurité. Les récits ci-dessous n\'en sont qu\'une partie.',
+  },
+  /** Stats line: use {count} and {months} as placeholders */
+  statsLine: {
+    en: '{count}+ families · {months}+ months of waiting',
+    zh: '{count}+ 个家庭 · 累计 {months}+ 个月在等待',
+    fr: '{count}+ familles · {months}+ mois d\'attente',
+  },
+  /** One line below the stats: these are shared so far, many more in same situation */
+  statsSource: {
+    en: 'These are the stories shared with us so far. Many more families are in the same situation.',
+    zh: '这些是迄今为止与我们分享的故事。还有更多家庭正处在同样的境遇中。',
+    fr: 'Ce sont les témoignages partagés avec nous jusqu\'à présent. Beaucoup d\'autres familles sont dans la même situation.',
+  },
   moreStories: { en: 'More Stories Coming Soon', zh: '更多故事即将推出', fr: 'D\'autres témoignages à venir' },
   shareStory: { en: 'Share Your Story', zh: '分享你的故事', fr: 'Partagez votre histoire' },
   notIsolatedTitle: { en: 'These Are Not Isolated Cases', zh: '这些并非个案', fr: 'Ce ne sont pas des cas isolés' },
-  notIsolatedDesc: { en: 'Thousands of Chinese PR applicants are experiencing similar delays. Each story represents a family in limbo, dreams deferred, and futures uncertain.', zh: '数千名华人PR申请人正经历类似的拖延。每个故事都代表一个悬而未决的家庭、被搁置的梦想和不确定的未来。', fr: 'Des milliers de demandeurs de RP chinois connaissent des délais similaires. Chaque témoignage représente une famille en suspens, des rêves reportés et un avenir incertain.' },
-  notIsolatedTogether: { en: 'Together, our voices cannot be ignored.', zh: '团结一心，我们的声音不容忽视。', fr: 'Ensemble, nos voix ne peuvent être ignorées.' },
+  notIsolatedDesc: {
+    en: 'The families who shared their stories here are not alone. Many more PR applicants across Canada are in the same situation—some for even longer, with stories that have yet to be heard. Each story on this page represents a family in limbo, dreams deferred, and futures uncertain.',
+    zh: '在此分享故事的家庭并不孤单。加拿大各地还有更多永久居民申请人处在同样的境遇中——有些人等待更久，他们的故事尚未被听见。本页的每一个故事，都代表一个悬而未决的家庭、被搁置的梦想与不确定的未来。',
+    fr: 'Les familles qui ont partagé leur histoire ici ne sont pas seules. Beaucoup d\'autres demandeurs de RP partout au Canada vivent la même situation—certains depuis encore plus longtemps, avec des récits qui n\'ont pas encore été entendus. Chaque témoignage sur cette page représente une famille en suspens, des rêves reportés et un avenir incertain.',
+  },
+  notIsolatedTogether: {
+    en: 'We are asking for fairness, transparency, and predictable timelines.',
+    zh: '我们呼吁公平、透明和可预期的时间线。',
+    fr: 'Nous demandons équité, transparence et des délais prévisibles.',
+  },
 } as const;
 
 export const eventPhotosSection = {

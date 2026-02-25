@@ -1,21 +1,44 @@
 ---
-// OurStories Section component (EN + 中文)
+// OurStories Section component (EN + 中文) — "Wall of stories" grid + impact stats
 import { getCollection } from 'astro:content';
 import { storiesSection } from '../i18n/strings';
 
-// Get all stories and sort by order
 const stories = await getCollection('pr-stories');
 const sortedStories = stories
   .filter(story => !story.data.isTemplate && !story.data.isPlaceholder)
   .sort((a, b) => a.data.order - b.data.order);
+
+const storyCount = sortedStories.length;
+const totalMonths = sortedStories.reduce((sum, s) => sum + s.data.waitingMonths, 0);
+
+function statsLine(lang: 'en' | 'zh' | 'fr') {
+  return storiesSection.statsLine[lang]
+    .replace('{count}', String(storyCount))
+    .replace('{months}', String(totalMonths));
+}
 ---
 
 <section id="stories" class="stories-section">
     <div class="container">
         <h2><span class="lang-en">{storiesSection.title.en}</span><span class="lang-zh">{storiesSection.title.zh}</span><span class="lang-fr">{storiesSection.title.fr}</span></h2>
         <p class="section-intro"><span class="lang-en">{storiesSection.subtitle.en}</span><span class="lang-zh">{storiesSection.subtitle.zh}</span><span class="lang-fr">{storiesSection.subtitle.fr}</span></p>
+        <p
+            class="stories-stats"
+            data-count={storyCount}
+            data-months={totalMonths}
+            aria-live="polite"
+        >
+            <span class="lang-en"><span class="stats-count" data-value>0</span>+ families · <span class="stats-months" data-value>0</span>+ months of waiting</span>
+            <span class="lang-zh"><span class="stats-count" data-value>0</span>+ 个家庭 · 累计 <span class="stats-months" data-value>0</span>+ 个月在等待</span>
+            <span class="lang-fr"><span class="stats-count" data-value>0</span>+ familles · <span class="stats-months" data-value>0</span>+ mois d'attente</span>
+        </p>
+        <p class="stories-stats-source">
+            <span class="lang-en">{storiesSection.statsSource.en}</span>
+            <span class="lang-zh">{storiesSection.statsSource.zh}</span>
+            <span class="lang-fr">{storiesSection.statsSource.fr}</span>
+        </p>
 
-        <div class="stories-scroll-wrap">
+        <div class="stories-grid-wrap">
             <div class="stories-grid">
             {sortedStories.map(async (story) => {
                 const { Content } = await story.render();
@@ -41,7 +64,7 @@ const sortedStories = stories
                                 )}
                             </div>
                         </div>
-                        <p class="story-teaser">{story.data.teaser}</p>
+                        <p class="story-teaser" data-teaser>{story.data.teaser}</p>
                         <div class="story-content-full" hidden>
                             <div class="story-content-prose">
                                 <Content />
@@ -87,9 +110,14 @@ const sortedStories = stories
         </div>
 
         <div class="stories-callout">
-            <h3><span class="lang-en">{storiesSection.notIsolatedTitle.en}</span><span class="lang-zh">{storiesSection.notIsolatedTitle.zh}</span><span class="lang-fr">{storiesSection.notIsolatedTitle.fr}</span></h3>
-            <p><span class="lang-en">{storiesSection.notIsolatedDesc.en}</span><span class="lang-zh">{storiesSection.notIsolatedDesc.zh}</span><span class="lang-fr">{storiesSection.notIsolatedDesc.fr}</span></p>
-            <p><strong><span class="lang-en">{storiesSection.notIsolatedTogether.en}</span><span class="lang-zh">{storiesSection.notIsolatedTogether.zh}</span><span class="lang-fr">{storiesSection.notIsolatedTogether.fr}</span></strong></p>
+            <img
+                src="/images/stories-callout-banner.png"
+                alt="These Are Not Isolated Cases. The families who shared their stories here are not alone. Many more PR applicants across Canada are in the same situation. We are asking for fairness, transparency, and predictable timelines."
+                class="stories-callout-banner"
+                width="1200"
+                height="630"
+                loading="lazy"
+            />
         </div>
     </div>
 </section>
@@ -108,46 +136,51 @@ const sortedStories = stories
         color: #a0aec0;
     }
 
-    .stories-scroll-wrap {
-        overflow-x: auto;
-        overflow-y: hidden;
-        margin: 0 -20px 2rem;
-        padding: 0 20px 0.5rem;
-        -webkit-overflow-scrolling: touch;
-        cursor: grab;
-        user-select: none;
+    .stories-stats {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: var(--accent-color);
+        text-align: center;
+        margin: -0.5rem 0 0.5rem;
+        letter-spacing: 0.02em;
     }
 
-    .stories-scroll-wrap.is-dragging {
-        cursor: grabbing;
-        scroll-behavior: auto;
+    .stories-stats-source {
+        font-size: 0.9375rem;
+        color: #a0aec0;
+        text-align: center;
+        margin: 0 0 1.75rem;
+        max-width: 560px;
+        margin-left: auto;
+        margin-right: auto;
+        line-height: 1.5;
     }
 
-    .stories-scroll-wrap::-webkit-scrollbar {
-        height: 6px;
-    }
-
-    .stories-scroll-wrap::-webkit-scrollbar-track {
-        background: #1a202c;
-        border-radius: 3px;
-    }
-
-    .stories-scroll-wrap::-webkit-scrollbar-thumb {
-        background: #4a5568;
-        border-radius: 3px;
+    .stories-grid-wrap {
+        margin-bottom: 2rem;
     }
 
     .stories-grid {
-        display: flex;
-        flex-wrap: nowrap;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
         gap: 1.25rem;
-        min-width: min-content;
+    }
+
+    @media (min-width: 640px) {
+        .stories-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .stories-grid {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
     }
 
     .story-card {
-        flex: 0 0 auto;
-        width: 310px;
-        min-height: 260px;
+        min-height: 220px;
         background: var(--bg-stories-card);
         color: #e2e8f0;
         padding: 1.25rem;
@@ -255,10 +288,14 @@ const sortedStories = stories
 
     .story-teaser {
         font-size: 0.9375rem;
-        line-height: 1.55;
+        line-height: 1.5;
         color: #cbd5e0;
         margin: 0 0 0.75rem;
         flex-grow: 1;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
     }
 
     .story-content-full {
@@ -358,105 +395,66 @@ const sortedStories = stories
     }
 
     .stories-callout {
-        background: var(--bg-stories-delay);
-        padding: 2rem;
+        padding: 0;
         border-radius: 8px;
-        text-align: center;
-        color: #e2e8f0;
+        overflow: hidden;
     }
 
-    .stories-callout h3 {
-        font-size: 1.75rem;
-        margin-bottom: 0.75rem;
-        color: var(--accent-color);
-    }
-
-    .stories-callout p {
-        font-size: 1rem;
-        line-height: 1.7;
-        max-width: 800px;
-        margin: 0 auto 0.75rem;
-        color: #cbd5e0;
+    .stories-callout-banner {
+        display: block;
+        width: 100%;
+        max-width: 1000px;
+        height: auto;
+        margin: 0 auto;
+        border-radius: 8px;
+        object-fit: cover;
     }
 </style>
 
 <script>
-    // Stories strip: drag-to-scroll + mouse-follow (mouse left/right auto-scrolls)
+    // Stats count-up: when section is in view, animate 0 → target (families + months)
     (function () {
-        const wrap = document.querySelector('.stories-scroll-wrap');
-        if (!wrap) return;
-        let isDown = false;
-        let startX = 0;
-        let scrollLeft = 0;
-        let didDrag = false;
+        const el = document.querySelector('.stories-stats');
+        if (!el) return;
+        const targetCount = parseInt(el.getAttribute('data-count') || '0', 10);
+        const targetMonths = parseInt(el.getAttribute('data-months') || '0', 10);
+        const durationMs = 2800;
+        const easeOutCubic = (t) => 1 - Math.pow(1 - t, 3);
 
-        // Mouse-follow: current mouse X relative to viewport, and whether mouse is inside wrap
-        let mouseX = 0;
-        let isInsideWrap = false;
-        const ease = 0.06;
-        let rafId = 0;
-
-        function updateFollowScroll() {
-            if (!isInsideWrap || isDown) {
-                rafId = requestAnimationFrame(updateFollowScroll);
-                return;
-            }
-            const rect = wrap.getBoundingClientRect();
-            const maxScroll = wrap.scrollWidth - wrap.clientWidth;
-            if (maxScroll <= 0) {
-                rafId = requestAnimationFrame(updateFollowScroll);
-                return;
-            }
-            const xIn = mouseX - rect.left;
-            const t = Math.max(0, Math.min(1, xIn / rect.width));
-            const targetScroll = t * maxScroll;
-            const current = wrap.scrollLeft;
-            const next = current + (targetScroll - current) * ease;
-            wrap.scrollLeft = next;
-            rafId = requestAnimationFrame(updateFollowScroll);
-        }
-        rafId = requestAnimationFrame(updateFollowScroll);
-
-        wrap.addEventListener('mouseenter', () => { isInsideWrap = true; });
-        wrap.addEventListener('mouseleave', () => { isInsideWrap = false; });
-        wrap.addEventListener('mousemove', (e) => {
-            mouseX = e.clientX;
-            if (!isDown) return;
-            e.preventDefault();
-            didDrag = true;
-            const x = e.pageX - wrap.offsetLeft;
-            const walk = (x - startX) * 1.2;
-            wrap.scrollLeft = scrollLeft - walk;
-        });
-
-        wrap.addEventListener('mousedown', (e) => {
-            isDown = true;
-            didDrag = false;
-            wrap.classList.add('is-dragging');
-            startX = e.pageX - wrap.offsetLeft;
-            scrollLeft = wrap.scrollLeft;
-        });
-        wrap.addEventListener('mouseleave', () => {
-            if (isDown) (window as unknown as { _storiesDidDrag?: boolean })._storiesDidDrag = didDrag;
-            isDown = false;
-            wrap.classList.remove('is-dragging');
-        });
-        wrap.addEventListener('mouseup', () => {
-            if (isDown) (window as unknown as { _storiesDidDrag?: boolean })._storiesDidDrag = didDrag;
-            isDown = false;
-            wrap.classList.remove('is-dragging');
-            setTimeout(() => { (window as unknown as { _storiesDidDrag?: boolean })._storiesDidDrag = false; }, 100);
-        });
+        let done = false;
+        const observer = new IntersectionObserver(
+            (entries) => {
+                if (done) return;
+                const e = entries[0];
+                if (!e?.isIntersecting) return;
+                done = true;
+                const countEls = el.querySelectorAll('.stats-count');
+                const monthsEls = el.querySelectorAll('.stats-months');
+                const start = performance.now();
+                function tick(now) {
+                    const elapsed = now - start;
+                    const t = Math.min(elapsed / durationMs, 1);
+                    const eased = easeOutCubic(t);
+                    const curCount = Math.round(eased * targetCount);
+                    const curMonths = Math.round(eased * targetMonths);
+                    countEls.forEach((n) => { n.textContent = String(curCount); });
+                    monthsEls.forEach((n) => { n.textContent = String(curMonths); });
+                    if (t < 1) requestAnimationFrame(tick);
+                }
+                requestAnimationFrame(tick);
+            },
+            { threshold: 0.3, rootMargin: '0px' }
+        );
+        observer.observe(el);
     })();
 
-    // Toggle story expansion (inline expand; modal is opened from BaseLayout on card/button click)
+    // Card click opens modal (BaseLayout); button toggles inline expand
     document.querySelectorAll('.story-toggle').forEach(btn => {
         btn.addEventListener('click', (e) => {
             e.stopPropagation();
             const card = btn.closest('.story-card');
             const content = card?.querySelector('.story-content-full');
             if (!content) return;
-
             const isExpanded = btn.getAttribute('aria-expanded') === 'true';
             btn.setAttribute('aria-expanded', String(!isExpanded));
             content.hidden = isExpanded;
