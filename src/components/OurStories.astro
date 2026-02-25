@@ -110,14 +110,9 @@ function statsLine(lang: 'en' | 'zh' | 'fr') {
         </div>
 
         <div class="stories-callout">
-            <img
-                src="/images/stories-callout-banner.png"
-                alt="These Are Not Isolated Cases. The families who shared their stories here are not alone. Many more PR applicants across Canada are in the same situation. We are asking for fairness, transparency, and predictable timelines."
-                class="stories-callout-banner"
-                width="1200"
-                height="630"
-                loading="lazy"
-            />
+            <h3><span class="lang-en">{storiesSection.notIsolatedTitle.en}</span><span class="lang-zh">{storiesSection.notIsolatedTitle.zh}</span><span class="lang-fr">{storiesSection.notIsolatedTitle.fr}</span></h3>
+            <p><span class="lang-en">{storiesSection.notIsolatedDesc.en}</span><span class="lang-zh">{storiesSection.notIsolatedDesc.zh}</span><span class="lang-fr">{storiesSection.notIsolatedDesc.fr}</span></p>
+            <p><strong><span class="lang-en">{storiesSection.notIsolatedTogether.en}</span><span class="lang-zh">{storiesSection.notIsolatedTogether.zh}</span><span class="lang-fr">{storiesSection.notIsolatedTogether.fr}</span></strong></p>
         </div>
     </div>
 </section>
@@ -395,19 +390,25 @@ function statsLine(lang: 'en' | 'zh' | 'fr') {
     }
 
     .stories-callout {
-        padding: 0;
+        background: var(--bg-stories-delay);
+        padding: 2rem;
         border-radius: 8px;
-        overflow: hidden;
+        text-align: center;
+        color: #e2e8f0;
     }
 
-    .stories-callout-banner {
-        display: block;
-        width: 100%;
-        max-width: 1000px;
-        height: auto;
-        margin: 0 auto;
-        border-radius: 8px;
-        object-fit: cover;
+    .stories-callout h3 {
+        font-size: 1.75rem;
+        margin-bottom: 0.75rem;
+        color: var(--accent-color);
+    }
+
+    .stories-callout p {
+        font-size: 1rem;
+        line-height: 1.7;
+        max-width: 800px;
+        margin: 0 auto 0.75rem;
+        color: #cbd5e0;
     }
 </style>
 
