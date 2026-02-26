@@ -1,5 +1,5 @@
 ---
-name: "Yi "
+name: "Yi X."
 title: "Inland PR & TRV Applicant"
 location: "Canada"
 profession: "Software Engineer"
