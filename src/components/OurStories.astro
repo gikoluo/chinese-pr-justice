@@ -390,11 +390,33 @@ function statsLine(lang: 'en' | 'zh' | 'fr') {
     }
 
     .stories-callout {
-        background: var(--bg-stories-delay);
-        padding: 2rem;
-        border-radius: 8px;
+        position: relative;
+        margin-top: 1.5rem;
+        border-radius: 12px;
+        overflow: hidden;
+        padding: 3.5rem 2rem;
         text-align: center;
-        color: #e2e8f0;
+
+        background-color: var(--bg-stories-delay);
+        background-image:
+            linear-gradient(
+                180deg,
+                rgba(30, 40, 55, 0.82),
+                rgba(30, 40, 55, 0.88)
+            ),
+            url('/images/Lives_On_Hold_Security_In_Progress_Banner_8K.jpg');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 100% 100%;
+    }
+
+    .stories-callout h3,
+    .stories-callout p {
+        position: relative;
+        z-index: 1;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .stories-callout h3 {
@@ -406,9 +428,8 @@ function statsLine(lang: 'en' | 'zh' | 'fr') {
     .stories-callout p {
         font-size: 1rem;
         line-height: 1.7;
-        max-width: 800px;
         margin: 0 auto 0.75rem;
-        color: #cbd5e0;
+        color: #e2e8f0;
     }
 </style>
 
