@@ -25,7 +25,7 @@ The continued delay is causing irreparable prejudice to my family's future in Ca
 
 - **Academic Excellence:** My child, LUO YIHAN, ranked in the Top 1% globally (Group IV Honour Roll) in the 2025 Canadian Senior Mathematics Contest hosted by the University of Waterloo. We are currently preparing for the Fall 2027 intake at the University of British Columbia (UBC). Without PR status, the tuition disparity (approx. $45,000/year vs. $6,000/year) creates a $150,000+ penalty that directly threatens my child's access to top-tier Canadian education.
 
-- **Significant Economic Contribution:** Our family consists of high-contributing residents of British Columbia. In the 2024 tax year, our combined total family income was $234,761 (as per Line 15000 of the attached Notices of Assessment), and we contributed a total of $60,085.09 in income tax to the Canadian government. It is fundamentally inequitable to deny domestic status to a family whose substantial taxes actively fund the very public institutions we are being barred from.
+- **Significant Economic Contribution:** Our family consists of high-contributing residents of British Columbia. In the 2024 tax year, our combined total family income was over $200K, and we contributed a total of $60K in income tax to the Canadian government. It is fundamentally inequitable to deny domestic status to a family whose substantial taxes actively fund the very public institutions we are being barred from.
 
 I sincerely hope to resolve this matter administratively and look forward to your prompt response.
 
