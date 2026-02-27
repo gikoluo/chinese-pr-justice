@@ -2,7 +2,7 @@
 name: "Jingjing Wen"
 title: "PR Applicant"
 location: "Ontario"
-waitingMonths: 38
+waitingMonths: 19
 anonymous: false
 order: 7
 teaser: "In December 2024 I opened the immigration tracker and saw four green check marks—all stages completed, background verification completed, security passed. We told our child, 'It's almost done.' In February 2025, without warning, the tracker changed. The green turned blue. 'Background verification — in progress.' No request for documents. No new information. No explanation. Just back to uncertainty, silence, and waiting."
