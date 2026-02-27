@@ -32,7 +32,7 @@ The human cost of this delay is not abstract:
 - It is planning our lives in short increments, a few months at a time, because we cannot rely on the system to operate within its own stated standards.
 - It is never being able to answer a simple question: when will we finally be together again?
 
-The prolonged uncertainty has taken a significant toll on my mental health. Over the years, I have lived with depression and anxiety as a result of this situation. It affects my personal life daily, my focus at work, and my overall well-being. Carrying this emotional burden while continuing to serve my community has been incredibly difficult.
+The prolonged uncertainty has taken a significant toll on my mental health. Over the years, I have lived with depression and anxiety as a result of this situation. It affects my personal life daily, and my overall well-being. Carrying this emotional burden while continuing to serve my community has been incredibly difficult.
 
 Through this experience, I've connected with a network of hundreds of other retired parents who are also placed in prolonged security screening, whether for permanent residence or a basic visitor visa. Many have waited for years without answers, and some tragically passed away during the wait. They simply want to spend their later years with their children and grandchildren. They should not have to suffer because of a failed system that lacks accountability.
 
