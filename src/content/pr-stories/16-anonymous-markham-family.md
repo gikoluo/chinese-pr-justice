@@ -1,13 +1,13 @@
 ---
 name: "Anonymous"
 title: "PR Applicant (Family)"
-location: "Markham, ON"
+location: "Ontario, Canada" 
 waitingMonths: 33
 anonymous: true
 order: 16
 teaser: "Our family submitted our PR application in May 2023. I passed all four stages quickly, but my husband and 7-year-old son have been stuck in security screening since August 2023. Life feels like an emotional cycle that never ends: anxious, trying to distract ourselves, trying to 'live like locals,' then anxious again. Our son has already changed three elementary schools. Each time we move, he gives us that innocent look — the look of a child who doesn't want to lose his friends again. Sometimes he asks, 'Mom, I really wish we had PR. When will we get it?' I don't know how to answer him."
 quote: "How many three-year periods does a person have in life? We do not know when the security screening will end. There is no timeline. No deadline. No visible finish line."
-timeline: "PR application submitted May 2023 → Main applicant passed all four stages → Husband and son in security screening since Aug 2023 → BOWP renewed Apr 2025 (took ~6 months) → Still waiting with no timeline"
+timeline: "PR application submitted May 2023 → Main applicant passed all four stages → Husband and son in security screening since Aug 2023 → BOWP renewed 2025 (took ~6 months) → Still waiting with no timeline"
 ---
 
 Our family submitted our permanent residence (PR) application in May 2023, and we are still waiting for a final decision from Immigration, Refugees and Citizenship Canada (IRCC).
@@ -39,7 +39,7 @@ I don't know how to answer him.
 
 **The Practical Difficulties**
 
-Because of the prolonged security screening, we already renewed our Bridging Open Work Permit in April 2025, and the renewal took nearly 6 months.
+Because of the prolonged security screening, we already renewed our Bridging Open Work Permit once, and the renewal took nearly 6 months.
 
 Each work permit renewal means:
 
