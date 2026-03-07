@@ -1,10 +1,10 @@
 ---
-name: "Anonymous"
+name: "Hong L."
 title: "Self-Employed Immigration Applicant; Parent (Family Separated)"
 location: "International"
 waitingMonths: 62
 email: "zijia1979@sina.com"
-anonymous: true
+anonymous: false
 order: 30
 teaser: "We submitted our Canada self-employed immigration application on December 22, 2020. Our application entered security screening in February 2024. Since then, time has felt heavy—every morning we check for updates and see only 'Processing.' Our eldest daughter went to Canada alone for high school in 2019; our younger daughter was two. Now the elder is about to graduate from university, the younger is nearly nine. The sisters have been separated by distance and this endless screening; career plans and childhood together have been lost. We are still waiting, and still choosing to believe that all our perseverance is worthwhile."
 quote: "The sisters, who should have grown up together, have missed out on entire childhoods because of this long wait. May every long wait be rewarded with a perfect ending. May we soon lay down our anxiety, cross mountains and seas, and embrace a future where we are never apart again."
