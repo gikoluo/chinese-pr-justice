@@ -1,0 +1,26 @@
+---
+name: "雷白"
+title: "Nova Scotia Provincial Nominee; Couple (Security Screening)"
+location: "Nova Scotia, Canada"
+waitingMonths: 14
+email: "raymanic@gmail.com"
+anonymous: false
+order: 44
+teaser: "In 2022 my wife and I came to Canada to begin a new life, leaving behind ten years of work—social network, jobs, property—but not our cat. We adapted quickly: she moved from HR to a new career in carpentry; I went from teaching English to learning Python and training my own language model. In 2025 we received Nova Scotia Provincial Nomination and applied for PR; I was preparing to start a small AI-related business here. In January 2026 we received security screening. We pulled ourselves together. Then in February 2026 my uncle—who raised me—became seriously ill. I wanted to go back to care for him. I realized: if I leave, I’d need a TRV to return, and TRV security screening can take over two years or have no timeline. IRCC’s policy forces an unbearably inhumane choice: abandon your loved one, or abandon everything you’ve built in Canada. My wife asked, 'By the next Winter Olympics, will our security screening be over?' I don’t know."
+quote: "IRCC's security screening policy puts people in an unbearably inhumane dilemma: either abandon your loved one, or abandon everything you have built in Canada. My wife asked me, 'By the next Winter Olympics, will our security screening be over?' And honestly, I don't know either."
+timeline: "Came to Canada 2022 with wife (left 10 years behind; brought cat) → Wife: HR to carpentry; author: English teacher to Python, training own language model → Nova Scotia nomination 2025; PR application; preparing AI small business → Security screening Jan 2026 → Uncle (who raised him) seriously ill Feb 2026; TRV re-entry could mean 2+ years screening—cannot leave to care for him without risking return"
+---
+
+In 2022, my wife and I chose to come to Canada to begin a new life. We left behind everything we had built over ten years of hard work—our social network, our jobs, our property, and all the familiar ties. Of course, we didn't leave our cat. He's simply too adorable to give up.
+
+We adapted quickly to life in Canada and soon found new direction and hope for the future. My wife had worked in human resources for more than a decade, and here in Canada she is proud to have started a new career in carpentry. I had been an English teacher for over ten years, and now I've learned even more languages—Python included—and I'm already able to train my own language model. As for our cat, every day he can freely watch brand-new "friends" from the balcony—foxes, squirrels, raccoons, and even deer.
+
+We work, study, and live seriously and earnestly, and everything has been moving in a better direction. In 2025, we received the Nova Scotia Provincial Nomination and applied for permanent residence. I also found my own path and began preparing to start a small business in Nova Scotia, promoting AI-related products locally. Every day we checked the status of our PR application, imagining the day things would finally be settled—where we might buy a home, which gym membership we would choose.
+
+But all those hopes were shattered by the security screening we received in January 2026. We went through a few traumatizing days, and then we pulled ourselves together. PR is indeed important; it brings certainty and a sense of safety. But a good life still depends on our own effort. As painful as it was, we accepted the result.
+
+Then an even greater blow came in February 2026. I learned that my uncle—the one who had raised me since I was little—had become seriously ill. He has given me so much, and I wanted to go back immediately to be with him and take care of him. Only then did I realize the more terrifying impact of security screening: if I return to my home country, to enter Canada again I would need to apply for a TRV, and TRV applications often face security screening that can take more than two years—or even have no clear timeline at all. That means if I go back right away to care for my uncle, I may have no idea when I'll be able to return to Canada. IRCC's security screening policy puts people in an unbearably inhumane dilemma: either abandon your loved one, or abandon everything you have built in Canada.
+
+This is only my story. I believe that tens of thousands of dreams have been shattered in the same way—perhaps in even more ruthless ways. Many are separated from their families and cannot reunite, living with constant guilt and self-blame. For people who come to Canada full of hope, and whose hearts are full of love, this is a truly cruel ending.
+
+During the Winter Olympics that just passed, my wife and I watched a hockey game for the first time. We witnessed the miracle comeback in the semifinal against Finland. At the moment of the winning goal, we were so excited that we jumped up. Then in the final, watching the heartbreaking loss in overtime, we were so angry that we turned off the TV. I comforted my wife: it's okay—at the next Winter Olympics, we'll win it back. My wife asked me, "By the next Winter Olympics, will our security screening be over?" And honestly, I don't know either. Four years from now, will we be able to cheer for Canada without fear—truly as residents of Canada?
