@@ -5,7 +5,7 @@ location: "Canada"
 waitingMonths: 36
 email: "Silvia2139@outlook.com"
 anonymous: false
-order: 47
+order: 52
 teaser: "Our family submitted our Canadian permanent residence application on March 4, 2021. We completed every required step—medical exams, police certificates, background checks—and everything passed. In 2023, our application was sent to Security Screening and has remained 'In Progress' ever since. We have now waited nearly three years with no clear progress and no timeline. Although the security check is mainly for my husband, our daughter and I are also trapped in this indefinite wait. The impact on my career, our family life, and our child's education has been profound. We work, pay taxes, raise our child, and actively participate in the community—yet we live under a status that keeps us from fully belonging."
 quote: "We are not asking to cancel security screening. We only hope that it can have a reasonable time frame, with basic transparency and explanation. For a family, the hardest part is not waiting for a result—it is waiting in a process that has no timeline and no explanation."
 timeline: "PR application submitted Mar 4, 2021 → All requirements completed and passed (medical, police, background) → Application sent to Security Screening in 2023 → Nearly 3 years waiting; status 'In Progress' with no clear timeline → Same school employer for ~3 years; daughter in Canada 4+ years, now 8 years old; repeated study permit renewals; ongoing uncertainty about work permits and PR"
@@ -78,30 +78,4 @@ In our personal life, we had planned to buy a home and settle down in Canada. Ho
 As a result, we continue to face the instability of renting, while also being unable to contribute to the local housing market and broader economy in the way long-term residents normally would.
 
 In terms of financial and civic responsibility, we have always tried to be responsible residents. From the very first year we arrived in Canada, we have filed our taxes every year as required, without interruption.
-
-We work here, pay taxes, and raise our child here. We also actively participate in the community. We contribute to local charitable organizations and volunteer our time and effort whenever we can, hoping to give back to the society around us.
-
-At the same time, we continuously work to improve ourselves. We keep improving our English and are learning French as well, so that we can better integrate into Canada’s multicultural society.
-
-We have always tried our best to become active, responsible members of Canadian society and hope to build our future here.
-
-The prolonged security screening process not only causes frustration and disappointment for applicants like us, but it also leaves our relatives, friends, and even Canadian employers confused and disappointed by the lack of clarity in the system.
-
-We understand that the Canadian government has a responsibility to conduct security screening, and we fully respect the importance of national security.
-
-However, when security screening has no reasonable time limit and no transparency, this indefinite waiting itself can cause tremendous harm to families.
-
-We are not asking for the elimination of security screening.
-
-What we hope for is simply that security screening can have a reasonable timeframe, and that applicants can at least see some transparency and basic explanation regarding the process.
-
-Canada is known for its values of fairness, transparency, and rule of law. We chose to come here because we believe in those values.
-
-We sincerely hope that while protecting national security, Canada’s immigration system can also provide families like ours with a process that is clear, fair, and bounded by time.
-
-Because for a family, the hardest part is not waiting for a result.
-
-The hardest part is waiting in a process that has no timeline and no explanation.
-
-Thank you.
 

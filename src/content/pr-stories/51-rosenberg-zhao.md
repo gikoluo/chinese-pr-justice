@@ -6,7 +6,7 @@ profession: "Engineer"
 waitingMonths: 36
 email: "rosenberg.georgefield1116@yahoo.com"
 anonymous: false
-order: 46
+order: 51
 teaser: "I submitted my PR application to IRCC through the Provincial Nominee Program in April 2023 and submitted all required documents on time. I have been waiting almost 36 months for a final decision—the standard processing time for my stream is about 18 months. I have called IRCC, sent webforms, and asked my local MP for help; none of it has led to reasonable processing. During this wait my father passed away. My mother is over 77 and living alone in my hometown; I cannot apply for a super visa for her until I have PR. As an engineer with a master's degree from a Canadian university, better opportunities in public enterprises are open only to citizens and permanent residents. I demand a final decision. We come here because we believe Canada is built by immigrants and respects human rights. We study hard, work hard, and contribute to Canadian communities and the economy."
 quote: "As most immigrants, we come here because we believe Canada is a country built by immigrants and respecting human rights. What we want is just a democratic and peaceful place to live. Most of us have got excellent education and degrees from Canadian universities. We study hard, work hard, and continuously contribute to Canadian communities, society and economy."
 timeline: "PR application (PNP) April 2023; all documents submitted on time → 36 months waiting (standard ~18 months) → IRCC calls, webforms, local MP—no reasonable progress → Father passed away during wait; mother 77+, alone in hometown; cannot apply for super visa without PR → Engineer, Canadian master's; public sector opportunities closed without PR"
@@ -40,3 +40,4 @@ The severely delayed processing of my PR application has caused terrible impact 
 - As most immigrants, we come here because we believe Canada is a country built by immigrants and respecting human rights. What we want is just a democratic and peaceful place to live.
 
 - Most of us have got excellent education and degrees from Canadian universities. We study hard, work hard, and continuously contribute to Canadian communities, society and economy.
+
