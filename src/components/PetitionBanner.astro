@@ -96,7 +96,7 @@ const p = petitionBanner;
   </div>
 
   <!-- Modal: How to sign (fixed overlay, not inline) -->
-  <div class="petition-help-modal" id="petition-help-modal" data-petition-help hidden aria-hidden="true">
+  <div class="petition-help-modal" id="petition-help" data-petition-help hidden aria-hidden="true">
     <div class="petition-help-backdrop" data-petition-help-close aria-label="Close"></div>
     <div class="petition-help-dialog" role="dialog" aria-labelledby="petition-help-title" aria-modal="true">
       <button type="button" class="petition-help-close" data-petition-help-close aria-label="Close">
@@ -205,7 +205,7 @@ const p = petitionBanner;
 <script is:inline>
   document.addEventListener('DOMContentLoaded', function () {
     var toggleBtn = document.querySelector('[data-petition-help-toggle]');
-    var modal = document.getElementById('petition-help-modal');
+    var modal = document.getElementById('petition-help');
     var closeButtons = document.querySelectorAll('[data-petition-help-close]');
     if (!toggleBtn || !modal) return;
 
@@ -224,6 +224,15 @@ const p = petitionBanner;
     closeButtons.forEach(function (btn) {
       btn.addEventListener('click', closeModal);
     });
+
+    // Open automatically when URL hash is #petition-help (e.g., /#petition-help)
+    function checkHash() {
+      if (window.location.hash === '#petition-help') {
+        openModal();
+      }
+    }
+    checkHash();
+    window.addEventListener('hashchange', checkHash);
 
     document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape' && !modal.hasAttribute('hidden')) closeModal();
