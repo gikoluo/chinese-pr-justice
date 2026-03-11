@@ -21,19 +21,11 @@ const p = petitionBanner;
         </p>
 
         <div class="petition-cta-row">
-          <div class="petition-cta-buttons">
-            <a href={petitionUrl} target="_blank" rel="noopener noreferrer" class="btn btn-primary-large petition-btn-sign">
-              <span class="lang-en">{p.signBtn.en}</span>
-              <span class="lang-zh">{p.signBtn.zh}</span>
-              <span class="lang-fr">{p.signBtn.fr}</span>
-            </a>
-            <button type="button" class="btn btn-outline petition-btn-help" data-petition-help-toggle>
-              <span class="petition-help-icon" aria-hidden="true">?</span>
-              <span class="lang-en">{p.helpBtn.en}</span>
-              <span class="lang-zh">{p.helpBtn.zh}</span>
-              <span class="lang-fr">{p.helpBtn.fr}</span>
-            </button>
-          </div>
+          <a href={petitionUrl} target="_blank" rel="noopener noreferrer" class="btn btn-primary-large petition-btn-sign">
+            <span class="lang-en">{p.signBtn.en}</span>
+            <span class="lang-zh">{p.signBtn.zh}</span>
+            <span class="lang-fr">{p.signBtn.fr}</span>
+          </a>
           <div class="petition-qr-card petition-qr-card--inline">
             <div class="petition-qr-image">
               <a href={petitionUrl} target="_blank" rel="noopener noreferrer">
@@ -41,6 +33,12 @@ const p = petitionBanner;
               </a>
             </div>
           </div>
+          <button type="button" class="btn btn-outline petition-btn-help" data-petition-help-toggle>
+            <span class="petition-help-icon" aria-hidden="true">?</span>
+            <span class="lang-en">{p.helpBtn.en}</span>
+            <span class="lang-zh">{p.helpBtn.zh}</span>
+            <span class="lang-fr">{p.helpBtn.fr}</span>
+          </button>
         </div>
 
         <p class="petition-meta">
