@@ -338,9 +338,9 @@ export const petitionBanner = {
     fr: 'Pétition e‑7259 (Citoyenneté et Immigration).',
   },
   goal: {
-    en: 'Goal: 10,000+ verified signatures (Canadian citizen or a resident of Canada).',
-    zh: '目标：10,000+ 有效签名。',
-    fr: 'Objectif : 10 000+ signatures vérifiées (citoyen canadien ou résident du Canada).',
+    en: 'Goal: 10,000+ verified signatures (Canadian citizen or a resident of Canada) so our collective voice for ending PR security screening delays cannot be ignored.',
+    zh: '目标：10,000+ 有效签名，让我们要求终结PR安全背景调查无限期拖延的呼声更响亮、更难被忽视。',
+    fr: 'Objectif : plus de 10 000 signatures vérifiées (citoyen canadien ou résident du Canada) afin que notre voix collective contre les délais d’évaluation de sécurité pour la RP ne puisse pas être ignorée.',
   },
   mpRole: { en: 'Member of Parliament', zh: '国会议员', fr: 'Députée' },
   mpDetails: {
