@@ -3,7 +3,7 @@ name: "Cecilia Liu"
 title: "OINP Applicant (Security Screening)"
 location: "Ontario, Canada"
 waitingMonths: 30
-email: ""
+email: "cecilia@example.com"
 anonymous: true
 order: 47
 teaser: "I submitted my PR application through OINP in September 2023, and security screening has been 'in progress' since January 2024 with no clear timeline or substantive update. The prolonged delay has made it difficult to plan major life decisions—housing, career, finances. Non-permanent residents face less favorable mortgage terms and additional tax implications. The repeated work permit extensions have created ongoing financial strain, while the uncertainty has caused prolonged anxiety."

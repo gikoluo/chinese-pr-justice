@@ -313,4 +313,140 @@ export const joinPage = {
   donateNoReceipt: { en: 'We cannot provide donation tax credit receipts at this time.', zh: '我们目前无法提供捐款抵税收据。', fr: 'Nous ne pouvons pas fournir de reçus d\'impôt pour dons pour le moment.' },
 } as const;
 
+/** E-petition banner and "How to sign" modal (e-7259). */
+export const petitionBanner = {
+  title: {
+    en: 'End indefinite security screening delays — sign e‑petition e‑7259',
+    zh: '终结无限期安全背景调查拖延 — 请签署电子请愿 e‑7259',
+    fr: 'Mettre fin aux délais indéfinis d\'évaluation de sécurité — signez la pétition électronique e‑7259',
+  },
+  intro: {
+    en: 'Citizens and residents of Canada can now sign a House of Commons e‑petition calling for strict timelines, transparency, and accountability for PR security screening delays.',
+    zh: '加拿大公民和居民现可签署国会下议院电子请愿，要求对PR安全背景调查设定明确时限、透明度和问责。',
+    fr: 'Les citoyens et résidents du Canada peuvent maintenant signer une pétition électronique de la Chambre des communes pour exiger des délais stricts, la transparence et l\'imputabilité en matière d\'évaluation de sécurité des demandes de RP.',
+  },
+  signBtn: { en: 'Sign the e‑petition', zh: '签署电子请愿', fr: 'Signer la pétition électronique' },
+  helpBtn: { en: 'How to sign (step‑by‑step)', zh: '如何签署（分步说明）', fr: 'Comment signer (étape par étape)' },
+  meta: {
+    en: 'Petition e‑7259 (Citizenship and Immigration).',
+    zh: '请愿 e‑7259（公民与移民）。',
+    fr: 'Pétition e‑7259 (Citoyenneté et Immigration).',
+  },
+  goal: {
+    en: 'Goal: 10,000+ verified signatures (Canadian citizen or a resident of Canada).',
+    zh: '目标：10,000+ 有效签名（须为加拿大公民或加拿大居民）。',
+    fr: 'Objectif : 10 000+ signatures vérifiées (citoyen canadien ou résident du Canada).',
+  },
+  mpRole: { en: 'Member of Parliament', zh: '国会议员', fr: 'Députée' },
+  mpDetails: {
+    en: 'Vancouver East · New Democratic Party · British Columbia',
+    zh: '温哥华东区 · 新民主党 · 不列颠哥伦比亚省',
+    fr: 'Vancouver-Est · NPD · Colombie-Britannique',
+  },
+  mpCredit: {
+    en: 'Sponsor of e‑petition e‑7259',
+    zh: '电子请愿 e‑7259 的发起人',
+    fr: 'Parrain de la pétition électronique e‑7259',
+  },
+  whyMatters: {
+    en: 'Why this petition matters',
+    zh: '为何这项请愿重要',
+    fr: 'Pourquoi cette pétition compte',
+  },
+  whereas1: {
+    en: 'Thousands of Permanent Residence (PR) applicants endure extreme security screening delays estimated at 65 months, vastly exceeding the official 110‑day service standard;',
+    zh: '数千名永久居民（PR）申请人承受极端的安全背景调查拖延，估计长达65个月，远超官方110天服务标准；',
+    fr: 'Des milliers de demandeurs de résidence permanente (RP) subissent des délais extrêmes d\'évaluation de sécurité estimés à 65 mois, dépassant largement la norme de service officielle de 110 jours ;',
+  },
+  whereas2: {
+    en: 'The security referral backlog continues to worsen, trapping over 23,000 PR applications as of November 2025;',
+    zh: '安全转介积压持续恶化，截至2025年11月超过23,000份PR申请被困；',
+    fr: 'L\'arriéré des renvois en sécurité continue de s\'aggraver, piégeant plus de 23 000 demandes de RP en novembre 2025 ;',
+  },
+  whereas3: {
+    en: 'These delays cause severe harm, including prolonged family separation, mental health crises, loss of legal status, and significant financial burdens;',
+    zh: '这些拖延造成严重伤害，包括长期家庭分离、心理健康危机、失去合法身份及重大经济负担；',
+    fr: 'Ces délais causent un préjudice grave : séparation familiale prolongée, crises de santé mentale, perte du statut légal et fardeaux financiers importants ;',
+  },
+  whereas4: {
+    en: 'Extreme processing times create a discriminatory two‑tier system where applicants from specific regions face indefinite, non‑transparent delays, and applicants lack meaningful recourse, transparent case information, or compensation when service standards are breached by 300–500%.',
+    zh: '极端审理时间造成歧视性的双轨制度：来自特定地区的申请人面临无限期、不透明的拖延，且缺乏有效救济、透明的案件信息或在服务标准被违反300–500%时的补偿。',
+    fr: 'Les délais de traitement extrêmes créent un système discriminatoire à deux vitesses : les demandeurs de certaines régions subissent des délais indéfinis et opaques, sans recours utile, sans information transparente ni indemnisation lorsque les normes de service sont dépassées de 300 à 500 %.',
+  },
+  modalTitle: {
+    en: 'How to sign the e‑petition (step‑by‑step)',
+    zh: '如何签署电子请愿（分步说明）',
+    fr: 'Comment signer la pétition électronique (étape par étape)',
+  },
+  modalNote: {
+    en: 'You need to be a Canadian citizen or a resident of Canada and confirm your email for your signature to count.',
+    zh: '您须为加拿大公民或加拿大居民，并确认邮箱后签名才有效。',
+    fr: 'Vous devez être citoyen canadien ou résident du Canada et confirmer votre courriel pour que votre signature compte.',
+  },
+  step1Title: { en: 'Open the petition page.', zh: '打开请愿页面。', fr: 'Ouvrez la page de la pétition.' },
+  step1GoTo: { en: 'Go to ', zh: '在浏览器中打开 ', fr: 'Allez sur ' },
+  step1InBrowser: { en: ' in your browser.', zh: '。', fr: ' dans votre navigateur.' },
+  tip1Label: { en: 'Step 1 – Personal info', zh: '步骤 1 – 个人信息', fr: 'Étape 1 – Renseignements personnels' },
+  tip1Text: {
+    en: 'Type your first name, last name and a real email you can check right away.',
+    zh: '填写您的姓名以及能立即查收的真实邮箱。',
+    fr: 'Indiquez votre prénom, nom et une adresse courriel que vous pouvez consulter tout de suite.',
+  },
+  tip2Label: { en: 'Step 2 – Address', zh: '步骤 2 – 地址', fr: 'Étape 2 – Adresse' },
+  tip2Text: {
+    en: 'Choose your province and enter the same postal code you use in daily life.',
+    zh: '选择您的省份并填写日常使用的邮政编码。',
+    fr: 'Choisissez votre province et entrez le code postal que vous utilisez au quotidien.',
+  },
+  tip3Label: { en: 'Step 3 – Eligibility box', zh: '步骤 3 – 资格选项', fr: 'Étape 3 – Case d\'admissibilité' },
+  tip3Text: {
+    en: 'Tick “I am a Canadian citizen or a resident of Canada” if this is true for you.',
+    zh: '若您符合条件，请勾选「我是加拿大公民或加拿大居民」。',
+    fr: 'Cochez « Je suis citoyen canadien ou résident du Canada » si cela s\'applique à vous.',
+  },
+  step2Title: {
+    en: 'Fill in your details carefully.',
+    zh: '仔细填写您的信息。',
+    fr: 'Remplissez vos coordonnées avec soin.',
+  },
+  step2Body: {
+    en: 'On the form, complete your personal information, address and eligibility checkbox, then click “Sign”.',
+    zh: '在表格中填写个人信息、地址并勾选资格选项框，然后点击 “Sign”（签署）。',
+    fr: 'Dans le formulaire, remplissez vos renseignements personnels, votre adresse et la case d’admissibilité, puis cliquez sur « Sign ».',
+  },
+  step3Title: { en: 'Submit the form and wait for the email.', zh: '提交表格并等待邮件。', fr: 'Soumettez le formulaire et attendez le courriel.' },
+  step3List1: { en: 'First and last name (must match your ID);', zh: '姓名（须与证件一致）；', fr: 'Prénom et nom (doivent correspondre à votre pièce d\'identité) ;' },
+  step3List2: { en: 'Email address (one you can access immediately);', zh: '邮箱（能立即查收的）；', fr: 'Adresse courriel (accessible immédiatement) ;' },
+  step3List3: { en: 'City, province, and postal code;', zh: '城市、省份和邮政编码；', fr: 'Ville, province et code postal ;' },
+  step3List4: { en: 'Status (Canadian citizen or resident in Canada).', zh: '身份（加拿大公民或加拿大居民）。', fr: 'Statut (citoyen canadien ou résident au Canada).' },
+  step3Consent: {
+    en: 'Read the declaration and check the consent box if you agree, then click Submit.',
+    zh: '阅读声明，若同意请勾选同意框，然后点击提交。',
+    fr: 'Lisez la déclaration, cochez la case de consentement si vous êtes d\'accord, puis cliquez sur Soumettre.',
+  },
+  step4Title: { en: 'Open the confirmation email.', zh: '打开确认邮件。', fr: 'Ouvrez le courriel de confirmation.' },
+  step4Body: {
+    en: 'Within a few minutes you should receive a message from the House of Commons petitions system. Click “Please confirm your support to complete process”.',
+    zh: '几分钟内您会收到国会下议院请愿系统的邮件。点击其中的 “Please confirm your support to complete process”。',
+    fr: 'Sous peu vous recevrez un message du système de pétitions de la Chambre des communes. Cliquez sur « Please confirm your support to complete process ».',
+  },
+  step5Title: { en: 'Make sure your signature is confirmed.', zh: '确保您的签名已确认。', fr: 'Assurez-vous que votre signature est confirmée.' },
+  step5Body: {
+    en: 'Your signature only counts after you click the link in the confirmation email. If you don’t see the email, check your spam / junk folder.',
+    zh: '只有点击确认邮件中的链接后，签名才有效。若未收到邮件，请查看垃圾邮件文件夹。',
+    fr: 'Votre signature ne compte qu\'après avoir cliqué sur le lien dans le courriel de confirmation. Si vous ne voyez pas le courriel, vérifiez les indésirables / courrier indésirable.',
+  },
+  shareAsk: {
+    en: 'After confirming, please share the petition with friends, family, and colleagues who are Canadian citizens or residents in Canada. Every confirmed signature helps.',
+    zh: '确认后请将请愿分享给加拿大公民或加拿大居民的朋友、家人和同事。每一份确认的签名都有帮助。',
+    fr: 'Après confirmation, merci de partager la pétition avec des amis, la famille et des collègues qui sont citoyens canadiens ou résidents au Canada. Chaque signature confirmée compte.',
+  },
+  shortStepsZh: {
+    en: 'Short steps: Open the petition link → Click Sign → Enter name, city, province, email, status → Check the consent box and Submit → Click the confirmation link in the email to complete.',
+    zh: '简要步骤：打开请愿链接，点击签名按钮 → 填写姓名、城市、省份、邮箱、身份 → 勾选同意并提交 → 到邮箱点击确认链接，签名才算成功 ✅',
+    fr: 'En bref : Ouvrez le lien de la pétition → Cliquez sur Signer → Saisissez nom, ville, province, courriel, statut → Cochez la case et Soumettre → Cliquez sur le lien de confirmation dans le courriel pour valider ✅',
+  },
+  officialPage: { en: 'the official e‑7259 page', zh: 'e‑7259 官方页面', fr: 'la page officielle e‑7259' },
+} as const;
+
 export type Lang = 'en' | 'zh' | 'fr';

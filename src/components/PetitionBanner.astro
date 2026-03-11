@@ -1,0 +1,603 @@
+---
+const petitionUrl =
+  'https://www.ourcommons.ca/petitions/en/Petition/Details?Petition=e-7259';
+import { petitionBanner } from '../i18n/strings';
+const p = petitionBanner;
+---
+
+<section id="petition" class="petition-banner-section">
+  <div class="container">
+    <div class="petition-banner">
+      <div class="petition-main">
+        <h2 class="petition-title">
+          <span class="lang-en">{p.title.en}</span>
+          <span class="lang-zh">{p.title.zh}</span>
+          <span class="lang-fr">{p.title.fr}</span>
+        </h2>
+        <p class="petition-intro">
+          <span class="lang-en">{p.intro.en}</span>
+          <span class="lang-zh">{p.intro.zh}</span>
+          <span class="lang-fr">{p.intro.fr}</span>
+        </p>
+
+        <div class="petition-cta-row">
+          <a href={petitionUrl} target="_blank" rel="noopener noreferrer" class="btn btn-primary-large petition-btn-sign">
+            <span class="lang-en">{p.signBtn.en}</span>
+            <span class="lang-zh">{p.signBtn.zh}</span>
+            <span class="lang-fr">{p.signBtn.fr}</span>
+          </a>
+          <button type="button" class="btn btn-outline petition-btn-help" data-petition-help-toggle>
+            <span class="lang-en">{p.helpBtn.en}</span>
+            <span class="lang-zh">{p.helpBtn.zh}</span>
+            <span class="lang-fr">{p.helpBtn.fr}</span>
+          </button>
+        </div>
+
+        <p class="petition-meta">
+          <span class="lang-en">{p.meta.en}</span>
+          <span class="lang-zh">{p.meta.zh}</span>
+          <span class="lang-fr">{p.meta.fr}</span>
+          <span class="petition-meta-highlight">
+            <span class="lang-en">{p.goal.en}</span>
+            <span class="lang-zh">{p.goal.zh}</span>
+            <span class="lang-fr">{p.goal.fr}</span>
+          </span>
+        </p>
+
+        <div class="petition-sponsor">
+          <img src="/images/jenny-kwan-mp.png" alt="" class="petition-sponsor-photo" width="48" height="48" loading="lazy" />
+          <div class="petition-sponsor-info">
+            <span class="petition-sponsor-role"><span class="lang-en">{p.mpRole.en}</span><span class="lang-zh">{p.mpRole.zh}</span><span class="lang-fr">{p.mpRole.fr}</span></span>
+            <strong class="petition-sponsor-name">Jenny Kwan</strong>
+            <span class="petition-sponsor-details"><span class="lang-en">{p.mpDetails.en}</span><span class="lang-zh">{p.mpDetails.zh}</span><span class="lang-fr">{p.mpDetails.fr}</span></span>
+            <span class="petition-sponsor-credit"><span class="lang-en">{p.mpCredit.en}</span><span class="lang-zh">{p.mpCredit.zh}</span><span class="lang-fr">{p.mpCredit.fr}</span></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="petition-whereas">
+        <h3>
+          <span class="lang-en">{p.whyMatters.en}</span>
+          <span class="lang-zh">{p.whyMatters.zh}</span>
+          <span class="lang-fr">{p.whyMatters.fr}</span>
+        </h3>
+        <ul class="declaration-list declaration-whereas-grid">
+          <li>
+            <span class="whereas-topic">WHEREAS</span>
+            <span class="lang-en">{p.whereas1.en}</span>
+            <span class="lang-zh">{p.whereas1.zh}</span>
+            <span class="lang-fr">{p.whereas1.fr}</span>
+          </li>
+          <li>
+            <span class="whereas-topic">WHEREAS</span>
+            <span class="lang-en">{p.whereas2.en}</span>
+            <span class="lang-zh">{p.whereas2.zh}</span>
+            <span class="lang-fr">{p.whereas2.fr}</span>
+          </li>
+          <li>
+            <span class="whereas-topic">WHEREAS</span>
+            <span class="lang-en">{p.whereas3.en}</span>
+            <span class="lang-zh">{p.whereas3.zh}</span>
+            <span class="lang-fr">{p.whereas3.fr}</span>
+          </li>
+          <li>
+            <span class="whereas-topic">WHEREAS</span>
+            <span class="lang-en">{p.whereas4.en}</span>
+            <span class="lang-zh">{p.whereas4.zh}</span>
+            <span class="lang-fr">{p.whereas4.fr}</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Modal: How to sign (fixed overlay, not inline) -->
+  <div class="petition-help-modal" id="petition-help-modal" data-petition-help hidden aria-hidden="true">
+    <div class="petition-help-backdrop" data-petition-help-close aria-label="Close"></div>
+    <div class="petition-help-dialog" role="dialog" aria-labelledby="petition-help-title" aria-modal="true">
+      <button type="button" class="petition-help-close" data-petition-help-close aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <div class="petition-help-inner">
+        <h2 id="petition-help-title" class="petition-help-title">
+          <span class="lang-en">{p.modalTitle.en}</span>
+          <span class="lang-zh">{p.modalTitle.zh}</span>
+          <span class="lang-fr">{p.modalTitle.fr}</span>
+        </h2>
+        <p class="petition-help-note">
+          <span class="lang-en">{p.modalNote.en}</span>
+          <span class="lang-zh">{p.modalNote.zh}</span>
+          <span class="lang-fr">{p.modalNote.fr}</span>
+        </p>
+
+        <ol class="petition-steps">
+          <li>
+            <strong><span class="lang-en">{p.step1Title.en}</span><span class="lang-zh">{p.step1Title.zh}</span><span class="lang-fr">{p.step1Title.fr}</span></strong>
+            <span class="lang-en">{p.step1GoTo.en}<a href={petitionUrl} target="_blank" rel="noopener noreferrer">{p.officialPage.en}</a>{p.step1InBrowser.en}</span>
+            <span class="lang-zh">{p.step1GoTo.zh}<a href={petitionUrl} target="_blank" rel="noopener noreferrer">{p.officialPage.zh}</a>{p.step1InBrowser.zh}</span>
+            <span class="lang-fr">{p.step1GoTo.fr}<a href={petitionUrl} target="_blank" rel="noopener noreferrer">{p.officialPage.fr}</a>{p.step1InBrowser.fr}</span>
+            <div class="petition-step-image petition-step-image--annotated">
+              <img src="/images/petition_step1_form.png" alt="Step 1: fill in the petition form with your information" loading="lazy" />
+              <div class="petition-tip petition-tip--personal">
+                <span class="petition-tip-label"><span class="lang-en">{p.tip1Label.en}</span><span class="lang-zh">{p.tip1Label.zh}</span><span class="lang-fr">{p.tip1Label.fr}</span></span>
+                <span class="petition-tip-text"><span class="lang-en">{p.tip1Text.en}</span><span class="lang-zh">{p.tip1Text.zh}</span><span class="lang-fr">{p.tip1Text.fr}</span></span>
+              </div>
+              <div class="petition-tip petition-tip--address">
+                <span class="petition-tip-label"><span class="lang-en">{p.tip2Label.en}</span><span class="lang-zh">{p.tip2Label.zh}</span><span class="lang-fr">{p.tip2Label.fr}</span></span>
+                <span class="petition-tip-text"><span class="lang-en">{p.tip2Text.en}</span><span class="lang-zh">{p.tip2Text.zh}</span><span class="lang-fr">{p.tip2Text.fr}</span></span>
+              </div>
+              <div class="petition-tip petition-tip--citizenship">
+                <span class="petition-tip-label"><span class="lang-en">{p.tip3Label.en}</span><span class="lang-zh">{p.tip3Label.zh}</span><span class="lang-fr">{p.tip3Label.fr}</span></span>
+                <span class="petition-tip-text"><span class="lang-en">{p.tip3Text.en}</span><span class="lang-zh">{p.tip3Text.zh}</span><span class="lang-fr">{p.tip3Text.fr}</span></span>
+              </div>
+            </div>
+          </li>
+          <li>
+            <strong><span class="lang-en">{p.step2Title.en}</span><span class="lang-zh">{p.step2Title.zh}</span><span class="lang-fr">{p.step2Title.fr}</span></strong>
+            <span class="lang-en">{p.step2Body.en}</span>
+            <span class="lang-zh">{p.step2Body.zh}</span>
+            <span class="lang-fr">{p.step2Body.fr}</span>
+            <div class="petition-step-image">
+              <img src="/images/2.petitions_submit.png" alt="Petition page with Submit button highlighted" loading="lazy" />
+            </div>
+          </li>
+          <li>
+            <strong><span class="lang-en">{p.step3Title.en}</span><span class="lang-zh">{p.step3Title.zh}</span><span class="lang-fr">{p.step3Title.fr}</span></strong>
+            <span class="lang-en">Enter your:</span>
+            <span class="lang-zh">请填写：</span>
+            <span class="lang-fr">Indiquez :</span>
+            <ul>
+              <li><span class="lang-en">{p.step3List1.en}</span><span class="lang-zh">{p.step3List1.zh}</span><span class="lang-fr">{p.step3List1.fr}</span></li>
+              <li><span class="lang-en">{p.step3List2.en}</span><span class="lang-zh">{p.step3List2.zh}</span><span class="lang-fr">{p.step3List2.fr}</span></li>
+              <li><span class="lang-en">{p.step3List3.en}</span><span class="lang-zh">{p.step3List3.zh}</span><span class="lang-fr">{p.step3List3.fr}</span></li>
+              <li><span class="lang-en">{p.step3List4.en}</span><span class="lang-zh">{p.step3List4.zh}</span><span class="lang-fr">{p.step3List4.fr}</span></li>
+            </ul>
+            <span class="lang-en">{p.step3Consent.en}</span>
+            <span class="lang-zh">{p.step3Consent.zh}</span>
+            <span class="lang-fr">{p.step3Consent.fr}</span>
+            <div class="petition-step-image">
+              <img src="/images/3.petitions_email_confirm.png" alt="Signature form fields" loading="lazy" />
+            </div>
+          </li>
+          <li>
+            <strong><span class="lang-en">{p.step4Title.en}</span><span class="lang-zh">{p.step4Title.zh}</span><span class="lang-fr">{p.step4Title.fr}</span></strong>
+            <span class="lang-en">{p.step4Body.en}</span>
+            <span class="lang-zh">{p.step4Body.zh}</span>
+            <span class="lang-fr">{p.step4Body.fr}</span>
+            <div class="petition-step-image">
+              <img src="/images/4.petitions_success.png" alt="Confirmation message after submitting" loading="lazy" />
+            </div>
+          </li>
+          <li>
+            <strong><span class="lang-en">{p.step5Title.en}</span><span class="lang-zh">{p.step5Title.zh}</span><span class="lang-fr">{p.step5Title.fr}</span></strong>
+            <span class="lang-en">{p.step5Body.en}</span>
+            <span class="lang-zh">{p.step5Body.zh}</span>
+            <span class="lang-fr">{p.step5Body.fr}</span>
+          </li>
+        </ol>
+
+        <p class="petition-help-share">
+          <span class="lang-en">{p.shareAsk.en}</span>
+          <span class="lang-zh">{p.shareAsk.zh}</span>
+          <span class="lang-fr">{p.shareAsk.fr}</span>
+        </p>
+
+        <p class="petition-help-note petition-help-short">
+          <span class="lang-en">{p.shortStepsZh.en}</span>
+          <span class="lang-zh">{p.shortStepsZh.zh}</span>
+          <span class="lang-fr">{p.shortStepsZh.fr}</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', function () {
+    var toggleBtn = document.querySelector('[data-petition-help-toggle]');
+    var modal = document.getElementById('petition-help-modal');
+    var closeButtons = document.querySelectorAll('[data-petition-help-close]');
+    if (!toggleBtn || !modal) return;
+
+    function openModal() {
+      modal.removeAttribute('hidden');
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeModal() {
+      modal.setAttribute('hidden', '');
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+
+    toggleBtn.addEventListener('click', openModal);
+    closeButtons.forEach(function (btn) {
+      btn.addEventListener('click', closeModal);
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && !modal.hasAttribute('hidden')) closeModal();
+    });
+  });
+</script>
+
+<style>
+  /* Match site: primary dark blue, white text, accent gold – high contrast */
+  .petition-banner-section {
+    background: linear-gradient(
+      135deg,
+      var(--primary-dark) 0%,
+      var(--navy-blue) 50%,
+      var(--dark-blue) 100%
+    );
+    color: var(--white);
+    padding: 3rem 0 2.5rem;
+  }
+
+  .petition-banner {
+    display: grid;
+    grid-template-columns: minmax(0, 1.6fr) minmax(0, 1.2fr);
+    gap: 2rem;
+    align-items: stretch;
+  }
+
+  .petition-main {
+    max-width: 720px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .petition-main .petition-sponsor {
+    margin-top: auto;
+  }
+
+  .petition-title {
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
+    font-weight: 800;
+    margin-bottom: 0.75rem;
+    letter-spacing: 0.02em;
+    color: var(--white);
+  }
+
+  .petition-intro {
+    font-size: 1.0625rem;
+    max-width: 640px;
+    margin-bottom: 1.25rem;
+    color: var(--white);
+    line-height: 1.55;
+  }
+
+  .petition-cta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    align-items: center;
+    margin-bottom: 0.75rem;
+  }
+
+  .petition-btn-sign {
+    background: var(--accent-bright);
+    color: var(--text-dark);
+    border-color: transparent;
+  }
+
+  .petition-btn-sign:hover {
+    background: var(--accent-color);
+  }
+
+  .petition-btn-help {
+    border: 2px solid var(--white);
+    color: var(--white);
+    background: transparent;
+  }
+
+  .petition-btn-help:hover {
+    background: var(--white);
+    color: var(--primary-color);
+  }
+
+  .petition-meta {
+    font-size: 0.9375rem;
+    color: var(--white);
+    margin-bottom: 1rem;
+  }
+
+  .petition-meta-highlight {
+    font-weight: 700;
+    color: var(--accent-bright);
+  }
+
+  .petition-sponsor {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.5rem 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .petition-sponsor-photo {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+
+  .petition-sponsor-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+    font-size: 0.8125rem;
+    color: var(--white);
+    min-width: 0;
+  }
+
+  .petition-sponsor-role {
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--accent-bright);
+    font-weight: 600;
+    font-size: 0.6875rem;
+  }
+
+  .petition-sponsor-name {
+    font-size: 1rem;
+  }
+
+  .petition-sponsor-details {
+    opacity: 0.95;
+    font-size: 0.75rem;
+  }
+
+  .petition-sponsor-credit {
+    margin-top: 0.15rem;
+    font-size: 0.6875rem;
+    color: var(--accent-bright);
+  }
+
+  .petition-whereas {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+  }
+
+  .petition-whereas h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: var(--white);
+  }
+
+  .petition-whereas .declaration-list li {
+    background: rgba(255, 255, 255, 0.08);
+    border-left: 4px solid var(--accent-color);
+    color: var(--white);
+  }
+
+  .petition-whereas .whereas-topic {
+    color: var(--accent-bright);
+  }
+
+  .petition-whereas .declaration-list li strong {
+    color: var(--accent-bright);
+  }
+
+  /* ----- Modal: How to sign (fixed overlay) ----- */
+  .petition-help-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    box-sizing: border-box;
+    pointer-events: none;
+  }
+
+  .petition-help-modal[aria-hidden="false"] {
+    pointer-events: auto;
+  }
+
+  .petition-help-modal[hidden] {
+    display: none !important;
+  }
+
+  .petition-help-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    cursor: pointer;
+  }
+
+  .petition-help-dialog {
+    position: relative;
+    width: 100%;
+    max-width: 720px;
+    max-height: calc(100vh - 3rem);
+    background: var(--bg-white);
+    color: var(--text-dark);
+    border-radius: 10px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    pointer-events: auto;
+  }
+
+  .petition-help-close {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    z-index: 2;
+    width: 2.25rem;
+    height: 2.25rem;
+    padding: 0;
+    font-size: 1.5rem;
+    line-height: 1;
+    color: var(--text-light);
+    background: var(--bg-light);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+  }
+
+  .petition-help-close:hover {
+    background: var(--border-color);
+    color: var(--text-dark);
+  }
+
+  .petition-help-inner {
+    padding: 1.75rem 1.5rem 1.5rem;
+    overflow-y: auto;
+    flex: 1;
+    min-height: 0;
+  }
+
+  .petition-help-title {
+    font-size: 1.4rem;
+    margin: 0 2rem 0.75rem 0;
+    color: var(--primary-color);
+  }
+
+  .petition-help-note {
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+  }
+
+  .petition-help-short {
+    margin-top: 0.75rem;
+    font-size: 0.9rem;
+    color: #4b5563;
+  }
+
+  .petition-steps {
+    list-style-position: outside;
+    padding-left: 1.25rem;
+    margin-bottom: 1rem;
+  }
+
+  .petition-steps > li {
+    margin-bottom: 0.9rem;
+    font-size: 0.95rem;
+  }
+
+  .petition-steps strong {
+    font-weight: 700;
+  }
+
+  .petition-steps ul {
+    margin-top: 0.35rem;
+    margin-bottom: 0.35rem;
+    padding-left: 1.1rem;
+  }
+
+  .petition-step-image {
+    margin-top: 0.4rem;
+  }
+
+  .petition-step-image img {
+    max-width: 100%;
+    border-radius: 6px;
+    border: 1px solid #e5e7eb;
+    display: block;
+  }
+
+  .petition-step-image--annotated {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .petition-tip {
+    position: absolute;
+    max-width: 210px;
+    background: rgba(17, 24, 39, 0.88);
+    color: #f9fafb;
+    padding: 0.5rem 0.6rem;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    line-height: 1.35;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+  }
+
+  .petition-tip-label {
+    display: block;
+    font-weight: 700;
+    color: #facc15;
+    margin-bottom: 0.2rem;
+  }
+
+  .petition-tip-text {
+    display: block;
+  }
+
+  /* Rough positions relative to screenshot areas (tuned for this image) */
+  .petition-tip--personal {
+    top: 8%;
+    left: 52%;
+  }
+
+  .petition-tip--address {
+    top: 46%;
+    left: 52%;
+  }
+
+  .petition-tip--citizenship {
+    top: 78%;
+    left: 8%;
+  }
+
+  .petition-help-share {
+    font-size: 0.95rem;
+    font-weight: 500;
+    margin-top: 0.75rem;
+  }
+
+  .petition-help a {
+    color: var(--primary-color);
+  }
+
+  .petition-help a:hover {
+    text-decoration: underline;
+  }
+
+  @media (max-width: 960px) {
+    .petition-banner {
+      grid-template-columns: minmax(0, 1fr);
+    }
+  }
+
+  @media (max-width: 640px) {
+    .petition-banner-section {
+      padding: 2.25rem 0 2rem;
+    }
+
+    .petition-title {
+      font-size: 1.5rem;
+    }
+
+    .petition-cta-row {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .petition-btn-sign,
+    .petition-btn-help {
+      width: 100%;
+      text-align: center;
+    }
+
+    .petition-sponsor {
+      flex-direction: row;
+      text-align: left;
+    }
+
+    .petition-sponsor-details {
+      font-size: 0.7rem;
+    }
+  }
+</style>
+
