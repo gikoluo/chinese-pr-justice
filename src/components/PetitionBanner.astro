@@ -117,6 +117,18 @@ const p = petitionBanner;
           <span class="lang-fr">{p.modalNote.fr}</span>
         </p>
 
+        <div class="petition-share">
+          <div class="petition-share-text">
+            <span class="lang-en">Share this guide with others:</span>
+            <span class="lang-zh">将此签名指南分享给身边的人：</span>
+            <span class="lang-fr">Partagez ce guide avec d’autres :</span>
+            <code class="petition-share-link">https://chinese-pr-delay.ca/#petition-help</code>
+          </div>
+          <div class="petition-share-qr">
+            <img src="/images/petition_help_qr.png" alt="QR code linking to chinese-pr-delay.ca/#petition-help" loading="lazy" />
+          </div>
+        </div>
+
         <ol class="petition-steps">
           <li>
             <strong><span class="lang-en">{p.step1Title.en}</span><span class="lang-zh">{p.step1Title.zh}</span><span class="lang-fr">{p.step1Title.fr}</span></strong>
@@ -511,6 +523,45 @@ const p = petitionBanner;
     margin-top: 0.75rem;
     font-size: 0.9rem;
     color: #4b5563;
+  }
+
+  .petition-share {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+    margin-top: 0.5rem;
+    padding: 0.75rem 0.9rem;
+    border-radius: 8px;
+    background: #fef9c3;
+    border: 1px solid #facc15;
+  }
+
+  .petition-share-text {
+    font-size: 0.85rem;
+    color: #4b5563;
+  }
+
+  .petition-share-link {
+    display: block;
+    margin-top: 0.25rem;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+      'Liberation Mono', 'Courier New', monospace;
+    font-size: 0.8rem;
+    padding: 0.25rem 0.4rem;
+    background: #f9fafb;
+    border-radius: 4px;
+    border: 1px solid #e5e7eb;
+    word-break: break-all;
+  }
+
+  .petition-share-qr img {
+    width: 96px;
+    height: 96px;
+    border-radius: 6px;
+    border: 1px solid #e5e7eb;
+    background: #fff;
   }
 
   .petition-help-icon {
