@@ -350,7 +350,7 @@ export const petitionBanner = {
   },
   mpCredit: {
     en: 'Sponsor of e‑petition e‑7259 (Citizenship and Immigration)',
-    zh: '赞助人 - 电子请愿 e‑7259（公民与移民部/IRCC',
+    zh: '赞助人 - 电子请愿 e‑7259 (公民与移民部/IRCC)',
     fr: 'Parrain de la pétition électronique e‑7259 (Citoyenneté et Immigration) ',
   },
   whyMatters: {
