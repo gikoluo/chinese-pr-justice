@@ -117,8 +117,17 @@ const p = petitionBanner;
             <span class="lang-en">{p.step1GoTo.en}<a href={petitionUrl} target="_blank" rel="noopener noreferrer">{p.officialPage.en}</a>{p.step1InBrowser.en}</span>
             <span class="lang-zh">{p.step1GoTo.zh}<a href={petitionUrl} target="_blank" rel="noopener noreferrer">{p.officialPage.zh}</a>{p.step1InBrowser.zh}</span>
             <span class="lang-fr">{p.step1GoTo.fr}<a href={petitionUrl} target="_blank" rel="noopener noreferrer">{p.officialPage.fr}</a>{p.step1InBrowser.fr}</span>
+            <div class="petition-step-image">
+              <img src="/images/1. petitions_sign.png" alt="Petition page with Sign the petition button" loading="lazy" />
+            </div>
+          </li>
+          <li>
+            <strong><span class="lang-en">{p.step2Title.en}</span><span class="lang-zh">{p.step2Title.zh}</span><span class="lang-fr">{p.step2Title.fr}</span></strong>
+            <span class="lang-en">{p.step2Body.en}</span>
+            <span class="lang-zh">{p.step2Body.zh}</span>
+            <span class="lang-fr">{p.step2Body.fr}</span>
             <div class="petition-step-image petition-step-image--annotated">
-              <img src="/images/petition_step1_form.png" alt="Step 1: fill in the petition form with your information" loading="lazy" />
+              <img src="/images/petition_step1_form.png" alt="Step 2: fill in your information on the petition form" loading="lazy" />
               <div class="petition-tip petition-tip--personal">
                 <span class="petition-tip-label"><span class="lang-en">{p.tip1Label.en}</span><span class="lang-zh">{p.tip1Label.zh}</span><span class="lang-fr">{p.tip1Label.fr}</span></span>
                 <span class="petition-tip-text"><span class="lang-en">{p.tip1Text.en}</span><span class="lang-zh">{p.tip1Text.zh}</span><span class="lang-fr">{p.tip1Text.fr}</span></span>
@@ -131,15 +140,6 @@ const p = petitionBanner;
                 <span class="petition-tip-label"><span class="lang-en">{p.tip3Label.en}</span><span class="lang-zh">{p.tip3Label.zh}</span><span class="lang-fr">{p.tip3Label.fr}</span></span>
                 <span class="petition-tip-text"><span class="lang-en">{p.tip3Text.en}</span><span class="lang-zh">{p.tip3Text.zh}</span><span class="lang-fr">{p.tip3Text.fr}</span></span>
               </div>
-            </div>
-          </li>
-          <li>
-            <strong><span class="lang-en">{p.step2Title.en}</span><span class="lang-zh">{p.step2Title.zh}</span><span class="lang-fr">{p.step2Title.fr}</span></strong>
-            <span class="lang-en">{p.step2Body.en}</span>
-            <span class="lang-zh">{p.step2Body.zh}</span>
-            <span class="lang-fr">{p.step2Body.fr}</span>
-            <div class="petition-step-image">
-              <img src="/images/2.petitions_submit.png" alt="Petition page with Submit button highlighted" loading="lazy" />
             </div>
           </li>
           <li>
@@ -157,7 +157,7 @@ const p = petitionBanner;
             <span class="lang-zh">{p.step3Consent.zh}</span>
             <span class="lang-fr">{p.step3Consent.fr}</span>
             <div class="petition-step-image">
-              <img src="/images/3.petitions_email_confirm.png" alt="Signature form fields" loading="lazy" />
+              <img src="/images/2.petitions_submit.png" alt="Submission success page of the petition" loading="lazy" />
             </div>
           </li>
           <li>
@@ -166,7 +166,7 @@ const p = petitionBanner;
             <span class="lang-zh">{p.step4Body.zh}</span>
             <span class="lang-fr">{p.step4Body.fr}</span>
             <div class="petition-step-image">
-              <img src="/images/4.petitions_success.png" alt="Confirmation message after submitting" loading="lazy" />
+              <img src="/images/3.petitions_email_confirm.png" alt="Email asking you to confirm your support" loading="lazy" />
             </div>
           </li>
           <li>
@@ -174,6 +174,9 @@ const p = petitionBanner;
             <span class="lang-en">{p.step5Body.en}</span>
             <span class="lang-zh">{p.step5Body.zh}</span>
             <span class="lang-fr">{p.step5Body.fr}</span>
+            <div class="petition-step-image">
+              <img src="/images/4.petitions_success.png" alt="Final confirmation that your petition signature is recorded" loading="lazy" />
+            </div>
           </li>
         </ol>
 
