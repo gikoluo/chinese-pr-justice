@@ -334,12 +334,12 @@ export const petitionBanner = {
   helpBtn: { en: 'How to sign (step‑by‑step)', zh: '如何签署（分步说明）', fr: 'Comment signer (étape par étape)' },
   meta: {
     en: 'Petition e‑7259 (Citizenship and Immigration).',
-    zh: '请愿 e‑7259（公民与移民）。',
+    zh: '请愿 e‑7259（公民与移民部/IRCC）。',
     fr: 'Pétition e‑7259 (Citoyenneté et Immigration).',
   },
   goal: {
     en: 'Goal: 10,000+ verified signatures (Canadian citizen or a resident of Canada).',
-    zh: '目标：10,000+ 有效签名（须为加拿大公民或加拿大居民）。',
+    zh: '目标：10,000+ 有效签名。',
     fr: 'Objectif : 10 000+ signatures vérifiées (citoyen canadien ou résident du Canada).',
   },
   mpRole: { en: 'Member of Parliament', zh: '国会议员', fr: 'Députée' },
