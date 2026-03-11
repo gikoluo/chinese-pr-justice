@@ -27,6 +27,7 @@ const p = petitionBanner;
             <span class="lang-fr">{p.signBtn.fr}</span>
           </a>
           <button type="button" class="btn btn-outline petition-btn-help" data-petition-help-toggle>
+            <span class="petition-help-icon" aria-hidden="true">?</span>
             <span class="lang-en">{p.helpBtn.en}</span>
             <span class="lang-zh">{p.helpBtn.zh}</span>
             <span class="lang-fr">{p.helpBtn.fr}</span>
@@ -48,7 +49,9 @@ const p = petitionBanner;
           <img src="/images/jenny-kwan-mp.png" alt="" class="petition-sponsor-photo" width="48" height="48" loading="lazy" />
           <div class="petition-sponsor-info">
             <span class="petition-sponsor-role"><span class="lang-en">{p.mpRole.en}</span><span class="lang-zh">{p.mpRole.zh}</span><span class="lang-fr">{p.mpRole.fr}</span></span>
-            <strong class="petition-sponsor-name">Jenny Kwan</strong>
+            <strong class="petition-sponsor-name">
+              <a href="https://www.jennykwanndp.ca/" target="_blank" rel="noopener noreferrer">Jenny Kwan</a>
+            </strong>
             <span class="petition-sponsor-details"><span class="lang-en">{p.mpDetails.en}</span><span class="lang-zh">{p.mpDetails.zh}</span><span class="lang-fr">{p.mpDetails.fr}</span></span>
             <span class="petition-sponsor-credit"><span class="lang-en">{p.mpCredit.en}</span><span class="lang-zh">{p.mpCredit.zh}</span><span class="lang-fr">{p.mpCredit.fr}</span></span>
           </div>
@@ -106,7 +109,10 @@ const p = petitionBanner;
           <span class="lang-fr">{p.modalTitle.fr}</span>
         </h2>
         <p class="petition-help-note">
-          <span class="lang-en">{p.modalNote.en}</span>
+          <span class="lang-en">
+            <strong class="petition-note-strong">DO NOT STOP AFTER SUBMITTING THE FORM.</strong>
+            {p.modalNote.en}
+          </span>
           <span class="lang-zh">{p.modalNote.zh}</span>
           <span class="lang-fr">{p.modalNote.fr}</span>
         </p>
@@ -293,6 +299,9 @@ const p = petitionBanner;
     border: 2px solid var(--white);
     color: var(--white);
     background: transparent;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
   }
 
   .petition-btn-help:hover {
@@ -469,12 +478,29 @@ const p = petitionBanner;
   .petition-help-note {
     font-size: 0.95rem;
     margin-bottom: 1rem;
+    padding: 0.75rem 0.9rem;
+    border-radius: 6px;
+    background: #fef3c7;
+    border-left: 4px solid #f59e0b;
+    color: #92400e;
   }
 
   .petition-help-short {
     margin-top: 0.75rem;
     font-size: 0.9rem;
     color: #4b5563;
+  }
+
+  .petition-help-icon {
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 999px;
+    border: 2px solid currentColor;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.78rem;
+    font-weight: 700;
   }
 
   .petition-steps {

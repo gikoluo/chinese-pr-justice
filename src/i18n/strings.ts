@@ -385,8 +385,8 @@ export const petitionBanner = {
   },
   modalNote: {
     en: 'You need to be a Canadian citizen or a resident of Canada and confirm your email for your signature to count.',
-    zh: '您须为加拿大公民或加拿大居民，并确认邮箱后签名才有效。',
-    fr: 'Vous devez être citoyen canadien ou résident du Canada et confirmer votre courriel pour que votre signature compte.',
+    zh: '重要提示：只有点击确认邮件中的链接后，您的签名才算有效，请不要在提交表格后就停下。您须为加拿大公民或加拿大居民（包括持工签、学签等在加合法居留者），并在确认邮箱后签名才有效。',
+    fr: 'Important : votre signature ne compte qu’après avoir cliqué sur le lien dans le courriel de confirmation. Ne vous arrêtez pas après avoir soumis le formulaire. Vous devez aussi être citoyen canadien ou résident du Canada et confirmer votre courriel pour que votre signature compte.',
   },
   step1Title: { en: 'Open the petition page.', zh: '打开请愿页面。', fr: 'Ouvrez la page de la pétition.' },
   step1GoTo: { en: 'Go to ', zh: '在浏览器中打开 ', fr: 'Allez sur ' },
