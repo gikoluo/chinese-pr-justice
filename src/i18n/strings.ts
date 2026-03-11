@@ -14,6 +14,11 @@ export const nav = {
 
 export const announcement = {
   event: { en: 'Procession to Parliament Hill — March 13, 2026 — Ottawa, Ontario', zh: '国会山游行 — 2026年3月13日 — 渥太华，安大略省', fr: 'Marche vers la Colline du Parlement — 13 mars 2026 — Ottawa, Ontario' },
+  petition: {
+    en: 'New: House of Commons e‑petition e‑7259 — click here to sign now.',
+    zh: '最新：国会下议院电子请愿 e‑7259 — 点击此处立即签名。',
+    fr: 'Nouveau : Pétition électronique e‑7259 de la Chambre des communes — cliquez ici pour signer maintenant.',
+  },
 } as const;
 
 /** Real PR stats from IRCC application inventory (Canada.ca). Update when inventory page updates. */
