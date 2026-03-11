@@ -45,9 +45,29 @@ const p = petitionBanner;
           <img src="/images/jenny-kwan-mp.png" alt="" class="petition-sponsor-photo" width="48" height="48" loading="lazy" />
           <div class="petition-sponsor-info">
             <span class="petition-sponsor-role"><span class="lang-en">{p.mpRole.en}</span><span class="lang-zh">{p.mpRole.zh}</span><span class="lang-fr">{p.mpRole.fr}</span></span>
-            <strong class="petition-sponsor-name">
-              <a href="https://www.jennykwanndp.ca/" target="_blank" rel="noopener noreferrer">Jenny Kwan</a>
-            </strong>
+            <div class="petition-sponsor-header">
+              <strong class="petition-sponsor-name">
+                <a href="https://www.jennykwanndp.ca/" target="_blank" rel="noopener noreferrer">Jenny Kwan</a>
+              </strong>
+              <a
+                href="https://x.com/JennyKwanBC"
+                class="petition-sponsor-x"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span class="petition-sponsor-x-text">
+                  Say thank you to Jenny on
+                  <span class="petition-sponsor-x-inline">
+                    <img
+                      src="https://about.x.com/content/dam/about-twitter/x/brand-toolkit/logo-black.png.twimg.2560.png"
+                      alt="X (x.com)"
+                      class="petition-sponsor-x-icon"
+                      loading="lazy"
+                    />
+                  </span>
+                </span>
+              </a>
+            </div>
             <span class="petition-sponsor-details"><span class="lang-en">{p.mpDetails.en}</span><span class="lang-zh">{p.mpDetails.zh}</span><span class="lang-fr">{p.mpDetails.fr}</span></span>
             <span class="petition-sponsor-credit"><span class="lang-en">{p.mpCredit.en}</span><span class="lang-zh">{p.mpCredit.zh}</span><span class="lang-fr">{p.mpCredit.fr}</span></span>
           </div>
@@ -382,6 +402,44 @@ const p = petitionBanner;
 
   .petition-sponsor-name {
     font-size: 1rem;
+  }
+
+  .petition-sponsor-header {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  .petition-sponsor-x {
+    display: inline-flex;
+    align-items: flex-end;
+    justify-content: center;
+    text-decoration: none;
+    padding: 2px 4px;
+    border-radius: 4px;
+    background: var(--accent-bright);
+    margin-left: 0.1rem;
+  }
+
+  .petition-sponsor-x-icon {
+    width: 0.8rem;
+    height: 0.8rem;
+    display: block;
+  }
+
+  .petition-sponsor-x-text {
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    color: #111827;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.15rem;
+  }
+
+  .petition-sponsor-x-inline {
+    display: inline-flex;
+    align-items: center;
   }
 
   .petition-sponsor-name a {
