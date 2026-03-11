@@ -331,7 +331,7 @@ export const petitionBanner = {
     fr: 'Les citoyens et résidents du Canada peuvent maintenant signer une pétition électronique de la Chambre des communes pour exiger des délais stricts, la transparence et l\'imputabilité en matière d\'évaluation de sécurité des demandes de RP.',
   },
   signBtn: { en: 'Sign the e‑petition', zh: '签署电子请愿', fr: 'Signer la pétition électronique' },
-  helpBtn: { en: 'How to sign (step‑by‑step)', zh: '如何签署（分步说明）', fr: 'Comment signer (étape par étape)' },
+  helpBtn: { en: 'How to sign (step‑by‑step)', zh: '如何签署（分步说明）', fr: 'Comment signer' },
   meta: {
     en: 'Petition e‑7259 (Citizenship and Immigration).',
     zh: '请愿 e‑7259（公民与移民部/IRCC）。',
