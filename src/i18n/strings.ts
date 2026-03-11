@@ -349,9 +349,9 @@ export const petitionBanner = {
     fr: 'Vancouver-Est · NPD · Colombie-Britannique',
   },
   mpCredit: {
-    en: 'Sponsor of e‑petition e‑7259',
-    zh: '电子请愿 e‑7259 的发起人',
-    fr: 'Parrain de la pétition électronique e‑7259',
+    en: 'Sponsor of e‑petition e‑7259 (Citizenship and Immigration)',
+    zh: '赞助人 - 电子请愿 e‑7259（公民与移民部/IRCC',
+    fr: 'Parrain de la pétition électronique e‑7259 (Citoyenneté et Immigration) ',
   },
   whyMatters: {
     en: 'Why this petition matters',
