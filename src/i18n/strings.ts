@@ -30,9 +30,14 @@ export const heroStats = {
 } as const;
 
 export const hero = {
-  eventTitle: { en: 'Procession to Parliament Hill', zh: '国会山游行', fr: 'Marche vers la Colline du Parlement' },
+  eventTitle: {
+    en: 'Procession to Parliament Hill — We Are Going',
+    zh: '国会山游行 — 我们一起出发',
+    fr: 'Marche vers la Colline du Parlement — Nous y allons',
+  },
   eventDetails: { en: 'Friday, March 13, 2026 · 8:30 AM – 4:30 PM · Ottawa, Ontario', zh: '2026年3月13日 周五 · 上午8:30 – 下午4:30 · 渥太华，安大略省', fr: 'Vendredi 13 mars 2026 · 8 h 30 – 16 h 30 · Ottawa, Ontario' },
   eventDetailsLink: { en: 'Event Details', zh: '活动详情', fr: 'Détails de l\'événement' },
+  liveStream: { en: 'Watch Live on YouTube', zh: '在 YouTube 上观看直播', fr: 'Regarder en direct sur YouTube' },
   joinMovement: { en: 'Join Our Movement', zh: '加入我们', fr: 'Rejoignez le mouvement' },
   donate: { en: 'Donate', zh: '捐款', fr: 'Faire un don' },
   /** Hero stat card: main label (PR in backlog) */
