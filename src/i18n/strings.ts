@@ -41,6 +41,8 @@ export const hero = {
   standingWithUs: { en: 'Standing with us', zh: '与我们站在一起', fr: 'À nos côtés' },
   senatorWooName: { en: 'Senator Yuen Pau Woo', zh: '参议员胡子修', fr: 'Sénateur Yuen Pau Woo' },
   senatorWooMeta: { en: 'British Columbia · Independent Senators Group', zh: '不列颠哥伦比亚省 · 独立参议员团', fr: 'Colombie-Britannique · Groupe des sénateurs indépendants' },
+  cpacName: { en: 'CPAC – Cable Public Affairs Channel', zh: 'CPAC 公众事务频道', fr: 'CPAC – Chaîne d\'affaires publiques' },
+  cpacMeta: { en: 'Independent, not-for-profit parliamentary broadcaster', zh: '独立非营利的国会与公共事务频道', fr: 'Diffuseur parlementaire indépendant à but non lucratif' },
   joinMovement: { en: 'Join Our Movement', zh: '加入我们', fr: 'Rejoignez le mouvement' },
   donate: { en: 'Donate', zh: '捐款', fr: 'Faire un don' },
   /** Hero stat card: main label (PR in backlog) */
