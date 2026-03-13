@@ -4,46 +4,87 @@ import { eventPhotosSection } from '../i18n/strings';
 ---
 
 <section id="photos" class="photos-section">
-    <div class="container">
-        <h2><span class="lang-en">{eventPhotosSection.title.en}</span><span class="lang-zh">{eventPhotosSection.title.zh}</span><span class="lang-fr">{eventPhotosSection.title.fr}</span></h2>
-        <p class="section-intro"><span class="lang-en">{eventPhotosSection.intro.en}</span><span class="lang-zh">{eventPhotosSection.intro.zh}</span><span class="lang-fr">{eventPhotosSection.intro.fr}</span></p>
+  <div class="container">
+    <h2>
+      <span class="lang-en">{eventPhotosSection.title.en}</span><span class="lang-zh">{eventPhotosSection.title.zh}</span><span class="lang-fr">{eventPhotosSection.title.fr}</span>
+    </h2>
+    <p class="section-intro">
+      <span class="lang-en">{eventPhotosSection.intro.en}</span><span class="lang-zh">{eventPhotosSection.intro.zh}</span><span class="lang-fr">{eventPhotosSection.intro.fr}</span>
+    </p>
 
-        <div class="photos-waiting">
-            <span class="photos-waiting-icon" aria-hidden="true">📷</span>
-            <p class="photos-waiting-text"><span class="lang-en">{eventPhotosSection.waitingMessage.en}</span><span class="lang-zh">{eventPhotosSection.waitingMessage.zh}</span><span class="lang-fr">{eventPhotosSection.waitingMessage.fr}</span></p>
-        </div>
+    <div class="photos-grid">
+      <figure class="photo-card">
+        <img src="/events/3eb1625011f01662ce2fd768d1955f94.JPG" alt="Protesters gathered on Parliament Hill" loading="lazy" />
+      </figure>
+      <figure class="photo-card">
+        <img src="/events/0b96ff5a44bd8d98f1fd4b43dbfd1502.JPG" alt="Protesters holding signs calling for an end to indefinite security screening" loading="lazy" />
+      </figure>
+      <figure class="photo-card">
+        <img src="/events/3666baa315089cec3072ab3f9a52f669.JPG" alt="Speakers addressing the crowd at the protest" loading="lazy" />
+      </figure>
+      <figure class="photo-card">
+        <img src="/events/00750e6d4345b6ed6f7db6fd72a845d1.JPG" alt="Participants standing together in front of Parliament Hill" loading="lazy" />
+      </figure>
+      <figure class="photo-card">
+        <img src="/events/dff066fb20779aa670f74b27ce365bac.JPG" alt="Protest signs and banners highlighting security screening delays" loading="lazy" />
+      </figure>
+      <figure class="photo-card">
+        <img src="/events/64abd21aab6a7c0570b75f2da55b0386.JPG" alt="Crowd view of the protest event" loading="lazy" />
+      </figure>
+      <figure class="photo-card photo-card-video">
+        <video controls preload="metadata">
+          <source src="/events/6186.MP4" type="video/mp4" />
+          <span class="lang-en">Your browser does not support the video tag.</span>
+          <span class="lang-zh">您的浏览器不支持视频播放。</span>
+          <span class="lang-fr">Votre navigateur ne prend pas en charge la lecture vidéo.</span>
+        </video>
+      </figure>
     </div>
+  </div>
 </section>
 
 <style>
-    .photos-section {
-        background: var(--bg-light);
-    }
+  .photos-section {
+    background: var(--bg-light);
+  }
 
-    .photos-waiting {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        min-height: 200px;
-        padding: 2rem;
-        background: white;
-        border-radius: 8px;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-        text-align: center;
-    }
+  .photos-grid {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+  }
 
-    .photos-waiting-icon {
-        font-size: 3rem;
-        margin-bottom: 1rem;
-        opacity: 0.4;
-    }
+  .photo-card {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #000;
+    box-shadow: 0 6px 18px rgba(15, 31, 51, 0.35);
+  }
 
-    .photos-waiting-text {
-        max-width: 520px;
-        margin: 0;
-        color: var(--text-light);
-        font-size: 1rem;
-        line-height: 1.6;
+  .photo-card img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+  }
+
+  .photo-card-video video {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  @media (max-width: 900px) {
+    .photos-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
     }
+  }
+
+  @media (max-width: 640px) {
+    .photos-grid {
+      grid-template-columns: minmax(0, 1fr);
+    }
+  }
 </style>
