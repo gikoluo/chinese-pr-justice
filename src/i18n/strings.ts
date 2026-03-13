@@ -48,6 +48,16 @@ export const hero = {
     zh: '国会山发布会通稿',
     fr: 'Communiqué de la conférence de presse sur la Colline du Parlement',
   },
+  youtubeCardTitle: {
+    en: 'Group calls for transparency and reasonable timelines in immigration processing',
+    zh: '华人团体呼吁移民审理透明、及时有序',
+    fr: 'Le groupe appelle à la transparence et à des délais raisonnables dans le traitement des dossiers d\'immigration',
+  },
+  youtubeCardMeta: {
+    en: 'March 13, 2026 · Parliament Hill · CPAC Coverage',
+    zh: '2026年3月13日 · 国会山 · CPAC 报道',
+    fr: '13 mars 2026 · Colline du Parlement · Couverture CPAC',
+  },
   joinMovement: { en: 'Join Our Movement', zh: '加入我们', fr: 'Rejoignez le mouvement' },
   donate: { en: 'Donate', zh: '捐款', fr: 'Faire un don' },
   /** Hero stat card: main label (PR in backlog) */
