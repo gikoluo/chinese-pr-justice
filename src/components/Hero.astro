@@ -165,27 +165,44 @@ import { hero, heroStats } from '../i18n/strings';
             </div>
             <div class="hero-standing-card">
                 <span class="hero-standing-label"><span class="lang-en">{hero.standingWithUs.en}</span><span class="lang-zh">{hero.standingWithUs.zh}</span><span class="lang-fr">{hero.standingWithUs.fr}</span></span>
-                <div class="hero-standing-inner">
-                    <a href="https://sencanada.ca/en/senators/woo-yuen-pau/" target="_blank" rel="noopener noreferrer" class="hero-standing-name">
-                        <span class="lang-en">{hero.senatorWooName.en}</span><span class="lang-zh">{hero.senatorWooName.zh}</span><span class="lang-fr">{hero.senatorWooName.fr}</span>
-                    </a>
-                    <span class="hero-standing-meta"><span class="lang-en">{hero.senatorWooMeta.en}</span><span class="lang-zh">{hero.senatorWooMeta.zh}</span><span class="lang-fr">{hero.senatorWooMeta.fr}</span></span>
-                    <span class="hero-standing-links">
-                        <a href="https://sencanada.ca/en/senators/woo-yuen-pau/" target="_blank" rel="noopener noreferrer" class="hero-standing-link">Senate</a>
-                        <a href="https://x.com/yuenpauwoo" target="_blank" rel="noopener noreferrer" class="hero-standing-x" aria-label="Senator Yuen Pau Woo on X">
-                            <img src="https://about.x.com/content/dam/about-twitter/x/brand-toolkit/logo-black.png.twimg.2560.png" alt="" width="18" height="18" loading="lazy" />
-                        </a>
-                    </span>
-                </div>
-                <div class="hero-standing-inner hero-standing-inner-secondary">
-                    <a href="https://www.cpac.ca/en" target="_blank" rel="noopener noreferrer" class="hero-standing-name">
-                        <span class="lang-en">{hero.cpacName.en}</span><span class="lang-zh">{hero.cpacName.zh}</span><span class="lang-fr">{hero.cpacName.fr}</span>
-                    </a>
-                    <span class="hero-standing-meta"><span class="lang-en">{hero.cpacMeta.en}</span><span class="lang-zh">{hero.cpacMeta.zh}</span><span class="lang-fr">{hero.cpacMeta.fr}</span></span>
-                    <span class="hero-standing-links">
-                        <a href="https://www.cpac.ca/en" target="_blank" rel="noopener noreferrer" class="hero-standing-link">CPAC</a>
-                        <a href="https://www.youtube.com/watch?v=FFaQSSfL_EY" target="_blank" rel="noopener noreferrer" class="hero-standing-link">Report</a>
-                    </span>
+                <div class="hero-standing-grid">
+                    <div class="hero-standing-item">
+                        <div class="hero-standing-photo">
+                            <img src="/events/woo.jpg" alt="Senator Yuen Pau Woo" loading="lazy" width="48" height="48" />
+                        </div>
+                        <div class="hero-standing-content">
+                            <a href="https://sencanada.ca/en/senators/woo-yuen-pau/" target="_blank" rel="noopener noreferrer" class="hero-standing-name">
+                                <span class="lang-en">{hero.senatorWooName.en}</span><span class="lang-zh">{hero.senatorWooName.zh}</span><span class="lang-fr">{hero.senatorWooName.fr}</span>
+                            </a>
+                            <span class="hero-standing-meta"><span class="lang-en">{hero.senatorWooMeta.en}</span><span class="lang-zh">{hero.senatorWooMeta.zh}</span><span class="lang-fr">{hero.senatorWooMeta.fr}</span></span>
+                            <span class="hero-standing-links">
+                                <a href="https://sencanada.ca/en/senators/woo-yuen-pau/" target="_blank" rel="noopener noreferrer" class="hero-standing-link">Senate</a>
+                                <a href="https://x.com/yuenpauwoo" target="_blank" rel="noopener noreferrer" class="hero-standing-x" aria-label="Senator Yuen Pau Woo on X">
+                                    <img src="https://about.x.com/content/dam/about-twitter/x/brand-toolkit/logo-black.png.twimg.2560.png" alt="" width="18" height="18" loading="lazy" />
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="hero-standing-item">
+                        <div class="hero-standing-photo">
+                            <img src="/events/cpac.jpeg" alt="CPAC – Cable Public Affairs Channel" loading="lazy" width="48" height="48" />
+                        </div>
+                        <div class="hero-standing-content">
+                            <a href="https://www.cpac.ca/en" target="_blank" rel="noopener noreferrer" class="hero-standing-name">
+                                <span class="lang-en">{hero.cpacName.en}</span><span class="lang-zh">{hero.cpacName.zh}</span><span class="lang-fr">{hero.cpacName.fr}</span>
+                            </a>
+                            <span class="hero-standing-meta"><span class="lang-en">{hero.cpacMeta.en}</span><span class="lang-zh">{hero.cpacMeta.zh}</span><span class="lang-fr">{hero.cpacMeta.fr}</span></span>
+                            <span class="hero-standing-links">
+                                <a href="https://www.cpac.ca/en" target="_blank" rel="noopener noreferrer" class="hero-standing-link">CPAC</a>
+                                <a href="https://www.youtube.com/watch?v=FFaQSSfL_EY" target="_blank" rel="noopener noreferrer" class="hero-standing-link">Report</a>
+                                <a href="/press-release" class="hero-standing-link">
+                                    <span class="lang-en">{hero.pressReleaseLink.en}</span>
+                                    <span class="lang-zh">{hero.pressReleaseLink.zh}</span>
+                                    <span class="lang-fr">{hero.pressReleaseLink.fr}</span>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -393,11 +410,11 @@ import { hero, heroStats } from '../i18n/strings';
     /* Senator standing with us card */
     .hero-standing-card {
         margin-top: 1.5rem;
-        padding: 0.75rem 1rem;
+        padding: 0.85rem 1rem;
         background: rgba(255, 255, 255, 0.12);
         border: 1px solid rgba(255, 255, 255, 0.3);
         border-radius: 8px;
-        max-width: 360px;
+        max-width: 420px;
     }
 
     .hero-standing-label {
@@ -409,11 +426,39 @@ import { hero, heroStats } from '../i18n/strings';
         margin-bottom: 0.35rem;
     }
 
-    .hero-standing-inner {
+    .hero-standing-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.75rem 1.25rem;
+        align-items: stretch;
+    }
+
+    .hero-standing-item {
         display: flex;
-        flex-wrap: wrap;
-        align-items: baseline;
-        gap: 0.35rem 0.75rem;
+        align-items: flex-start;
+        gap: 0.6rem;
+    }
+
+    .hero-standing-photo {
+        flex: 0 0 44px;
+        width: 44px;
+        height: 44px;
+        border-radius: 999px;
+        overflow: hidden;
+        background: rgba(0, 0, 0, 0.3);
+        border: 1px solid rgba(255, 255, 255, 0.4);
+    }
+
+    .hero-standing-photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    .hero-standing-content {
+        flex: 1;
+        min-width: 0;
     }
 
     .hero-standing-name {
@@ -437,7 +482,6 @@ import { hero, heroStats } from '../i18n/strings';
         display: inline-flex;
         align-items: center;
         gap: 0.5rem;
-        margin-left: auto;
     }
 
     .hero-standing-link {
@@ -696,13 +740,8 @@ import { hero, heroStats } from '../i18n/strings';
             max-width: 100%;
         }
 
-        .hero-standing-inner {
-            flex-direction: column;
-            align-items: flex-start;
-        }
-
-        .hero-standing-links {
-            margin-left: 0;
+        .hero-standing-grid {
+            grid-template-columns: minmax(0, 1fr);
         }
     }
 

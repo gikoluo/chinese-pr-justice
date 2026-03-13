@@ -43,6 +43,11 @@ export const hero = {
   senatorWooMeta: { en: 'British Columbia · Independent Senators Group', zh: '不列颠哥伦比亚省 · 独立参议员团', fr: 'Colombie-Britannique · Groupe des sénateurs indépendants' },
   cpacName: { en: 'CPAC – Cable Public Affairs Channel', zh: 'CPAC 公众事务频道', fr: 'CPAC – Chaîne d\'affaires publiques' },
   cpacMeta: { en: 'Independent, not-for-profit parliamentary broadcaster', zh: '独立非营利的国会与公共事务频道', fr: 'Diffuseur parlementaire indépendant à but non lucratif' },
+  pressReleaseLink: {
+    en: 'Parliament Hill press conference release',
+    zh: '国会山发布会通稿',
+    fr: 'Communiqué de la conférence de presse sur la Colline du Parlement',
+  },
   joinMovement: { en: 'Join Our Movement', zh: '加入我们', fr: 'Rejoignez le mouvement' },
   donate: { en: 'Donate', zh: '捐款', fr: 'Faire un don' },
   /** Hero stat card: main label (PR in backlog) */
@@ -294,6 +299,11 @@ export const eventPage = {
   quickInfoDate: { en: 'Friday, March 13, 2026', zh: '2026年3月13日 周五', fr: 'Vendredi 13 mars 2026' },
   quickInfoTime: { en: '8:30 AM – 4:30 PM', zh: '上午8:30 – 下午4:30', fr: '8 h 30 – 16 h 30' },
   quickInfoPlace: { en: 'Parliament Hill, Ottawa, Ontario', zh: '国会山，渥太华，安大略省', fr: 'Colline du Parlement, Ottawa, Ontario' },
+  pressReleasePill: {
+    en: 'Read the Parliament Hill press conference release',
+    zh: '查看国会山发布会通稿',
+    fr: 'Lire le communiqué de la conférence de presse sur la Colline du Parlement',
+  },
   whatToBringTitle: { en: 'What to Bring', zh: '携带物品', fr: 'À apporter' },
   whatToBring1: { en: 'Signs or banners (approved — we\'ll provide some)', zh: '标语或横幅（已批准 — 我们会提供部分）', fr: 'Pancartes ou bannières (approuvées — nous en fournirons)' },
   whatToBring2: { en: 'Flyers (approved — we\'ll provide printouts)', zh: '传单（已批准 — 我们会提供印刷品）', fr: 'Tracts (approuvés — nous fournirons des imprimés)' },
