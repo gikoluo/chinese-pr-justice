@@ -38,6 +38,9 @@ export const hero = {
   eventDetails: { en: 'Friday, March 13, 2026 · 8:30 AM – 4:30 PM · Ottawa, Ontario', zh: '2026年3月13日 周五 · 上午8:30 – 下午4:30 · 渥太华，安大略省', fr: 'Vendredi 13 mars 2026 · 8 h 30 – 16 h 30 · Ottawa, Ontario' },
   eventDetailsLink: { en: 'Event Details', zh: '活动详情', fr: 'Détails de l\'événement' },
   liveStream: { en: 'Watch Live on YouTube', zh: '在 YouTube 上观看直播', fr: 'Regarder en direct sur YouTube' },
+  standingWithUs: { en: 'Standing with us', zh: '与我们站在一起', fr: 'À nos côtés' },
+  senatorWooName: { en: 'Senator Yuen Pau Woo', zh: '参议员胡子修', fr: 'Sénateur Yuen Pau Woo' },
+  senatorWooMeta: { en: 'British Columbia · Independent Senators Group', zh: '不列颠哥伦比亚省 · 独立参议员团', fr: 'Colombie-Britannique · Groupe des sénateurs indépendants' },
   joinMovement: { en: 'Join Our Movement', zh: '加入我们', fr: 'Rejoignez le mouvement' },
   donate: { en: 'Donate', zh: '捐款', fr: 'Faire un don' },
   /** Hero stat card: main label (PR in backlog) */

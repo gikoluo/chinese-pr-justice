@@ -31,6 +31,22 @@ import { eventPage } from "../i18n/strings";
         </p>
       </div>
 
+      <div class="event-livestream">
+        <a
+          href="https://www.youtube.com/watch?v=FFaQSSfL_EY"
+          class="event-livestream-link"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span class="event-livestream-pill">
+            <span class="event-livestream-dot" aria-hidden="true"></span>
+            <span class="lang-en">Watch the Parliament Hill procession live on YouTube</span>
+            <span class="lang-zh">在 YouTube 上观看国会山游行直播</span>
+            <span class="lang-fr">Regarder en direct la marche vers la Colline du Parlement sur YouTube</span>
+          </span>
+        </a>
+      </div>
+
       <div class="event-quick-info">
         <div class="quick-info-item">
           <span class="quick-info-icon">
@@ -485,6 +501,36 @@ import { eventPage } from "../i18n/strings";
   /* Event Section */
   .event-section {
     background: white;
+  }
+
+  .event-livestream {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .event-livestream-link {
+    text-decoration: none;
+  }
+
+  .event-livestream-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0.9rem;
+    border-radius: 999px;
+    background: #fbbf24;
+    color: #111827;
+    font-size: 0.9rem;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+  }
+
+  .event-livestream-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 999px;
+    background: #ef4444;
+    box-shadow: 0 0 0 6px rgba(239, 68, 68, 0.35);
   }
 
   /* Event Quick Info Bar */

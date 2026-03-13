@@ -163,6 +163,21 @@ import { hero, heroStats } from '../i18n/strings';
                     </span>
                 </a>
             </div>
+            <div class="hero-standing-card">
+                <span class="hero-standing-label"><span class="lang-en">{hero.standingWithUs.en}</span><span class="lang-zh">{hero.standingWithUs.zh}</span><span class="lang-fr">{hero.standingWithUs.fr}</span></span>
+                <div class="hero-standing-inner">
+                    <a href="https://sencanada.ca/en/senators/woo-yuen-pau/" target="_blank" rel="noopener noreferrer" class="hero-standing-name">
+                        <span class="lang-en">{hero.senatorWooName.en}</span><span class="lang-zh">{hero.senatorWooName.zh}</span><span class="lang-fr">{hero.senatorWooName.fr}</span>
+                    </a>
+                    <span class="hero-standing-meta"><span class="lang-en">{hero.senatorWooMeta.en}</span><span class="lang-zh">{hero.senatorWooMeta.zh}</span><span class="lang-fr">{hero.senatorWooMeta.fr}</span></span>
+                    <span class="hero-standing-links">
+                        <a href="https://sencanada.ca/en/senators/woo-yuen-pau/" target="_blank" rel="noopener noreferrer" class="hero-standing-link">Senate</a>
+                        <a href="https://x.com/yuenpauwoo" target="_blank" rel="noopener noreferrer" class="hero-standing-x" aria-label="Senator Yuen Pau Woo on X">
+                            <img src="https://about.x.com/content/dam/about-twitter/x/brand-toolkit/logo-black.png.twimg.2560.png" alt="" width="18" height="18" loading="lazy" />
+                        </a>
+                    </span>
+                </div>
+            </div>
         </div>
     </div>
 </section>
@@ -363,6 +378,77 @@ import { hero, heroStats } from '../i18n/strings';
         background: #fff;
         color: var(--text-dark);
         border-color: #fff;
+    }
+
+    /* Senator standing with us card */
+    .hero-standing-card {
+        margin-top: 1.5rem;
+        padding: 0.75rem 1rem;
+        background: rgba(255, 255, 255, 0.12);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 8px;
+        max-width: 360px;
+    }
+
+    .hero-standing-label {
+        display: block;
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: var(--accent-bright);
+        margin-bottom: 0.35rem;
+    }
+
+    .hero-standing-inner {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        gap: 0.35rem 0.75rem;
+    }
+
+    .hero-standing-name {
+        font-size: 1rem;
+        font-weight: 600;
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .hero-standing-name:hover {
+        color: var(--accent-bright);
+        text-decoration: underline;
+    }
+
+    .hero-standing-meta {
+        font-size: 0.8rem;
+        color: rgba(255, 255, 255, 0.85);
+    }
+
+    .hero-standing-links {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-left: auto;
+    }
+
+    .hero-standing-link {
+        font-size: 0.8rem;
+        color: var(--accent-bright);
+        text-decoration: none;
+    }
+
+    .hero-standing-link:hover {
+        text-decoration: underline;
+    }
+
+    .hero-standing-x img {
+        display: block;
+        width: 18px;
+        height: 18px;
+        opacity: 0.9;
+    }
+
+    .hero-standing-x:hover img {
+        opacity: 1;
     }
 
     /* CTA Button with Flip Animation */
@@ -594,6 +680,19 @@ import { hero, heroStats } from '../i18n/strings';
         .hero-event-buttons .btn-cta,
         .hero-event-buttons .hero-event-link {
             text-align: center;
+        }
+
+        .hero-standing-card {
+            max-width: 100%;
+        }
+
+        .hero-standing-inner {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .hero-standing-links {
+            margin-left: 0;
         }
     }
 
