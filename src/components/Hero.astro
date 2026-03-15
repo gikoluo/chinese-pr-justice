@@ -214,6 +214,21 @@ import { hero, heroStats } from '../i18n/strings';
                             </span>
                         </div>
                     </div>
+                    <div class="hero-standing-item">
+                        <div class="hero-standing-photo hero-standing-photo-initials" aria-hidden="true">VO</div>
+                        <div class="hero-standing-content">
+                            <a href="https://sencanada.ca/en/senators/oh-victor/" target="_blank" rel="noopener noreferrer" class="hero-standing-name">
+                                <span class="lang-en">{hero.senatorOhName.en}</span><span class="lang-zh">{hero.senatorOhName.zh}</span><span class="lang-fr">{hero.senatorOhName.fr}</span>
+                            </a>
+                            <span class="hero-standing-meta"><span class="lang-en">{hero.senatorOhMeta.en}</span><span class="lang-zh">{hero.senatorOhMeta.zh}</span><span class="lang-fr">{hero.senatorOhMeta.fr}</span></span>
+                            <span class="hero-standing-links">
+                                <a href="https://sencanada.ca/en/senators/oh-victor/" target="_blank" rel="noopener noreferrer" class="hero-standing-link">Senate</a>
+                                <a href="https://x.com/SenatorVictorOh/status/2032488493805420939" target="_blank" rel="noopener noreferrer" class="hero-standing-x" aria-label="Senator Victor Oh on X">
+                                    <img src="https://about.x.com/content/dam/about-twitter/x/brand-toolkit/logo-black.png.twimg.2560.png" alt="" width="18" height="18" loading="lazy" />
+                                </a>
+                            </span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -425,7 +440,7 @@ import { hero, heroStats } from '../i18n/strings';
         background: rgba(255, 255, 255, 0.12);
         border: 1px solid rgba(255, 255, 255, 0.3);
         border-radius: 8px;
-        max-width: 680px;
+        max-width: 880px;
     }
 
     .hero-standing-label {
@@ -439,7 +454,7 @@ import { hero, heroStats } from '../i18n/strings';
 
     .hero-standing-grid {
         display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-template-columns: repeat(4, minmax(0, 1fr));
         gap: 0.75rem 1.25rem;
         align-items: start;
     }
@@ -479,6 +494,16 @@ import { hero, heroStats } from '../i18n/strings';
         font-size: 0.82rem;
         line-height: 1.35;
         display: block;
+    }
+
+    .hero-standing-photo-initials {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.75rem;
+        font-weight: 700;
+        color: rgba(255, 255, 255, 0.9);
+        letter-spacing: -0.02em;
     }
 
     .hero-standing-content {

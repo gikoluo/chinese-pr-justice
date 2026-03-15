@@ -39,8 +39,10 @@ export const hero = {
   eventDetailsLink: { en: 'Event Details', zh: '活动详情', fr: 'Détails de l\'événement' },
   liveStream: { en: 'Watch Live on YouTube', zh: '在 YouTube 上观看直播', fr: 'Regarder en direct sur YouTube' },
   standingWithUs: { en: 'Standing with us', zh: '与我们站在一起', fr: 'À nos côtés' },
-  senatorWooName: { en: 'Senator Yuen Pau Woo', zh: '参议员胡子修', fr: 'Sénateur Yuen Pau Woo' },
+  senatorWooName: { en: 'Senator Yuen Pau Woo', zh: '参议员胡元豹', fr: 'Sénateur Yuen Pau Woo' },
   senatorWooMeta: { en: 'British Columbia · Independent Senators Group', zh: '不列颠哥伦比亚省 · 独立参议员团', fr: 'Colombie-Britannique · Groupe des sénateurs indépendants' },
+  senatorOhName: { en: 'Senator Victor Oh', zh: '参议员胡子修', fr: 'Sénateur Victor Oh' },
+  senatorOhMeta: { en: 'Ontario · Former Senator', zh: '安大略省 · 前参议员', fr: 'Ontario · Ancien sénateur' },
   cpacName: { en: 'CPAC – Cable Public Affairs Channel', zh: 'CPAC 公众事务频道', fr: 'CPAC – Chaîne d\'affaires publiques' },
   cpacMeta: { en: 'Independent, not-for-profit parliamentary broadcaster', zh: '独立非营利的国会与公共事务频道', fr: 'Diffuseur parlementaire indépendant à but non lucratif' },
   pressReleaseLink: {
