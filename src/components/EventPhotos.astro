@@ -1,6 +1,13 @@
 ---
 // EventPhotos Section component (EN + 中文)
 import { eventPhotosSection } from '../i18n/strings';
+
+// March 13, 2026 procession photos (manually curated)
+const march13Photos = [
+  'march13-01-DSC00903.jpg', 'march13-02-DSC00904.jpg', 'march13-03-DSC00905.jpg', 'march13-08-DSC00910.jpg', 'march13-09-DSC00911.jpg',
+  'march13-11-DSC00913.jpg', 'march13-18-DSC00925.jpg', 'march13-22-DSC00931.jpg', 'march13-23-DSC00940.jpg', 'march13-24-DSC00933.jpg',
+  'march13-26-DSC00938.jpg', 'march13-27-DSC00937.jpg', 'march13-28-DSC00941.jpg', 'march13-29-DSC00943.jpg',
+];
 ---
 
 <section id="photos" class="photos-section">
@@ -12,25 +19,15 @@ import { eventPhotosSection } from '../i18n/strings';
       <span class="lang-en">{eventPhotosSection.intro.en}</span><span class="lang-zh">{eventPhotosSection.intro.zh}</span><span class="lang-fr">{eventPhotosSection.intro.fr}</span>
     </p>
 
-    <div class="photos-grid">
-      <figure class="photo-card">
-        <img src="/events/3eb1625011f01662ce2fd768d1955f94.JPG" alt="Protesters gathered on Parliament Hill" loading="lazy" />
-      </figure>
-      <figure class="photo-card">
-        <img src="/events/0b96ff5a44bd8d98f1fd4b43dbfd1502.JPG" alt="Protesters holding signs calling for an end to indefinite security screening" loading="lazy" />
-      </figure>
-      <figure class="photo-card">
-        <img src="/events/3666baa315089cec3072ab3f9a52f669.JPG" alt="Speakers addressing the crowd at the protest" loading="lazy" />
-      </figure>
-      <figure class="photo-card">
-        <img src="/events/00750e6d4345b6ed6f7db6fd72a845d1.JPG" alt="Participants standing together in front of Parliament Hill" loading="lazy" />
-      </figure>
-      <figure class="photo-card">
-        <img src="/events/dff066fb20779aa670f74b27ce365bac.JPG" alt="Protest signs and banners highlighting security screening delays" loading="lazy" />
-      </figure>
-      <figure class="photo-card">
-        <img src="/events/64abd21aab6a7c0570b75f2da55b0386.JPG" alt="Crowd view of the protest event" loading="lazy" />
-      </figure>
+    <div class="photos-grid photos-grid-march13">
+      {march13Photos.map((file) => (
+        <figure class="photo-card">
+          <img src={`/events/march-13-2026/${file}`} alt="Procession to Parliament Hill, March 13, 2026" loading="lazy" />
+        </figure>
+      ))}
+    </div>
+
+    <div class="photos-grid photos-grid-video">
       <figure class="photo-card photo-card-video">
         <video controls preload="metadata">
           <source src="/events/6186.MP4" type="video/mp4" />
@@ -53,6 +50,11 @@ import { eventPhotosSection } from '../i18n/strings';
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 1rem;
+  }
+
+  .photos-grid-video {
+    margin-top: 1.5rem;
+    max-width: 640px;
   }
 
   .photo-card {
