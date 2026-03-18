@@ -7,6 +7,9 @@ const march13Photos = [
   'march13-01-DSC00903.jpg', 'march13-02-DSC00904.jpg', 'march13-03-DSC00905.jpg', 'march13-08-DSC00910.jpg', 'march13-09-DSC00911.jpg',
   'march13-11-DSC00913.jpg', 'march13-18-DSC00925.jpg', 'march13-22-DSC00931.jpg', 'march13-23-DSC00940.jpg', 'march13-24-DSC00933.jpg',
   'march13-26-DSC00938.jpg', 'march13-27-DSC00937.jpg', 'march13-28-DSC00941.jpg', 'march13-29-DSC00943.jpg',
+  'march13-30-DSC00944.jpg',
+  'march13-31-DSC00945.jpg', 'march13-32-DSC00946.jpg',
+  'march13-33-DSC00947.jpg',
 ];
 ---
 
@@ -37,6 +40,30 @@ const march13Photos = [
         </video>
       </figure>
     </div>
+
+    <div class="media-section">
+      <h3 class="media-title">
+        <span class="lang-en">Media Coverage</span>
+        <span class="lang-zh">媒体报道</span>
+        <span class="lang-fr">Couverture médiatique</span>
+      </h3>
+      <p class="media-intro">
+        <span class="lang-en">Selected interviews and coverage from TV, radio, and online media.</span>
+        <span class="lang-zh">来自电视、电台和网络媒体的部分采访与报道。</span>
+        <span class="lang-fr">Sélection d'entrevues et de reportages à la télévision, à la radio et en ligne.</span>
+      </p>
+
+      <div class="photos-grid photos-grid-video media-video">
+        <figure class="photo-card photo-card-video">
+          <video controls preload="metadata">
+            <source src="/events/media%20coverage/OMNI%20NEWS.mp4" type="video/mp4" />
+            <span class="lang-en">Your browser does not support the video tag.</span>
+            <span class="lang-zh">您的浏览器不支持视频播放。</span>
+            <span class="lang-fr">Votre navigateur ne prend pas en charge la lecture vidéo.</span>
+          </video>
+        </figure>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -54,7 +81,12 @@ const march13Photos = [
 
   .photos-grid-video {
     margin-top: 1.5rem;
-    max-width: 640px;
+    /* Let video rows use full container width like photo grid */
+    max-width: none;
+  }
+
+  .media-video {
+    margin-top: 1.75rem;
   }
 
   .photo-card {
@@ -63,6 +95,7 @@ const march13Photos = [
     overflow: hidden;
     background: #000;
     box-shadow: 0 6px 18px rgba(15, 31, 51, 0.35);
+    aspect-ratio: 4 / 3;
   }
 
   .photo-card img {
@@ -76,6 +109,25 @@ const march13Photos = [
     width: 100%;
     height: 100%;
     display: block;
+  }
+
+  .media-section {
+    margin-top: 3rem;
+    text-align: center;
+  }
+
+  .media-title {
+    font-size: 1.75rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .media-intro {
+    margin: 0;
+    color: var(--text-light);
+  }
+
+  .media-grid {
+    margin-top: 1.5rem;
   }
 
   @media (max-width: 900px) {
