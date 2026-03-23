@@ -26,7 +26,13 @@ const march13Photos = [
     <div class="photos-grid photos-grid-march13">
       {march13Photos.map((file) => (
         <figure class="photo-card">
-          <img src={`/events/march-13-2026/${file}`} alt="Procession to Parliament Hill, March 13, 2026" loading="lazy" />
+          <img
+            class="js-lazy-photo"
+            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3C/svg%3E"
+            data-src={`/events/march-13-2026/${file}`}
+            alt="Procession to Parliament Hill, March 13, 2026"
+            decoding="async"
+          />
         </figure>
       ))}
     </div>
@@ -74,12 +80,51 @@ const march13Photos = [
     <div class="photos-grid photos-grid-extended">
       {eventPhotos20260322.map((file: string) => (
         <figure class="photo-card">
-          <img src={`/events/event-photos-20260322/${file}`} alt="Parliament Hill procession, March 2026" loading="lazy" />
+          <img
+            class="js-lazy-photo"
+            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3C/svg%3E"
+            data-src={`/events/event-photos-20260322/${file}`}
+            alt="Parliament Hill procession, March 2026"
+            decoding="async"
+          />
         </figure>
       ))}
     </div>
   </div>
 </section>
+
+<script is:inline>
+  (function () {
+    var root = document.getElementById('photos');
+    if (!root) return;
+    var imgs = root.querySelectorAll('img.js-lazy-photo[data-src]');
+    function loadImg(img) {
+      var src = img.getAttribute('data-src');
+      if (!src) return;
+      img.src = src;
+      img.removeAttribute('data-src');
+      img.classList.add('is-loaded');
+    }
+    if (!imgs.length) return;
+    if (!('IntersectionObserver' in window)) {
+      imgs.forEach(loadImg);
+      return;
+    }
+    var io = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) return;
+          loadImg(entry.target);
+          io.unobserve(entry.target);
+        });
+      },
+      { root: null, rootMargin: '280px 0px', threshold: 0.01 }
+    );
+    imgs.forEach(function (img) {
+      io.observe(img);
+    });
+  })();
+</script>
 
 <style>
   .photos-section {
@@ -129,6 +174,32 @@ const march13Photos = [
     height: 100%;
     display: block;
     object-fit: cover;
+  }
+
+  /* Placeholder until Intersection Observer loads the real URL */
+  .photo-card img.js-lazy-photo:not(.is-loaded) {
+    background: linear-gradient(
+      110deg,
+      rgba(220, 225, 232, 0.9) 0%,
+      rgba(240, 242, 246, 0.95) 40%,
+      rgba(220, 225, 232, 0.9) 80%
+    );
+    background-size: 200% 100%;
+    animation: lazy-photo-shimmer 1.4s ease-in-out infinite;
+  }
+
+  @keyframes lazy-photo-shimmer {
+    0% {
+      background-position: 100% 0;
+    }
+    100% {
+      background-position: -100% 0;
+    }
+  }
+
+  .photo-card img.js-lazy-photo.is-loaded {
+    animation: none;
+    background: transparent;
   }
 
   .photo-card-video video {
