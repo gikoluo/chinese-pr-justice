@@ -1,6 +1,7 @@
 ---
 // EventPhotos Section component (EN + 中文)
 import { eventPhotosSection } from '../i18n/strings';
+import eventPhotos20260322 from '../data/eventPhotos20260322.json';
 
 // March 13, 2026 procession photos (manually curated)
 const march13Photos = [
@@ -64,6 +65,19 @@ const march13Photos = [
         </figure>
       </div>
     </div>
+
+    <h3 class="photos-extended-heading">
+      <span class="lang-en">{eventPhotosSection.extendedTitle.en}</span>
+      <span class="lang-zh">{eventPhotosSection.extendedTitle.zh}</span>
+      <span class="lang-fr">{eventPhotosSection.extendedTitle.fr}</span>
+    </h3>
+    <div class="photos-grid photos-grid-extended">
+      {eventPhotos20260322.map((file: string) => (
+        <figure class="photo-card">
+          <img src={`/events/event-photos-20260322/${file}`} alt="Parliament Hill procession, March 2026" loading="lazy" />
+        </figure>
+      ))}
+    </div>
   </div>
 </section>
 
@@ -87,6 +101,18 @@ const march13Photos = [
 
   .media-video {
     margin-top: 1.75rem;
+  }
+
+  .photos-extended-heading {
+    margin-top: 2.5rem;
+    margin-bottom: 0.5rem;
+    font-family: var(--font-heading);
+    font-size: 1.35rem;
+    color: var(--text-dark);
+  }
+
+  .photos-grid-extended {
+    margin-top: 1rem;
   }
 
   .photo-card {
