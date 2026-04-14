@@ -163,6 +163,12 @@ import { hero, heroStats } from '../i18n/strings';
                     </span>
                 </a>
             </div>
+            <div class="hero-past-event">
+                <span class="hero-past-event-label"><span class="lang-en">{hero.pastEventLabel.en}</span><span class="lang-zh">{hero.pastEventLabel.zh}</span><span class="lang-fr">{hero.pastEventLabel.fr}</span></span>
+                <div class="hero-past-event-title"><span class="lang-en">{hero.pastEventTitle.en}</span><span class="lang-zh">{hero.pastEventTitle.zh}</span><span class="lang-fr">{hero.pastEventTitle.fr}</span></div>
+                <div class="hero-past-event-details"><span class="lang-en">{hero.pastEventDetails.en}</span><span class="lang-zh">{hero.pastEventDetails.zh}</span><span class="lang-fr">{hero.pastEventDetails.fr}</span></div>
+                <a href="/press-release" class="hero-past-event-link"><span class="lang-en">{hero.pastEventLink.en}</span><span class="lang-zh">{hero.pastEventLink.zh}</span><span class="lang-fr">{hero.pastEventLink.fr}</span></a>
+            </div>
             <div class="hero-standing-card">
                 <span class="hero-standing-label"><span class="lang-en">{hero.standingWithUs.en}</span><span class="lang-zh">{hero.standingWithUs.zh}</span><span class="lang-fr">{hero.standingWithUs.fr}</span></span>
                 <div class="hero-standing-grid">
@@ -432,6 +438,46 @@ import { hero, heroStats } from '../i18n/strings';
         background: #fff;
         color: var(--text-dark);
         border-color: #fff;
+    }
+
+    .hero-past-event {
+        margin-top: 0.85rem;
+        padding-top: 0.7rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        text-align: center;
+    }
+
+    .hero-past-event-label {
+        display: block;
+        font-size: 0.68rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.78);
+    }
+
+    .hero-past-event-title {
+        margin-top: 0.2rem;
+        font-size: 0.95rem;
+        font-weight: 700;
+        color: rgba(255, 255, 255, 0.92);
+    }
+
+    .hero-past-event-details {
+        margin-top: 0.15rem;
+        font-size: 0.78rem;
+        color: rgba(255, 255, 255, 0.75);
+    }
+
+    .hero-past-event-link {
+        display: inline-block;
+        margin-top: 0.22rem;
+        font-size: 0.78rem;
+        color: var(--accent-bright);
+        text-decoration: none;
+    }
+
+    .hero-past-event-link:hover {
+        text-decoration: underline;
     }
 
     /* Senator standing with us card */

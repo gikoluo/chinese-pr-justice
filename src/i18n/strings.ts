@@ -50,6 +50,26 @@ export const hero = {
     zh: '国会山发布会通稿',
     fr: 'Communiqué de la conférence de presse sur la Colline du Parlement',
   },
+  pastEventLabel: {
+    en: 'Historical event',
+    zh: '历史行动',
+    fr: 'Événement passé',
+  },
+  pastEventTitle: {
+    en: '3.13 Ottawa Parliament Hill Rally',
+    zh: '3.13 渥太华国会山集会',
+    fr: 'Rassemblement du 13 mars à Ottawa',
+  },
+  pastEventDetails: {
+    en: 'Friday, March 13, 2026 · Parliament Hill · Ottawa',
+    zh: '2026年3月13日 周五 · 国会山 · 渥太华',
+    fr: 'Vendredi 13 mars 2026 · Colline du Parlement · Ottawa',
+  },
+  pastEventLink: {
+    en: 'View recap',
+    zh: '查看回顾',
+    fr: 'Voir le bilan',
+  },
   youtubeCardTitle: {
     en: 'Group calls for transparency and reasonable timelines in immigration processing',
     zh: '华人团体呼吁移民审理透明、及时有序',
