@@ -1,0 +1,172 @@
+================================================================================
+FORMAL COMPLAINT TO THE OFFICE OF THE PRIVACY COMMISSIONER OF CANADA
+Re: Failure by CBSA to Respond to Privacy Act Request Within Statutory Deadline
+
+Complainant:  Chunhui Luo
+Date:         March 10, 2026
+================================================================================
+
+To: Office of the Privacy Commissioner of Canada (OPC)
+
+COMPLAINT: Deemed Refusal Under the Privacy Act
+Institution:  Canada Border Services Agency (CBSA)
+Request #:    EP2026_0477948
+
+
+1. SUMMARY
+
+I am filing a complaint under section 29 of the Privacy Act against the Canada
+Border Services Agency (CBSA) for failure to respond to my personal information
+request within the 30-day statutory time limit. CBSA has not provided any records,
+any acknowledgment of processing, or any notice of extension. This constitutes a
+deemed refusal under the Privacy Act.
+
+
+2. REQUEST DETAILS
+
+  Request Number:     EP2026_0477948
+  Date Submitted:     February 6, 2026
+  Institution:        Canada Border Services Agency (CBSA)
+  Request Type:       Personal Information Request (Privacy Act)
+  30-Day Deadline:    March 8, 2026
+  Days Overdue:       2 days (as of March 10, 2026)
+  Response Received:  NONE
+  Extension Notice:   NONE
+
+  Subject: All records related to security screening of my Permanent Residence
+  application (EP00514084, UCI: 1121737519, BC PNP, submitted August 2022),
+  specifically CBSA's phase of screening following CSIS completion on July 16, 2025.
+
+
+3. CHRONOLOGY
+
+  2022-08:     PR application submitted under BC Provincial Nominee Program
+  2023 mid:    All admissibility requirements (eligibility, criminality, medical)
+               completed — application entered extended security screening
+  2025-07-16:  CSIS completed its phase of security screening (confirmed via
+               CSIS ATIP response received February 2026)
+  2026-02-06:  ATIP request EP2026_0477948 submitted to CBSA via the online
+               ATIP portal, with 5 supporting attachments (passport, IRCC status
+               update from MP, CSIS ATIP response, authority to release form,
+               and previous GCMS notes)
+  2026-02-06:  Portal status changed to "Request In Progress" (automated)
+  2026-02-17:  Formal demand letter sent to IRCC CPC-O and Department of Justice
+               Canada BC Regional Office regarding the underlying PR delay
+  2026-03-08:  30-day statutory deadline expired — NO response from CBSA
+  2026-03-10:  This complaint filed (2 days past deadline, no communication
+               of any kind received from CBSA)
+
+
+4. GROUNDS FOR COMPLAINT
+
+Under section 14 of the Privacy Act, a government institution must respond to a
+personal information request within 30 days of receipt. The institution may extend
+this period under section 15, but ONLY if it notifies the requester in writing
+within the initial 30-day period, stating the reason for the extension and the
+new expected completion date.
+
+CBSA has done neither:
+  (a) No records or partial records have been provided;
+  (b) No acknowledgment of processing has been communicated;
+  (c) No notice of extension under section 15 has been sent;
+  (d) No communication of any kind has been received from CBSA.
+
+This constitutes a deemed refusal under the Privacy Act.
+
+
+5. IMPACT OF NON-COMPLIANCE
+
+The requested records are urgently needed because:
+
+  (a) My PR application has been in security screening for over 40 months —
+      far beyond any published service standard;
+
+  (b) CSIS confirmed completion of its screening phase on July 16, 2025, meaning
+      CBSA has held my file for over 7 months with no explanation;
+
+  (c) My work permit and my son's study permit expire in October 2026;
+
+  (d) My son will apply to Canadian universities in Fall 2026 for Fall 2027
+      admission. Without PR, he faces international student tuition
+      ($40,000-65,000/year) versus domestic tuition ($7,000-15,000/year) —
+      a difference of $130,000-200,000 over four years;
+
+  (e) Without these records, I cannot understand what CBSA is doing with my file,
+      what remains outstanding, or make informed decisions about my family's future;
+
+  (f) The delay in responding to this ATIP request compounds an already
+      unacceptable 40-month processing delay, further eroding my ability to
+      plan and protect my family's interests.
+
+
+6. RELIEF REQUESTED
+
+I respectfully request that the Privacy Commissioner:
+
+  (a) Investigate CBSA's failure to comply with the 30-day statutory deadline;
+
+  (b) Order CBSA to process and release my records immediately;
+
+  (c) Determine whether CBSA's failure to respond constitutes a systemic issue
+      affecting other applicants in similar security screening situations;
+
+  (d) Report findings and recommendations to CBSA regarding its ATIP compliance
+      obligations.
+
+
+7. COMPLAINANT INFORMATION
+
+  Full Name:    Chunhui Luo
+  Date of Birth: February 20, 1985
+  Address:      8751 Francis Rd, Richmond, BC V7A 4N6
+  Phone:        778-886-8708
+  Email:        ca@luochunhui.com
+  Language:     English
+
+
+8. SUPPORTING DOCUMENTS (available upon request)
+
+  - CBSA ATIP request confirmation (EP2026_0477948, dated Feb 6, 2026)
+  - CSIS ATIP response confirming July 16, 2025 screening completion
+  - IRCC status update from MP Bains showing "non-routine" designation
+  - Formal demand letter to IRCC CPC-O and DOJ BC (Feb 17, 2026)
+
+
+Respectfully submitted,
+
+Chunhui Luo
+March 10, 2026
+
+================================================================================
+HOW TO FILE THIS COMPLAINT:
+================================================================================
+
+OPTION 1 — Online (fastest):
+  https://www.priv.gc.ca/en/report-a-concern/file-a-formal-privacy-complaint/
+  - Select: "Complaint about the handling of your personal information
+    by a federal government institution"
+  - Select: "Time limit — the institution did not respond within 30 days
+    and did not send an extension notice"
+  - Copy/paste the relevant sections into the form fields
+  - Attach the CBSA ATIP confirmation (RequestData-EP2026_0477948.html or PDF)
+
+OPTION 2 — Email:
+  Send this letter to: info@priv.gc.ca
+  Subject: Privacy Act Complaint — CBSA Deemed Refusal — EP2026_0477948
+  Attach: CBSA ATIP request confirmation
+
+OPTION 3 — Mail:
+  Office of the Privacy Commissioner of Canada
+  30 Victoria Street
+  Gatineau, Quebec K1A 1H3
+
+IMPORTANT NOTES:
+  - There is no fee to file a complaint with the OPC
+  - The OPC will contact CBSA on your behalf and investigate
+  - Keep your complaint reference number once received
+  - Typical OPC investigation takes 3-6 months, but the act of filing
+    often prompts the institution to release records quickly to resolve
+    the complaint
+  - You may also wish to send a courtesy copy of this complaint to CBSA's
+    ATIP office to signal that you have escalated
+================================================================================

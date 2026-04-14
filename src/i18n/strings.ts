@@ -13,11 +13,11 @@ export const nav = {
 } as const;
 
 export const announcement = {
-  event: { en: 'Procession to Parliament Hill — March 13, 2026 — Ottawa, Ontario', zh: '国会山游行 — 2026年3月13日 — 渥太华，安大略省', fr: 'Marche vers la Colline du Parlement — 13 mars 2026 — Ottawa, Ontario' },
+  event: { en: 'VAN501 — End Indefinite PR Delays — Friday, May 1, 2026 — Vancouver', zh: 'VAN501 — 终结PR无限期拖延 — 2026年5月1日（周五）— 温哥华', fr: 'VAN501 — Mettre fin aux délais indéfinis de RP — vendredi 1 mai 2026 — Vancouver' },
   petition: {
-    en: 'New: House of Commons e‑petition e‑7259 — click here to sign now.',
-    zh: '最新：国会下议院电子请愿 e‑7259 — 点击此处立即签名。',
-    fr: 'Nouveau : Pétition électronique e‑7259 de la Chambre des communes — cliquez ici pour signer maintenant.',
+    en: 'Priority now: House of Commons e‑petition e‑7341 — sign now (e‑7259 is our prior win).',
+    zh: '当前优先：国会下议院电子请愿 e‑7341 — 立即签署（e‑7259 为此前成果）。',
+    fr: 'Priorité actuelle : pétition électronique e‑7341 de la Chambre des communes — signez maintenant (e‑7259 est notre résultat antérieur).',
   },
 } as const;
 
@@ -31,11 +31,11 @@ export const heroStats = {
 
 export const hero = {
   eventTitle: {
-    en: 'Procession to Parliament Hill — We Are Going',
-    zh: '国会山游行 — 我们一起出发',
-    fr: 'Marche vers la Colline du Parlement — Nous y allons',
+    en: 'VAN501 — End Indefinite PR Delays',
+    zh: 'VAN501 — 终结PR无限期拖延',
+    fr: 'VAN501 — Mettre fin aux délais indéfinis de RP',
   },
-  eventDetails: { en: 'Friday, March 13, 2026 · 8:30 AM – 4:30 PM · Ottawa, Ontario', zh: '2026年3月13日 周五 · 上午8:30 – 下午4:30 · 渥太华，安大略省', fr: 'Vendredi 13 mars 2026 · 8 h 30 – 16 h 30 · Ottawa, Ontario' },
+  eventDetails: { en: 'Friday, May 1, 2026 · 9:00 AM – 12:00 PM · Vancouver, BC', zh: '2026年5月1日 周五 · 上午9:00 – 中午12:00 · 温哥华，BC省', fr: 'Vendredi 1 mai 2026 · 9 h 00 – 12 h 00 · Vancouver, C.-B.' },
   eventDetailsLink: { en: 'Event Details', zh: '活动详情', fr: 'Détails de l\'événement' },
   liveStream: { en: 'Watch Live on YouTube', zh: '在 YouTube 上观看直播', fr: 'Regarder en direct sur YouTube' },
   standingWithUs: { en: 'Standing with us', zh: '与我们站在一起', fr: 'À nos côtés' },
@@ -56,9 +56,9 @@ export const hero = {
     fr: 'Le groupe appelle à la transparence et à des délais raisonnables dans le traitement des dossiers d\'immigration',
   },
   youtubeCardMeta: {
-    en: 'March 13, 2026 · Parliament Hill · CPAC Coverage',
-    zh: '2026年3月13日 · 国会山 · CPAC 报道',
-    fr: '13 mars 2026 · Colline du Parlement · Couverture CPAC',
+    en: 'March 13, 2026 · Ottawa Parliament Hill · CPAC Coverage',
+    zh: '2026年3月13日 · 渥太华国会山 · CPAC 报道',
+    fr: '13 mars 2026 · Colline du Parlement à Ottawa · Couverture CPAC',
   },
   joinMovement: { en: 'Join Our Movement', zh: '加入我们', fr: 'Rejoignez le mouvement' },
   donate: { en: 'Donate', zh: '捐款', fr: 'Faire un don' },
@@ -308,18 +308,18 @@ export const eventPhotosSection = {
 } as const;
 
 export const eventPage = {
-  title: { en: 'Procession to Parliament Hill', zh: '国会山游行', fr: 'Marche vers la Colline du Parlement' },
-  intro: { en: 'Join us as we march for justice and demand action from the Canadian government.', zh: '加入我们，为公正而游行，要求加拿大政府采取行动。', fr: 'Rejoignez-nous pour marcher pour la justice et exiger des actions du gouvernement canadien.' },
-  bannerTitle: { en: 'March for PR Justice', zh: '为PR公正而游行', fr: 'Marche pour la justice RP' },
+  title: { en: 'VAN501 — Vancouver May 1 Action', zh: 'VAN501 — 温哥华 5·1 行动', fr: 'VAN501 — Action de Vancouver du 1er mai' },
+  intro: { en: 'The same movement continues in Vancouver. Join us to demand real, timely action on PR security-screening delays.', zh: '同一场运动来到温哥华。加入我们，要求就PR安调拖延采取真正、及时的行动。', fr: 'Le même mouvement continue à Vancouver. Joignez-vous à nous pour exiger des actions réelles et rapides contre les retards de filtrage de sécurité des demandes de RP.' },
+  bannerTitle: { en: 'VAN501 — End Indefinite PR Delays', zh: 'VAN501 — 终结PR无限期拖延', fr: 'VAN501 — Mettre fin aux délais indéfinis de RP' },
   bannerTagline: { en: 'End Discriminatory Security Screening Delays', zh: '终结歧视性安全背景调查拖延', fr: 'Mettons fin aux délais discriminatoires de l\'évaluation de sécurité' },
   joinCampaign: { en: 'JOIN THE CAMPAIGN', zh: '加入行动', fr: 'REJOINDRE LA CAMPAGNE' },
-  quickInfoDate: { en: 'Friday, March 13, 2026', zh: '2026年3月13日 周五', fr: 'Vendredi 13 mars 2026' },
-  quickInfoTime: { en: '8:30 AM – 4:30 PM', zh: '上午8:30 – 下午4:30', fr: '8 h 30 – 16 h 30' },
-  quickInfoPlace: { en: 'Parliament Hill, Ottawa, Ontario', zh: '国会山，渥太华，安大略省', fr: 'Colline du Parlement, Ottawa, Ontario' },
+  quickInfoDate: { en: 'Friday, May 1, 2026', zh: '2026年5月1日 周五', fr: 'Vendredi 1 mai 2026' },
+  quickInfoTime: { en: '9:00 AM – 12:00 PM', zh: '上午9:00 – 中午12:00', fr: '9 h 00 – 12 h 00' },
+  quickInfoPlace: { en: 'Vancouver Art Gallery → IRCC Vancouver Office', zh: '温哥华美术馆 → IRCC 温哥华办公室', fr: 'Vancouver Art Gallery → Bureau IRCC de Vancouver' },
   pressReleasePill: {
-    en: 'Read the Parliament Hill press conference release',
-    zh: '查看国会山发布会通稿',
-    fr: 'Lire le communiqué de la conférence de presse sur la Colline du Parlement',
+    en: 'Read the 3.13 Ottawa press conference release',
+    zh: '查看 3.13 渥太华发布会通稿',
+    fr: 'Lire le communiqué de presse d’Ottawa du 13 mars',
   },
   whatToBringTitle: { en: 'What to Bring', zh: '携带物品', fr: 'À apporter' },
   whatToBring1: { en: 'Signs or banners (approved — we\'ll provide some)', zh: '标语或横幅（已批准 — 我们会提供部分）', fr: 'Pancartes ou bannières (approuvées — nous en fournirons)' },
@@ -355,40 +355,40 @@ export const joinPage = {
   donateNoReceipt: { en: 'We cannot provide donation tax credit receipts at this time.', zh: '我们目前无法提供捐款抵税收据。', fr: 'Nous ne pouvons pas fournir de reçus d\'impôt pour dons pour le moment.' },
 } as const;
 
-/** E-petition banner and "How to sign" modal (e-7259). */
+/** E-petition banner and "How to sign" modal (priority: e-7341). */
 export const petitionBanner = {
   title: {
-    en: 'End indefinite security screening delays — sign e‑petition e‑7259',
-    zh: '终结无限期安全背景调查拖延 — 请签署电子请愿 e‑7259',
-    fr: 'Mettre fin aux délais indéfinis d\'évaluation de sécurité — signez la pétition électronique e‑7259',
+    en: 'Petition to the House of Commons — sign e‑petition e‑7341',
+    zh: '致加拿大下议院请愿 — 请签署电子请愿 e‑7341',
+    fr: 'Pétition à la Chambre des communes — signez la pétition électronique e‑7341',
   },
   intro: {
-    en: 'Citizens and residents of Canada can now sign a House of Commons e‑petition calling for strict timelines, transparency, and accountability for PR security screening delays.',
-    zh: '加拿大公民和居民现可签署国会下议院电子请愿，要求对PR安全背景调查设定明确时限、透明度和问责。',
-    fr: 'Les citoyens et résidents du Canada peuvent maintenant signer une pétition électronique de la Chambre des communes pour exiger des délais stricts, la transparence et l\'imputabilité en matière d\'évaluation de sécurité des demandes de RP.',
+    en: 'e‑7341 asks Parliament to examine immigration security screening delays and establish clear accountability, transparency, and risk-based resource allocation.',
+    zh: 'e‑7341 呼吁国会审查移民安全背景调查拖延问题，并建立明确问责、透明机制和基于风险的资源配置。',
+    fr: 'La pétition e‑7341 demande au Parlement d’examiner les retards du filtrage de sécurité en immigration et d’établir une responsabilisation claire, de la transparence et une allocation des ressources fondée sur le risque.',
   },
   signBtn: { en: 'Sign the e‑petition', zh: '签署电子请愿', fr: 'Signer la pétition électronique' },
   helpBtn: { en: 'How to sign (step‑by‑step)', zh: '如何签署（分步说明）', fr: 'Comment signer' },
   meta: {
-    en: 'Petition e‑7259 (Citizenship and Immigration).',
-    zh: '请愿 e‑7259（公民与移民部/IRCC）。',
-    fr: 'Pétition e‑7259 (Citoyenneté et Immigration).',
+    en: 'Current priority petition: e‑7341 (Citizenship and Immigration).',
+    zh: '当前优先请愿：e‑7341（公民与移民部/IRCC）。',
+    fr: 'Pétition prioritaire actuelle : e‑7341 (Citoyenneté et Immigration).',
   },
   goal: {
-    en: 'Goal: 10,000+ verified signatures (Canadian citizen or a resident of Canada) so our collective voice for ending PR security screening delays cannot be ignored.',
-    zh: '目标：10,000+ 有效签名，让我们要求终结PR安全背景调查无限期拖延的呼声更响亮、更难被忽视。',
-    fr: 'Objectif : plus de 10 000 signatures vérifiées (citoyen canadien ou résident du Canada) afin que notre voix collective contre les délais d’évaluation de sécurité pour la RP ne puisse pas être ignorée.',
+    en: 'Call upon the House to request a Public Safety Committee study on screening delays, with concrete recommendations for resources, accountability, triage, and independent review.',
+    zh: '呼吁下议院要求公共安全与国家安全常设委员会就安调拖延开展研究，并就资源、问责、分流机制和独立审查提出具体建议。',
+    fr: 'Demander à la Chambre de charger le Comité permanent de la sécurité publique d’étudier les retards de filtrage et de recommander des mesures concrètes sur les ressources, la responsabilisation, le triage et l’examen indépendant.',
   },
   mpRole: { en: 'Member of Parliament', zh: '国会议员', fr: 'Députée' },
   mpDetails: {
-    en: 'Vancouver East · New Democratic Party · British Columbia',
-    zh: '温哥华东区 · 新民主党 · 不列颠哥伦比亚省',
-    fr: 'Vancouver-Est · NPD · Colombie-Britannique',
+    en: 'Waterloo · Liberal Caucus · Ontario',
+    zh: '滑铁卢选区 · 自由党党团 · 安大略省',
+    fr: 'Waterloo · Caucus libéral · Ontario',
   },
   mpCredit: {
-    en: 'Sponsor of e‑petition e‑7259 (Citizenship and Immigration)',
-    zh: '赞助人 - 电子请愿 e‑7259 (公民与移民部/IRCC)',
-    fr: 'Parrain de la pétition électronique e‑7259 (Citoyenneté et Immigration) ',
+    en: 'Sponsor of e‑petition e‑7341 (Citizenship and Immigration)',
+    zh: '电子请愿 e‑7341 赞助人（公民与移民）',
+    fr: 'Marraine de la pétition électronique e‑7341 (Citoyenneté et Immigration)',
   },
   whyMatters: {
     en: 'Why this petition matters',
@@ -396,24 +396,24 @@ export const petitionBanner = {
     fr: 'Pourquoi cette pétition compte',
   },
   whereas1: {
-    en: 'Thousands of Permanent Residence (PR) applicants endure extreme security screening delays estimated at 65 months, vastly exceeding the official 110‑day service standard;',
-    zh: '数千名永久居民（PR）申请人承受极端的安全背景调查拖延，估计长达65个月，远超官方110天服务标准；',
-    fr: 'Des milliers de demandeurs de résidence permanente (RP) subissent des délais extrêmes d\'évaluation de sécurité estimés à 65 mois, dépassant largement la norme de service officielle de 110 jours ;',
+    en: 'Prolonged security screening for applicants residing in Canada may create avoidable public-safety risks by delaying identification and resolution of cases, including high-risk cases;',
+    zh: '在加拿大境内申请人的安全背景调查长期拖延，可能因延误案件（包括高风险案件）的识别与处置而带来可避免的公共安全风险；',
+    fr: 'Le prolongement du filtrage de sécurité des demandeurs résidant au Canada peut créer des risques évitables pour la sécurité publique en retardant l’identification et le traitement des dossiers, y compris les cas à haut risque ;',
   },
   whereas2: {
-    en: 'The security referral backlog continues to worsen, trapping over 23,000 PR applications as of November 2025;',
-    zh: '安全转介积压持续恶化，截至2025年11月超过23,000份PR申请被困；',
-    fr: 'L\'arriéré des renvois en sécurité continue de s\'aggraver, piégeant plus de 23 000 demandes de RP en novembre 2025 ;',
+    en: 'No single authority is held accountable for timeliness and service standards across the multi-agency screening process;',
+    zh: '在多机构参与的审查流程中，尚无单一责任主体对时效与服务标准承担明确问责；',
+    fr: 'Aucune autorité unique n’est tenue responsable du respect des délais et des normes de service dans ce processus multi-agences ;',
   },
   whereas3: {
-    en: 'These delays cause severe harm, including prolonged family separation, mental health crises, loss of legal status, and significant financial burdens;',
-    zh: '这些拖延造成严重伤害，包括长期家庭分离、心理健康危机、失去合法身份及重大经济负担；',
-    fr: 'Ces délais causent un préjudice grave : séparation familiale prolongée, crises de santé mentale, perte du statut légal et fardeaux financiers importants ;',
+    en: 'Significant and persistent backlogs suggest a structural mismatch between referral volumes and screening capacity;',
+    zh: '显著且持续的积压表明，转介量与审查能力之间存在结构性不匹配；',
+    fr: 'Des arriérés importants et persistants indiquent un décalage structurel entre le volume des renvois et la capacité de filtrage ;',
   },
   whereas4: {
-    en: 'Extreme processing times create a discriminatory two‑tier system where applicants from specific regions face indefinite, non‑transparent delays, and applicants lack meaningful recourse, transparent case information, or compensation when service standards are breached by 300–500%.',
-    zh: '极端审理时间造成歧视性的双轨制度：来自特定地区的申请人面临无限期、不透明的拖延，且缺乏有效救济、透明的案件信息或在服务标准被违反300–500%时的补偿。',
-    fr: 'Les délais de traitement extrêmes créent un système discriminatoire à deux vitesses : les demandeurs de certaines régions subissent des délais indéfinis et opaques, sans recours utile, sans information transparente ni indemnisation lorsque les normes de service sont dépassées de 300 à 500 %.',
+    en: 'High favourable outcomes suggest inefficient use of limited resources, with lower-risk cases receiving extensive review while higher-risk cases may not receive timely attention.',
+    zh: '较高的“有利结果”比例表明有限资源存在配置低效：低风险案件被过度审查，而高风险案件可能未能获得及时关注。',
+    fr: 'Le taux élevé de résultats favorables laisse croire à une utilisation inefficace des ressources limitées : des dossiers à faible risque font l’objet d’un examen étendu, tandis que des cas à haut risque pourraient ne pas recevoir une attention rapide.',
   },
   modalTitle: {
     en: 'How to sign the e‑petition (step‑by‑step)',
@@ -488,7 +488,7 @@ export const petitionBanner = {
     zh: '简要步骤：打开请愿链接，点击签名按钮 → 填写姓名、城市、省份、邮箱、身份 → 勾选同意并提交 → 到邮箱点击确认链接，签名才算成功 ✅',
     fr: 'En bref : Ouvrez le lien de la pétition → Cliquez sur Signer → Saisissez nom, ville, province, courriel, statut → Cochez la case et Soumettre → Cliquez sur le lien de confirmation dans le courriel pour valider ✅',
   },
-  officialPage: { en: 'the official e‑7259 page', zh: 'e‑7259 官方页面', fr: 'la page officielle e‑7259' },
+  officialPage: { en: 'the official e‑7341 page', zh: 'e‑7341 官方页面', fr: 'la page officielle e‑7341' },
 } as const;
 
 export type Lang = 'en' | 'zh' | 'fr';
