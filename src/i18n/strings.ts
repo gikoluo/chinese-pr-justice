@@ -13,7 +13,7 @@ export const nav = {
 } as const;
 
 export const announcement = {
-  event: { en: 'VAN501 — End Indefinite PR Delays — Friday, May 1, 2026 — Vancouver', zh: 'VAN501 — 终结PR无限期拖延 — 2026年5月1日（周五）— 温哥华', fr: 'VAN501 — Mettre fin aux délais indéfinis de RP — vendredi 1 mai 2026 — Vancouver' },
+  event: { en: 'Past event: VAN501 Vancouver action recap', zh: '过往活动：VAN501 温哥华行动回顾', fr: 'Événement passé : récapitulatif de l’action VAN501 à Vancouver' },
   petition: {
     en: 'Priority now: House of Commons e‑petition e‑7341 — sign now (e‑7259 is our prior win).',
     zh: '当前优先：国会下议院电子请愿 e‑7341 — 立即签署（e‑7259 为此前成果）。',
@@ -31,12 +31,12 @@ export const heroStats = {
 
 export const hero = {
   eventTitle: {
-    en: 'VAN501 — End Indefinite PR Delays',
-    zh: 'VAN501 — 终结PR无限期拖延',
-    fr: 'VAN501 — Mettre fin aux délais indéfinis de RP',
+    en: 'Campaign updates',
+    zh: '行动更新',
+    fr: 'Mises à jour de la campagne',
   },
-  eventDetails: { en: 'Friday, May 1, 2026 · 9:00 AM – 12:00 PM · Vancouver, BC', zh: '2026年5月1日 周五 · 上午9:00 – 中午12:00 · 温哥华，BC省', fr: 'Vendredi 1 mai 2026 · 9 h 00 – 12 h 00 · Vancouver, C.-B.' },
-  eventDetailsLink: { en: 'Event Details', zh: '活动详情', fr: 'Détails de l\'événement' },
+  eventDetails: { en: '9:00 AM – 12:00 PM · Vancouver, BC', zh: '上午9:00 – 中午12:00 · 温哥华，BC省', fr: '9 h 00 – 12 h 00 · Vancouver, C.-B.' },
+  eventDetailsLink: { en: 'Past event recap', zh: '过往活动回顾', fr: 'Bilan d’événement passé' },
   liveStream: { en: 'Watch Live on YouTube', zh: '在 YouTube 上观看直播', fr: 'Regarder en direct sur YouTube' },
   standingWithUs: { en: 'Standing with us', zh: '与我们站在一起', fr: 'À nos côtés' },
   senatorWooName: { en: 'Senator Yuen Pau Woo', zh: '参议员胡元豹', fr: 'Sénateur Yuen Pau Woo' },
@@ -328,12 +328,12 @@ export const eventPhotosSection = {
 } as const;
 
 export const eventPage = {
-  title: { en: 'VAN501 — Vancouver May 1 Action', zh: 'VAN501 — 温哥华 5·1 行动', fr: 'VAN501 — Action de Vancouver du 1er mai' },
+  title: { en: 'VAN501 — Vancouver Action Recap', zh: 'VAN501 — 温哥华行动回顾', fr: 'VAN501 — Bilan de l’action de Vancouver' },
   intro: { en: 'The same movement continues in Vancouver. Join us to demand real, timely action on PR security-screening delays.', zh: '同一场运动来到温哥华。加入我们，要求就PR安调拖延采取真正、及时的行动。', fr: 'Le même mouvement continue à Vancouver. Joignez-vous à nous pour exiger des actions réelles et rapides contre les retards de filtrage de sécurité des demandes de RP.' },
-  bannerTitle: { en: 'VAN501 — End Indefinite PR Delays', zh: 'VAN501 — 终结PR无限期拖延', fr: 'VAN501 — Mettre fin aux délais indéfinis de RP' },
+  bannerTitle: { en: 'Past Event: VAN501 — End Indefinite PR Delays', zh: '过往活动：VAN501 — 终结PR无限期拖延', fr: 'Événement passé : VAN501 — Mettre fin aux délais indéfinis de RP' },
   bannerTagline: { en: 'End Discriminatory Security Screening Delays', zh: '终结歧视性安全背景调查拖延', fr: 'Mettons fin aux délais discriminatoires de l\'évaluation de sécurité' },
   joinCampaign: { en: 'JOIN THE CAMPAIGN', zh: '加入行动', fr: 'REJOINDRE LA CAMPAGNE' },
-  quickInfoDate: { en: 'Friday, May 1, 2026', zh: '2026年5月1日 周五', fr: 'Vendredi 1 mai 2026' },
+  quickInfoDate: { en: 'Event concluded', zh: '活动已结束', fr: 'Événement terminé' },
   quickInfoTime: { en: '9:00 AM – 12:00 PM', zh: '上午9:00 – 中午12:00', fr: '9 h 00 – 12 h 00' },
   quickInfoPlace: { en: 'Vancouver Art Gallery → IRCC Vancouver Office', zh: '温哥华美术馆 → IRCC 温哥华办公室', fr: 'Vancouver Art Gallery → Bureau IRCC de Vancouver' },
   pressReleasePill: {
