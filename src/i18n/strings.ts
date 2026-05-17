@@ -7,7 +7,7 @@ export const nav = {
   declaration: { en: 'Declaration', zh: '宣言', fr: 'Déclaration' },
   demands: { en: 'Our Demands', zh: '我们的诉求', fr: 'Nos revendications' },
   stories: { en: 'Stories', zh: '故事', fr: 'Témoignages' },
-  event: { en: 'Event', zh: '活动', fr: 'Événement' },
+  event: { en: 'Events', zh: '活动', fr: 'Événements' },
   joinUs: { en: 'Join Us', zh: '加入我们', fr: 'Rejoignez-nous' },
   references: { en: 'References', zh: '参考文献', fr: 'Références' },
 } as const;
@@ -31,11 +31,11 @@ export const heroStats = {
 
 export const hero = {
   eventTitle: {
-    en: 'Campaign updates',
-    zh: '行动更新',
-    fr: 'Mises à jour de la campagne',
+    en: 'Ongoing Campaign',
+    zh: '持续进行的活动',
+    fr: 'Campagne en cours',
   },
-  eventDetails: { en: '9:00 AM – 12:00 PM · Vancouver, BC', zh: '上午9:00 – 中午12:00 · 温哥华，BC省', fr: '9 h 00 – 12 h 00 · Vancouver, C.-B.' },
+  eventDetails: { en: 'May 28, 2026 · 7:30 AM – 11:30 AM · Mississauga, ON', zh: '2026年5月28日 · 上午7:30 – 上午11:30 · 密西沙加，ON省', fr: '28 mai 2026 · 7 h 30 – 11 h 30 · Mississauga, Ont.' },
   eventDetailsLink: { en: 'Past event recap', zh: '过往活动回顾', fr: 'Bilan d’événement passé' },
   liveStream: { en: 'Watch Live on YouTube', zh: '在 YouTube 上观看直播', fr: 'Regarder en direct sur YouTube' },
   standingWithUs: { en: 'Standing with us', zh: '与我们站在一起', fr: 'À nos côtés' },
@@ -51,19 +51,29 @@ export const hero = {
     fr: 'Communiqué de la conférence de presse sur la Colline du Parlement',
   },
   pastEventLabel: {
-    en: 'Historical event',
-    zh: '历史行动',
+    en: 'Past event',
+    zh: '过往行动',
     fr: 'Événement passé',
   },
   pastEventTitle: {
-    en: '3.13 Ottawa Parliament Hill Rally',
-    zh: '3.13 渥太华国会山集会',
-    fr: 'Rassemblement du 13 mars à Ottawa',
+    en: '2026.3.13 Ottawa Parliament Hill Rally',
+    zh: '2026.3.13 渥太华国会山集会',
+    fr: '2026.3.13 Rassemblement sur la Colline du Parlement à Ottawa',
   },
   pastEventDetails: {
     en: 'Friday, March 13, 2026 · Parliament Hill · Ottawa',
     zh: '2026年3月13日 周五 · 国会山 · 渥太华',
     fr: 'Vendredi 13 mars 2026 · Colline du Parlement · Ottawa',
+  },
+  pastEventVancouverTitle: {
+    en: '2026.5.1 IRCC Vancouver Office Rally',
+    zh: '2026.5.1 IRCC 温哥华办公室集会',
+    fr: '2026.5.1 Rassemblement au bureau IRCC de Vancouver',
+  },
+  pastEventVancouverDetails: {
+    en: 'Friday, May 1, 2026 · Vancouver Art Gallery → IRCC Vancouver Office · Vancouver',
+    zh: '2026年5月1日 周五 · 温哥华美术馆 → IRCC 温哥华办公室 · 温哥华',
+    fr: 'Vendredi 1er mai 2026 · Vancouver Art Gallery → Bureau IRCC de Vancouver · Vancouver',
   },
   pastEventLink: {
     en: 'View recap',

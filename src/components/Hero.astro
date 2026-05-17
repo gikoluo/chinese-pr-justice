@@ -117,23 +117,11 @@ import { hero, heroStats } from '../i18n/strings';
                 <span class="lang-fr">{hero.eventTitle.fr}</span>
             </h2>
             <div class="hero-event-details">
-                <span class="lang-en">9:00 AM – 12:00 PM</span>
-                <span class="lang-zh">上午9:00 – 中午12:00</span>
-                <span class="lang-fr">9 h 00 – 12 h 00</span>
-                <span class="hero-event-dot" aria-hidden="true">·</span>
-                <span class="lang-en">Vancouver, BC</span>
-                <span class="lang-zh">温哥华，BC省</span>
-                <span class="lang-fr">Vancouver, C.-B.</span>
+                <span class="lang-en">{hero.eventDetails.en}</span>
+                <span class="lang-zh">{hero.eventDetails.zh}</span>
+                <span class="lang-fr">{hero.eventDetails.fr}</span>
             </div>
             <div class="hero-event-buttons">
-                <a href="/event" class="hero-event-link btn-flip">
-                    <span class="btn-text-block">
-                        <span class="btn-text-wrapper">
-                            <span class="hover-out-text"><span class="lang-en">{hero.eventDetailsLink.en}</span><span class="lang-zh">{hero.eventDetailsLink.zh}</span><span class="lang-fr">{hero.eventDetailsLink.fr}</span></span>
-                            <span class="hover-in-text"><span class="lang-en">{hero.eventDetailsLink.en}</span><span class="lang-zh">{hero.eventDetailsLink.zh}</span><span class="lang-fr">{hero.eventDetailsLink.fr}</span></span>
-                        </span>
-                    </span>
-                </a>
                 <a href="/press-release" class="hero-event-link btn-flip">
                     <span class="btn-text-block">
                         <span class="btn-text-wrapper">
@@ -153,9 +141,10 @@ import { hero, heroStats } from '../i18n/strings';
             </div>
             <div class="hero-past-event">
                 <span class="hero-past-event-label"><span class="lang-en">{hero.pastEventLabel.en}</span><span class="lang-zh">{hero.pastEventLabel.zh}</span><span class="lang-fr">{hero.pastEventLabel.fr}</span></span>
-                <div class="hero-past-event-title"><span class="lang-en">{hero.pastEventTitle.en}</span><span class="lang-zh">{hero.pastEventTitle.zh}</span><span class="lang-fr">{hero.pastEventTitle.fr}</span></div>
+                <a href="/events/OTT313-2026" class="hero-past-event-title"><span class="lang-en">{hero.pastEventTitle.en}</span><span class="lang-zh">{hero.pastEventTitle.zh}</span><span class="lang-fr">{hero.pastEventTitle.fr}</span></a>
                 <div class="hero-past-event-details"><span class="lang-en">{hero.pastEventDetails.en}</span><span class="lang-zh">{hero.pastEventDetails.zh}</span><span class="lang-fr">{hero.pastEventDetails.fr}</span></div>
-                <a href="/press-release" class="hero-past-event-link"><span class="lang-en">{hero.pastEventLink.en}</span><span class="lang-zh">{hero.pastEventLink.zh}</span><span class="lang-fr">{hero.pastEventLink.fr}</span></a>
+                <a href="/events/VAN501-2026" class="hero-past-event-title hero-past-event-title-secondary"><span class="lang-en">{hero.pastEventVancouverTitle.en}</span><span class="lang-zh">{hero.pastEventVancouverTitle.zh}</span><span class="lang-fr">{hero.pastEventVancouverTitle.fr}</span></a>
+                <div class="hero-past-event-details"><span class="lang-en">{hero.pastEventVancouverDetails.en}</span><span class="lang-zh">{hero.pastEventVancouverDetails.zh}</span><span class="lang-fr">{hero.pastEventVancouverDetails.fr}</span></div>
             </div>
             <div class="hero-standing-card">
                 <span class="hero-standing-label"><span class="lang-en">{hero.standingWithUs.en}</span><span class="lang-zh">{hero.standingWithUs.zh}</span><span class="lang-fr">{hero.standingWithUs.fr}</span></span>
@@ -444,10 +433,23 @@ import { hero, heroStats } from '../i18n/strings';
     }
 
     .hero-past-event-title {
+        display: block;
         margin-top: 0.2rem;
         font-size: 0.95rem;
         font-weight: 700;
         color: rgba(255, 255, 255, 0.92);
+        text-decoration: none;
+        transition: color 0.2s ease;
+    }
+
+    .hero-past-event-title:hover {
+        color: #ffffff;
+        text-decoration: underline;
+        text-underline-offset: 3px;
+    }
+
+    .hero-past-event-title-secondary {
+        margin-top: 0.55rem;
     }
 
     .hero-past-event-details {

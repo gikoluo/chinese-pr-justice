@@ -69,6 +69,16 @@ const march13Photos = [
             <span class="lang-fr">Votre navigateur ne prend pas en charge la lecture vidéo.</span>
           </video>
         </figure>
+        <figure class="photo-card photo-card-video photo-card-youtube">
+          <iframe
+            src="https://www.youtube.com/embed/XXHEqymbn1M"
+            title="Media coverage on YouTube"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </figure>
       </div>
     </div>
 
@@ -202,10 +212,17 @@ const march13Photos = [
     background: transparent;
   }
 
-  .photo-card-video video {
+  .photo-card-video video,
+  .photo-card-video iframe {
     width: 100%;
     height: 100%;
     display: block;
+    border: 0;
+  }
+
+  .photo-card-youtube iframe {
+    position: absolute;
+    inset: 0;
   }
 
   .media-section {

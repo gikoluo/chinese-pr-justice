@@ -1,0 +1,926 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import EventPhotos from "../../components/EventPhotos.astro";
+import { eventPage } from "../../i18n/strings";
+---
+
+<BaseLayout
+  title="Event - VAN501 Vancouver Action Recap | Justice for Chinese PR Applicants"
+>
+  <!-- Event Hero Section -->
+  <section class="event-hero">
+    <div class="event-hero-content">
+      <h1><span class="lang-en">{eventPage.title.en}</span><span class="lang-zh">{eventPage.title.zh}</span><span class="lang-fr">{eventPage.title.fr}</span></h1>
+      <p>
+        <span class="lang-en">{eventPage.intro.en}</span>
+        <span class="lang-zh">{eventPage.intro.zh}</span>
+        <span class="lang-fr">{eventPage.intro.fr}</span>
+      </p>
+    </div>
+  </section>
+
+  <!-- Event Section -->
+  <section id="event" class="event-section">
+    <div class="container">
+      <div class="event-banner">
+        <h3><span class="lang-en">{eventPage.bannerTitle.en}</span><span class="lang-zh">{eventPage.bannerTitle.zh}</span><span class="lang-fr">{eventPage.bannerTitle.fr}</span></h3>
+        <p class="event-tagline">
+          <span class="lang-en">{eventPage.bannerTagline.en}</span>
+          <span class="lang-zh">{eventPage.bannerTagline.zh}</span>
+          <span class="lang-fr">{eventPage.bannerTagline.fr}</span>
+        </p>
+      </div>
+
+      <div class="event-livestream">
+        <a
+          href="https://bc-pr-delay.lol/#event"
+          class="event-livestream-link"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span class="event-livestream-pill">
+            <span class="event-livestream-dot" aria-hidden="true"></span>
+            <span class="lang-en">View VAN501 recap and registration archive</span>
+            <span class="lang-zh">查看 VAN501 回顾与报名存档</span>
+            <span class="lang-fr">Voir le bilan VAN501 et l’archive d’inscription</span>
+          </span>
+        </a>
+        <a href="/press-release" class="event-livestream-link event-press-release-link">
+          <span class="event-livestream-pill">
+            <span class="event-livestream-dot event-livestream-dot-muted" aria-hidden="true"></span>
+            <span class="lang-en">{eventPage.pressReleasePill.en}</span>
+            <span class="lang-zh">{eventPage.pressReleasePill.zh}</span>
+            <span class="lang-fr">{eventPage.pressReleasePill.fr}</span>
+          </span>
+        </a>
+        <a
+          href="/events/Group%20Calls%20for%20Transparency%20and%20Timely%20Immigration%20Processing.pdf"
+          class="event-livestream-link event-press-release-link"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span class="event-livestream-pill event-livestream-pill-pdf">
+            <span class="event-livestream-dot event-livestream-dot-muted" aria-hidden="true"></span>
+            <span class="lang-en">Download full press release (PDF)</span>
+            <span class="lang-zh">下载完整通稿 PDF</span>
+            <span class="lang-fr">Télécharger le communiqué complet (PDF)</span>
+          </span>
+        </a>
+      </div>
+
+      <div class="glance-card van501-alert">
+        <h4>📌 Tentative — Schedule & locations subject to change</h4>
+        <p>
+          Follow our social media for updates as attendance numbers are confirmed.
+        </p>
+      </div>
+
+      <div class="glance-card van501-alert">
+        <h4>⚠️ Registration Notice for IRCC Building</h4>
+        <p>
+          To manage capacity, activities at the IRCC Vancouver office (1148 Hornby St)
+          require prior registration. The Vancouver Art Gallery phase (9:00–11:00) is open
+          to all — registration is welcome but not required. Please use the signup form or
+          email us to confirm your spot for the IRCC building phase.
+        </p>
+      </div>
+
+      <div class="event-quick-info">
+        <div class="quick-info-item">
+          <span class="quick-info-icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              ><rect x="3" y="4" width="18" height="18" rx="2" ry="2"
+              ></rect><line x1="16" y1="2" x2="16" y2="6"></line><line
+                x1="8"
+                y1="2"
+                x2="8"
+                y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg
+            >
+          </span>
+          <span class="quick-info-text"><span class="lang-en">{eventPage.quickInfoDate.en}</span><span class="lang-zh">{eventPage.quickInfoDate.zh}</span><span class="lang-fr">{eventPage.quickInfoDate.fr}</span></span>
+        </div>
+        <div class="quick-info-divider"></div>
+        <div class="quick-info-item">
+          <span class="quick-info-icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              ><circle cx="12" cy="12" r="10"></circle><polyline
+                points="12 6 12 12 16 14"></polyline></svg
+            >
+          </span>
+          <span class="quick-info-text"><span class="lang-en">{eventPage.quickInfoTime.en}</span><span class="lang-zh">{eventPage.quickInfoTime.zh}</span><span class="lang-fr">{eventPage.quickInfoTime.fr}</span></span>
+        </div>
+        <div class="quick-info-divider"></div>
+        <div class="quick-info-item">
+          <span class="quick-info-icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              ><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"
+              ></path><circle cx="12" cy="10" r="3"></circle></svg
+            >
+          </span>
+          <span class="quick-info-text"><span class="lang-en">{eventPage.quickInfoPlace.en}</span><span class="lang-zh">{eventPage.quickInfoPlace.zh}</span><span class="lang-fr">{eventPage.quickInfoPlace.fr}</span></span>
+        </div>
+      </div>
+
+      <div class="glance-card">
+        <h4><span class="lang-en">{eventPage.whatToBringTitle.en}</span><span class="lang-zh">{eventPage.whatToBringTitle.zh}</span><span class="lang-fr">{eventPage.whatToBringTitle.fr}</span></h4>
+        <ul>
+          <li><span class="lang-en">{eventPage.whatToBring1.en}</span><span class="lang-zh">{eventPage.whatToBring1.zh}</span><span class="lang-fr">{eventPage.whatToBring1.fr}</span></li>
+          <li><span class="lang-en">{eventPage.whatToBring2.en}</span><span class="lang-zh">{eventPage.whatToBring2.zh}</span><span class="lang-fr">{eventPage.whatToBring2.fr}</span></li>
+          <li><span class="lang-en">{eventPage.whatToBring3.en}</span><span class="lang-zh">{eventPage.whatToBring3.zh}</span><span class="lang-fr">{eventPage.whatToBring3.fr}</span></li>
+          <li><span class="lang-en">{eventPage.whatToBring4.en}</span><span class="lang-zh">{eventPage.whatToBring4.zh}</span><span class="lang-fr">{eventPage.whatToBring4.fr}</span></li>
+          <li><span class="lang-en">{eventPage.whatToBring5.en}</span><span class="lang-zh">{eventPage.whatToBring5.zh}</span><span class="lang-fr">{eventPage.whatToBring5.fr}</span></li>
+          <li><span class="lang-en">{eventPage.whatToBring6.en}</span><span class="lang-zh">{eventPage.whatToBring6.zh}</span><span class="lang-fr">{eventPage.whatToBring6.fr}</span></li>
+          <li><span class="lang-en">{eventPage.whatToBring7.en}</span><span class="lang-zh">{eventPage.whatToBring7.zh}</span><span class="lang-fr">{eventPage.whatToBring7.fr}</span></li>
+        </ul>
+      </div>
+
+      <div class="glance-card">
+        <h4><span class="lang-en">{eventPage.guidelinesTitle.en}</span><span class="lang-zh">{eventPage.guidelinesTitle.zh}</span><span class="lang-fr">{eventPage.guidelinesTitle.fr}</span></h4>
+        <ul>
+          <li><span class="lang-en">{eventPage.guidelines1.en}</span><span class="lang-zh">{eventPage.guidelines1.zh}</span><span class="lang-fr">{eventPage.guidelines1.fr}</span></li>
+          <li><span class="lang-en">{eventPage.guidelines2.en}</span><span class="lang-zh">{eventPage.guidelines2.zh}</span><span class="lang-fr">{eventPage.guidelines2.fr}</span></li>
+          <li><span class="lang-en">{eventPage.guidelines3.en}</span><span class="lang-zh">{eventPage.guidelines3.zh}</span><span class="lang-fr">{eventPage.guidelines3.fr}</span></li>
+          <li><span class="lang-en">{eventPage.guidelines4.en}</span><span class="lang-zh">{eventPage.guidelines4.zh}</span><span class="lang-fr">{eventPage.guidelines4.fr}</span></li>
+          <li><span class="lang-en">{eventPage.guidelines5.en}</span><span class="lang-zh">{eventPage.guidelines5.zh}</span><span class="lang-fr">{eventPage.guidelines5.fr}</span></li>
+          <li><span class="lang-en">{eventPage.guidelines6.en}</span><span class="lang-zh">{eventPage.guidelines6.zh}</span><span class="lang-fr">{eventPage.guidelines6.fr}</span></li>
+          <li><span class="lang-en">{eventPage.guidelines7.en}</span><span class="lang-zh">{eventPage.guidelines7.zh}</span><span class="lang-fr">{eventPage.guidelines7.fr}</span></li>
+        </ul>
+      </div>
+
+      <!-- Schedule (visible table follows global lang: data-lang on <html>) -->
+      <div class="schedule-content glance-card" id="schedule-en">
+        <table class="schedule-table">
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>Activity</th>
+              <th>Details</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Phase 1</td>
+              <td>Vancouver Art Gallery</td>
+              <td>9:00 AM – 11:00 AM · 750 Hornby St</td>
+            </tr>
+            <tr>
+              <td>8:45</td>
+              <td>Setup</td>
+              <td>Core team arrives early to set up</td>
+            </tr>
+            <tr>
+              <td>9:00</td>
+              <td>Gather</td>
+              <td>Distribute materials and info cards</td>
+            </tr>
+            <tr>
+              <td>9:15</td>
+              <td>Opening</td>
+              <td>Opening remarks and lead chants</td>
+            </tr>
+            <tr>
+              <td>9:15–10:45</td>
+              <td>Speakers & Chants</td>
+              <td>Live social media coverage</td>
+            </tr>
+            <tr>
+              <td>10:50</td>
+              <td>March Assembly</td>
+              <td>Assemble for march departure</td>
+            </tr>
+            <tr>
+              <td>11:00</td>
+              <td>🚶 March Departs</td>
+              <td>From Art Gallery → IRCC (~10 min walk)</td>
+            </tr>
+            <tr class="highlight-row">
+              <td>Phase 2</td>
+              <td>IRCC Vancouver Office</td>
+              <td>11:00 AM – 12:00 PM · 1148 Hornby St · ⚠️ Registration required</td>
+            </tr>
+            <tr>
+              <td>11:10</td>
+              <td>Arrival & Chants</td>
+              <td>Arrive at 1148 Hornby and continue chants</td>
+            </tr>
+            <tr>
+              <td>11:45</td>
+              <td>Closing Remarks</td>
+              <td>Closing remarks and next steps</td>
+            </tr>
+            <tr>
+              <td>12:00</td>
+              <td>Dispersal</td>
+              <td>Orderly dispersal</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Chinese Schedule -->
+      <div class="schedule-content glance-card" id="schedule-zh">
+        <table class="schedule-table">
+          <thead>
+            <tr>
+              <th>时间</th>
+              <th>主要活动</th>
+              <th>详情</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>第一阶段</td>
+              <td>温哥华美术馆</td>
+              <td>9:00 AM – 11:00 AM · 750 Hornby St</td>
+            </tr>
+            <tr>
+              <td>8:45</td>
+              <td>提前布置</td>
+              <td>核心团队提前到场完成布置</td>
+            </tr>
+            <tr>
+              <td>9:00</td>
+              <td>集合</td>
+              <td>发放物料和信息卡</td>
+            </tr>
+            <tr>
+              <td>9:15</td>
+              <td>开场发言</td>
+              <td>开场讲话并领喊口号</td>
+            </tr>
+            <tr>
+              <td>9:15–10:45</td>
+              <td>发言与口号</td>
+              <td>现场发言与口号，社交媒体直播同步</td>
+            </tr>
+            <tr>
+              <td>10:50</td>
+              <td>整队出发</td>
+              <td>集合准备步行出发</td>
+            </tr>
+            <tr>
+              <td>11:00</td>
+              <td>🚶 游行开始</td>
+              <td>从美术馆步行至 IRCC（约 10 分钟）</td>
+            </tr>
+            <tr class="highlight-row">
+              <td>第二阶段</td>
+              <td>IRCC 温哥华办公室</td>
+              <td>11:00 AM – 12:00 PM · 1148 Hornby St · ⚠️ 需提前报名</td>
+            </tr>
+            <tr>
+              <td>11:10</td>
+              <td>抵达与口号</td>
+              <td>抵达 1148 Hornby 并继续口号行动</td>
+            </tr>
+            <tr>
+              <td>11:45</td>
+              <td>结束发言</td>
+              <td>总结发言并说明后续行动</td>
+            </tr>
+            <tr>
+              <td>12:00</td>
+              <td>有序散场</td>
+              <td>活动有序结束</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- French Schedule -->
+      <div class="schedule-content glance-card" id="schedule-fr">
+        <table class="schedule-table">
+          <thead>
+            <tr>
+              <th>Heure</th>
+              <th>Activité</th>
+              <th>Détails</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Phase 1</td>
+              <td>Vancouver Art Gallery</td>
+              <td>9 h 00 – 11 h 00 · 750 Hornby St</td>
+            </tr>
+            <tr>
+              <td>8 h 45</td>
+              <td>Préparation</td>
+              <td>L’équipe principale arrive tôt pour l’installation</td>
+            </tr>
+            <tr>
+              <td>9 h 00</td>
+              <td>Rassemblement</td>
+              <td>Distribution du matériel et des fiches d’information</td>
+            </tr>
+            <tr>
+              <td>9 h 15</td>
+              <td>Ouverture</td>
+              <td>Discours d’ouverture et slogans menés par l’équipe</td>
+            </tr>
+            <tr>
+              <td>9 h 15 – 10 h 45</td>
+              <td>Interventions & slogans</td>
+              <td>Couverture en direct sur les réseaux sociaux</td>
+            </tr>
+            <tr>
+              <td>10 h 50</td>
+              <td>Préparation de la marche</td>
+              <td>Rassemblement avant le départ</td>
+            </tr>
+            <tr>
+              <td>11 h 00</td>
+              <td>🚶 Départ de la marche</td>
+              <td>De la galerie vers IRCC (~10 minutes à pied)</td>
+            </tr>
+            <tr class="highlight-row">
+              <td>Phase 2</td>
+              <td>Bureau IRCC Vancouver</td>
+              <td>11 h 00 – 12 h 00 · 1148 Hornby St · ⚠️ Inscription requise</td>
+            </tr>
+            <tr>
+              <td>11 h 10</td>
+              <td>Arrivée & slogans</td>
+              <td>Arrivée au 1148 Hornby, slogans sur place</td>
+            </tr>
+            <tr>
+              <td>11 h 45</td>
+              <td>Clôture</td>
+              <td>Remarques finales et prochaines étapes</td>
+            </tr>
+            <tr>
+              <td>12 h 00</td>
+              <td>Dispersion</td>
+              <td>Dispersion ordonnée</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="event-cta-box">
+        <h3><span class="lang-en">{eventPage.ctaTitle.en}</span><span class="lang-zh">{eventPage.ctaTitle.zh}</span><span class="lang-fr">{eventPage.ctaTitle.fr}</span></h3>
+        <p><span class="lang-en">{eventPage.ctaText.en}</span><span class="lang-zh">{eventPage.ctaText.zh}</span><span class="lang-fr">{eventPage.ctaText.fr}</span></p>
+        <div class="event-cta-buttons">
+          <a href="/join" class="btn-cta btn-flip">
+            <span class="btn-text-block">
+              <span class="btn-text-wrapper">
+                <span class="hover-out-text"><span class="lang-en">{eventPage.joinCampaign.en}</span><span class="lang-zh">{eventPage.joinCampaign.zh}</span><span class="lang-fr">{eventPage.joinCampaign.fr}</span></span>
+                <span class="hover-in-text"><span class="lang-en">{eventPage.joinCampaign.en}</span><span class="lang-zh">{eventPage.joinCampaign.zh}</span><span class="lang-fr">{eventPage.joinCampaign.fr}</span></span>
+              </span>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <EventPhotos />
+</BaseLayout>
+
+<style>
+  /* Event Hero Section */
+  .event-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                url('/images/hero-event-march-for-pr.jpg') center/cover no-repeat;
+    padding: 6rem 1.5rem;
+    text-align: center;
+    color: white;
+  }
+
+  .event-hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .event-hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  .event-hero p {
+    font-size: 1.25rem;
+    opacity: 0.95;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  }
+
+  @media (max-width: 768px) {
+    .event-hero {
+      padding: 4rem 1rem;
+    }
+
+    .event-hero h1 {
+      font-size: 1.75rem;
+    }
+
+    .event-hero p {
+      font-size: 1rem;
+    }
+  }
+
+  /* Event Section */
+  .event-section {
+    background: white;
+  }
+
+  .event-livestream {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .event-livestream-link {
+    text-decoration: none;
+  }
+
+  .event-livestream-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0.9rem;
+    border-radius: 999px;
+    background: #fbbf24;
+    color: #111827;
+    font-size: 0.9rem;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+  }
+
+  .event-livestream-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 999px;
+    background: #ef4444;
+    box-shadow: 0 0 0 6px rgba(239, 68, 68, 0.35);
+  }
+
+  .event-press-release-link .event-livestream-pill {
+    margin-top: 0.5rem;
+    background: #e5e7eb;
+    color: #111827;
+    box-shadow: none;
+  }
+
+  .event-livestream-pill-pdf {
+    background: #ffffff;
+    border: 1px solid #d1d5db;
+  }
+
+  .event-livestream-dot-muted {
+    background: #9ca3af;
+    box-shadow: none;
+  }
+
+  /* Event Quick Info Bar */
+  .event-quick-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    padding: 1.5rem 0;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .quick-info-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0 1.5rem;
+  }
+
+  .quick-info-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1.5px solid rgba(240, 39, 39, 0.5);
+    color: var(--red);
+    flex-shrink: 0;
+  }
+
+  .quick-info-icon svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .quick-info-text {
+    color: var(--text-dark);
+    font-size: 0.9375rem;
+    font-weight: 500;
+  }
+
+  .quick-info-divider {
+    width: 1px;
+    height: 24px;
+    background: #e5e7eb;
+  }
+
+  /* Glance Cards */
+  .glance-card {
+    background-color: rgba(240, 39, 39, 0.05);
+    border: 1px solid rgba(240, 39, 39, 0.5);
+    padding: 20px 60px 40px 40px;
+    margin-bottom: 1.5rem;
+  }
+
+  .glance-card h4 {
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+    color: var(--text-dark);
+  }
+
+  .glance-card ul {
+    list-style: disc;
+    padding-left: 1.25rem;
+    color: var(--text-light);
+    font-size: 1.1rem;
+    line-height: 1.7;
+  }
+
+  .glance-card li {
+    margin-bottom: 0.375rem;
+  }
+
+  .glance-card li:last-child {
+    margin-bottom: 0;
+  }
+
+  /* Schedule: show only the table for current global lang (data-lang on <html>) */
+  #schedule-zh,
+  #schedule-fr {
+    display: none !important;
+  }
+  :global(html[data-lang="zh"]) #schedule-en,
+  :global(html[data-lang="zh"]) #schedule-fr {
+    display: none !important;
+  }
+  :global(html[data-lang="zh"]) #schedule-zh {
+    display: block !important;
+  }
+  :global(html[data-lang="fr"]) #schedule-en,
+  :global(html[data-lang="fr"]) #schedule-zh {
+    display: none !important;
+  }
+  :global(html[data-lang="fr"]) #schedule-fr {
+    display: block !important;
+  }
+
+  /* Schedule Table */
+  .schedule-content {
+    overflow-x: auto;
+  }
+
+  .schedule-content.glance-card {
+    padding: 20px;
+  }
+
+  .schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9375rem;
+  }
+
+  .schedule-table th,
+  .schedule-table td {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid rgba(240, 39, 39, 0.2);
+    vertical-align: top;
+  }
+
+  .schedule-table th {
+    font-weight: 600;
+    color: var(--text-dark);
+    background: rgba(240, 39, 39, 0.08);
+  }
+
+  .schedule-table td:first-child {
+    white-space: nowrap;
+    font-weight: 500;
+    min-width: 100px;
+  }
+
+  .schedule-table td:nth-child(2) {
+    font-weight: 500;
+    min-width: 140px;
+  }
+
+  .schedule-table ul {
+    margin: 0;
+    padding-left: 1.25rem;
+    list-style: disc;
+  }
+
+  .schedule-table li {
+    margin-bottom: 0.25rem;
+  }
+
+  .schedule-table li:last-child {
+    margin-bottom: 0;
+  }
+
+  /* Override glance-card ul styling for schedule table - ensure consistent font */
+  .schedule-content.glance-card ul {
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    color: inherit;
+  }
+
+  .highlight-row {
+    background: rgba(240, 39, 39, 0.08);
+  }
+
+  .media-note {
+    display: inline-block;
+    font-size: 0.75rem;
+    color: var(--red);
+    font-weight: 500;
+    margin-top: 0.25rem;
+  }
+
+  .event-details-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .event-banner {
+    background: white;
+    color: var(--text-dark);
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .event-banner h3 {
+    font-size: 1.75rem;
+    margin-bottom: 0.375rem;
+    color: var(--primary-color);
+  }
+
+  .event-tagline {
+    font-size: 1.125rem;
+    color: var(--text-light);
+  }
+
+  .event-info {
+    background: var(--bg-light);
+    padding: 1.5rem;
+    border-radius: 8px;
+  }
+
+  .event-info-item {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .event-info-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .info-icon {
+    font-size: 1.75rem;
+  }
+
+  .event-info-item strong {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 0.375rem;
+    color: var(--text-dark);
+  }
+
+  .event-info-item p {
+    color: var(--text-light);
+    margin-bottom: 0.25rem;
+    font-size: 0.9375rem;
+  }
+
+  .info-note {
+    font-size: 0.875rem;
+    font-style: italic;
+  }
+
+  .event-info-item ul {
+    list-style-position: inside;
+    color: var(--text-light);
+    font-size: 0.9375rem;
+  }
+
+  .event-agenda {
+    margin-top: 1.5rem;
+  }
+
+  .event-agenda h4 {
+    font-size: 1.375rem;
+    margin-bottom: 1rem;
+  }
+
+  .agenda-item {
+    display: flex;
+    gap: 1.25rem;
+    margin-bottom: 1rem;
+    padding: 0.75rem;
+    background: var(--bg-light);
+    border-radius: 6px;
+  }
+
+  .agenda-time {
+    font-weight: 700;
+    color: var(--accent-color);
+    min-width: 75px;
+    font-size: 0.9375rem;
+  }
+
+  .agenda-content strong {
+    display: block;
+    margin-bottom: 0.25rem;
+    font-size: 0.9375rem;
+  }
+
+  .agenda-content p {
+    color: var(--text-light);
+    font-size: 0.875rem;
+  }
+
+  .event-card {
+    background: var(--bg-light);
+    padding: 1.25rem;
+    border-radius: 8px;
+    margin-bottom: 1.25rem;
+    border-top: 3px solid var(--primary-color);
+  }
+
+  .event-card h4 {
+    font-size: 1.125rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .event-card ul {
+    list-style-position: inside;
+    color: var(--text-light);
+    font-size: 0.9375rem;
+  }
+
+  .event-card li {
+    margin-bottom: 0.375rem;
+  }
+
+  .event-card .btn {
+    margin-top: 0.75rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  .event-cta-box {
+    background: var(--bg-light);
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+  }
+
+  .event-cta-box h3 {
+    font-size: 1.75rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .event-cta-box p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .event-cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  /* CTA Button with Flip Animation */
+  .btn-cta {
+    background: rgb(229, 25, 55);
+    color: #ffffff;
+    padding: 0.875rem 1.5rem;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: background 0.2s;
+  }
+
+  .btn-cta:hover {
+    background: rgb(200, 20, 45);
+  }
+
+  /* Flip animation */
+  .btn-flip {
+    display: inline-block;
+    text-decoration: none;
+  }
+
+  .btn-text-block {
+    display: block;
+    overflow: hidden;
+    height: 1.25em;
+  }
+
+  .btn-text-wrapper {
+    display: block;
+    transition: transform 0.3s ease;
+  }
+
+  .hover-out-text,
+  .hover-in-text {
+    display: block;
+    height: 1.25em;
+    line-height: 1.25;
+  }
+
+  .btn-flip:hover .btn-text-wrapper {
+    transform: translateY(-50%);
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .event-quick-info {
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .quick-info-divider {
+      display: none;
+    }
+
+    .quick-info-item {
+      padding: 0;
+    }
+
+    .glance-card {
+      padding: 20px 20px 30px 20px;
+    }
+
+    .event-details-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .event-cta-buttons {
+      flex-direction: column;
+    }
+
+    /* Schedule responsive */
+    .schedule-table {
+      font-size: 0.8125rem;
+    }
+
+    .schedule-table th,
+    .schedule-table td {
+      padding: 0.5rem 0.5rem;
+    }
+
+    .schedule-table td:first-child {
+      min-width: 70px;
+    }
+
+    .schedule-table td:nth-child(2) {
+      min-width: 80px;
+    }
+
+    .schedule-content.glance-card {
+      padding: 10px;
+    }
+  }
+</style>

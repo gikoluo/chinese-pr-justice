@@ -23,7 +23,8 @@ This is an advocacy website for Chinese Permanent Residence applicants in Canada
 chinese-pr-justice/
 ├── src/
 │   ├── components/           # Reusable UI components
-│   │   ├── Navbar.astro      # Navigation bar + announcement bar
+│   │   ├── Navbar.astro      # Navigation bar
+│   │   ├── AnnouncementBar.astro # Optional announcement bar
 │   │   ├── Footer.astro      # Site footer
 │   │   ├── Hero.astro        # Main hero section (slogan + demands)
 │   │   └── Hero2.astro       # Secondary hero (background image)
@@ -31,8 +32,14 @@ chinese-pr-justice/
 │   │   └── BaseLayout.astro  # HTML wrapper, meta tags, fonts
 │   ├── pages/                # Each file = one route
 │   │   ├── index.astro       # Home page (/)
-│   │   ├── event.astro       # Event details (/event)
+│   │   ├── events/           # Event detail pages (/events/*)
+│   │   │   ├── OTT313-2026.astro
+│   │   │   ├── VAN501-2026.astro
+│   │   │   └── TOR528-2026.astro
 │   │   └── join.astro        # Join/volunteer (/join)
+│   ├── archive/              # Historical code not rendered by the live site
+│   ├── config/
+│   │   └── announcement.ts   # Announcement bar visibility + links
 │   └── styles/
 │       └── global.css        # CSS variables, shared styles
 ├── static/
@@ -50,14 +57,17 @@ chinese-pr-justice/
 
 Each `.astro` file in `pages/` becomes a route:
 - `index.astro` → `/` (home page with Declaration, Demands, Stories sections)
-- `event.astro` → `/event` (procession details, schedule, photos)
+- `events/OTT313-2026.astro` → `/events/OTT313-2026`
+- `events/VAN501-2026.astro` → `/events/VAN501-2026`
+- `events/TOR528-2026.astro` → `/events/TOR528-2026`
 - `join.astro` → `/join` (volunteer form, contact info)
 
 ### Components (`src/components/`)
 
 | Component | Description |
 |-----------|-------------|
-| `Navbar.astro` | Sticky navigation + red announcement bar at top |
+| `Navbar.astro` | Sticky navigation |
+| `AnnouncementBar.astro` | Optional red announcement bar rendered above navigation |
 | `Footer.astro` | Four-column footer with links and contact info |
 | `Hero.astro` | Main hero with slogan in 3 languages, event info, demands list |
 | `Hero2.astro` | Image background hero with quote and CTA buttons |
@@ -98,6 +108,10 @@ Example:
 ```html
 <img src="/images/hero2-bg-feb-9.jpg" alt="..." />
 ```
+
+### Archive (`src/archive/`)
+
+`src/archive/` stores historical sections that are intentionally not rendered on the live frontend. Use it when a feature or campaign section has ended but its code should remain available for future maintainers to understand prior site behavior.
 
 ## Common Tasks
 
@@ -167,6 +181,10 @@ import YourComponent from '../components/YourComponent.astro';
 1. Add image to `static/images/`
 2. Reference as `/images/your-image.jpg` in HTML/Astro
 
+### Announcement Bar
+
+The top announcement bar is controlled by `src/config/announcement.ts`. Set `enabled: true` to show it or `enabled: false` to hide it. Update its links, badge, and displayed items in that config; update multilingual announcement copy in `src/i18n/strings.ts`.
+
 ## Development Commands
 
 ```bash
@@ -207,8 +225,8 @@ npm run deploy
 The procession is scheduled for **March 13, 2026** at Parliament Hill, Ottawa.
 Key dates/info are in:
 - `Hero.astro` - hero section event line
-- `event.astro` - full event details
-- `Navbar.astro` - announcement bar
+- `src/pages/events/` - event-specific detail pages
+- `src/config/announcement.ts` and `AnnouncementBar.astro` - optional announcement bar
 
 ## Related Documentation
 
