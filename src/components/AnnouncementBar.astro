@@ -1,0 +1,136 @@
+---
+import { announcement } from '../i18n/strings';
+import { announcementConfig } from '../config/announcement';
+
+const { items } = announcementConfig;
+---
+
+<div class="announcement-bar" id="announcement-bar">
+    <div class="announcement-inner">
+        {items.map((item) => {
+            const text = announcement[item.textKey];
+            const rel = item.external ? 'noopener noreferrer' : undefined;
+            const target = item.external ? '_blank' : undefined;
+
+            return (
+                <a
+                    href={item.href}
+                    target={target}
+                    rel={rel}
+                    class:list={[
+                        'announcement-content',
+                        item.variant === 'petition' ? 'announcement-petition' : 'announcement-event',
+                    ]}
+                >
+                    {'badge' in item && item.badge && <span class="announcement-pill">{item.badge}</span>}
+                    <span class="lang-en">{text.en}</span>
+                    <span class="lang-zh">{text.zh}</span>
+                    <span class="lang-fr">{text.fr}</span>
+                </a>
+            );
+        })}
+    </div>
+    <button class="announcement-close" aria-label="Close announcement">&times;</button>
+</div>
+
+<script>
+    const announcementBar = document.getElementById('announcement-bar');
+    const announcementClose = document.querySelector('.announcement-close');
+
+    function closeAnnouncement() {
+        if (announcementBar) {
+            announcementBar.classList.add('hidden');
+        }
+    }
+
+    if (announcementClose) {
+        announcementClose.addEventListener('click', closeAnnouncement);
+    }
+</script>
+
+<style>
+    .announcement-bar {
+        background: rgb(229, 25, 55);
+        min-height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        transition: transform 0.3s ease, opacity 0.3s ease, min-height 0.3s ease;
+    }
+
+    .announcement-bar.hidden {
+        transform: translateY(-100%);
+        opacity: 0;
+        min-height: 0;
+        height: 0;
+        overflow: hidden;
+    }
+
+    .announcement-inner {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+        padding: 0 2.5rem;
+        text-align: center;
+        flex-wrap: wrap;
+    }
+
+    .announcement-content {
+        color: #ffffff;
+        font-size: 0.86rem;
+        font-weight: 400;
+        text-decoration: none;
+        transition: opacity 0.2s;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+        white-space: nowrap;
+    }
+
+    .announcement-content:hover {
+        opacity: 0.9;
+    }
+
+    .announcement-petition {
+        padding: 0.15rem 0.6rem;
+        border-radius: 999px;
+        background: rgba(0, 0, 0, 0.18);
+        font-weight: 600;
+    }
+
+    .announcement-pill {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.1rem 0.45rem;
+        border-radius: 999px;
+        background: #ffffff;
+        color: rgb(229, 25, 55);
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+    }
+
+    .announcement-close {
+        position: absolute;
+        right: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: transparent;
+        border: none;
+        color: #ffffff;
+        font-size: 1.25rem;
+        line-height: 1;
+        cursor: pointer;
+        padding: 0 4px;
+        opacity: 0.8;
+        transition: opacity 0.2s;
+    }
+
+    .announcement-close:hover {
+        opacity: 1;
+    }
+</style>

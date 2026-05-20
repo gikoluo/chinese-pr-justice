@@ -1,27 +1,18 @@
 ---
 // Navbar component - shared across all pages (EN / 中文 / FR)
-import { nav, announcement } from '../i18n/strings';
+import AnnouncementBar from './AnnouncementBar.astro';
+import { announcementConfig } from '../config/announcement';
+import { nav } from '../i18n/strings';
 const currentPath = Astro.url.pathname;
-const petitionUrl =
-  'https://www.ourcommons.ca/petitions/en/Petition/Details?Petition=e-7341';
+const isEventsPath = currentPath.startsWith('/events/');
+const eventLinks = [
+    { href: '/events/OTT313-2026', label: 'OTT313' },
+    { href: '/events/VAN501-2026', label: 'VAN501' },
+    { href: '/events/TOR528-2026', label: 'TOR528' },
+];
 ---
 
-<div class="announcement-bar" id="announcement-bar">
-    <div class="announcement-inner">
-        <a href="/event" class="announcement-content announcement-event">
-            <span class="lang-en">{announcement.event.en}</span>
-            <span class="lang-zh">{announcement.event.zh}</span>
-            <span class="lang-fr">{announcement.event.fr}</span>
-        </a>
-        <a href={petitionUrl} target="_blank" rel="noopener noreferrer" class="announcement-content announcement-petition">
-            <span class="announcement-pill">e‑7341</span>
-            <span class="lang-en">{announcement.petition.en}</span>
-            <span class="lang-zh">{announcement.petition.zh}</span>
-            <span class="lang-fr">{announcement.petition.fr}</span>
-        </a>
-    </div>
-    <button class="announcement-close" aria-label="Close announcement">&times;</button>
-</div>
+{announcementConfig.enabled && <AnnouncementBar />}
 
 <nav class="navbar">
     <div class="container">
@@ -59,11 +50,21 @@ const petitionUrl =
                 <span class="lang-zh">{nav.stories.zh}</span>
                 <span class="lang-fr">{nav.stories.fr}</span>
             </a>
-            <a href="/event" class:list={[{ active: currentPath === '/event' || currentPath === '/event/' }]}>
-                <span class="lang-en">{nav.event.en}</span>
-                <span class="lang-zh">{nav.event.zh}</span>
-                <span class="lang-fr">{nav.event.fr}</span>
-            </a>
+            <div class="nav-dropdown">
+                <button type="button" class:list={['nav-dropdown-trigger', { active: isEventsPath }]} aria-haspopup="true">
+                    <span class="lang-en">{nav.event.en}</span>
+                    <span class="lang-zh">{nav.event.zh}</span>
+                    <span class="lang-fr">{nav.event.fr}</span>
+                    <span class="nav-dropdown-caret" aria-hidden="true">▾</span>
+                </button>
+                <div class="nav-dropdown-menu">
+                    {eventLinks.map((eventLink) => (
+                        <a href={eventLink.href} class:list={[{ active: currentPath === eventLink.href || currentPath === `${eventLink.href}/` }]}>
+                            {eventLink.label}
+                        </a>
+                    ))}
+                </div>
+            </div>
             <a href="/join" class:list={[{ active: currentPath === '/join' || currentPath === '/join/' }]}>
                 <span class="lang-en">{nav.joinUs.en}</span>
                 <span class="lang-zh">{nav.joinUs.zh}</span>
@@ -101,118 +102,9 @@ const petitionUrl =
         });
     }
 
-    // Announcement bar functionality
-    const announcementBar = document.getElementById('announcement-bar');
-    const announcementClose = document.querySelector('.announcement-close');
-
-    function closeAnnouncement() {
-        if (announcementBar) {
-            announcementBar.classList.add('hidden');
-        }
-    }
-
-    // Close on button click
-    if (announcementClose) {
-        announcementClose.addEventListener('click', closeAnnouncement);
-    }
-
-    // Close on scroll
-    //let hasScrolled = false;
-    //window.addEventListener('scroll', () => {
-    //    if (!hasScrolled && window.scrollY > 0) {
-    //        hasScrolled = true;
-    //        closeAnnouncement();
-    //    }
-    //}, { passive: true });
 </script>
 
 <style>
-    /* Announcement Bar */
-    .announcement-bar {
-        background: rgb(229, 25, 55);
-        min-height: 30px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-        transition: transform 0.3s ease, opacity 0.3s ease, min-height 0.3s ease;
-    }
-
-    .announcement-bar.hidden {
-        transform: translateY(-100%);
-        opacity: 0;
-        min-height: 0;
-        height: 0;
-        overflow: hidden;
-    }
-
-    .announcement-inner {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 1.5rem;
-        padding: 0 2.5rem;
-        text-align: center;
-        flex-wrap: wrap;
-    }
-
-    .announcement-content {
-        color: #ffffff;
-        font-size: 0.86rem;
-        font-weight: 400;
-        text-decoration: none;
-        transition: opacity 0.2s;
-        display: inline-flex;
-        align-items: center;
-        gap: 0.35rem;
-        white-space: nowrap;
-    }
-
-    .announcement-content:hover {
-        opacity: 0.9;
-    }
-
-    .announcement-petition {
-        padding: 0.15rem 0.6rem;
-        border-radius: 999px;
-        background: rgba(0, 0, 0, 0.18);
-        font-weight: 600;
-    }
-
-    .announcement-pill {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        padding: 0.1rem 0.45rem;
-        border-radius: 999px;
-        background: #ffffff;
-        color: rgb(229, 25, 55);
-        font-size: 0.72rem;
-        font-weight: 700;
-        letter-spacing: 0.03em;
-        text-transform: uppercase;
-    }
-
-    .announcement-close {
-        position: absolute;
-        right: 12px;
-        top: 50%;
-        transform: translateY(-50%);
-        background: transparent;
-        border: none;
-        color: #ffffff;
-        font-size: 1.25rem;
-        line-height: 1;
-        cursor: pointer;
-        padding: 0 4px;
-        opacity: 0.8;
-        transition: opacity 0.2s;
-    }
-
-    .announcement-close:hover {
-        opacity: 1;
-    }
-
     /* Navigation – hero theme: dark blue gradient, white text, red accent */
     .navbar {
         background: linear-gradient(145deg, var(--primary-color) 0%, var(--primary-dark) 100%);
@@ -253,10 +145,12 @@ const petitionUrl =
 
     .nav-menu {
         display: flex;
+        align-items: center;
         gap: 2rem;
     }
 
-    .nav-menu a {
+    .nav-menu a,
+    .nav-dropdown-trigger {
         color: rgba(255, 255, 255, 0.92);
         text-decoration: none;
         font-weight: 600;
@@ -265,15 +159,91 @@ const petitionUrl =
         transition: color 0.2s, text-shadow 0.2s;
     }
 
-    .nav-menu a:hover {
+    .nav-dropdown-trigger {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.25rem;
+        border: 0;
+        background: transparent;
+        font-family: inherit;
+        cursor: pointer;
+        padding: 0;
+    }
+
+    .nav-menu a:hover,
+    .nav-dropdown-trigger:hover {
         color: #fff;
         text-shadow: 0 0 0 1px rgba(255, 255, 255, 0.3);
         border-bottom: 2px solid var(--red);
         padding-bottom: 2px;
     }
 
-    .nav-menu a.active {
+    .nav-menu a.active,
+    .nav-dropdown-trigger.active {
         color: #fff;
+    }
+
+    .nav-dropdown {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+    }
+
+    .nav-dropdown::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: -0.75rem;
+        right: -0.75rem;
+        height: 0.9rem;
+    }
+
+    .nav-dropdown-caret {
+        font-size: 0.7rem;
+        line-height: 1;
+        opacity: 0.8;
+    }
+
+    .nav-dropdown-menu {
+        position: absolute;
+        top: calc(100% + 0.75rem);
+        left: 50%;
+        min-width: 9rem;
+        padding: 0.35rem;
+        border-radius: 8px;
+        background: #ffffff;
+        box-shadow: 0 12px 28px rgba(0, 0, 0, 0.22);
+        opacity: 0;
+        pointer-events: none;
+        transform: translate(-50%, -0.35rem);
+        transition: opacity 0.18s ease 0.18s, transform 0.18s ease 0.18s;
+        z-index: 1002;
+    }
+
+    .nav-dropdown:hover .nav-dropdown-menu,
+    .nav-dropdown:focus-within .nav-dropdown-menu {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translate(-50%, 0);
+        transition-delay: 0s;
+    }
+
+    .nav-dropdown-menu a {
+        display: block;
+        padding: 0.65rem 0.85rem;
+        border-radius: 6px;
+        color: var(--primary-dark);
+        font-size: 0.9rem;
+        white-space: nowrap;
+    }
+
+    .nav-dropdown-menu a:hover,
+    .nav-dropdown-menu a.active {
+        padding: 0.65rem 0.85rem;
+        border-bottom: 0;
+        color: var(--primary-dark);
+        background: rgba(229, 25, 55, 0.1);
+        text-shadow: none;
     }
 
     /* Language switcher */
@@ -401,22 +371,67 @@ const petitionUrl =
             display: flex;
         }
 
-        .nav-menu a {
+        .nav-menu a,
+        .nav-dropdown-trigger {
             padding: 0.5rem 0;
             border-bottom: 2px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .nav-dropdown {
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+        }
+
+        .nav-dropdown::after {
+            display: none;
+        }
+
+        .nav-dropdown-trigger {
+            justify-content: flex-start;
+        }
+
+        .nav-dropdown-menu {
+            position: static;
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+            min-width: 0;
+            padding: 0.25rem 0 0.25rem 1rem;
+            border-radius: 0;
+            background: transparent;
+            box-shadow: none;
+            opacity: 1;
+            pointer-events: auto;
+            transform: none;
+        }
+
+        .nav-dropdown-menu a {
+            color: rgba(255, 255, 255, 0.86);
+            padding: 0.4rem 0;
+            border-bottom: 0;
+        }
+
+        .nav-dropdown-menu a:hover,
+        .nav-dropdown-menu a.active {
+            color: #fff;
+            background: transparent;
+            padding: 0.4rem 0;
         }
 
         .nav-menu a:last-child {
             border-bottom: 2px solid transparent;
         }
 
-        .nav-menu a:hover {
+        .nav-menu a:hover,
+        .nav-dropdown-trigger:hover {
             color: #fff;
             border-bottom: 2px solid var(--red);
             padding: 0.5rem 0;
         }
 
-        .nav-menu a.active {
+        .nav-menu a.active,
+        .nav-dropdown-trigger.active {
             color: #fff;
         }
     }
