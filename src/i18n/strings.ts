@@ -31,9 +31,9 @@ export const heroStats = {
 
 export const hero = {
   eventTitle: {
-    en: 'Ongoing Campaign',
-    zh: '持续进行的活动',
-    fr: 'Campagne en cours',
+    en: 'Ongoing Campaign - Toronto 528',
+    zh: '持续进行的活动 - 多伦多 528',
+    fr: 'Campagne en cours - Toronto 528',
   },
   eventDetails: { en: 'May 28, 2026 · 7:30 AM – 11:30 AM · Mississauga, ON', zh: '2026年5月28日 · 上午7:30 – 上午11:30 · 密西沙加，ON省', fr: '28 mai 2026 · 7 h 30 – 11 h 30 · Mississauga, Ont.' },
   eventDetailsLink: { en: 'Past event recap', zh: '过往活动回顾', fr: 'Bilan d’événement passé' },
@@ -115,7 +115,7 @@ export const footer = {
   resources: { en: 'Resources', zh: '资源', fr: 'Ressources' },
   contact: { en: 'Contact', zh: '联系我们', fr: 'Contact' },
   standTogether: { en: 'We stand together for justice.', zh: '我们为公正团结一心。', fr: 'Nous sommes unis pour la justice.' },
-  copyright: { en: '© 2026 Justice for Chinese PR Applicants.', zh: '© 2026 华人PR申请人公正维权。', fr: '© 2026 Justice pour les demandeurs de RP chinois.' },
+  copyright: { en: 'Justice for Chinese PR Applicants.', zh: '华人PR申请人公正维权。', fr: 'Justice pour les demandeurs de RP chinois.' },
   footerNote: { en: 'We advocate for fair policy, not against any group or nation. We believe in Canada\'s values of equality and justice.', zh: '我们倡导公平政策，不针对任何群体或国家。我们认同加拿大平等与公正的价值观。', fr: 'Nous prônons des politiques équitables, sans nous opposer à aucun groupe ni pays. Nous croyons aux valeurs d\'égalité et de justice du Canada.' },
   ircc: { en: 'IRCC Website', zh: 'IRCC 官网', fr: 'Site IRCC' },
   processingTimes: { en: 'Processing Times', zh: '审理时间', fr: 'Délais de traitement' },

@@ -1,6 +1,5 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import EventPhotos from "../../components/EventPhotos.astro";
 import { eventPage } from "../../i18n/strings";
 ---
 
@@ -384,24 +383,30 @@ import { eventPage } from "../../i18n/strings";
         </table>
       </div>
 
-      <div class="event-cta-box">
-        <h3><span class="lang-en">{eventPage.ctaTitle.en}</span><span class="lang-zh">{eventPage.ctaTitle.zh}</span><span class="lang-fr">{eventPage.ctaTitle.fr}</span></h3>
-        <p><span class="lang-en">{eventPage.ctaText.en}</span><span class="lang-zh">{eventPage.ctaText.zh}</span><span class="lang-fr">{eventPage.ctaText.fr}</span></p>
-        <div class="event-cta-buttons">
-          <a href="/join" class="btn-cta btn-flip">
-            <span class="btn-text-block">
-              <span class="btn-text-wrapper">
-                <span class="hover-out-text"><span class="lang-en">{eventPage.joinCampaign.en}</span><span class="lang-zh">{eventPage.joinCampaign.zh}</span><span class="lang-fr">{eventPage.joinCampaign.fr}</span></span>
-                <span class="hover-in-text"><span class="lang-en">{eventPage.joinCampaign.en}</span><span class="lang-zh">{eventPage.joinCampaign.zh}</span><span class="lang-fr">{eventPage.joinCampaign.fr}</span></span>
-              </span>
-            </span>
+      <section class="event-archive-embed">
+        <div class="event-archive-header">
+          <h3>
+            <span class="lang-en">VAN501 branch site</span>
+            <span class="lang-zh">VAN501 分支网站</span>
+            <span class="lang-fr">Site satellite VAN501</span>
+          </h3>
+          <a href="https://bc-pr-delay.lol/" target="_blank" rel="noopener noreferrer">
+            <span class="lang-en">Open full site</span>
+            <span class="lang-zh">打开完整页面</span>
+            <span class="lang-fr">Ouvrir le site complet</span>
           </a>
         </div>
-      </div>
+        <div class="event-archive-frame-wrap">
+          <iframe
+            src="https://bc-pr-delay.lol/"
+            title="VAN501 external archive"
+            loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin"
+          ></iframe>
+        </div>
+      </section>
     </div>
   </section>
-
-  <EventPhotos />
 </BaseLayout>
 
 <style>
@@ -808,27 +813,53 @@ import { eventPage } from "../../i18n/strings";
     text-align: center;
   }
 
-  .event-cta-box {
-    background: var(--bg-light);
-    padding: 2rem;
+  .event-archive-embed {
+    margin-top: 2rem;
+    overflow: hidden;
     border-radius: 12px;
-    text-align: center;
+    background: #ffffff;
+    box-shadow: 0 12px 32px rgba(15, 31, 51, 0.16);
   }
 
-  .event-cta-box h3 {
-    font-size: 1.75rem;
-    margin-bottom: 0.75rem;
-  }
-
-  .event-cta-box p {
-    font-size: 1rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .event-cta-buttons {
+  .event-archive-header {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
     gap: 1rem;
-    justify-content: center;
+    padding: 1rem 1.25rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    color: #ffffff;
+  }
+
+  .event-archive-header h3 {
+    margin: 0;
+    color: #ffffff;
+    font-size: 1.35rem;
+  }
+
+  .event-archive-header a {
+    color: #ffffff;
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .event-archive-header a:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  .event-archive-frame-wrap {
+    height: 760px;
+    overflow: hidden;
+    background: #f8f9fa;
+  }
+
+  .event-archive-frame-wrap iframe {
+    display: block;
+    width: 100%;
+    height: 760px;
+    border: 0;
   }
 
   /* CTA Button with Flip Animation */
@@ -897,8 +928,17 @@ import { eventPage } from "../../i18n/strings";
       grid-template-columns: 1fr;
     }
 
-    .event-cta-buttons {
+    .event-archive-header {
+      align-items: flex-start;
       flex-direction: column;
+    }
+
+    .event-archive-frame-wrap {
+      height: 680px;
+    }
+
+    .event-archive-frame-wrap iframe {
+      height: 680px;
     }
 
     /* Schedule responsive */
