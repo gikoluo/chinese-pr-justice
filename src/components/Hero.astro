@@ -112,9 +112,11 @@ import { hero, heroStats } from '../i18n/strings';
         <!-- Dedicated line below: event title + timeline + Event Details link -->
         <div class="hero-event">
             <h2 class="hero-event-title">
-                <span class="lang-en">{hero.eventTitle.en}</span>
-                <span class="lang-zh">{hero.eventTitle.zh}</span>
-                <span class="lang-fr">{hero.eventTitle.fr}</span>
+                <a href="/events/TOR528-2026">
+                    <span class="lang-en">{hero.eventTitle.en}</span>
+                    <span class="lang-zh">{hero.eventTitle.zh}</span>
+                    <span class="lang-fr">{hero.eventTitle.fr}</span>
+                </a>
             </h2>
             <div class="hero-event-details">
                 <span class="lang-en">{hero.eventDetails.en}</span>
@@ -373,6 +375,17 @@ import { hero, heroStats } from '../i18n/strings';
         text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
         letter-spacing: 0.02em;
         text-align: center;
+    }
+
+    .hero-event-title a {
+        color: #ffffff;
+        text-decoration: none;
+    }
+
+    .hero-event-title a:hover {
+        color: #ffffff;
+        text-decoration: underline;
+        text-underline-offset: 4px;
     }
 
     .hero-event-details {
