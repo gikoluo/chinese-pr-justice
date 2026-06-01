@@ -31,9 +31,9 @@ export const heroStats = {
 
 export const hero = {
   eventTitle: {
-    en: 'Ongoing Campaign - Toronto 528',
-    zh: '持续进行的活动 - 多伦多 528',
-    fr: 'Campagne en cours - Toronto 528',
+    en: 'Latest Campaign - Toronto 528',
+    zh: '最新行动 - 多伦多 528',
+    fr: 'Dernière campagne - Toronto 528',
   },
   eventDetails: { en: 'May 28, 2026 · 7:30 AM – 11:30 AM · Mississauga, ON', zh: '2026年5月28日 · 上午7:30 – 上午11:30 · 密西沙加，ON省', fr: '28 mai 2026 · 7 h 30 – 11 h 30 · Mississauga, Ont.' },
   eventDetailsLink: { en: 'Past event recap', zh: '过往活动回顾', fr: 'Bilan d’événement passé' },
@@ -379,9 +379,7 @@ export const joinPage = {
   speakOut: { en: 'Speak Out', zh: '发声', fr: 'Parlez' },
   donateTitle: { en: 'Donate', zh: '捐款', fr: 'Faire un don' },
   donateMethod: { en: 'We accept e-Transfer (Canada only). Send to:', zh: '我们接受电子转账（仅限加拿大）。请发送至：', fr: 'Nous acceptons les virements Interac (Canada seulement). Envoyer à :' },
-  donateReceiverLabel: { en: 'Receiver:', zh: '收款人：', fr: 'Destinataire :' },
-  donateReceiverName: { en: 'Jiaqi Jiang', zh: 'Jiaqi Jiang', fr: 'Jiaqi Jiang' },
-  donateEmail: { en: 'we@chinese-pr-delay.ca', zh: 'we@chinese-pr-delay.ca', fr: 'we@chinese-pr-delay.ca' },
+  donateEmail: { en: 'voicesforfairscreening@gmail.com', zh: 'voicesforfairscreening@gmail.com', fr: 'voicesforfairscreening@gmail.com' },
   donateNoReceipt: { en: 'We cannot provide donation tax credit receipts at this time.', zh: '我们目前无法提供捐款抵税收据。', fr: 'Nous ne pouvons pas fournir de reçus d\'impôt pour dons pour le moment.' },
 } as const;
 

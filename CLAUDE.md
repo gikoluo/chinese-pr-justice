@@ -43,7 +43,8 @@ chinese-pr-justice/
 │   └── styles/
 │       └── global.css        # CSS variables, shared styles
 ├── static/
-│   └── images/               # All images (JPG, PNG, etc.)
+│   ├── images/               # Shared site images, hero images, icons, QR codes
+│   └── events/               # Event-specific media grouped by event slug
 ├── dist/                     # Build output (auto-generated)
 ├── astro.config.mjs          # Astro configuration
 ├── wrangler.toml             # Cloudflare Workers config
@@ -102,12 +103,25 @@ Each `.astro` file in `pages/` becomes a route:
 
 ### Static Assets (`static/`)
 
-All images go in `static/images/`. Reference them in code as `/images/filename.jpg`.
+Shared site images go in `static/images/`. Reference them in code as `/images/filename.jpg`.
 
 Example:
 ```html
 <img src="/images/hero2-bg-feb-9.jpg" alt="..." />
 ```
+
+### Event Media (`static/events/`)
+
+Event-specific photos and videos should live under `static/events/<event-slug>/` instead of `static/images/`. This keeps large campaign galleries separate from shared site assets.
+
+Use lowercase event slugs that match the page route meaning, for example:
+
+```text
+static/events/tor528-2026/photos/
+static/events/tor528-2026/videos/
+```
+
+Reference those assets from pages with `/events/<event-slug>/photos/filename.jpg` or `/events/<event-slug>/videos/filename.mp4`.
 
 ### Archive (`src/archive/`)
 

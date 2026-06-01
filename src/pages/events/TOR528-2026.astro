@@ -1,5 +1,36 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const tor528Photos = [
+  "tor528-014.jpg",
+  "tor528-017.jpg",
+  "tor528-018.jpg",
+  "tor528-019.jpg",
+  "tor528-020.jpg",
+  "tor528-021.jpg",
+  "tor528-023.jpg",
+  "tor528-024.jpg",
+  "tor528-025.jpg",
+  "tor528-026.jpg",
+  "tor528-027.jpg",
+  "tor528-028.jpg",
+  "tor528-029.jpg",
+  "tor528-030.jpg",
+  "tor528-031.jpg",
+  "tor528-032.jpg",
+  "tor528-033.jpg",
+  "tor528-034.jpg",
+  "tor528-035.jpg",
+  "tor528-036.jpg",
+  "tor528-037.jpg",
+  "tor528-038.jpg",
+  "tor528-039.jpg",
+  "tor528-040.jpg",
+  "tor528-041.jpg",
+  "tor528-042.jpg",
+  "tor528-043.jpg",
+  "tor528-044.jpg",
+];
 ---
 
 <BaseLayout title="Mississauga May 28 Peaceful Rally | Justice for Chinese PR Applicants">
@@ -32,9 +63,9 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
           <span class="lang-fr">Présence à confirmer sur place</span>
         </strong>
         <span>
-          <span class="lang-en">Please check in with organizers when you arrive. Detailed run-of-show is TBD.</span>
-          <span class="lang-zh">到场后请向组织者签到。具体日程安排待定。</span>
-          <span class="lang-fr">Veuillez vous présenter aux organisateurs à votre arrivée. Le déroulé détaillé reste à confirmer.</span>
+          <span class="lang-en">Please check in with organizers when you arrive.</span>
+          <span class="lang-zh">到场后请向组织者签到。</span>
+          <span class="lang-fr">Veuillez vous présenter aux organisateurs à votre arrivée.</span>
         </span>
       </div>
 
@@ -379,6 +410,39 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
               <span>@voicesforfairscreening</span>
             </span>
           </a>
+        </div>
+      </section>
+
+      <section class="tor-gallery">
+        <div class="tor-gallery-header">
+          <p class="tor-kicker tor-gallery-kicker">
+            <span class="lang-en">Event Photos</span>
+            <span class="lang-zh">活动照片</span>
+            <span class="lang-fr">Photos de l’événement</span>
+          </p>
+          <h2>
+            <span class="lang-en">Scenes from the May 28 rally</span>
+            <span class="lang-zh">5月28日集会现场</span>
+            <span class="lang-fr">Moments du rassemblement du 28 mai</span>
+          </h2>
+          <p>
+            <span class="lang-en">Selected photos from the TOR528 Mississauga peaceful rally.</span>
+            <span class="lang-zh">TOR528 密西沙加和平集会的部分现场照片。</span>
+            <span class="lang-fr">Sélection de photos du rassemblement pacifique TOR528 à Mississauga.</span>
+          </p>
+        </div>
+
+        <div class="tor-gallery-grid">
+          {tor528Photos.map((file, index) => (
+            <figure class="tor-gallery-card">
+              <img
+                src={`/events/tor528-2026/photos/${file}`}
+                alt={`TOR528 Mississauga peaceful rally photo ${index + 1}`}
+                loading="lazy"
+                decoding="async"
+              />
+            </figure>
+          ))}
         </div>
       </section>
     </div>
@@ -842,12 +906,75 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
     overflow-wrap: anywhere;
   }
 
+  .tor-gallery {
+    margin-top: 1.5rem;
+    padding: 2rem;
+    border: 1px solid rgba(51, 65, 85, 0.18);
+    background:
+      linear-gradient(135deg, rgba(248, 250, 252, 0.98), rgba(226, 232, 240, 0.94)),
+      #f8fafc;
+    box-shadow: 0 18px 42px rgba(15, 23, 42, 0.12);
+    color: #111827;
+  }
+
+  .tor-gallery-header {
+    max-width: 760px;
+    margin: 0 auto 1.4rem;
+    text-align: center;
+  }
+
+  .tor-gallery-kicker {
+    border-color: rgba(185, 28, 28, 0.28);
+    background: rgba(185, 28, 28, 0.08);
+    color: #b91c1c;
+  }
+
+  .tor-gallery-header h2 {
+    margin: 0;
+    font-family: var(--font-heading);
+    color: #0f172a;
+  }
+
+  .tor-gallery-header p {
+    margin: 0.7rem auto 0;
+    color: #475569;
+    line-height: 1.65;
+  }
+
+  .tor-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  .tor-gallery-card {
+    margin: 0;
+    overflow: hidden;
+    border: 1px solid rgba(15, 23, 42, 0.12);
+    background: #ffffff;
+    aspect-ratio: 4 / 3;
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.1);
+  }
+
+  .tor-gallery-card img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.2s ease;
+  }
+
+  .tor-gallery-card:hover img {
+    transform: scale(1.03);
+  }
+
   @media (max-width: 860px) {
     .tor-summary-grid,
     .tor-route-grid,
     .tor-info-grid,
     .tor-phase-grid,
-    .tor-social-grid {
+    .tor-social-grid,
+    .tor-gallery-grid {
       grid-template-columns: minmax(0, 1fr);
     }
 
@@ -877,6 +1004,10 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
     }
 
     .tor-social {
+      padding: 1.35rem;
+    }
+
+    .tor-gallery {
       padding: 1.35rem;
     }
 
