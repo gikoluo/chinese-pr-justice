@@ -112,23 +112,28 @@ import { hero, heroStats } from '../i18n/strings';
         <!-- Dedicated line below: event title + timeline + Event Details link -->
         <div class="hero-event">
             <h2 class="hero-event-title">
-                <a href="/events/TOR528-2026">
+                <a href="/join#join">
                     <span class="lang-en">{hero.eventTitle.en}</span>
                     <span class="lang-zh">{hero.eventTitle.zh}</span>
                     <span class="lang-fr">{hero.eventTitle.fr}</span>
                 </a>
             </h2>
+            <div class="hero-event-tagline">
+                <span class="lang-en">{hero.eventTagline.en}</span>
+                <span class="lang-zh">{hero.eventTagline.zh}</span>
+                <span class="lang-fr">{hero.eventTagline.fr}</span>
+            </div>
             <div class="hero-event-details">
                 <span class="lang-en">{hero.eventDetails.en}</span>
                 <span class="lang-zh">{hero.eventDetails.zh}</span>
                 <span class="lang-fr">{hero.eventDetails.fr}</span>
             </div>
             <div class="hero-event-buttons">
-                <a href="/press-release" class="hero-event-link btn-flip">
+                <a href="/join#join" class="hero-event-link btn-flip">
                     <span class="btn-text-block">
                         <span class="btn-text-wrapper">
-                            <span class="hover-out-text"><span class="lang-en">{hero.pressReleaseLink.en}</span><span class="lang-zh">{hero.pressReleaseLink.zh}</span><span class="lang-fr">{hero.pressReleaseLink.fr}</span></span>
-                            <span class="hover-in-text"><span class="lang-en">{hero.pressReleaseLink.en}</span><span class="lang-zh">{hero.pressReleaseLink.zh}</span><span class="lang-fr">{hero.pressReleaseLink.fr}</span></span>
+                            <span class="hover-out-text"><span class="lang-en">{hero.getInvolved.en}</span><span class="lang-zh">{hero.getInvolved.zh}</span><span class="lang-fr">{hero.getInvolved.fr}</span></span>
+                            <span class="hover-in-text"><span class="lang-en">{hero.getInvolved.en}</span><span class="lang-zh">{hero.getInvolved.zh}</span><span class="lang-fr">{hero.getInvolved.fr}</span></span>
                         </span>
                     </span>
                 </a>
@@ -141,12 +146,29 @@ import { hero, heroStats } from '../i18n/strings';
                     </span>
                 </a>
             </div>
+            <div class="hero-qr-card">
+                <span class="hero-qr-label"><span class="lang-en">{hero.qrSectionLabel.en}</span><span class="lang-zh">{hero.qrSectionLabel.zh}</span><span class="lang-fr">{hero.qrSectionLabel.fr}</span></span>
+                <div class="hero-qr-grid">
+                    <div class="hero-qr-item">
+                        <img src="/events/national731-2026/qrcodes/toronto-wechat.png" alt="Toronto WeChat group QR code" width="120" height="120" loading="lazy" />
+                        <span class="hero-qr-city"><span class="lang-en">{hero.qrTorontoCity.en}</span><span class="lang-zh">{hero.qrTorontoCity.zh}</span><span class="lang-fr">{hero.qrTorontoCity.fr}</span></span>
+                        <span class="hero-qr-group">731多伦多集会</span>
+                    </div>
+                    <div class="hero-qr-item">
+                        <img src="/events/national731-2026/qrcodes/vancouver-wechat.png" alt="Vancouver WeChat group QR code" width="120" height="120" loading="lazy" />
+                        <span class="hero-qr-city"><span class="lang-en">{hero.qrVancouverCity.en}</span><span class="lang-zh">{hero.qrVancouverCity.zh}</span><span class="lang-fr">{hero.qrVancouverCity.fr}</span></span>
+                        <span class="hero-qr-group">260731-VAN温哥华群</span>
+                    </div>
+                </div>
+            </div>
             <div class="hero-past-event">
                 <span class="hero-past-event-label"><span class="lang-en">{hero.pastEventLabel.en}</span><span class="lang-zh">{hero.pastEventLabel.zh}</span><span class="lang-fr">{hero.pastEventLabel.fr}</span></span>
                 <a href="/events/OTT313-2026" class="hero-past-event-title"><span class="lang-en">{hero.pastEventTitle.en}</span><span class="lang-zh">{hero.pastEventTitle.zh}</span><span class="lang-fr">{hero.pastEventTitle.fr}</span></a>
                 <div class="hero-past-event-details"><span class="lang-en">{hero.pastEventDetails.en}</span><span class="lang-zh">{hero.pastEventDetails.zh}</span><span class="lang-fr">{hero.pastEventDetails.fr}</span></div>
                 <a href="/events/VAN501-2026" class="hero-past-event-title hero-past-event-title-secondary"><span class="lang-en">{hero.pastEventVancouverTitle.en}</span><span class="lang-zh">{hero.pastEventVancouverTitle.zh}</span><span class="lang-fr">{hero.pastEventVancouverTitle.fr}</span></a>
                 <div class="hero-past-event-details"><span class="lang-en">{hero.pastEventVancouverDetails.en}</span><span class="lang-zh">{hero.pastEventVancouverDetails.zh}</span><span class="lang-fr">{hero.pastEventVancouverDetails.fr}</span></div>
+                <a href="/events/TOR528-2026" class="hero-past-event-title hero-past-event-title-secondary"><span class="lang-en">{hero.pastEventTorontoTitle.en}</span><span class="lang-zh">{hero.pastEventTorontoTitle.zh}</span><span class="lang-fr">{hero.pastEventTorontoTitle.fr}</span></a>
+                <div class="hero-past-event-details"><span class="lang-en">{hero.pastEventTorontoDetails.en}</span><span class="lang-zh">{hero.pastEventTorontoDetails.zh}</span><span class="lang-fr">{hero.pastEventTorontoDetails.fr}</span></div>
             </div>
             <div class="hero-standing-card">
                 <span class="hero-standing-label"><span class="lang-en">{hero.standingWithUs.en}</span><span class="lang-zh">{hero.standingWithUs.zh}</span><span class="lang-fr">{hero.standingWithUs.fr}</span></span>
@@ -388,6 +410,15 @@ import { hero, heroStats } from '../i18n/strings';
         text-underline-offset: 4px;
     }
 
+    .hero-event-tagline {
+        text-align: center;
+        font-size: clamp(0.9rem, 1.8vw, 1rem);
+        font-weight: 600;
+        color: var(--accent-bright);
+        letter-spacing: 0.02em;
+        margin-bottom: 0.5rem;
+    }
+
     .hero-event-details {
         display: flex;
         align-items: center;
@@ -481,6 +512,62 @@ import { hero, heroStats } from '../i18n/strings';
 
     .hero-past-event-link:hover {
         text-decoration: underline;
+    }
+
+    /* QR codes: scan to join a WeChat group */
+    .hero-qr-card {
+        margin-top: 1.25rem;
+        padding: 0.85rem 1rem;
+        background: rgba(255, 255, 255, 0.12);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 8px;
+    }
+
+    .hero-qr-label {
+        display: block;
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: var(--accent-bright);
+        margin-bottom: 0.65rem;
+        text-align: center;
+    }
+
+    .hero-qr-grid {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        flex-wrap: wrap;
+    }
+
+    .hero-qr-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.3rem;
+        max-width: 150px;
+    }
+
+    .hero-qr-item img {
+        width: 110px;
+        height: 110px;
+        border-radius: 6px;
+        background: #fff;
+        padding: 4px;
+        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+    }
+
+    .hero-qr-city {
+        font-size: 0.9rem;
+        font-weight: 700;
+        color: #fff;
+        margin-top: 0.15rem;
+    }
+
+    .hero-qr-group {
+        font-size: 0.72rem;
+        color: rgba(255, 255, 255, 0.8);
+        text-align: center;
     }
 
     /* Senator standing with us card */
@@ -838,6 +925,15 @@ import { hero, heroStats } from '../i18n/strings';
 
         .hero-standing-card {
             max-width: 100%;
+        }
+
+        .hero-qr-grid {
+            gap: 1.25rem;
+        }
+
+        .hero-qr-item img {
+            width: 90px;
+            height: 90px;
         }
 
         .hero-standing-grid {

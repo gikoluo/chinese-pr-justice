@@ -31,12 +31,29 @@ export const heroStats = {
 
 export const hero = {
   eventTitle: {
-    en: 'Latest Campaign - Toronto 528',
-    zh: '最新行动 - 多伦多 528',
-    fr: 'Dernière campagne - Toronto 528',
+    en: 'National Day of Action — July 31, 2026',
+    zh: '2026年7月31日 · 全国和平集会',
+    fr: 'Journée d’action nationale — 31 juillet 2026',
   },
-  eventDetails: { en: 'May 28, 2026 · 7:30 AM – 11:30 AM · Mississauga, ON', zh: '2026年5月28日 · 上午7:30 – 上午11:30 · 密西沙加，ON省', fr: '28 mai 2026 · 7 h 30 – 11 h 30 · Mississauga, Ont.' },
+  eventTagline: {
+    en: 'One day. One voice. One Canada — coast to coast.',
+    zh: '同一天，同一个声音，同一个加拿大。',
+    fr: 'Un jour. Une voix. Un Canada — d’un océan à l’autre.',
+  },
+  eventDetails: { en: 'Friday, July 31, 2026 · Ottawa · Vancouver · Toronto · and cities across Canada', zh: '2026年7月31日 周五 · 渥太华 · 温哥华 · 多伦多 · 全国各地同步举行', fr: 'Vendredi 31 juillet 2026 · Ottawa · Vancouver · Toronto · partout au Canada' },
   eventDetailsLink: { en: 'Past event recap', zh: '过往活动回顾', fr: 'Bilan d’événement passé' },
+  getInvolved: {
+    en: 'Join the July 31 Rally',
+    zh: '加入 7月31日 集会',
+    fr: 'Participez au rassemblement du 31 juillet',
+  },
+  qrSectionLabel: {
+    en: 'Scan to join a WeChat group',
+    zh: '扫码加入微信群',
+    fr: 'Scannez pour rejoindre un groupe WeChat',
+  },
+  qrTorontoCity: { en: 'Toronto', zh: '多伦多', fr: 'Toronto' },
+  qrVancouverCity: { en: 'Vancouver', zh: '温哥华', fr: 'Vancouver' },
   liveStream: { en: 'Watch Live on YouTube', zh: '在 YouTube 上观看直播', fr: 'Regarder en direct sur YouTube' },
   standingWithUs: { en: 'Standing with us', zh: '与我们站在一起', fr: 'À nos côtés' },
   senatorWooName: { en: 'Senator Yuen Pau Woo', zh: '参议员胡元豹', fr: 'Sénateur Yuen Pau Woo' },
@@ -51,9 +68,9 @@ export const hero = {
     fr: 'Communiqué de la conférence de presse sur la Colline du Parlement',
   },
   pastEventLabel: {
-    en: 'Past event',
-    zh: '过往行动',
-    fr: 'Événement passé',
+    en: 'Past actions',
+    zh: '往期行动',
+    fr: 'Actions passées',
   },
   pastEventTitle: {
     en: '2026.3.13 Ottawa Parliament Hill Rally',
@@ -74,6 +91,16 @@ export const hero = {
     en: 'Friday, May 1, 2026 · Vancouver Art Gallery → IRCC Vancouver Office · Vancouver',
     zh: '2026年5月1日 周五 · 温哥华美术馆 → IRCC 温哥华办公室 · 温哥华',
     fr: 'Vendredi 1er mai 2026 · Vancouver Art Gallery → Bureau IRCC de Vancouver · Vancouver',
+  },
+  pastEventTorontoTitle: {
+    en: '2026.5.28 IRCC Toronto Office Rally',
+    zh: '2026.5.28 IRCC 多伦多办公室集会',
+    fr: '2026.5.28 Rassemblement au bureau IRCC de Toronto',
+  },
+  pastEventTorontoDetails: {
+    en: 'May 28, 2026 · 7:30 AM – 11:30 AM · Mississauga, ON',
+    zh: '2026年5月28日 · 上午7:30 – 上午11:30 · 密西沙加，ON省',
+    fr: '28 mai 2026 · 7 h 30 – 11 h 30 · Mississauga, Ont.',
   },
   pastEventLink: {
     en: 'View recap',
