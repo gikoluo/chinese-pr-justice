@@ -3,7 +3,7 @@
  * Use with .lang-en / .lang-zh / .lang-fr and html[data-lang] to show the right language.
  */
 export const nav = {
-  brand: { en: 'PR Justice Now', zh: 'PR 公正行动', fr: 'Justice PR Maintenant' },
+  brand: { en: 'Fair Screening, Justice Now', zh: '公平安调，正义此刻', fr: 'Vérifications équitables, justice maintenant' },
   declaration: { en: 'Declaration', zh: '宣言', fr: 'Déclaration' },
   demands: { en: 'Our Demands', zh: '我们的诉求', fr: 'Nos revendications' },
   stories: { en: 'Stories', zh: '故事', fr: 'Témoignages' },
