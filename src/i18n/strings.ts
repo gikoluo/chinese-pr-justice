@@ -54,6 +54,11 @@ export const hero = {
   },
   qrTorontoCity: { en: 'Toronto', zh: '多伦多', fr: 'Toronto' },
   qrVancouverCity: { en: 'Vancouver', zh: '温哥华', fr: 'Vancouver' },
+  impactCaption: {
+    en: 'Real families, torn apart by endless delays.',
+    zh: '真实的家庭，被无休止的拖延撕裂。',
+    fr: 'De vraies familles, déchirées par des délais interminables.',
+  },
   liveStream: { en: 'Watch Live on YouTube', zh: '在 YouTube 上观看直播', fr: 'Regarder en direct sur YouTube' },
   standingWithUs: { en: 'Standing with us', zh: '与我们站在一起', fr: 'À nos côtés' },
   senatorWooName: { en: 'Senator Yuen Pau Woo', zh: '参议员胡元豹', fr: 'Sénateur Yuen Pau Woo' },

@@ -146,6 +146,14 @@ import { hero, heroStats } from '../i18n/strings';
                     </span>
                 </a>
             </div>
+            <div class="hero-impact-image">
+                <img src="/events/can731-2026/photos/dadTraped.jpg" alt="A handmade family scrapbook: Grandma fell. Time is running out. Dad trapped — save us." loading="lazy" />
+                <p class="hero-impact-caption">
+                    <span class="lang-en">{hero.impactCaption.en}</span>
+                    <span class="lang-zh">{hero.impactCaption.zh}</span>
+                    <span class="lang-fr">{hero.impactCaption.fr}</span>
+                </p>
+            </div>
             <div class="hero-qr-card">
                 <span class="hero-qr-label"><span class="lang-en">{hero.qrSectionLabel.en}</span><span class="lang-zh">{hero.qrSectionLabel.zh}</span><span class="lang-fr">{hero.qrSectionLabel.fr}</span></span>
                 <div class="hero-qr-grid">
@@ -512,6 +520,33 @@ import { hero, heroStats } from '../i18n/strings';
 
     .hero-past-event-link:hover {
         text-decoration: underline;
+    }
+
+    /* Impact image: family scrapbook, above the QR codes */
+    .hero-impact-image {
+        margin-top: 1.25rem;
+        padding: 0.85rem 1rem;
+        background: rgba(255, 255, 255, 0.12);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 8px;
+        text-align: center;
+    }
+
+    .hero-impact-image img {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+        width: 420px;
+        height: auto;
+        border-radius: 6px;
+        box-shadow: 0 6px 24px rgba(0, 0, 0, 0.35);
+    }
+
+    .hero-impact-caption {
+        margin: 0.65rem 0 0;
+        color: rgba(255, 255, 255, 0.85);
+        font-size: 0.85rem;
+        font-weight: 600;
     }
 
     /* QR codes: scan to join a WeChat group */
@@ -925,6 +960,10 @@ import { hero, heroStats } from '../i18n/strings';
 
         .hero-standing-card {
             max-width: 100%;
+        }
+
+        .hero-impact-image img {
+            width: 100%;
         }
 
         .hero-qr-grid {
