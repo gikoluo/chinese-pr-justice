@@ -55,9 +55,9 @@ export const hero = {
   qrTorontoCity: { en: 'Toronto', zh: '多伦多', fr: 'Toronto' },
   qrVancouverCity: { en: 'Vancouver', zh: '温哥华', fr: 'Vancouver' },
   impactCaption: {
-    en: 'Real families, torn apart by endless delays.',
-    zh: '真实的家庭，被无休止的拖延撕裂。',
-    fr: 'De vraies familles, déchirées par des délais interminables.',
+    en: 'Speak out today, or stand alone tomorrow.',
+    zh: '今天不发声，明天就孤立无援。',
+    fr: 'Parlez aujourd’hui, ou vous vous retrouverez seul demain.',
   },
   liveStream: { en: 'Watch Live on YouTube', zh: '在 YouTube 上观看直播', fr: 'Regarder en direct sur YouTube' },
   standingWithUs: { en: 'Standing with us', zh: '与我们站在一起', fr: 'À nos côtés' },
@@ -549,6 +549,21 @@ export const petitionBanner = {
     fr: 'En bref : Ouvrez le lien de la pétition → Cliquez sur Signer → Saisissez nom, ville, province, courriel, statut → Cochez la case et Soumettre → Cliquez sur le lien de confirmation dans le courriel pour valider ✅',
   },
   officialPage: { en: 'the official e‑7341 page', zh: 'e‑7341 官方页面', fr: 'la page officielle e‑7341' },
+} as const;
+
+export const speakOut = {
+  line1: { en: 'First they came for the Socialists, and I did not speak out—', zh: '起初，他们追杀社会主义者，我没有说话——', fr: 'D’abord, ils sont venus chercher les socialistes, et je n’ai rien dit —' },
+  line2: { en: 'Then they came for the Trade Unionists, and I did not speak out—', zh: '接着，他们追杀工会会员，我没有说话——', fr: 'Puis ils sont venus chercher les syndicalistes, et je n’ai rien dit —' },
+  line3: { en: 'Then they came for the Jews, and I did not speak out—', zh: '后来，他们追杀犹太人，我没有说话——', fr: 'Puis ils sont venus chercher les Juifs, et je n’ai rien dit —' },
+  line4: { en: 'Then they came for me—', zh: '此后，他们冲我而来——', fr: 'Puis ils sont venus me chercher —' },
+  line5: { en: 'and there was no one left to speak for me.', zh: '却再也没有人站出来为我说话了。', fr: 'et il ne restait plus personne pour parler pour moi.' },
+  attribution: { en: '— Martin Niemöller', zh: '——马丁·尼莫拉', fr: '— Martin Niemöller' },
+  question: { en: 'What if you do not speak out for yourselves?', zh: '如果你们自己都不为自己发声，又会怎样？', fr: 'Que se passe-t-il si vous ne parlez pas pour vous-mêmes ?' },
+  answer: {
+    en: 'Silence and indifference in the face of injustice ultimately endanger everyone in every respect.',
+    zh: '面对不公时的沉默与冷漠，最终会从各个方面危及每一个人。',
+    fr: 'Le silence et l’indifférence face à l’injustice finissent, à tous égards, par mettre tout le monde en danger.',
+  },
 } as const;
 
 export type Lang = 'en' | 'zh' | 'fr';
