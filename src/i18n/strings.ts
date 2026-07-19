@@ -40,20 +40,13 @@ export const hero = {
     zh: '同一天，同一个声音，同一个加拿大。',
     fr: 'Un jour. Une voix. Un Canada — d’un océan à l’autre.',
   },
-  eventDetails: { en: 'Friday, July 31, 2026 · Ottawa · Vancouver · Toronto · and cities across Canada', zh: '2026年7月31日 周五 · 渥太华 · 温哥华 · 多伦多 · 全国各地同步举行', fr: 'Vendredi 31 juillet 2026 · Ottawa · Vancouver · Toronto · partout au Canada' },
+  eventDetails: { en: 'Friday, July 31, 2026 · Ottawa · Toronto · Vancouver · Calgary · Saskatchewan · Winnipeg', zh: '2026年7月31日 周五 · 渥太华 · 多伦多 · 温哥华 · 卡尔加里 · 萨斯喀彻温 · 温尼伯', fr: 'Vendredi 31 juillet 2026 · Ottawa · Toronto · Vancouver · Calgary · Saskatchewan · Winnipeg' },
   eventDetailsLink: { en: 'Past event recap', zh: '过往活动回顾', fr: 'Bilan d’événement passé' },
   getInvolved: {
     en: 'Join the July 31 Rally',
     zh: '加入 7月31日 集会',
     fr: 'Participez au rassemblement du 31 juillet',
   },
-  qrSectionLabel: {
-    en: 'Scan to join a WeChat group',
-    zh: '扫码加入微信群',
-    fr: 'Scannez pour rejoindre un groupe WeChat',
-  },
-  qrTorontoCity: { en: 'Toronto', zh: '多伦多', fr: 'Toronto' },
-  qrVancouverCity: { en: 'Vancouver', zh: '温哥华', fr: 'Vancouver' },
   impactCaption: {
     en: 'Speak out today, or stand alone tomorrow.',
     zh: '今天不发声，明天就孤立无援。',

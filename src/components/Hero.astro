@@ -154,21 +154,6 @@ import { hero, heroStats } from '../i18n/strings';
                     <span class="lang-fr">{hero.impactCaption.fr}</span>
                 </p>
             </div>
-            <div class="hero-qr-card">
-                <span class="hero-qr-label"><span class="lang-en">{hero.qrSectionLabel.en}</span><span class="lang-zh">{hero.qrSectionLabel.zh}</span><span class="lang-fr">{hero.qrSectionLabel.fr}</span></span>
-                <div class="hero-qr-grid">
-                    <div class="hero-qr-item">
-                        <img src="/events/can731-2026/qrcodes/toronto-wechat.png" alt="Toronto WeChat group QR code" width="120" height="120" loading="lazy" />
-                        <span class="hero-qr-city"><span class="lang-en">{hero.qrTorontoCity.en}</span><span class="lang-zh">{hero.qrTorontoCity.zh}</span><span class="lang-fr">{hero.qrTorontoCity.fr}</span></span>
-                        <span class="hero-qr-group">731多伦多集会</span>
-                    </div>
-                    <div class="hero-qr-item">
-                        <img src="/events/can731-2026/qrcodes/vancouver-wechat.png" alt="Vancouver WeChat group QR code" width="120" height="120" loading="lazy" />
-                        <span class="hero-qr-city"><span class="lang-en">{hero.qrVancouverCity.en}</span><span class="lang-zh">{hero.qrVancouverCity.zh}</span><span class="lang-fr">{hero.qrVancouverCity.fr}</span></span>
-                        <span class="hero-qr-group">260731-VAN温哥华群</span>
-                    </div>
-                </div>
-            </div>
             <div class="hero-past-event">
                 <span class="hero-past-event-label"><span class="lang-en">{hero.pastEventLabel.en}</span><span class="lang-zh">{hero.pastEventLabel.zh}</span><span class="lang-fr">{hero.pastEventLabel.fr}</span></span>
                 <a href="/events/OTT313-2026" class="hero-past-event-title"><span class="lang-en">{hero.pastEventTitle.en}</span><span class="lang-zh">{hero.pastEventTitle.zh}</span><span class="lang-fr">{hero.pastEventTitle.fr}</span></a>
@@ -549,62 +534,6 @@ import { hero, heroStats } from '../i18n/strings';
         font-weight: 600;
     }
 
-    /* QR codes: scan to join a WeChat group */
-    .hero-qr-card {
-        margin-top: 1.25rem;
-        padding: 0.85rem 1rem;
-        background: rgba(255, 255, 255, 0.12);
-        border: 1px solid rgba(255, 255, 255, 0.3);
-        border-radius: 8px;
-    }
-
-    .hero-qr-label {
-        display: block;
-        font-size: 0.7rem;
-        text-transform: uppercase;
-        letter-spacing: 0.08em;
-        color: var(--accent-bright);
-        margin-bottom: 0.65rem;
-        text-align: center;
-    }
-
-    .hero-qr-grid {
-        display: flex;
-        justify-content: center;
-        gap: 2rem;
-        flex-wrap: wrap;
-    }
-
-    .hero-qr-item {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 0.3rem;
-        max-width: 150px;
-    }
-
-    .hero-qr-item img {
-        width: 110px;
-        height: 110px;
-        border-radius: 6px;
-        background: #fff;
-        padding: 4px;
-        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
-    }
-
-    .hero-qr-city {
-        font-size: 0.9rem;
-        font-weight: 700;
-        color: #fff;
-        margin-top: 0.15rem;
-    }
-
-    .hero-qr-group {
-        font-size: 0.72rem;
-        color: rgba(255, 255, 255, 0.8);
-        text-align: center;
-    }
-
     /* Senator standing with us card */
     .hero-standing-card {
         margin-top: 1.5rem;
@@ -964,15 +893,6 @@ import { hero, heroStats } from '../i18n/strings';
 
         .hero-impact-image img {
             width: 100%;
-        }
-
-        .hero-qr-grid {
-            gap: 1.25rem;
-        }
-
-        .hero-qr-item img {
-            width: 90px;
-            height: 90px;
         }
 
         .hero-standing-grid {
